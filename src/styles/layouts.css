@@ -1,0 +1,58 @@
+/* Global Layout Classes */
+/* 🔒 Not configurable */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* Card */
+.card {
+  padding: var(--cardPadding);
+  border-radius: var(--cardRadius);
+  background: var(--white);
+}
+
+.card > *:first-child {
+  margin-top: 0;
+}
+
+.card > *:last-child {
+  margin-bottom: 0;
+}
+
+/* Flex */
+.space-between {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.space-between > *:last-child {
+  margin-left: 20px;
+}
+
+/* Cols */
+.cols {
+  display: grid;
+  grid-gap: var(--gap);
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (min-width: 880px) {
+  .cols {
+    grid-template-columns: 1fr 360px;
+  }
+  .cols.reverse {
+    grid-template-columns: 360px 1fr;
+  }
+}
+
+/* Wrapper */
+.wrapper {
+  padding: 0 var(--basePadding);
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .wrapper.tight {
+    max-width: "940px";
+  }
+}

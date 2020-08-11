@@ -1,28 +1,31 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "pure-func-homepage",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A homepage for Pure Func LLC",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Eric Sartorius <eric@purefunc.dev>",
   "dependencies": {
+    "framer-motion": "^2.3.0",
     "gatsby": "^2.24.26",
     "gatsby-image": "^2.4.14",
     "gatsby-plugin-manifest": "^2.4.21",
     "gatsby-plugin-offline": "^3.2.21",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.6.24",
+    "gatsby-plugin-styled-components": "^3.3.10",
     "gatsby-source-filesystem": "^2.3.23",
     "gatsby-transformer-sharp": "^2.5.12",
-    "prop-types": "^15.7.2",
+    "intersection-observer": "^0.11.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "prettier": "2.0.5"
   },
   "keywords": [
-    "gatsby"
+    "pure func"
   ],
   "license": "0BSD",
   "scripts": {
@@ -36,9 +39,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/purefunc/pure-func-homepage"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/purefunc/pure-func-homepage/issues"
   }
 }
