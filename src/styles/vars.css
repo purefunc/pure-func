@@ -1,20 +1,8 @@
 :root {
   /* Colors */
-  --purp: #524763;
-  --purp-20: #6a5c80;
-  --purp-60: #b8afc5;
-  --darkPurp: #373142;
-  --xtraPurp: #191324;
-  --grey: #d8d8d8;
-  --green: #cbe56c;
-  --green-20: #daed97;
-  --teal: #82d8d8;
-  --teal-20: #b1e7e7;
+  --lilac: #82a8ff;
   --red: #e54b4b;
-  --red-20: #f08484;
-  --pink: #cf256d;
-
-  --black: #333;
+  --black: #252526;
   --black-20: #4f4f4f;
   --black-40: #828282;
   --black-60: #bdbdbd;
@@ -23,38 +11,51 @@
   --white-20: #f5f4f6;
   --white: #fff;
 
-  --syntaxYellow: #f0c05e;
-  --twitter: #00aced;
-  --facebook: #3b5998;
-  --google: #dd4b39;
-  --youtube: #bb0000;
-
   /* Theme Vars */
-  --logoColor: var(--teal);
+  --primaryColor: var(--lilac);
   --bgColor: var(--purp);
   --footerBg: var(--darkPurp);
   --lineColor: var(--white-60);
-
-  --sheetBg: var(--white);
-  --sheetHover: var(--white-20);
-  --sheetTextColor: var(--black);
-  --sheetShadow: 0px 0px 22px rgba(0, 0, 0, 0.4),
-    0px 0px 4px rgba(0, 0, 0, 0.25);
+  --textColor: var(--black);
   --cardBg: var(--white);
 
-  /* Misc Sizes */
+  /* Layout */
   --baseMargin: 2.75rem;
   --margins: 2.75rem 0 1rem;
 
   --basePadding: 2rem;
   --baseSectionPadding: 6rem;
-  --topSectionPadding: 0rem;
-  --bottomSectionPadding: 4rem;
 
-  --gap: 30px;
+  --gutter: 16px;
+
+  --scrollbarWidth: 0px;
+  --windowWidth: calc(100vw - var(--scrollbarWidth));
+  --layoutWidth: calc(var(--windowWidth) - var(--gutter) * 2);
+  --layoutWidthMax: 1080px;
+  --small: 375;
+  --medium: 600;
+  --large: 1112;
+  --viewportScale: calc(var(--windowWidth) / var(--large));
+  --paddingTop: 160px;
+  --paddingBottom: 160px;
+  --columnPaddingNone: 0;
+
+  --columnPaddingNormal: 16px;
+  --columnPaddingMedium: 16px;
+  --columnPaddingLarge: 16px;
+  --columnPaddingXLarge: 16px;
+
+  --rowGapNormal: 8px;
+  --rowGapMedium: 24px;
+  --rowGapLarge: 32px;
+  --rowGapXLarge: 64px;
+  --rowGap: var(--rowGapNormal);
+  --columnCountMax: 1;
+  --columnWidth: calc(var(--layoutWidth) / var(--columnCountMax));
+  --columnMaxWidth: calc(var(--layoutWidthMax) * 0.25);
 
   --inputRadius: 6px;
-  --cardRadius: 15px;
+  --cardRadius: 8px;
   --buttonRadius: 15px;
 
   /* Z-Index */
@@ -69,6 +70,25 @@
   --elevation-4: 0 14px 28px rgba(0, 0, 0, 0.25),
     0 10px 10px rgba(0, 0, 0, 0.22);
   --elevation-5: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+  --cardShadowXSmall: 0 2px 5px -1px rgba(50, 50, 93, 0.25),
+    0 1px 3px -1px rgba(0, 0, 0, 0.3);
+  --cardShadowSmall: 0 6px 12px -2px rgba(50, 50, 93, 0.25),
+    0 3px 7px -3px rgba(0, 0, 0, 0.3);
+  --cardShadowMedium: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3);
+  --cardShadowLarge: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3);
+  --cardShadowLargeInset: inset 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    inset 0 18px 36px -18px rgba(0, 0, 0, 0.3);
+  --cardShadowXLarge: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
+    0 30px 60px -30px rgba(0, 0, 0, 0.3);
+
+  --cardShadowXSMallMargin: 2px;
+  --cardShadowSmallMargin: 8px;
+  --cardShadowMediumMargin: 16px;
+  --cardShadowLargeMargin: 32px;
+  --cardShadowXLargeMargin: 48px;
 
   /* Fonts */
   --baseFontSize: 1rem;
@@ -86,16 +106,25 @@
   --heading-six: 0.64rem;
   --heading-seven: var(--smallestFontSize);
 
-  --headingFont: "Playfair Display", Helvetica, arial, sans-serif;
-  --bodyFont: "Roboto", Helvetica, arial, sans-serif;
+  --headingFont: "sohne-var", "Helvetica Neue", "Arial", sans-serif;
+  --bodyFont: "sohne-var", "Helvetica Neue", "Arial", sans-serif;
+
+  /* Other */
+  --hoverTransition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 /* Above small breakpoint */
 @media only screen and (min-width: 600px) {
+  :root {
+    --columnPaddingMedium: 32px;
+    --columnPaddingLarge: 64px;
+    --columnPaddingXLarge: 64px;
+    --columnCountMax: 2;
+  }
 }
 
 /* Above medium breakpoint */
-@media only screen and (min-width: 880px) {
+@media only screen and (min-width: 900px) {
   :root {
     --margins: 6rem 0 2rem;
     --topSectionPadding: 7rem;
@@ -103,13 +132,18 @@
     --baseSectionPadding: 15rem;
     --baseMargin: 8rem;
     --basePadding: 3rem;
+
+    --columnPaddingXLarge: 112px;
+    --columnCountMax: 4;
   }
 }
 
 /* Above large breakpoint */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1112px) {
   :root {
     --baseNavSize: 0.64rem;
+    --layoutWidth: var(--layoutWidthMax);
+    --gutter: calc((var(--windowWidth) - var(--layoutWidth)) / 2);
   }
   html {
     font-size: 24px;

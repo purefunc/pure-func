@@ -1,12 +1,9 @@
 import React from "react"
-
 import Layout from "../layouts"
-import SEO from "../components/seo"
 
-export default function () {
+export default function ({ location }) {
   return (
-    <Layout>
-      <SEO title="Home" />
+    <Layout title="Home" description="" location={location}>
       <h1>Hi people</h1>
     </Layout>
   )

@@ -1,10 +1,10 @@
 import { css } from "styled-components"
 
 export const sizes: any = {
-  xSmall: 414,
+  xSmall: 375,
   small: 600,
-  medium: 880,
-  tablet: 1024,
+  medium: 900,
+  tablet: 1112,
   large: 1280,
   xLarge: 1440,
 }
