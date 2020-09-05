@@ -1,0 +1,33 @@
+.header-container {
+  position: relative;
+  max-width: calc(var(--columnPaddingNormal) * 2 + var(--layoutWidth));
+  margin: 0 auto;
+  padding: 0 var(--columnPaddingNormal);
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 56px;
+    padding: 32px var(--columnPaddingNormal) 12px;
+    .desktop-nav {
+      display: none;
+      ul {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .header-container {
+    .nav-container {
+      padding: 12px var(--columnPaddingNormal);
+      .mobile-nav {
+        display: none;
+      }
+      .desktop-nav {
+        display: block;
+      }
+    }
+  }
+}

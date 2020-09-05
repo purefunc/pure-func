@@ -1,0 +1,36 @@
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: var(--heading-#{$i});
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  --titleWeight: var(--fontWeightSemibold);
+  --titleLineHeight: 1.15;
+  font-weight: var(--titleWeight);
+  line-height: var(--titleLineHeight);
+  &.title {
+    color: var(--primaryColor);
+  }
+  &.subtitle {
+    --titleWeight: var(--fontWeightbold);
+    font-size: var(--baseFontSize);
+  }
+}
+
+p {
+  --bodyWeight: var(--fontWeightNormal);
+  --bodyLineHeight: 36px;
+  font-weight: var(--bodyWeight);
+  font-family: var(--fontFamily);
+  line-height: var(--titleLineHeight);
+  &.subtext {
+    color: var(--black-40);
+    font-size: var(--smallFontSize);
+  }
+}

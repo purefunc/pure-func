@@ -1,10 +1,8 @@
 import React from "react"
-import styled from "styled-components"
-import { media } from "../styles"
 
 function MobileNav() {
   return (
-    <Nav>
+    <nav className="mobile-nav">
       <a
         className="MenuButton"
         href="#"
@@ -20,14 +18,8 @@ function MobileNav() {
           </g>
         </svg>
       </a>
-    </Nav>
+    </nav>
   )
 }
 
 export default MobileNav
-
-const Nav = styled.nav`
-  ${media.medium`
-    display: none;
-  `};
-`

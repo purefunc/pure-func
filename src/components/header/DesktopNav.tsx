@@ -1,10 +1,8 @@
 import React from "react"
-import styled from "styled-components"
-import { media } from "../styles"
 
-function DesktopNav() {
+export default function DesktopNav() {
   return (
-    <Nav>
+    <div className="desktop-nav">
       <ul>
         <li>
           <button
@@ -27,18 +25,6 @@ function DesktopNav() {
           </button>
         </li>
       </ul>
-    </Nav>
+    </div>
   )
 }
-
-export default DesktopNav
-
-const Nav = styled.nav`
-  display: none;
-  ul {
-    display: flex;
-  }
-  ${media.medium`
-  display: block;
-  `};
-`

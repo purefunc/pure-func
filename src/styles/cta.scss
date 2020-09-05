@@ -1,0 +1,40 @@
+// BUTTONS
+// TODO WIP
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.cta {
+  --buttonRadius: 15px;
+  --ctaFont: var(--fontWeightSemibold) 15px/1.6 var(--fontFamily);
+  display: inline-block;
+  padding: 3px 0 6px;
+  border-radius: 16.5px;
+  font: var(--ctaFont);
+  color: var(--buttonColor);
+  white-space: nowrap;
+  transition: var(--hoverTransition);
+  outline: none;
+}
+
+button.cta {
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: var(--buttonColor);
+  -webkit-transition-property: background-color, opacity;
+  transition-property: background-color, opacity;
+}
+
+.cta-container > .cta:first-of-type,
+.cta-container > .CtaButton:last-of-type {
+  margin-bottom: 16px;
+}
+
+.cta-container > .vta:first-of-type:last-of-type {
+  margin-bottom: 0;
+}
