@@ -5,10 +5,10 @@ export default function CompanyPage() {
   return (
     <Layout title="Company" description="" location={location}>
       <div className="Section">
-        <div class="Section__container">
-          <div class="Section__layoutContainer">
-            <div class="Section__layout">
-              <div className="ColumnLayout" data-columns="2,2">
+        <div className="Section__container">
+          <div className="Section__layoutContainer">
+            <div className="Section__layout">
+           Name
                 <section className="Copy variant--Section">
                   <header className="Copy__header">
                     <h2 className="Copy__caption">For business teams</h2>
