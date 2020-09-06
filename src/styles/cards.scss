@@ -1,30 +1,16 @@
-.card {
+.Card {
   --cardPadding: 16px;
   --cardBorderRadius: 8px;
   --cardElevation: none;
-  --cardElevation-0: inset 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-    inset 0 18px 36px -18px rgba(0, 0, 0, 0.3);
-  --cardElevation-1: 0 2px 5px -1px rgba(50, 50, 93, 0.25),
-    0 1px 3px -1px rgba(0, 0, 0, 0.3);
-  --cardElevation-2: 0 6px 12px -2px rgba(50, 50, 93, 0.25),
-    0 3px 7px -3px rgba(0, 0, 0, 0.3);
-  --cardElevation-3: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-    0 8px 16px -8px rgba(0, 0, 0, 0.3);
-  --cardElevation-4: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
-    0 18px 36px -18px rgba(0, 0, 0, 0.3);
-  --cardElevation-5: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
-    0 30px 60px -30px rgba(0, 0, 0, 0.3);
 
   border-radius: var(--cardBorderRadius);
   background: var(--cardBackground);
   box-shadow: var(--cardElevation);
   padding: var(--cardPadding);
 
-  .elevation {
-    @for $i from 0 through 5 {
-      &-#{$i} {
-        --cardElevation: var(--cardElevation-#{$i});
-      }
+  @for $i from 0 through 5 {
+    &.elevation-#{$i} {
+      --cardElevation: var(--elevation-#{$i});
     }
   }
 }

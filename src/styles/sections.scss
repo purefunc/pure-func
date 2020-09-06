@@ -1,6 +1,6 @@
 // SECTION
 // TODO WIP
-.section {
+.Section {
   --sectionAnglePaddingTopBase: calc(
     var(--sectionAnglePaddingBaseMin) * 1px +
       (var(--sectionAnglePaddingTopBaseMax) - var(--sectionAnglePaddingBaseMin)) *
@@ -58,27 +58,27 @@
   );
 }
 
-// .section__container {
-//   position: relative;
-//   z-index: 1;
-//   display: -webkit-box;
-//   display: flex;
-//   -webkit-box-pack: center;
-//   justify-content: center;
-// }
+.Section__container {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
 
-// .section__layoutContainer {
-//   width: 100%;
-//   max-width: var(--layoutWidth);
-//   margin: 0 var(--columnPaddingNormal);
-// }
+.Section__layoutContainer {
+  width: 100%;
+  max-width: var(--layoutWidth);
+  margin: 0 var(--columnPaddingNormal);
+}
 
-// .section__layout {
-//   padding: var(--sectionPaddingTop) 0 var(--sectionPaddingBottom);
-// }
+.Section__layout {
+  padding: var(--sectionPaddingTop) 0 var(--sectionPaddingBottom);
+}
 
 @media (min-width: 1112px) {
-  .section {
+  .Section {
     --sectionAnglePaddingTopBase: calc(
       var(--sectionAnglePaddingTopBaseMax) * 1px
     );

@@ -58,6 +58,48 @@
 //   }
 // }
 
+/* --- Container Classes --- */
+// .container {
+//   padding: var(--topSectionPadding) 0 var(--bottomSectionPadding) 0;
+// }
+
+// /* Vertical margins wrapper */
+// .margins {
+//   margin: var(--margins);
+// }
+
+// .no-margins {
+//   margin: 0;
+// }
+
+// .no-top-margin {
+//   margin-top: 0;
+// }
+
+// /* Only top section padding */
+// .top-padding {
+//   padding-top: var(--topSectionPadding);
+// }
+
+// /* Only bottom section padding */
+// .bottom-padding {
+//   padding-bottom: var(--bottomSectionPadding);
+// }
+
+// /* --- Mobile Classes (Below medium screen size) --- */
+// @media (max-width: 880px) {
+//   /* Change order of grid item on mobile
+//   ? This class should be placed on the first item in a grid with 2 desktop columns to change it's order on mobile
+// */
+//   .mobile-reverse-item {
+//     grid-row: 2;
+//   }
+//   /* Hide item on mobile */
+//   .hide-mobile {
+//     display: none;
+//   }
+// }
+
 // COLS
 
 @media (min-width: 600px) {
@@ -79,7 +121,6 @@
   --columnRowGap: var(--rowGapLarge);
   display: grid;
   row-gap: var(--columnRowGap);
-  -webkit-box-align: start;
   align-items: flex-start;
 }
 
@@ -123,7 +164,6 @@
   display: grid;
   grid: auto/repeat(var(--gridColumnCount), 1fr);
   justify-items: center;
-  -webkit-box-align: center;
   align-items: center;
   row-gap: var(--gridRowGap);
 }

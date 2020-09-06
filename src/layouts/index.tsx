@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Header from "../components/header/Header"
-import Footer from "../components/footer"
+import Footer from "../components/footer/Footer"
 
 import "../styles/vars.scss"
 import "../styles/reset.scss"
@@ -17,20 +17,10 @@ import "../styles/classes.scss"
 import "../styles/themes.scss"
 
 const Layout = ({ children, location, description, title }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <>
       <SEO title={title} description={description} location={location} />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header />
       <main>{children}</main>
       <Footer />
     </>

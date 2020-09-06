@@ -1,15 +1,15 @@
-.header-container {
+.Header {
   position: relative;
   max-width: calc(var(--columnPaddingNormal) * 2 + var(--layoutWidth));
   margin: 0 auto;
   padding: 0 var(--columnPaddingNormal);
-  .nav-container {
+  .InnerHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 56px;
     padding: 32px var(--columnPaddingNormal) 12px;
-    .desktop-nav {
+    .MainNav {
       display: none;
       ul {
         display: flex;
@@ -19,13 +19,13 @@
 }
 
 @media only screen and (min-width: 600px) {
-  .header-container {
-    .nav-container {
+  .Header {
+    .InnerHeader {
       padding: 12px var(--columnPaddingNormal);
-      .mobile-nav {
+      .MobileNav {
         display: none;
       }
-      .desktop-nav {
+      .MainNav {
         display: block;
       }
     }

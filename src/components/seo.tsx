@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+// TODO Update
 type Props = {
   description?: string
   meta?: []
@@ -9,7 +10,12 @@ type Props = {
   location: object
 }
 
-function SEO({ description = "", meta = [], title, location }: Props) {
+export default function SEO({
+  description = "",
+  meta = [],
+  title,
+  location,
+}: Props) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -70,5 +76,3 @@ function SEO({ description = "", meta = [], title, location }: Props) {
     />
   )
 }
-
-export default SEO
