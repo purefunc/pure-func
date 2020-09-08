@@ -1,0 +1,44 @@
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: var(--heading-#{$i});
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--fontWeightBold);
+  font-family: var(--headingFamily);
+  line-height: 1.15;
+  max-width: var(--maxTextWidth);
+  margin: var(--headingMargins);
+  letter-spacing: 0.2px;
+  &.caption {
+    margin-top: 0;
+    font-size: var(--paragraphFontSize);
+    color: var(--accentColor);
+  }
+  &.title {
+    color: var(--titleColor);
+  }
+}
+
+p {
+  font-weight: var(--fontWeightNormal);
+  font-family: var(--bodyFamily);
+  line-height: 1.555555556;
+  max-width: var(--maxTextWidth);
+  margin-bottom: var(--paragraphGap);
+  font-size: var(--paragraphFontSize);
+  letter-spacing: 0.2px;
+  &.small,
+  small {
+    font-size: var(--smallFontSize);
+  }
+  &.large {
+    font-size: var(--largeFontSize);
+  }
+}

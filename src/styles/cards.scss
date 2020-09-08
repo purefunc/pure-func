@@ -8,6 +8,13 @@
   box-shadow: var(--cardElevation);
   padding: var(--cardPadding);
 
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
   @for $i from 0 through 5 {
     &.elevation-#{$i} {
       --cardElevation: var(--elevation-#{$i});

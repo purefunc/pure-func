@@ -1,26 +1,14 @@
-// SECTION
-// TODO WIP
 .Section {
-  --sectionAnglePaddingTopBase: calc(
-    var(--sectionAnglePaddingBaseMin) * 1px +
-      (var(--sectionAnglePaddingTopBaseMax) - var(--sectionAnglePaddingBaseMin)) *
-      (var(--windowWidth) - 375px) / 737
-  );
-  --sectionAnglePaddingBottomBase: calc(
-    var(--sectionAnglePaddingBaseMin) * 1px +
-      (
-        var(--sectionAnglePaddingBottomBaseMax) -
-          var(--sectionAnglePaddingBaseMin)
-      ) * (var(--windowWidth) - 375px) / 737
-  );
-  --sectionAnglePaddingTop: calc(
-    var(--sectionAngleHeight) + var(--sectionAnglePaddingTopBase) -
-      var(--sectionAngleSin) * var(--gutterWidth)
-  );
-  --sectionAnglePaddingBottom: calc(
-    var(--sectionAngleHeight) + var(--sectionAnglePaddingBottomBase) -
-      var(--sectionAngleSin) * var(--gutterWidth)
-  );
+  --sectionPaddingNormalMax: 128;
+  --sectionPaddingSmallMax: 110;
+  --sectionPaddingMin: 72;
+  --sectionPaddingMax: var(--sectionPaddingNormalMax);
+  --sectionPaddingTopMax: var(--sectionPaddingMax);
+  --sectionPaddingBottomMax: var(--sectionPaddingMax);
+  --sectionMarginBottom: 0;
+  --sectionOverflow: hidden;
+  --sectionBackgroundOverflow: visible;
+
   --sectionPaddingTop: calc(
     var(--sectionPaddingMin) * 1px +
       (var(--sectionPaddingTopMax) - var(--sectionPaddingMin)) *
@@ -32,59 +20,14 @@
       (var(--windowWidth) - 375px) / 737
   );
 
-  --sectionAngleSin: var(--angleNormalSin);
-  --sectionAngle: 0;
-  --sectionPaddingNormalMax: 128;
-  --sectionPaddingSmallMax: 110;
-  --sectionPaddingMin: 72;
-  --sectionPaddingMax: var(--sectionPaddingNormalMax);
-  --sectionPaddingTopMax: var(--sectionPaddingMax);
-  --sectionPaddingBottomMax: var(--sectionPaddingMax);
-  --sectionMarginBottom: 0;
-  --sectionAngleHeight: calc(var(--windowWidth) * var(--sectionAngleSin));
-  --sectionAnglePaddingBaseMin: 100;
-  --sectionAnglePaddingBaseMax: var(--sectionPaddingMax);
-  --sectionAnglePaddingTopBaseMax: var(--sectionAnglePaddingBaseMax);
-  --sectionAnglePaddingBottomBaseMax: var(--sectionAnglePaddingBaseMax);
-  --sectionOverflow: hidden;
-  --sectionTransformOrigin: 100% 0;
-  --sectionBackgroundOverflow: visible;
   position: relative;
   z-index: 1;
   margin-bottom: var(--sectionMarginBottom);
   color: var(--textColor);
-  scroll-margin-top: calc(
-    var(--fixedNavHeight) + var(--fixedNavSpacing) - var(--sectionPaddingTop)
-  );
-}
-
-.Section__container {
-  position: relative;
-  z-index: 1;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-}
-
-.Section__layoutContainer {
-  width: 100%;
-  max-width: var(--layoutWidth);
-  margin: 0 var(--columnPaddingNormal);
-}
-
-.Section__layout {
-  padding: var(--sectionPaddingTop) 0 var(--sectionPaddingBottom);
 }
 
 @media (min-width: 1112px) {
   .Section {
-    --sectionAnglePaddingTopBase: calc(
-      var(--sectionAnglePaddingTopBaseMax) * 1px
-    );
-    --sectionAnglePaddingBottomBase: calc(
-      var(--sectionAnglePaddingBottomBaseMax) * 1px
-    );
     --sectionPaddingTop: calc(var(--sectionPaddingTopMax) * 1px);
     --sectionPaddingBottom: calc(var(--sectionPaddingBottomMax) * 1px);
   }

@@ -1,36 +1,26 @@
-// TODO WIP
-
 html {
+  /* Layout vars*/
   --gutterWidth: 16px;
   --scrollbarWidth: 0px;
-
   --windowWidth: calc(100vw - var(--scrollbarWidth));
   --layoutWidth: calc(var(--windowWidth) - var(--gutterWidth) * 2);
   --layoutWidthMax: 1080px;
 
-  --viewportWidthSmall: 375;
-  --viewportWidthMedium: 600;
-  --viewportWidthLarge: 1112;
-  --viewportScale: calc(var(--windowWidth) / var(--viewportWidthLarge));
+  --sectionPaddingTop: 160px;
+  --sectionPaddingBottom: 160px;
 
-  --paddingTop: 160px;
-  --paddingBottom: 160px;
+  --columnPadding: 16px;
 
-  --columnPaddingNone: 0;
-  --columnPaddingNormal: 16px;
-  --columnPaddingMedium: 16px;
-  --columnPaddingLarge: 16px;
-  --columnPaddingXLarge: 16px;
-
-  --rowGapNormal: 8px;
+  --rowGap: 8px;
   --rowGapMedium: 24px;
   --rowGapLarge: 32px;
   --rowGapXLarge: 64px;
-  --rowGap: var(--rowGapNormal);
 
-  --columnCountMax: 1;
+  // --columnCountMax: 1;
   --columnWidth: calc(var(--layoutWidth) / var(--columnCountMax));
   --columnMaxWidth: calc(var(--layoutWidthMax) * 0.25);
+
+  font-size: 100%; /*16px*/
 }
 
 body {
@@ -48,72 +38,10 @@ body {
   z-index: var(--highestLevel);
 }
 
-@for $i from 1 through 6 {
-  h#{$i} {
-    font-size: var(--heading-#{$i});
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  --titleWeight: var(--fontWeightSemibold);
-  --titleLineHeight: 1.15;
-  font-weight: var(--titleWeight);
-  line-height: var(--titleLineHeight);
-  &.title {
-    color: var(--primaryColor);
-  }
-  &.subtitle {
-    --titleWeight: var(--fontWeightbold);
-    font-size: var(--baseFontSize);
-  }
-}
-
-p {
-  --bodyWeight: var(--fontWeightNormal);
-  --bodyLineHeight: 36px;
-  font-weight: var(--bodyWeight);
-  font-family: var(--fontFamily);
-  line-height: var(--titleLineHeight);
-  &.subtext {
-    color: var(--black-40);
-    font-size: var(--smallFontSize);
-  }
-  &.small {
-    font-size: var(--smallestFontSize);
-  }
-  &.large {
-    font-size: var(--largeFontSize);
-  }
-}
-
 /* Above large breakpoint */
 @media (min-width: 1112px) {
   html {
-    font-size: 24px;
     --layoutWidth: var(--layoutWidthMax);
     --gutterWidth: calc((var(--windowWidth) - var(--layoutWidth)) / 2);
-  }
-}
-
-/* Above medium breakpoint */
-@media (min-width: 900px) {
-  html {
-    --columnPaddingXLarge: 112px;
-    --columnCountMax: 4;
-  }
-}
-
-/* Above small breakpoint */
-@media (min-width: 600px) {
-  html {
-    --columnPaddingMedium: 32px;
-    --columnPaddingLarge: 64px;
-    --columnPaddingXLarge: 64px;
-    --columnCountMax: 2;
   }
 }
