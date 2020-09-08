@@ -9,8 +9,7 @@
   margin: 0 auto;
 }
 
-.container {
-  padding: var(--sectionPaddingTop) 0 var(--sectionPaddingBottom);
+.padding {
   &-top {
     padding-top: var(--sectionPaddingTop);
     &-none {
@@ -34,7 +33,7 @@
   }
 }
 
-.padding {
+.column-padding {
   padding: 0 var(--columnPadding);
 }
 

@@ -24,6 +24,7 @@
   z-index: 1;
   margin-bottom: var(--sectionMarginBottom);
   color: var(--textColor);
+  padding: var(--sectionPaddingTop) 0 var(--sectionPaddingBottom);
 }
 
 @media (min-width: 1112px) {
