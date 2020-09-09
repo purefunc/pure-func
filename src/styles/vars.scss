@@ -5,8 +5,11 @@
   /* Colors */
   --lilac: #82a8ff;
   --red: #e54b4b;
+  --navy: #0c2e4e;
+  --navy-10: #0a2540;
   --black: #252526;
-  --black-20: #4f4f4f;
+  --black-20: #425466;
+  --black-30: #4f4f4f;
   --black-40: #828282;
   --black-60: #bdbdbd;
   --white-60: #e0e0e0;
@@ -15,15 +18,26 @@
   --white: #fff;
 
   /* Theme Vars */
+  --brandColor: var(--lilac);
   --primaryColor: var(--lilac);
-  --accentColor: var(--black);
+  --secondaryColor: var(--black);
+  --accentColor: var(--black-20);
   --backgroundColor: var(--white);
-  --footerBackground: var(--black-20);
   --lineColor: var(--white-60);
-  --textColor: var(--black);
-  --titleColor: var(--textColor);
-  --cardBackground: var(--white);
+  --linkColor: var(--primaryColor);
+  --linkHoverColor: var(--primaryColor);
   --buttonColor: var(--primaryColor);
+  --buttonHoverColor: var(--primaryColor);
+  --buttonDisabledColor: var(--black-60);
+  --titleColor: var(--navy-10);
+  --textColor: var(--black-20);
+  --inputBackground: var(--white-20);
+  --inputPlaceholderColor: var(--black-60);
+  --navColor: var(--navy-10);
+  --navHoverColor: var(--navy-10);
+  --cardBackground: var(--white);
+  --footerBackground: var(--black-60);
+  --footerColor: var(--navy-10);
 
   /* Typography */
   --fontFamily: "Roboto", "Helvetica Neue", "Arial", sans-serif;

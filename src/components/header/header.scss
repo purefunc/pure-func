@@ -10,12 +10,6 @@
     padding: var(--columnPadding);
     .MainNav {
       display: none;
-      ul {
-        display: flex;
-        li + li {
-          margin-left: var(--columnPadding);
-        }
-      }
     }
   }
 }
@@ -29,6 +23,21 @@
       }
       .MainNav {
         display: block;
+        ul {
+          display: flex;
+          li {
+            font-weight: var(--fontWeightBold);
+            a {
+              color: var(--navColor);
+              &:hover {
+                color: var(--navHoverColor);
+              }
+            }
+            & + li {
+              margin-left: var(--columnPadding);
+            }
+          }
+        }
       }
     }
   }

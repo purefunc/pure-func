@@ -1,9 +1,9 @@
 import React from "react"
 import Layout from "../layouts"
 
-export default function CompanyPage() {
+export default function ServicesPage() {
   return (
-    <Layout title="Company" description="" location={location}>
+    <Layout title="Services" description="" location={location}>
       <div className="Wrapper">
         <div className="Section">
           <section>

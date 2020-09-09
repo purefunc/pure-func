@@ -3,25 +3,10 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 // Layout
-.wrapper {
+.Wrapper {
   max-width: var(--layoutWidth);
   padding: 0 var(--columnPadding);
   margin: 0 auto;
-}
-
-.padding {
-  &-top {
-    padding-top: var(--sectionPaddingTop);
-    &-none {
-      --sectionPaddingTop: 0;
-    }
-  }
-  &-bottom {
-    padding-bottom: var(--sectionPaddingBottom);
-    &-none {
-      --sectionPaddingBottom: 0;
-    }
-  }
 }
 
 .space-between {
@@ -35,6 +20,12 @@
 
 .column-padding {
   padding: 0 var(--columnPadding);
+}
+
+.margin {
+  &-0 {
+    margin: 0;
+  }
 }
 
 // TODO Cleanup with scss vars

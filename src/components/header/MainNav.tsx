@@ -9,7 +9,7 @@ export default function MainNav() {
           <Link to="/company/">Company</Link>
         </li>
         <li>
-          <Link to="/products/">Products</Link>
+          <Link to="/services/">Services</Link>
         </li>
       </ul>
     </nav>

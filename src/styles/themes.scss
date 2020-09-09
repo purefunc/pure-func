@@ -1,36 +1,22 @@
-// TODO WIP
-
-.theme {
-  &--light {
-    --backgroundColor: #fff;
-    --linkColor: var(--accentColor);
-    --linkHoverColor: #0a2540;
-    --buttonColor: var(--accentColor);
-    --buttonHoverColor: #0a2540;
-    --buttonDisabledColor: #cfd7df;
-    --titleColor: #0a2540;
-    --textColor: #425466;
-    --inputBackground: #f1f4f7;
-    --inputPlaceholderColor: #acb9c5;
-    --navColor: #0a2540;
-    --navHoverColor: #0a2540;
-    --footerColor: #0a2540;
-    --cardBackground: #fff;
-  }
+.Theme {
+  background: var(--backgroundColor);
   &--dark {
-    --backgroundColor: #0a2540;
-    --linkColor: var(--accentColor);
-    --linkHoverColor: #fff;
-    --buttonColor: var(--accentColor);
-    --buttonHoverColor: #fff;
-    --buttonDisabledColor: #6b7c93;
-    --titleColor: #fff;
-    --textColor: #adbdcc;
-    --inputBackground: #0c2e4e;
-    --inputPlaceholderColor: #b6c2cd;
-    --navColor: #fff;
-    --navHoverColor: #fff;
-    --footerColor: #fff;
-    --cardBackground: #0c2e4e;
+    --secondaryColor: var(--white);
+    --backgroundColor: var(--navy-10);
+    --lineColor: var(--white-60);
+    --linkColor: var(--primaryColor);
+    --linkHoverColor: var(--white);
+    --buttonColor: var(--primaryColor);
+    --buttonHoverColor: var(--white);
+    --buttonDisabledColor: var(--black-60);
+    --titleColor: var(--white);
+    --textColor: var(--black-60);
+    --inputBackground: var(--navy);
+    --inputPlaceholderColor: var(--black-60);
+    --navColor: var(--white);
+    --navHoverColor: var(--white);
+    --cardBackground: var(--navy);
+    --footerBackground: var(--black-20);
+    --footerColor: var(--white);
   }
 }
