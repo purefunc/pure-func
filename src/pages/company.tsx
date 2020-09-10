@@ -7,21 +7,30 @@ export default function CompanyPage() {
       <div className="Wrapper">
         <div className="Section">
           <section>
-            <h3 className="caption">For business teams</h3>
-            <h2>End-to-end billing, no code required</h2>
-
+            <h3 className="caption">For You by Us</h3>
+            <h1>Behind the Company</h1>
             <p>
-              Once you’re set up, you can create and manage subscriptions and
-              invoices—and view detailed financial reports—directly from the
-              Dashboard. Stripe doesn’t limit the number of team members you can
-              add and supports granular roles and permissions to help manage
-              access.
+              Pure Func is a web development agency commited to making blazing
+              fast, modern websites. We specialize in static e-commerce websites
+              for small companies but also offer other development solutions.
             </p>
-            <p>FOOTER STUFF HERE</p>
+            <h3>About the founder</h3>
+            <p>
+              Eric Sartorius is a digital nomad that enjoys coding from all
+              around the globe. He has been developing websites since 2014 and
+              has had the pleasure to work with clients from all corners of the
+              earth.
+            </p>
+            <p>
+              <a
+                href="https://ericsartorius.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Eric's homepage
+              </a>
+            </p>
           </section>
-          <div className="ColumnLayout" data-columns="1,3">
-            <div className="Card elevation-4">test card</div>
-          </div>
         </div>
       </div>
     </Layout>

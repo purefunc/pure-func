@@ -2,7 +2,8 @@
   background: var(--backgroundColor);
   &--dark {
     --secondaryColor: var(--white);
-    --backgroundColor: var(--navy-10);
+    --backgroundColor: var(--darkPurp);
+    --accentColor: var(--white-10);
     --lineColor: var(--white-60);
     --linkColor: var(--primaryColor);
     --linkHoverColor: var(--white);
@@ -10,13 +11,16 @@
     --buttonHoverColor: var(--white);
     --buttonDisabledColor: var(--black-60);
     --titleColor: var(--white);
-    --textColor: var(--black-60);
-    --inputBackground: var(--navy);
+    --textColor: var(--white-30);
+    --inputBackground: var(--purp);
     --inputPlaceholderColor: var(--black-60);
     --navColor: var(--white);
     --navHoverColor: var(--white);
-    --cardBackground: var(--navy);
+    --cardBackground: var(--purp);
     --footerBackground: var(--black-20);
     --footerColor: var(--white);
+  }
+  &--grey {
+    --backgroundColor: var(--white-40);
   }
 }

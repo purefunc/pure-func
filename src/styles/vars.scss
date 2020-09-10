@@ -3,25 +3,33 @@
 
 :root {
   /* Colors */
-  --lilac: #82a8ff;
+  --lilac: #6772e5;
+  --lilac-2: #7795f8;
+  --lilac-3: #82a8ff;
+  --lilac-4: #87bbfd;
+  --purp: #555abf;
+  --darkPurp: #32325d;
   --red: #e54b4b;
   --navy: #0c2e4e;
   --navy-10: #0a2540;
   --black: #252526;
+  --black-10: #525f7f;
   --black-20: #425466;
   --black-30: #4f4f4f;
   --black-40: #828282;
   --black-60: #bdbdbd;
   --white-60: #e0e0e0;
   --white-40: #f2f2f2;
+  --white-30: #f6f9fc;
   --white-20: #f5f4f6;
+  --white-10: #f0f4fa;
   --white: #fff;
 
   /* Theme Vars */
-  --brandColor: var(--lilac);
+  --brandColor: var(--lilac-2);
   --primaryColor: var(--lilac);
   --secondaryColor: var(--black);
-  --accentColor: var(--black-20);
+  --accentColor: var(--purp);
   --backgroundColor: var(--white);
   --lineColor: var(--white-60);
   --linkColor: var(--primaryColor);
@@ -29,14 +37,14 @@
   --buttonColor: var(--primaryColor);
   --buttonHoverColor: var(--primaryColor);
   --buttonDisabledColor: var(--black-60);
-  --titleColor: var(--navy-10);
+  --titleColor: var(--darkPurp);
   --textColor: var(--black-20);
   --inputBackground: var(--white-20);
   --inputPlaceholderColor: var(--black-60);
   --navColor: var(--navy-10);
   --navHoverColor: var(--navy-10);
   --cardBackground: var(--white);
-  --footerBackground: var(--black-60);
+  --footerBackground: var(--white-10);
   --footerColor: var(--navy-10);
 
   /* Typography */

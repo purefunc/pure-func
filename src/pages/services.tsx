@@ -7,9 +7,8 @@ export default function ServicesPage() {
       <div className="Wrapper">
         <div className="Section">
           <section>
-            <h3 className="caption">For business teams</h3>
-            <h2>End-to-end billing, no code required</h2>
-
+            <h2>Products and Services</h2>
+            <h3 className="caption">Let us help you</h3>
             <p>
               Once you’re set up, you can create and manage subscriptions and
               invoices—and view detailed financial reports—directly from the
@@ -17,9 +16,10 @@ export default function ServicesPage() {
               add and supports granular roles and permissions to help manage
               access.
             </p>
-            <p>FOOTER STUFF HERE</p>
           </section>
           <div className="ColumnLayout" data-columns="1,3">
+            <div className="Card elevation-2">test card</div>
+            <div className="Card elevation-3">test card</div>
             <div className="Card elevation-4">test card</div>
           </div>
         </div>

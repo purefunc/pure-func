@@ -16,12 +16,12 @@ h6 {
   max-width: var(--maxTextWidth);
   margin: var(--headingMargins);
   letter-spacing: 0.2px;
+  color: var(--titleColor);
   &.caption {
     margin-top: 0;
     font-size: var(--paragraphFontSize);
     color: var(--accentColor);
   }
-  color: var(--titleColor);
 }
 
 p {
