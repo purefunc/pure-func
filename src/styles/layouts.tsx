@@ -7,9 +7,10 @@ import { media } from "./breakpoints"
 // Used anytime you need a grid of anything.
 // Cards, Images, nearly anything
 // * cols: [1,2,3], 1
-export const ColumnLayout = styled.div`
+export const Grid = styled.div`
   display: grid;
   margin: 0 auto;
+  gap: var(--columnPadding);
   ${({ cols = [] }) => {
     if (typeof cols === "object") {
       return cols.map((_, index: number) => {
