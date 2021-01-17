@@ -4,46 +4,33 @@
   "description": "A homepage for Pure Func LLC",
   "version": "0.1.0",
   "author": "Eric Sartorius <eric@purefunc.dev>",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "web-test-runner \"src/**/*.test.tsx\"",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
+  },
   "dependencies": {
-    "framer-motion": "^2.3.0",
-    "gatsby": "^2.24.26",
-    "gatsby-image": "^2.4.14",
-    "gatsby-plugin-manifest": "^2.4.21",
-    "gatsby-plugin-offline": "^3.2.21",
-    "gatsby-plugin-react-helmet": "^3.3.10",
-    "gatsby-plugin-sass": "^2.3.12",
-    "gatsby-plugin-sharp": "^2.6.24",
-    "gatsby-plugin-styled-components": "^3.3.10",
-    "gatsby-source-filesystem": "^2.3.23",
-    "gatsby-transformer-sharp": "^2.5.12",
-    "intersection-observer": "^0.11.0",
-    "node-sass": "^4.14.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.0"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "devDependencies": {
-    "prettier": "2.0.5"
-  },
-  "keywords": [
-    "pure func"
-  ],
-  "license": "0BSD",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/purefunc/pure-func-homepage"
-  },
-  "bugs": {
-    "url": "https://github.com/purefunc/pure-func-homepage/issues"
+    "@snowpack/plugin-dotenv": "^2.0.5",
+    "@snowpack/plugin-react-refresh": "^2.4.0",
+    "@snowpack/plugin-sass": "^1.2.0",
+    "@snowpack/plugin-typescript": "^1.2.0",
+    "@snowpack/web-test-runner-plugin": "^0.2.0",
+    "@testing-library/react": "^11.0.0",
+    "@types/chai": "^4.2.13",
+    "@types/mocha": "^8.2.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/snowpack-env": "^2.3.2",
+    "@web/test-runner": "^0.12.0",
+    "chai": "^4.2.0",
+    "prettier": "^2.0.5",
+    "snowpack": "^3.0.1",
+    "typescript": "^4.0.0"
   }
 }

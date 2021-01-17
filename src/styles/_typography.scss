@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css?family=Space+Mono:400|Work+Sans:400");
+
+html {
+  font-size: var(--baseFontSize);
+}
+
+body {
+  font-family: var(--bodyFont);
+  line-height: var(--bodyLineHeight);
+  color: var(--textColor);
+  font-weight: var(--fontWeightNormal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-weight: var(--fontWeightNormal);
+  margin: var(--bodyFontMargins);
+  max-width: var(--maxTextWidth);
+}
+
+p a,
+blockquote a {
+  color: var(--textColor);
+  text-decoration: none;
+  border-bottom: solid 2px var(--primaryColor);
+}
+
+small {
+  font-size: var(--smallText);
+}
+
+@for $i from 1 through 6 {
+  h#{$i},
+  .h#{$i} {
+    font-size: var(--h#{$i});
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--titleColor);
+  margin: var(--headingMargins);
+  font-family: var(--headingFont);
+  font-weight: var(--fontWeightBold);
+  max-width: var(--maxTextWidth);
+  line-height: var(--headingLineHeight);
+}
+
+.text {
+  /* --- Utility Classes --- */
+  &-center {
+    text-align: center;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  &-largest {
+    font-size: var(--largestFontSize);
+  }
+  &-large {
+    font-size: var(--largeFontSize);
+  }
+  &-small {
+    font-size: var(--smallText);
+  }
+  /* --- Color Classes --- */
+  &-white {
+    color: var(--white);
+  }
+  &-primary {
+    color: var(--primaryColor);
+  }
+  &-secondary {
+    color: var(--secondaryColor);
+  }
+  &-accent {
+    color: var(--accentColor);
+  }
+  &-danger {
+    color: var(--dangerColor);
+  }
+  &-success {
+    color: var(--successColor);
+  }
+  &-warning {
+    color: var(--warningColor);
+  }
+}
+
+/* Type Scale Theme */
+.theme {
+  &--minor-second {
+    --fontScale: 1.067;
+  }
+  &--major-second {
+    --fontScale: 1.125;
+  }
+  &--minor-third {
+    --fontScale: 1.2;
+  }
+  &--major-third {
+    --fontScale: 1.25;
+  }
+  &--perfect-fourth {
+    --fontScale: 1.333;
+  }
+  &--augmented-fourth {
+    --fontScale: 1.414;
+  }
+  &--perfect-fifth {
+    --fontScale: 1.5;
+  }
+  &--golden-ratio {
+    --fontScale: 1.618;
+  }
+}

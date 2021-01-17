@@ -1,0 +1,138 @@
+:root {
+  /* Colors */
+
+  --purple: hsl(264, 16%, 33%); /* #524763 */
+  --purple-10: hsl(264, 16%, 43%);
+
+  --teal: hsl(180, 52%, 68%); /* #82d8d8 */
+  --teal-10: hsl(180, 52%, 78%);
+
+  --green: hsl(73, 70%, 66%); /* #cbe56c */
+  --yellow: hsl(51, 98%, 65%); /* #fde24f */
+  --red: hsl(0, 75%, 60%); /* #e54b4b */
+
+  --black: hsl(0, 0%, 20%); /* #333333 */
+  --grey: hsl(0, 0%, 85%); /* #d8d8d8 */
+  --grey-10: hsl(0, 0, 75%);
+  --white: hsl(0, 0%, 100%); /* #ffffff */
+
+  /* Colors intentions */
+  --brandColor: var(--purple);
+  --primaryColor: var(--purple);
+  --primaryLight: var(--purple-10);
+  --secondaryColor: var(--grey);
+  --secondaryLight: var(--grey-10);
+  --accentColor: var(--teal);
+  --accentLight: var(--teal-10);
+
+  --backgroundColor: var(--grey);
+  --cardBackground: var(--white);
+  --footerBackground: var(--black);
+
+  --titleColor: var(--black);
+  --textColor: var(--black);
+  --footerColor: var(--white);
+  --lineColor: var(--grey);
+
+  --dangerColor: var(--red);
+  --successColor: var(--green);
+  --warningColor: var(--yellow);
+
+  /* Styles */
+  --line: solid 1px var(--lineColor);
+
+  --headingFont: 'Fira Sans', 'Work Sans', sans-serif;
+  --bodyFont: 'Inconsolata', 'Space Mono', monospace;
+
+  --fontScale: 1.25;
+  --baseFontSize: 1em;
+
+  --h6: var(--baseFontSize);
+  --h5: calc(var(--h6) * var(--fontScale));
+  --h4: calc(var(--h5) * var(--fontScale));
+  --h3: calc(var(--h4) * var(--fontScale));
+  --h2: calc(var(--h3) * var(--fontScale));
+  --h1: calc(var(--h2) * var(--fontScale));
+
+  --smallText: calc(var(--baseFontSize) / var(--fontScale));
+  --smallestText: calc(var(--smallText) / var(--fontScale));
+
+  --maxTextWidth: 737px;
+  --fontWeightNormal: 300;
+  --fontWeightSemibold: 400;
+  --fontWeightBold: 500;
+  --headingLineHeight: 1.15;
+  --bodyLineHeight: 1.75;
+
+  /* Elevation */
+  --elevation-0: inset 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    inset 0 18px 36px -18px rgba(0, 0, 0, 0.3);
+  --elevation-1: 0 2px 5px -1px rgba(50, 50, 93, 0.25),
+    0 1px 3px -1px rgba(0, 0, 0, 0.3);
+  --elevation-2: 0 6px 12px -2px rgba(50, 50, 93, 0.25),
+    0 3px 7px -3px rgba(0, 0, 0, 0.3);
+  --elevation-3: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3);
+  --elevation-4: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3);
+  --elevation-5: 0 50px 100px -20px rgba(50, 50, 93, 0.25),
+    0 30px 60px -30px rgba(0, 0, 0, 0.3);
+
+  /* Z-Index */
+  --headerLevel: 10;
+  --modalLevel: calc(var(--headerLevel) * 10);
+  --highestLevel: calc(var(--modalLevel) * 10);
+
+  /* Animation */
+  --transitionSpeed: 300ms;
+  --hoverTransition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  /* Sizing */
+  --spaceScale: 1.25;
+  --baseSpaceSize: 1em;
+
+  --space: var(--baseSpaceSize);
+  --largeSpace: calc(var(--space) * var(--spaceScale));
+  --largestSpace: calc(var(--largeSpace) * var(--spaceScale));
+  --smallSpace: calc(var(--baseSpaceSize) / var(--spaceScale));
+  --smallestSpace: calc(var(--smallSpace) / var(--spaceScale));
+
+  --gridGap: var(--space);
+
+  --headingMargins: var(--largestSpace) 0 var(--space);
+  --bodyFontMargins: 0 0 var(--space);
+
+  /* Radii */
+  --cardRadius: 3px;
+  --inputRadius: 6px;
+  --buttonRadius: 4rem;
+
+  --headerHeight: 3rem;
+}
+
+/* Change root sizes above MEDIUM breakpoint */
+@media (min-width: 880px) {
+  :root {
+    // --margins: 8rem 0 2rem;
+    // --topSectionPadding: 12rem;
+    // --bottomSectionPadding: 12rem;
+    // --padding: 3rem;
+    // --cardPadding: 2.4rem;
+    --headerHeight: 125px;
+    --baseFontSize: 1.15em;
+    --baseSpaceSize: 1.15em;
+  }
+}
+
+/* Change root sizes above SMALL breakpoint */
+@media (min-width: 600px) {
+  :root {
+    // --baseFontSize: 112.5%;
+    // --margins: 8rem 0 2rem;
+    // --topSectionPadding: 7rem;
+    // --bottomSectionPadding: 12.5rem;
+    // --padding: 3rem;
+    // --cardPadding: 2.4rem;
+    // --headerHeight: 125px;
+  }
+}

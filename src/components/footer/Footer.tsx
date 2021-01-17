@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="Wrapper">
         <div className="Section">
           <h4>Footer</h4>
-          <div>&copy; {new Date().getFullYear()} Rachio inc.</div>
+          <div>&copy; {new Date().getFullYear()} Pure Func LLC</div>
         </div>
       </div>
     </footer>
