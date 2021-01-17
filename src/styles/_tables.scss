@@ -1,0 +1,30 @@
+table {
+  border: solid 1px #333;
+  border-radius: 6px;
+  border-spacing: 0;
+  margin: 2rem auto;
+}
+
+th {
+  font-weight: bold;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th + th {
+  border-left: solid 1px var(--lineColor);
+}
+
+tr,
+thead tr {
+  background: transparent;
+  box-shadow: inset 0 -1px var(--lineColor);
+}
+
+tbody tr:last-child {
+  box-shadow: none;
+}

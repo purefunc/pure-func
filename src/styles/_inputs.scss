@@ -1,0 +1,25 @@
+label {
+  display: block;
+  font-size: var(--smallText);
+}
+
+input,
+textarea,
+select {
+  padding: 4px 5px;
+  border: var(--line);
+  border-radius: var(--inputRadius);
+}
+
+textarea {
+  width: 100%;
+  height: 5rem;
+}
+
+::placeholder {
+  color: var(--grey);
+}
+
+select {
+  border: var(--line);
+}
