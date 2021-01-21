@@ -1,4 +1,5 @@
 import React, { FC } from 'react';
+import { AuthProvider } from './auth';
 import { LoadingProvider } from './loading';
 import { UserProvider } from './user';
 
@@ -16,7 +17,9 @@ function ProviderComposer({ contexts, children }) {
 
 export const ContextProvider: FC = ({ children }) => {
   return (
-    <ProviderComposer contexts={[<LoadingProvider />, <UserProvider />]}>
+    <ProviderComposer
+      contexts={[<LoadingProvider />, <UserProvider />, <AuthProvider />]}
+    >
       {children}
     </ProviderComposer>
   );
