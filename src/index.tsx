@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import App from './App';
+import App from './layouts/App';
 import { ApolloClient, InMemoryCache } from '@apollo/client';
 import { createUploadLink } from 'apollo-upload-client';
 import { ApolloProvider } from '@apollo/react-hooks';
@@ -19,19 +19,15 @@ const client = new ApolloClient({
   link: uploadLink,
 });
 
-const ClientApp = () => (
-  <HelmetProvider>
-    <ApolloProvider client={client}>
-      <Router>
-        <App />
-      </Router>
-    </ApolloProvider>
-  </HelmetProvider>
-);
-
 ReactDOM.render(
   <React.StrictMode>
-    <ClientApp />
+    <HelmetProvider>
+      <ApolloProvider client={client}>
+        <Router>
+          <App />
+        </Router>
+      </ApolloProvider>
+    </HelmetProvider>{' '}
   </React.StrictMode>,
   document.getElementById('root'),
 );
