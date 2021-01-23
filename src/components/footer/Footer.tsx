@@ -1,7 +1,7 @@
-import React from "react"
-import "./footer.scss"
+import React from 'react';
+import './footer.scss';
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="Footer">
       <div className="Wrapper">
@@ -11,5 +11,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

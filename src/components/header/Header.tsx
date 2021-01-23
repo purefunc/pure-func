@@ -1,8 +1,13 @@
-import React from "react"
-import { Nav } from "../nav/Nav"
+import React from 'react';
+import { Nav } from '../nav/Nav';
 
-import "./header.scss"
+import './header.scss';
 
-export default function Header() {
-  return <div className="Header">header<Nav /></div>
+export function Header() {
+  return (
+    <div className="Header">
+      header
+      <Nav />
+    </div>
+  );
 }

@@ -52,6 +52,29 @@ button.cta {
   background-color: var(--buttonBg);
 }
 
+// Button used to skip to content
+a.skip-link {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: var(--white);
+  background: var(--red);
+  &:active,
+  &:focus,
+  &:hover {
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+}
+
 .cta + .cta {
   margin-left: 20px;
 }
