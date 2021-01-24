@@ -1,16 +1,22 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export function SEO() {
+type Props = {
+  title?: string;
+  description?: string;
+};
+
+export function SEO({ title = '', description = '' }: Props) {
+  const pageTitle = title || 'Web Development Agency';
+  const pageDescription =
+    description || 'The development agency that brings the func!';
+
   return (
     <Helmet>
       <html lang="en" />
-      <title>Pure Func | Web Development Agency</title>
+      <title>{pageTitle} | Pure Func</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta
-        name="description"
-        content="The development agency that brings the func!"
-      />
+      <meta name="description" content={pageDescription} />
     </Helmet>
   );
 }

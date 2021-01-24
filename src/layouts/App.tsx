@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { ContextProvider } from '../global';
-import { Header } from '../components/header/Header';
-import { Footer } from '../components/footer/Footer';
+import { Header } from '../components/Header';
+import { Footer } from '../components/Footer';
 import { SEO } from '../components/SEO';
 import MainLayout from './MainLayout';
 
