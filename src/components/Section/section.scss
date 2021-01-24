@@ -1,0 +1,62 @@
+.section {
+  /* Theme intentions */
+  --sectionBgColor: none;
+  --sectionHeadlineColor: var(--headlineColor);
+  --sectionTextColor: var(--textColor);
+
+  &.section--theme__dark,
+  &.section--theme__primary {
+    --sectionHeadlineColor: var(--white);
+    --sectionTextColor: var(--white);
+  }
+
+  &.section--theme__dark {
+    --sectionBgColor: var(--black);
+  }
+
+  &.section--theme__primary {
+    --sectionBgColor: var(--primaryColor);
+  }
+
+  &.section--theme__white {
+    --sectionBgColor: var(--white);
+  }
+
+  /* Size intentions */
+  .section--padding {
+    --sectionPaddingNormalMax: 150;
+    --sectionPaddingSmallMax: 70;
+    --sectionPaddingMin: 40;
+    --sectionPaddingMax: var(--sectionPaddingNormalMax);
+
+    --sectionPaddingTop: calc(
+      var(--sectionPaddingMin) * 1px + (var(--sectionPaddingTopMax) - var(--sectionPaddingMin)) *
+        (var(--windowWidth) - var(--layoutWidthMin)) / var(--maxTextLayoutWidth)
+    );
+    --sectionPaddingBottom: calc(
+      var(--sectionPaddingMin) * 1px + (var(--sectionPaddingBottomMax) - var(--sectionPaddingMin)) *
+        (var(--windowWidth) - var(--layoutWidthMin)) / var(--maxTextLayoutWidth)
+    );
+
+    position: relative;
+    z-index: 1;
+    padding: var(--sectionPaddingTop) 0 var(--sectionPaddingBottom);
+
+    & > *:first-child {
+      margin-top: 0;
+    }
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  background-color: var(--sectionBgColor);
+  color: var(--sectionTextColor);
+}
+
+@media (min-width: 1112px) {
+  .section--padding {
+    --sectionPaddingTop: calc(var(--sectionPaddingTopMax) * 1px);
+    --sectionPaddingBottom: calc(var(--sectionPaddingBottomMax) * 1px);
+  }
+}

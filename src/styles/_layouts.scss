@@ -77,44 +77,6 @@
   padding: var(--space) 0;
 }
 
-.section {
-  --sectionPaddingNormalMax: 128;
-  --sectionPaddingSmallMax: 110;
-  --sectionPaddingMin: 72;
-  --sectionPaddingMax: var(--sectionPaddingNormalMax);
-  --sectionPaddingTopMax: var(--sectionPaddingMax);
-  --sectionPaddingBottomMax: var(--sectionPaddingMax);
-
-  --sectionPaddingTop: calc(
-    var(--sectionPaddingMin) * 1px +
-      (var(--sectionPaddingTopMax) - var(--sectionPaddingMin)) *
-      (var(--windowWidth) - 375px) / 737
-  );
-
-  --sectionPaddingBottom: calc(
-    var(--sectionPaddingMin) * 1px +
-      (var(--sectionPaddingBottomMax) - var(--sectionPaddingMin)) *
-      (var(--windowWidth) - 375px) / 737
-  );
-
-  position: relative;
-  z-index: 1;
-  padding: var(--sectionPaddingTop) 0 var(--sectionPaddingBottom);
-  & > *:first-child {
-    margin-top: 0;
-  }
-  & > *:last-child {
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 1112px) {
-  .section {
-    --sectionPaddingTop: calc(var(--sectionPaddingTopMax) * 1px);
-    --sectionPaddingBottom: calc(var(--sectionPaddingBottomMax) * 1px);
-  }
-}
-
 /* Size Theme */
 .theme {
   &--compact {

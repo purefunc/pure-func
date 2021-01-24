@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="wrapper">
-        <div className="section">
+        <div className="padding">
           <NavLink data-testid="logo-link" to="/" aria-label="home page">
             <Logo />
           </NavLink>
