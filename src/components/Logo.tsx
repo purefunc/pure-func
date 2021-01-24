@@ -1,14 +1,8 @@
-import React from "react"
+import React from 'react'
 
 export function Logo() {
   return (
-    <svg
-      width="172"
-      height="42"
-      viewBox="0 0 1721 426"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="172" height="42" viewBox="0 0 1721 426" fill="none" xmlns="http://www.w3.org/2000/svg">
       <title>Pure Func Logo</title>
       <g clipPath="url(#clip0)">
         <path
@@ -35,12 +29,7 @@ export function Logo() {
       />
       <defs>
         <clipPath id="clip0">
-          <rect
-            width="1721"
-            height="404.318"
-            fill="var(--white)"
-            transform="translate(0 21)"
-          />
+          <rect width="1721" height="404.318" fill="var(--white)" transform="translate(0 21)" />
         </clipPath>
       </defs>
     </svg>

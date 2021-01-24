@@ -1,26 +1,26 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import Loadable from 'react-loadable';
-import Loader from '../utilities/Loader';
-import Home from '../pages/Home';
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
+import Loadable from 'react-loadable'
+import Loader from 'utilities/Loader'
+import Home from '../pages/Home'
 
 export const About = Loadable({
   loader: async () => {
-    const c = await import('../pages/About');
-    return c.default;
+    const c = await import('../pages/About')
+    return c.default
   },
   loading: Loader,
   delay: 3000,
-});
+})
 
 export const NotFound = Loadable({
   loader: async () => {
-    const c = await import('../pages/NotFound');
-    return c.default;
+    const c = await import('../pages/NotFound')
+    return c.default
   },
   loading: Loader,
   delay: 3000,
-});
+})
 
 const MainLayout = () => {
   return (
@@ -33,7 +33,7 @@ const MainLayout = () => {
         <Route component={NotFound} />
       </Switch>
     </main>
-  );
-};
+  )
+}
 
-export default MainLayout;
+export default MainLayout

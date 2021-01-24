@@ -1,10 +1,4 @@
-import React, {
-  FC,
-  useState,
-  createContext,
-  useContext,
-  useEffect,
-} from 'react'
+import React, { FC, useState, createContext, useContext, useEffect } from 'react'
 
 export const initialLoadingValues = {
   isLoading: false,

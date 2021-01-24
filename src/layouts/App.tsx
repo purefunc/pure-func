@@ -1,10 +1,10 @@
-import React from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { ContextProvider } from '../global';
-import { Header } from '../components/Header';
-import { Footer } from '../components/Footer';
-import { SEO } from '../components/SEO';
-import MainLayout from './MainLayout';
+import React from 'react'
+import { Route, Switch } from 'react-router-dom'
+import { ContextProvider } from 'global'
+import { SEO } from 'utilities'
+import { Header } from './Header'
+import { Footer } from './Footer'
+import MainLayout from './MainLayout'
 
 const App = () => (
   <ContextProvider>
@@ -13,9 +13,9 @@ const App = () => (
       <Route component={NoMatch} />
     </Switch>
   </ContextProvider>
-);
+)
 
-const NoMatch = () => null;
+const NoMatch = () => null
 
 const AppLayout = () => (
   <>
@@ -27,6 +27,6 @@ const AppLayout = () => (
     <MainLayout />
     <Footer />
   </>
-);
+)
 
-export default App;
+export default App

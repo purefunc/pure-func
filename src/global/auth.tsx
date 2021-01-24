@@ -1,22 +1,22 @@
-import React, { createContext, useReducer, useContext, FC } from 'react';
+import React, { createContext, useReducer, useContext, FC } from 'react'
 
 type InitialStateType = {
-  displayName: string;
-  username: string;
-  isLoggedIn: boolean;
-  isAdmin: boolean;
-};
+  displayName: string
+  username: string
+  isLoggedIn: boolean
+  isAdmin: boolean
+}
 
 type ActionMap<M extends { [index: string]: any }> = {
   [Key in keyof M]: M[Key] extends undefined
     ? {
-        type: Key;
+        type: Key
       }
     : {
-        type: Key;
-        payload: M[Key];
-      };
-};
+        type: Key
+        payload: M[Key]
+      }
+}
 
 export enum Types {
   Login = 'LOGIN',
@@ -25,26 +25,26 @@ export enum Types {
 
 type AuthPayLoad = {
   [Types.Login]: {
-    displayName: string;
-    username: string;
-    isAdmin: boolean;
-  };
-  [Types.Logoff]: {};
-};
+    displayName: string
+    username: string
+    isAdmin: boolean
+  }
+  [Types.Logoff]: {}
+}
 
-export type AuthActions = ActionMap<AuthPayLoad>[keyof ActionMap<AuthPayLoad>];
+export type AuthActions = ActionMap<AuthPayLoad>[keyof ActionMap<AuthPayLoad>]
 
 export const initialAuthValues = {
   displayName: '',
   username: '',
   isLoggedIn: false,
   isAdmin: false,
-};
+}
 
 export const AuthContext = createContext<{
-  state: InitialStateType;
-  dispatch: React.Dispatch<AuthActions>;
-}>({ state: initialAuthValues, dispatch: () => null });
+  state: InitialStateType
+  dispatch: React.Dispatch<AuthActions>
+}>({ state: initialAuthValues, dispatch: () => null })
 
 const reducer = (state: InitialStateType, action: AuthActions) => {
   switch (action.type) {
@@ -54,22 +54,18 @@ const reducer = (state: InitialStateType, action: AuthActions) => {
         username: action.payload.username,
         isLoggedIn: true,
         isAdmin: action.payload.isAdmin,
-      };
+      }
     case 'LOGOFF':
-      return initialAuthValues;
+      return initialAuthValues
     default:
-      return state;
+      return state
   }
-};
+}
 
 export const AuthProvider: FC = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, initialAuthValues);
+  const [state, dispatch] = useReducer(reducer, initialAuthValues)
 
-  return (
-    <AuthContext.Provider value={{ state, dispatch }}>
-      {children}
-    </AuthContext.Provider>
-  );
-};
+  return <AuthContext.Provider value={{ state, dispatch }}>{children}</AuthContext.Provider>
+}
 
-export const useAuth = () => useContext(AuthContext);
+export const useAuth = () => useContext(AuthContext)

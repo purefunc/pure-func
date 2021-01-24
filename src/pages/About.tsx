@@ -1,5 +1,5 @@
-import React from 'react';
-import { SEO } from '../components/SEO';
+import React from 'react'
+import { SEO } from 'utilities'
 
 export default function About() {
   return (
@@ -7,5 +7,5 @@ export default function About() {
       <SEO title="About" description="All About Pure Func" />
       <h1>About page</h1>
     </>
-  );
+  )
 }

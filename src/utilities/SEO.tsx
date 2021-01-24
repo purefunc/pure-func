@@ -1,15 +1,14 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 
 type Props = {
-  title?: string;
-  description?: string;
-};
+  title?: string
+  description?: string
+}
 
 export function SEO({ title = '', description = '' }: Props) {
-  const pageTitle = title || 'Web Development Agency';
-  const pageDescription =
-    description || 'The development agency that brings the func!';
+  const pageTitle = title || 'Web Development Agency'
+  const pageDescription = description || 'The development agency that brings the func!'
 
   return (
     <Helmet>
@@ -18,5 +17,5 @@ export function SEO({ title = '', description = '' }: Props) {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content={pageDescription} />
     </Helmet>
-  );
+  )
 }

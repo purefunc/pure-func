@@ -1,9 +1,9 @@
-import React from 'react';
-import { Logo } from '../Logo';
-import { Nav } from './Nav';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { Logo } from 'components'
+import { Nav } from './Nav'
 
-import './footer.scss';
+import './footer.scss'
 
 export function Footer() {
   return (
@@ -18,5 +18,5 @@ export function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

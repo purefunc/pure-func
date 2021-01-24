@@ -1,4 +1,4 @@
-# New Project
+# Pure Func
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 

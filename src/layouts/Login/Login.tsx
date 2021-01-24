@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useContext } from 'react';
-import { AuthContext, Types } from '../../global/auth';
-import { useQuery, useMutation } from '@apollo/react-hooks';
-import gql from 'graphql-tag';
-import Cookies from 'js-cookie';
-import { Redirect } from 'react-router';
+import React, { useState, useEffect } from 'react'
+import { useAuth, Types } from 'global'
+import { useQuery, useMutation } from '@apollo/react-hooks'
+import gql from 'graphql-tag'
+import Cookies from 'js-cookie'
+import { Redirect } from 'react-router'
 
-import '../header/header.scss';
+import '../header/header.scss'
 
 const ME = gql`
   query GetMe {
@@ -15,7 +15,7 @@ const ME = gql`
       isAdmin
     }
   }
-`;
+`
 
 const LOGIN = gql`
   mutation CheckCreds($username: String!, $password: String!) {
@@ -28,35 +28,26 @@ const LOGIN = gql`
       token
     }
   }
-`;
+`
 
-export const Login = (props) => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [isCredsChecked, setIsCredsChecked] = useState(false);
-  const [isRedirecting, setIsRedirecting] = useState(false);
+export const Login = () => {
+  const { dispatch: authDispatch } = useAuth()
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+  const [isCredsChecked, setIsCredsChecked] = useState(false)
+  const [isRedirecting] = useState(false)
 
-  const { dispatch: authDispatch } = useContext(AuthContext);
-
-  const { data: credsOnServer } = useQuery(ME);
-  const [
-    login,
-    { data: loginData, loading: loginLoading, error: loginError },
-  ] = useMutation(LOGIN, {
+  const { data: credsOnServer } = useQuery(ME)
+  const [login, { data: loginData, loading: loginLoading, error: loginError }] = useMutation(LOGIN, {
     variables: {
       password,
       username,
     },
-  });
+  })
 
   // Check if user is logged in
   useEffect(() => {
-    if (
-      !isCredsChecked &&
-      credsOnServer &&
-      credsOnServer.me &&
-      credsOnServer.me.displayName
-    ) {
+    if (!isCredsChecked && credsOnServer && credsOnServer.me && credsOnServer.me.displayName) {
       authDispatch({
         type: Types.Login,
         payload: {
@@ -64,15 +55,15 @@ export const Login = (props) => {
           username: credsOnServer.me.username,
           isAdmin: credsOnServer.me.isAdmin,
         },
-      });
-      setIsCredsChecked(true);
+      })
+      setIsCredsChecked(true)
     }
-  }, [credsOnServer, isCredsChecked, authDispatch]);
+  }, [credsOnServer, isCredsChecked, authDispatch])
 
   // Authenticate from login
   useEffect(() => {
     if (loginData && loginData.login) {
-      Cookies.set('token', loginData.login.token);
+      Cookies.set('token', loginData.login.token)
       authDispatch({
         type: Types.Login,
         payload: {
@@ -80,9 +71,9 @@ export const Login = (props) => {
           username: loginData.login.user.username,
           isAdmin: loginData.login.user.isAdmin,
         },
-      });
+      })
     }
-  }, [loginData, authDispatch]);
+  }, [loginData, authDispatch])
 
   return (
     <>
@@ -91,8 +82,8 @@ export const Login = (props) => {
       ) : (
         <form
           onSubmit={(e) => {
-            e.preventDefault();
-            login();
+            e.preventDefault()
+            login()
           }}
         >
           <input
@@ -116,5 +107,5 @@ export const Login = (props) => {
         </form>
       )}
     </>
-  );
-};
+  )
+}

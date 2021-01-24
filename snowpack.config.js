@@ -27,4 +27,11 @@ module.exports = {
   buildOptions: {
     /* ... */
   },
-};
+  alias: {
+    animation: './src/animation',
+    components: './src/components',
+    hooks: './src/hooks',
+    global: './src/global',
+    utilities: './src/utilities',
+  },
+}

@@ -1,8 +1,9 @@
-import React from 'react';
-import { Nav } from './Nav';
-import { NavLink } from 'react-router-dom';
-import { Logo } from '../Logo';
-import './header.scss';
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { Logo } from 'components'
+import { Nav } from './Nav'
+
+import './header.scss'
 
 export function Header() {
   return (
@@ -16,5 +17,5 @@ export function Header() {
         <Nav />
       </div>
     </header>
-  );
+  )
 }

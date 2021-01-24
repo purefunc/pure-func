@@ -1,16 +1,16 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Portal from './Portal';
-import logo from '../logo.svg';
+import React from 'react'
+import { motion } from 'framer-motion'
+import Portal from './Portal'
+import logo from '../logo.svg'
 
 type Props = {
-  pastDelay?: boolean;
-  error?: {} | null;
-};
+  pastDelay?: boolean
+  error?: {} | null
+}
 
 const Loader = ({ pastDelay = true, error }: Props) => {
   // Error and pastDelay stuff have to do with react-loadable
-  if (error) console.error(error);
+  if (error) console.error(error)
   if (pastDelay) {
     return (
       <Portal>
@@ -18,9 +18,9 @@ const Loader = ({ pastDelay = true, error }: Props) => {
           <img src={logo} alt="" />
         </motion.div>
       </Portal>
-    );
+    )
   }
-  return null;
-};
+  return null
+}
 
-export default Loader;
+export default Loader
