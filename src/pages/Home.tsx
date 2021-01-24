@@ -3,7 +3,11 @@ import React from 'react'
 export default function Home() {
   return (
     <>
-      <h1>home page</h1>
+      <div className="wrapper">
+        <section className="section">
+          <h1>Home page</h1>
+        </section>
+      </div>
     </>
   )
 }

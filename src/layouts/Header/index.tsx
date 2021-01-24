@@ -8,7 +8,7 @@ import './header.scss'
 export function Header() {
   return (
     <header className="header flex">
-      <div className="header__inner flex">
+      <div className="header__inner flex wrapper">
         <h1 className="margin-0 logo">
           <NavLink data-testid="logo-link" to="/" aria-label="home page">
             <Logo />
