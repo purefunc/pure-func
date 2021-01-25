@@ -1,18 +1,20 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import { AboutPage, QrMenuPage, QrMenuBetaPage, NotFoundPage } from './loadables'
+import { AboutPage, QrMenuPage, QrMenuBetaPage, NotFoundPage, DashboardLayout, AdminLayout } from './loadable'
 import HomePage from '../pages'
 
-const MainLayout = () => {
+const SiteLayout = () => {
   return (
     <main id="main">
       <Switch>
-        {/* Static Routes */}
+        {/* Static Pages */}
         <Route exact path="/" component={HomePage} />
         <Route exact path="/about" component={AboutPage} />
         <Route exact path="/qr-menus" component={QrMenuPage} />
         <Route exact path="/qr-menus/beta" component={QrMenuBetaPage} />
-
+        {/* Layouts */}
+        <Route path="/dashboard" component={DashboardLayout} />
+        <Route path="/admin" component={AdminLayout} />
         {/* 404 Page */}
         <Route component={NotFoundPage} />
       </Switch>
@@ -20,4 +22,4 @@ const MainLayout = () => {
   )
 }
 
-export default MainLayout
+export default SiteLayout

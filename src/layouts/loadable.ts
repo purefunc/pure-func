@@ -32,6 +32,24 @@ export const QrMenuBetaPage = Loadable({
 
 /* Layouts */
 
+export const DashboardLayout = Loadable({
+  loader: async () => {
+    const c = await import('./DashboardLayout')
+    return c.default
+  },
+  loading: Loader,
+  delay: 3000,
+})
+
+export const AdminLayout = Loadable({
+  loader: async () => {
+    const c = await import('./AdminLayout')
+    return c.default
+  },
+  loading: Loader,
+  delay: 3000,
+})
+
 /* 404 Template */
 
 export const NotFoundPage = Loadable({
