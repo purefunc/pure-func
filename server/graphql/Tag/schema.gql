@@ -1,0 +1,20 @@
+module.exports = `
+  type Tag {
+      _id: ID!
+      name: String!
+      symbol: String
+      description: String
+  }
+
+  extend type Query {
+      tags: [Tag]
+      tag(_id: ID): Tag
+      tagByName(name: String): Tag
+  }
+
+  extend type Mutation {
+    createTag(name: String!, symbol: String, description: String): Tag
+    editTag(_id: ID!, name: String, symbol: String, description: String): Tag
+    deleteTag(_id: ID!): Tag
+  }
+`

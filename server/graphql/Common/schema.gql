@@ -1,0 +1,25 @@
+module.exports = `
+  scalar Date
+  
+  type File {
+    id: String!
+    filepath: String!
+    filename: String!
+    mimetype: String!
+    encoding: String!
+  }
+
+  type DeleteResponse {
+    n: Int
+    ok: Int
+    deletedCount: Int
+  }
+
+  type Query {
+    uploads: [File]
+  }
+
+  type Mutation {
+    singleUpload(file: Upload!): File!
+  }
+`

@@ -1,4 +1,6 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
+const httpProxy = require('http-proxy');
+const proxy = httpProxy.createServer({target: 'http://localhost:8000'});
 module.exports = {
   mount: {
     public: { url: '/', static: true },
@@ -12,6 +14,10 @@ module.exports = {
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
+    {
+      src: '/.*',
+      dest: (req, res) => proxy.web(req, res),
+    },
     { match: 'routes', src: '.*', dest: '/index.html' },
   ],
   optimize: {
