@@ -12,7 +12,7 @@ export function Section({ children, id = '', theme = '' }: Props) {
   return (
     <div id={id} className={`section ${theme ? `section--theme__${theme}` : ''}`}>
       <div className="wrapper">
-        <section className="section section--padding">{children}</section>
+        <section className="section--inner section--padding">{children}</section>
       </div>
     </div>
   )

@@ -2,11 +2,11 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import Loadable from 'react-loadable'
 import Loader from 'utilities/Loader'
-import Home from '../pages/Home'
+import Home from '../pages'
 
 export const About = Loadable({
   loader: async () => {
-    const c = await import('../pages/About')
+    const c = await import('../pages/about')
     return c.default
   },
   loading: Loader,
@@ -15,7 +15,7 @@ export const About = Loadable({
 
 export const NotFound = Loadable({
   loader: async () => {
-    const c = await import('../pages/NotFound')
+    const c = await import('../pages/not-found')
     return c.default
   },
   loading: Loader,
