@@ -1,36 +1,20 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Loadable from 'react-loadable'
-import Loader from 'utilities/Loader'
-import Home from '../pages'
-
-export const About = Loadable({
-  loader: async () => {
-    const c = await import('../pages/about')
-    return c.default
-  },
-  loading: Loader,
-  delay: 3000,
-})
-
-export const NotFound = Loadable({
-  loader: async () => {
-    const c = await import('../pages/not-found')
-    return c.default
-  },
-  loading: Loader,
-  delay: 3000,
-})
+import { AboutPage, QrMenuPage, QrMenuBetaPage, NotFoundPage } from './loadables'
+import HomePage from '../pages'
 
 const MainLayout = () => {
   return (
     <main id="main">
       <Switch>
         {/* Static Routes */}
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/about" component={AboutPage} />
+        <Route exact path="/qr-menus" component={QrMenuPage} />
+        <Route exact path="/qr-menus/beta" component={QrMenuBetaPage} />
+
         {/* 404 Page */}
-        <Route component={NotFound} />
+        <Route component={NotFoundPage} />
       </Switch>
     </main>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Section } from 'components'
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Section>

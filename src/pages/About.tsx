@@ -1,7 +1,7 @@
 import React from 'react'
 import { SEO } from 'utilities'
 
-export default function About() {
+export default function AboutPage() {
   return (
     <>
       <SEO title="About" description="All About Pure Func" />

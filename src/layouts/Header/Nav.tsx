@@ -18,6 +18,9 @@ export const Nav = () => {
       <NavLink to="/about" aria-label="about page">
         About
       </NavLink>
+      <NavLink to="/qr-menus" aria-label="QR menus page">
+        QR Menus
+      </NavLink>
       {!authState.isLoggedIn && <Login />}
       {authState.isLoggedIn && (
         <>
