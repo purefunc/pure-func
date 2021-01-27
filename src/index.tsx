@@ -11,7 +11,7 @@ import './styles/index.scss'
 
 const uploadLink = createUploadLink({
   credentials: 'include',
-  uri: '/graphql',
+  uri: '/api/graphql',
 })
 
 const client = new ApolloClient({
