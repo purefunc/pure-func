@@ -6,3 +6,13 @@
 {"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-25 13:49:57"}
 {"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-25 13:50:15"}
 {"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-27 13:09:43"}
+{"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-28 21:05:56"}
+{"level":"error","message":"Mongoose connection error: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/","timestamp":"2021-01-28 21:06:27"}
+{"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-29 12:45:24"}
+{"message":"Login error","level":"error","service":"drew-site","timestamp":"2021-01-29 12:49:04"}
+{"level":"error","service":"drew-site","timestamp":"2021-01-29 12:49:04","message":"Invalid username","stack":"Error: Invalid username\n    at login (C:\\Users\\ryanb\\OneDrive\\Desktop\\purefunc\\pure-func\\server\\graphql\\Users\\mutations.js:103:17)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"}
+{"message":"Login error","level":"error","service":"drew-site","timestamp":"2021-01-29 12:49:05"}
+{"level":"error","service":"drew-site","timestamp":"2021-01-29 12:49:05","message":"Invalid username","stack":"Error: Invalid username\n    at login (C:\\Users\\ryanb\\OneDrive\\Desktop\\purefunc\\pure-func\\server\\graphql\\Users\\mutations.js:103:17)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"}
+{"message":"Login error","level":"error","service":"drew-site","timestamp":"2021-01-29 12:49:06"}
+{"level":"error","service":"drew-site","timestamp":"2021-01-29 12:49:06","message":"Invalid username","stack":"Error: Invalid username\n    at login (C:\\Users\\ryanb\\OneDrive\\Desktop\\purefunc\\pure-func\\server\\graphql\\Users\\mutations.js:103:17)\n    at processTicksAndRejections (internal/process/task_queues.js:93:5)"}
+{"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-29 13:09:57"}
