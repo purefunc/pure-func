@@ -1,0 +1,13 @@
+.BannerWrapper {
+  h4 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    color: var(--textColor);
+    padding: var(--cardPadding);
+    box-shadow: var(--elevation-5);
+    background: linear-gradient(#e3cdfa, #c1a7c7);
+  }
+}
