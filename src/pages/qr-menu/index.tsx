@@ -1,12 +1,11 @@
 import React from 'react'
-import { Banner, Section } from 'components'
+import { Section } from 'components'
 import { SEO } from 'utilities'
 
 export default function QrMenuPage() {
   return (
     <>
       <SEO title="QR Menus" description="We have QR Menus!" />
-      <Banner />
       <Section>
         <>
           <div className="grid">
