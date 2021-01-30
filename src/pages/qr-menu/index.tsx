@@ -1,5 +1,6 @@
 import React from 'react'
-import { Section } from 'components'
+import { Link } from 'react-router-dom'
+import { Section, Plans } from 'components'
 import { SEO } from 'utilities'
 
 export default function QrMenuPage() {
@@ -40,6 +41,15 @@ export default function QrMenuPage() {
               device, giving every customer the chance to find their new favorite dish.
             </p>
           </div>
+        </div>
+      </Section>
+      <Plans />
+      <Section theme="white">
+        <div className="margin-top-0">
+        <h2>
+            Ready to ride the QR wave?
+          </h2>
+          <Link to="" className="cta">Contact</Link>
         </div>
       </Section>
     </>
