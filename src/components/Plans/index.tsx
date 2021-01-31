@@ -5,8 +5,7 @@ export function Plans() {
     return (
         <Section>
             <>
-            <div>
-            <h2 className="margin-top-0"
+            <h2
             //   style={{
             //      display: "inline-flex",
             //      fontSize: "var(--heading-one)",
@@ -15,19 +14,17 @@ export function Plans() {
             >
               Find a plan that works for you.
             </h2>
-            <h4 className="">
+            <h4>
               Whether you’re a small local business or a rapidly expanding
               chain, we offer plans for restaurants and hotels of all sizes.
               Explore our subscription tiers to find the perfect fit.
             </h4>
-            </div>
-            <div>
             <div className="grid">
               <div className="card">
-                <h3 className="">
+                <h3>
                   <strong>Basic</strong>
                 </h3>
-                <h4 className="">$4.99/Month</h4>
+                <h4>$4.99/Month</h4>
                 <hr />
                 <ul>
                   <li>Black and White QR Code image</li>
@@ -40,10 +37,10 @@ export function Plans() {
                 </p>
               </div>
               <div className="card">
-                <h3 className="">
+                <h3>
                   <strong>Pro</strong>
                 </h3>
-                <h4 className="">
+                <h4>
                   $19.99/Month
                 </h4>
                 <hr />
@@ -69,7 +66,7 @@ export function Plans() {
                 </ul>
               </div>
               <div className="card">
-                <h3 className="">
+                <h3>
                   <strong>Expert</strong>
                 </h3>
                 <p>
@@ -78,7 +75,6 @@ export function Plans() {
                 </p>
                 <h4>Coming Soon!</h4>
               </div>
-            </div>
             </div>
             </>
         </Section>

@@ -45,12 +45,12 @@ export default function QrMenuPage() {
       </Section>
       <Plans />
       <Section theme="white">
-        <div className="margin-top-0">
+        <>
         <h2>
             Ready to ride the QR wave?
           </h2>
-          <Link to="" className="cta">Contact</Link>
-        </div>
+          <Link to="/contact" className="cta">Contact</Link>
+        </>
       </Section>
     </>
   )
