@@ -50,15 +50,6 @@ export const DashboardLayout = Loadable({
   delay: 3000,
 })
 
-export const AdminLayout = Loadable({
-  loader: async () => {
-    const c = await import('./AdminLayout')
-    return c.default
-  },
-  loading: Loader,
-  delay: 3000,
-})
-
 /* 404 Template */
 
 export const NotFoundPage = Loadable({
