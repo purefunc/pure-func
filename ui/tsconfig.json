@@ -1,5 +1,5 @@
 {
-  "include": ["src", "types"],
+  "include": ["ui/src", "ui/types"],
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
@@ -12,16 +12,16 @@
       // Add this line to get types for streaming imports (packageOptions.source="remote"):
       //     "*": [".snowpack/types/*"]
       // More info: https://www.snowpack.dev/guides/streaming-imports
-      "animation": ["./src/animation"],
-      "animation*": ["./src/animation*"],
-      "components": ["./src/components"],
-      "components*": ["./src/components*"],
-      "hooks": ["./src/hooks"],
-      "hooks*": ["./src/hooks*"],
-      "global": ["./src/global"],
-      "global*": ["./src/global*"],
-      "utilities": ["./src/utilities"],
-      "utilities*": ["./src/utilities*"]
+      "animation": ["ui/src/animation"],
+      "animation*": ["ui/src/animation*"],
+      "components": ["ui/src/components"],
+      "components*": ["ui/src/components*"],
+      "hooks": ["ui/src/hooks"],
+      "hooks*": ["ui/src/hooks*"],
+      "global": ["ui/src/global"],
+      "global*": ["ui/src/global*"],
+      "utilities": ["ui/src/utilities"],
+      "utilities*": ["ui/src/utilities*"]
     },
     /* noEmit - Snowpack builds (emits) files, not tsc. */
     "noEmit": true,
