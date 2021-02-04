@@ -27,4 +27,5 @@ module.exports.connect = uri => {
   require("./availability")
   require("./discount")
   require("./team")
+  require("./role")
 }

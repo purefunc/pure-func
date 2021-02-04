@@ -12,6 +12,7 @@ const userResolver = require("./Users/resolver")
 const availabilityResolver = require("./Availability/resolver")
 const discountResolver = require("./Discount/resolver")
 const teamResolver = require("./Team/resolver")
+const roleResolver = require("./Role/resolver")
 
 const commonTypeDef = require("./Common/schema.gql")
 const tagTypeDef = require("./Tag/schema.gql")
@@ -24,6 +25,7 @@ const userTypeDef = require("./Users/schema.gql")
 const availabilityTypeDef = require("./Availability/schema.gql")
 const discountTypeDef = require("./Discount/schema.gql")
 const teamTypeDef = require("./Team/schema.gql")
+const roleTypeDef = require("./Role/schema.gql")
 
 const commonMutations = require("./Common/mutation")
 const tagMutations = require("./Tag/mutations")
@@ -36,6 +38,7 @@ const userMutations = require("./Users/mutations")
 const availabilityMutations = require("./Availability/mutations")
 const discountMutations = require("./Discount/mutations")
 const teamMutations = require("./Team/mutations")
+const roleMutations = require("./Role/mutations")
 
 const queries = merge(
   commonResolver,
@@ -48,7 +51,8 @@ const queries = merge(
   userResolver,
   availabilityResolver,
   discountResolver,
-  teamResolver
+  teamResolver,
+  roleResolver
 )
 const mutations = merge(
   commonMutations,
@@ -61,7 +65,8 @@ const mutations = merge(
   userMutations,
   availabilityMutations,
   discountMutations,
-  teamMutations
+  teamMutations,
+  roleMutations
 )
 const resolvers = merge(queries, mutations)
 
@@ -87,7 +92,8 @@ const apolloServer = new ApolloServer({
     userTypeDef,
     availabilityTypeDef,
     discountTypeDef,
-    teamTypeDef
+    teamTypeDef,
+    roleTypeDef
   ]
 })
 
