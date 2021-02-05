@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Section, Plans } from 'components'
 import { SEO } from 'utilities'
+import phoneImg from '../../images/qr-menu/phone-qr.png'
 
 export default function QrMenuPage() {
   return (
@@ -25,7 +26,9 @@ export default function QrMenuPage() {
       </Section>
       <Section theme="white">
         <div className="grid">
-          <div>IMAGE</div>
+          <div>
+            <img alt="phone" src={phoneImg} />
+          </div>
           <div>
             <h2>Update your offerings without all the hassle.</h2>
             <p className="large">
