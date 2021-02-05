@@ -37,6 +37,7 @@ module.exports = {
     animation: './src/animation',
     components: './src/components',
     hooks: './src/hooks',
+    images: './src/images',
     global: './src/global',
     utilities: './src/utilities',
   },
