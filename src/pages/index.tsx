@@ -23,13 +23,15 @@ export default function HomePage() {
         </div>
       </Section>
       <Section isSkewed>
-        <h2>Services</h2>
-        <p>
-          From business card sites to booming e-commerce platforms, our team offers a wide range of services that will
-          meet all of your development needs. Go big with a brand-new full stack site, refresh your old design with a
-          modern makeover, or hit the ground running with a semi-custom template—our highly skilled developers have got
-          you covered.
-        </p>
+        <>
+          <h2>Services</h2>
+          <p>
+            From business card sites to booming e-commerce platforms, our team offers a wide range of services that will
+            meet all of your development needs. Go big with a brand-new full stack site, refresh your old design with a
+            modern makeover, or hit the ground running with a semi-custom template—our highly skilled developers have
+            got you covered.
+          </p>
+        </>
       </Section>
       <Section theme="primary" isSkewed>
         <div className="card">
@@ -55,6 +57,49 @@ export default function HomePage() {
               yourself.
             </p>
           </div>
+        </div>
+      </Section>
+      <Section isSkewed>
+        <>
+          <h2>What Sets Us Apart</h2>
+          <div className="grid grid-cols-3">
+            <div className="card">
+              <h5>An Ultramodern Approach</h5>
+              <p>
+                We’re constantly studying and experimenting with emerging, state-of-the-art technologies that will give
+                your website a competitive edge. Our team leverages the latest and greatest frameworks, languages, and
+                architectures to create the most performant solution possible.
+              </p>
+            </div>
+            <div className="card">
+              <h5>Fully Custom Solutions</h5>
+              <p>
+                From loading times to error handling, the quality of your customer experience hinges on the quality of
+                the code that powers it. That’s why we craft every website from scratch, creating a fully custom
+                masterpiece that fulfills all of your needs with speed and efficiency.
+              </p>
+            </div>
+            <div className="card">
+              <h5>A Global Perspective</h5>
+              <p>
+                Our team has worked with clients from all over the world, accommodating a wide variety of timezones and
+                languages. Whether you’re already targeting an international audience or looking to expand, a global
+                perspective is key for success in today’s interconnected world.
+              </p>
+            </div>
+          </div>
+        </>
+      </Section>
+      <Section theme="primary" isSkewed>
+        <div className="card">
+          <h2>Get In Touch</h2>
+          <p>
+            Potential client? Curious new developer? #1 Pure Func fan? As long as you're not a robot, we want to hear
+            from you! Fill out our contact form, and a member of our team will be in touch as soon as possible.
+          </p>
+          <Link to="/contact" className="cta">
+            Contact Us
+          </Link>
         </div>
       </Section>
     </>

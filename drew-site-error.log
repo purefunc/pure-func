@@ -6,6 +6,7 @@
 {"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-25 13:49:57"}
 {"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-25 13:50:15"}
 {"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-27 13:09:43"}
+<<<<<<< HEAD
 {"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-28 18:02:55"}
 {"level":"error","message":"Mongoose connection error: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/","timestamp":"2021-01-28 18:03:26"}
 {"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-28 18:43:19"}
@@ -26,3 +27,21 @@
 {"level":"info","message":"Server is running on port 8000","timestamp":"2021-02-04 15:55:20"}
 {"level":"info","message":"Server is running on port 8000","timestamp":"2021-02-07 09:45:07"}
 {"level":"info","message":"Server is running on port 8000","timestamp":"2021-02-07 09:47:51"}
+=======
+{"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-28 17:21:02"}
+{"level":"error","message":"Mongoose connection error: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/","timestamp":"2021-01-28 17:21:32"}
+{"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-28 17:25:23"}
+{"level":"error","message":"Mongoose connection error: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/","timestamp":"2021-01-28 17:25:53"}
+{"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-28 17:27:41"}
+{"level":"error","message":"Mongoose connection error: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/","timestamp":"2021-01-28 17:28:11"}
+{"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-28 17:47:36"}
+{"level":"error","message":"Mongoose connection error: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/","timestamp":"2021-01-28 17:48:06"}
+{"level":"info","message":"Server is running on port 8000","timestamp":"2021-01-28 21:41:05"}
+{"level":"error","message":"Mongoose connection error: MongooseServerSelectionError: Could not connect to any servers in your MongoDB Atlas cluster. One common reason is that you're trying to access the database from an IP that isn't whitelisted. Make sure your current IP address is on your Atlas cluster's IP whitelist: https://docs.atlas.mongodb.com/security-whitelist/","timestamp":"2021-01-28 21:41:35"}
+{"level":"info","message":"Server is running on port 8000","timestamp":"2021-02-03 17:57:21"}
+{"level":"info","message":"Server is running on port 8000","timestamp":"2021-02-07 13:23:13"}
+{"level":"info","message":"Server is running on port 8000","timestamp":"2021-02-07 13:25:30"}
+{"level":"info","message":"Server is running on port 8000","timestamp":"2021-02-07 13:26:28"}
+{"level":"info","message":"Server is running on port 8000","timestamp":"2021-02-07 13:34:02"}
+>>>>>>> 9ef5787acf07ab5007f99b021b21881715a0cfd5
+{"level":"info","message":"Server is running on port 8000","timestamp":"2021-02-07 14:40:33"}

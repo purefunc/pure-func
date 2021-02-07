@@ -28,8 +28,21 @@
   }
   &--cancel {
     --buttonBg: var(--dangerColor);
-    --buttonTextColor: white;
+    --buttonTextColor: var(--white);
     --buttonHoverBg: var(--dangerColor);
+  }
+  &--white {
+    --buttonBg: var(--white);
+    --buttonTextColor: var(--primaryColor);
+    --buttonHoverBg: var(--white);
+    --buttonHoverColor: var(--primaryColor);
+  }
+  &--white-ghost {
+    --buttonBorder: 2px solid var(--white);
+    --buttonTextColor: var(--white);
+    --buttonBg: transparent;
+    --buttonShadow: none;
+    --buttonHoverBorderColor: var(--white);
   }
   &--ghost {
     --buttonBorder: 2px solid var(--primaryColor);
@@ -49,7 +62,6 @@ button.cta {
   padding-right: 16px;
   -webkit-transition-property: background-color, opacity;
   transition-property: background-color, opacity;
-  background-color: var(--buttonBg);
 }
 
 // Button used to skip to content

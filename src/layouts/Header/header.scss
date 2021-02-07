@@ -1,22 +1,20 @@
 .header {
-  --headerBg: var(--black);
+  --headerBg: transparent;
   background: var(--headerBg);
   top: 0;
   width: 100%;
   height: var(--headerHeight);
   z-index: var(--headerLevel);
   position: fixed;
-  box-shadow: var(--elevation-2);
+  // box-shadow: var(--elevation-2);
   .header__inner {
     position: relative;
     padding: 0 var(--space);
     margin: 0 auto;
     height: 100%;
     width: 100%;
-    nav {
-      a {
-        color: var(--white);
-      }
+    nav .nav-link {
+      color: var(--white);
     }
   }
 }
