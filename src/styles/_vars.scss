@@ -28,7 +28,7 @@
 
   --backgroundColor: var(--grey);
   --cardBackground: var(--white);
-  --footerBackground: var(--black);
+  // --footerBackground: var(--black);
 
   --titleColor: var(--black);
   --textColor: var(--black);
@@ -42,8 +42,8 @@
   /* Styles */
   --line: solid 1px var(--lineColor);
 
-  --headingFont: 'Fira Sans', 'Work Sans', sans-serif;
-  --bodyFont: 'Inconsolata', 'Space Mono', monospace;
+  --bodyFont: 'Fira Sans', 'Work Sans', sans-serif;
+  --headingFont: 'Inconsolata', 'Space Mono', monospace;
 
   --fontScale: 1.25;
   --baseFontSize: 1em;

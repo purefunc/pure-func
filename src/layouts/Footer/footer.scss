@@ -1,9 +1,11 @@
 .footer {
-  background: var(--footerBackground);
   color: var(--footerColor);
-  nav {
-    a {
-      color: var(--white);
-    }
+  background: var(--primaryColor);
+  &--grid {
+    // display: grid;
+    // grid-template-columns: 1fr minmax(0, 4fr);
+  }
+  &--bottom {
+    background: var(--black);
   }
 }

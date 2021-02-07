@@ -1,8 +1,9 @@
 html {
   /* Layout vars */
-  --layoutWidthMax: 1140px;
+  --layoutWidthMax: 1246px;
   --layoutWidthMin: 375px;
   --scrollbarWidth: 0px;
+  --gutterWidth: var(--space);
   --windowWidth: calc(100vw - var(--scrollbarWidth));
   --layoutWidth: calc(var(--windowWidth) - var(--gutterWidth) * 2);
 
