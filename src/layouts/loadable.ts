@@ -41,18 +41,20 @@ export const QrMenuExamplesPage = Loadable({
 
 /* Layouts */
 
-export const DashboardLayout = Loadable({
+export const QrMenuPlansPage = Loadable({
   loader: async () => {
-    const c = await import('./DashboardLayout')
+    const c = await import('../pages/qr-menu/plans')
     return c.default
   },
   loading: Loader,
   delay: 3000,
 })
 
-export const AdminLayout = Loadable({
+/* Layouts */
+
+export const DashboardLayout = Loadable({
   loader: async () => {
-    const c = await import('./AdminLayout')
+    const c = await import('./DashboardLayout')
     return c.default
   },
   loading: Loader,

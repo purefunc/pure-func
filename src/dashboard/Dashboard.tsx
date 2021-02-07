@@ -1,7 +1,7 @@
 import React from 'react'
 import { SEO } from 'utilities'
 
-export default function Dashboard() {
+export function Dashboard() {
   return (
     <>
       <SEO title="Dashboard" />

@@ -7,7 +7,7 @@ import {
   QrMenuExamplesPage,
   NotFoundPage,
   DashboardLayout,
-  AdminLayout,
+  QrMenuPlansPage,
 } from './loadable'
 import HomePage from '../pages'
 
@@ -21,9 +21,9 @@ const SiteLayout = () => {
         <Route exact path="/qr-menus" component={QrMenuPage} />
         <Route exact path="/qr-menus/beta" component={QrMenuBetaPage} />
         <Route exact path="/qr-menus/examples" component={QrMenuExamplesPage} />
+        <Route exact path="/qr-menus/plans" component={QrMenuPlansPage} />
         {/* Layouts */}
         <Route path="/dashboard" component={DashboardLayout} />
-        <Route path="/admin" component={AdminLayout} />
         {/* 404 Page */}
         <Route component={NotFoundPage} />
       </Switch>

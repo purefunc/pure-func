@@ -18,6 +18,8 @@
       "components*": ["./src/components*"],
       "hooks": ["./src/hooks"],
       "hooks*": ["./src/hooks*"],
+      "images":["./src/images"],
+      "images*":["./src/images*"],
       "global": ["./src/global"],
       "global*": ["./src/global*"],
       "utilities": ["./src/utilities"],
