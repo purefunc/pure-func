@@ -1,6 +1,14 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import { AboutPage, QrMenuPage, QrMenuBetaPage, NotFoundPage, DashboardLayout, AdminLayout } from './loadable'
+import {
+  AboutPage,
+  QrMenuPage,
+  QrMenuBetaPage,
+  QrMenuExamplesPage,
+  NotFoundPage,
+  DashboardLayout,
+  AdminLayout,
+} from './loadable'
 import HomePage from '../pages'
 
 const SiteLayout = () => {
@@ -12,6 +20,7 @@ const SiteLayout = () => {
         <Route exact path="/about" component={AboutPage} />
         <Route exact path="/qr-menus" component={QrMenuPage} />
         <Route exact path="/qr-menus/beta" component={QrMenuBetaPage} />
+        <Route exact path="/qr-menus/examples" component={QrMenuExamplesPage} />
         {/* Layouts */}
         <Route path="/dashboard" component={DashboardLayout} />
         <Route path="/admin" component={AdminLayout} />

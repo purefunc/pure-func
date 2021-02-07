@@ -30,6 +30,15 @@ export const QrMenuBetaPage = Loadable({
   delay: 3000,
 })
 
+export const QrMenuExamplesPage = Loadable({
+  loader: async () => {
+    const c = await import('../pages/qr-menu/examples')
+    return c.default
+  },
+  loading: Loader,
+  delay: 3000,
+})
+
 /* Layouts */
 
 export const DashboardLayout = Loadable({
