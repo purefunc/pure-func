@@ -15,12 +15,23 @@
     --sectionBgColor: var(--black);
   }
 
+  &.section--theme__grey {
+    --sectionBgColor: var(--grey);
+  }
+
   &.section--theme__primary {
-    --sectionBgColor: var(--primaryColor);
+    --sectionBgColor: var(--purpleGradient);
   }
 
   &.section--theme__white {
     --sectionBgColor: var(--white);
+  }
+
+  &.section--theme__funcy {
+    --sectionBgColor: var(--funcGradient);
+    &.section--skewed .slant {
+      opacity: 0.2;
+    }
   }
 
   /* Skewed Section */
@@ -71,7 +82,7 @@
     }
   }
 
-  background-color: var(--sectionBgColor);
+  background: var(--sectionBgColor);
   color: var(--sectionTextColor);
 }
 

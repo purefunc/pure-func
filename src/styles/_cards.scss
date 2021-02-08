@@ -2,13 +2,23 @@
   --cardPadding: 16px;
   --cardBorderRadius: 8px;
   --cardElevation: none;
+  --maxCardWidth: 680px;
 
   border-radius: var(--cardBorderRadius);
   background: var(--cardBackground);
   box-shadow: var(--cardElevation);
   padding: var(--cardPadding);
   color: var(--textColor);
-
+  max-width: var(--maxCardWidth);
+  &--func {
+    --cardBackground: var(--funcGradient);
+  }
+  &--func-2 {
+    --cardBackground: var(--funcGradient-2);
+  }
+  &--full-width {
+    --maxCardWidth: none;
+  }
   & > *:first-child {
     margin-top: 0;
   }

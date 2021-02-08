@@ -31,10 +31,47 @@ export default function HomePage() {
             modern makeover, or hit the ground running with a semi-custom template—our highly skilled developers have
             got you covered.
           </p>
+          <div className="grid">
+            <div>
+              <h3>E-Commerce Integration</h3>
+              <p>
+                Rack up sale after sale with a custom Shopify theme. Designed for your unique needs, our e-commerce
+                sites offer all of the same benefits as our fast, adaptable brochure sites but with the added power of
+                Shopify’s seamless product listing and payment integration. Whether you’re looking to start from scratch
+                or add to your existing platform, our custom Shopify themes weave powerful e-commerce functionality
+                right into your stunning site.
+              </p>
+              <Link className="cta" to="/services">
+                Learn More
+              </Link>
+            </div>
+            <div>IMAGE HERE</div>
+          </div>
+          <div className="grid">
+            <div>
+              <h3>Custom Full Stack Web Development</h3>
+              <p>
+                Our full stack websites are more than just a pretty face. Equipped with powerful backend functionality
+                along with gorgeous, responsive user interfaces, these websites can accomplish anything you need with
+                elegance and speed. The Pure Func team has experience building a wide variety of custom full stack
+                websites, including admin systems, analytics dashboards, social networks, and so much more.
+              </p>
+              <Link className="cta" to="/services">
+                Learn More
+              </Link>
+            </div>
+            <div>IMAGE HERE</div>
+          </div>
+          <h3>But Wait, There's More...</h3>
+          <p>
+            Don't see exactly what you're looking for? Check out our full list of services (link) to explore even more
+            options. If you're still not sure that we're the right fit, get in touch (link) with our team to chat about
+            a custom solution.
+          </p>
         </>
       </Section>
-      <Section theme="primary" isSkewed>
-        <div className="card">
+      <Section theme="funcy" isSkewed>
+        <div className="card text-center margin-auto">
           <h2>Clients Trust Us</h2>
           <p>
             Pure Func is able to achieve what other web developers can’t. We needed a fast website with high value
@@ -44,9 +81,9 @@ export default function HomePage() {
           <h5>Tune Kantharoup - Flying Home Studio</h5>
         </div>
       </Section>
-      <Section isSkewed>
+      <Section>
         <div className="grid">
-          <div>VID</div>
+          <div>VIDEO HERE</div>
           <div>
             <h2>Featured Project: Level Up Tutorials</h2>
             <p>
@@ -59,11 +96,11 @@ export default function HomePage() {
           </div>
         </div>
       </Section>
-      <Section isSkewed>
+      <Section isSkewed theme="grey">
         <>
           <h2>What Sets Us Apart</h2>
           <div className="grid grid-cols-3">
-            <div className="card">
+            <div className="card card--func">
               <h5>An Ultramodern Approach</h5>
               <p>
                 We’re constantly studying and experimenting with emerging, state-of-the-art technologies that will give
@@ -71,7 +108,7 @@ export default function HomePage() {
                 architectures to create the most performant solution possible.
               </p>
             </div>
-            <div className="card">
+            <div className="card card--func">
               <h5>Fully Custom Solutions</h5>
               <p>
                 From loading times to error handling, the quality of your customer experience hinges on the quality of
@@ -79,7 +116,7 @@ export default function HomePage() {
                 masterpiece that fulfills all of your needs with speed and efficiency.
               </p>
             </div>
-            <div className="card">
+            <div className="card card--func">
               <h5>A Global Perspective</h5>
               <p>
                 Our team has worked with clients from all over the world, accommodating a wide variety of timezones and
@@ -90,8 +127,9 @@ export default function HomePage() {
           </div>
         </>
       </Section>
-      <Section theme="primary" isSkewed>
-        <div className="card">
+      <Section>LOGO STRIP HERE</Section>
+      <Section theme="funcy" isSkewed>
+        <div className="card card--func-2 text-center margin-auto">
           <h2>Get In Touch</h2>
           <p>
             Potential client? Curious new developer? #1 Pure Func fan? As long as you're not a robot, we want to hear

@@ -17,6 +17,11 @@
   --grey-10: hsl(0, 0, 75%);
   --white: hsl(0, 0%, 100%); /* #ffffff */
 
+  /* Gradients */
+  --purpleGradient: linear-gradient(269.29deg, #32325d 0%, #4e34a1 99.59%);
+  --funcGradient: linear-gradient(265.13deg, #a943c9 22.71%, #82a8ff 76.07%);
+  --funcGradient-2: linear-gradient(95.04deg, rgba(85, 90, 191, 0.3) 33.05%, rgba(148, 14, 255, 0.3) 80.31%);
+
   /* Colors intentions */
   --brandColor: var(--lilac);
   --primaryColor: var(--purple);
@@ -26,7 +31,7 @@
   --accentColor: var(--teal);
   --accentLight: var(--teal-10);
 
-  --backgroundColor: var(--grey);
+  --backgroundColor: var(--white);
   --cardBackground: var(--white);
   // --footerBackground: var(--black);
 
