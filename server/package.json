@@ -6,12 +6,13 @@
   "author": "Eric Sartorius <eric@purefunc.dev>",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \"cd server && npm run server\" \"cd ../ui && npm run client\"",
-    "build": "cd ui && snowpack build",
-    "test": "cd ui && web-test-runner \"src/**/*.test.tsx\"",
-    "format": "cd ui && prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint": "cd ui && prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
-    "postinstall": "cd ui && npm i && cd ../server && npm i"
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon --use_strict server.js",
+    "client": "snowpack dev",
+    "build": "snowpack build",
+    "test": "web-test-runner \"src/**/*.test.tsx\"",
+    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
     "@apollo/client": "^3.3.7",
@@ -70,7 +71,7 @@
     "chai": "^4.2.0",
     "nodemon": "^1.19.4",
     "prettier": "^2.0.5",
-    "snowpack": "^3.0.11",
+    "snowpack": "^3.0.1",
     "typescript": "^4.0.0"
   }
 }

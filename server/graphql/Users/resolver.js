@@ -1,5 +1,5 @@
 const userDAO = require("../../models/user")
-const restaurantDAO = require("../../models/restaurant")
+const teamDAO = require("../../models/team")
 const logger = require('../../config/logger')
 
 module.exports = {
@@ -16,8 +16,8 @@ module.exports = {
     email({ email }) {
       return email
     },
-    restaurants({ restaurants }) {
-      return restaurantDAO.find({ _id: restaurants })
+    teams({ teams }) {
+      return teamDAO.find({ _id: {$in: teams} })
     },
     isAdmin({ isAdmin }) {
       return isAdmin
