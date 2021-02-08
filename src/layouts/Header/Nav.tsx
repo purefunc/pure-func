@@ -32,10 +32,10 @@ export const Nav = () => {
           </button>
         </>
       )} */}
-      <Link className="cta cta--white" to="/contact">
+      <Link className="cta cta--white cta--small" to="/contact">
         Countact Us
       </Link>
-      <button className="cta cta--white-ghost">Sign Up</button>
+      <button className="cta cta--white-ghost cta--small">Sign Up</button>
     </nav>
   )
 }
