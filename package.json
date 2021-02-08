@@ -6,7 +6,7 @@
   "author": "Eric Sartorius <eric@purefunc.dev>",
   "main": "server.js",
   "scripts": {
-    "start": "concurrently \"cd server && npm run server\" \"cd ../ui && npm run client\"",
+    "start": "concurrently \"cd server && npm run server\" \"cd ui && npm run start\"",
     "build": "cd ui && snowpack build",
     "test": "cd ui && web-test-runner \"src/**/*.test.tsx\"",
     "format": "cd ui && prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
