@@ -1,11 +1,51 @@
 .footer {
   color: var(--footerColor);
-  background: var(--primaryColor);
+  background: var(--purpleGradient);
   &--grid {
-    // display: grid;
-    // grid-template-columns: 1fr minmax(0, 4fr);
+    background: transparent;
+      padding-right: 4em;
+      padding-left: 3em;
+      padding-bottom: 2em;
+      padding-top: 2em;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: min-content min-content;
+      gap: .75em 2em;
+      grid-template-areas:
+        "logo about services sign-in"
+        "logo qr-menus contact-us sign-up";
+        & a {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 22px;
+          color: white;
+        }
   }
   &--bottom {
-    background: var(--black);
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.527);
+    background: #32325D;
+    height: 3em;
+    padding-left: 10em;
+    padding-right: 13em;
+    & a {
+      font-size: 14px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.527);
+    }
   }
 }
+
+.logo { 
+  grid-area: logo;
+  display: flex;
+  align-items:start;
+}
+.about { grid-area: about; }
+.qr-menus { grid-area: qr-menus; }
+.services { grid-area: services; }
+.contact-us { grid-area: contact-us; }
+.sign-in { grid-area: sign-in; }
+.sign-up { grid-area: sign-up; }

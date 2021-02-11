@@ -55,6 +55,9 @@
     --buttonPadding: 5px 25px;
     font-size: var(--smallText);
   }
+  &--footer {
+    width: 12em;
+  }
 }
 
 button.cta {
