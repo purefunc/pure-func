@@ -5,24 +5,6 @@ const logger = require("../../config/logger")
 
 module.exports = {
   Mutation: {
-    addRestaurantToUser: (_, args, { userIsAdmin }) => {
-      if (!userIsAdmin) {
-        throw new Error("Only admins can make this change")
-      }
-
-      try {
-        userDAO
-          .updateOne(
-            { _id: { $eq: args.userId } },
-            { $addToSet: { restaurants: args.restaurantId } }
-          )
-          .exec()
-        return true
-      } catch (e) {
-        logger.log("warn", "addRestaurantToUser error", e)
-        return false
-      }
-    },
     changePassword: async (_, { oldPass, newPass }, { userId }) => {
       try {
         const foundUser = await userDAO.findById(userId)

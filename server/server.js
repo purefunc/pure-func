@@ -5,15 +5,15 @@ const path = require("path")
 // const morgan = require("morgan")
 const dotenv = require("dotenv")
 dotenv.config()
-const { apolloServer } = require("./server/graphql/index")
+const { apolloServer } = require("./graphql/index")
 const jwt = require("jsonwebtoken")
 const cookieParser = require("cookie-parser")
 
-const logger = require("./server/config/logger")
+const logger = require("./config/logger")
 
 // connect to the database and load models
 const mongooseUri = process.env.DB_URI
-require("./server/models").connect(mongooseUri)
+require("./models").connect(mongooseUri)
 
 const corsOptions = {
   credentials: true,
@@ -53,7 +53,7 @@ apolloServer.applyMiddleware({
 })
 
 // routes
-app.use("/api/uploads", require("./server/routes/uploads"))
+app.use("/api/uploads", require("./routes/uploads"))
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "build")))

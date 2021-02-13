@@ -1,5 +1,5 @@
 {
-  "include": ["src", "types"],
+  "include": ["ui/src", "ui/types"],
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
