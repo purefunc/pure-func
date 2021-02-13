@@ -70,7 +70,7 @@ export default function HomePage() {
           </p>
         </>
       </Section>
-      <Section theme="funcy" isSkewed>
+      <Section theme="funky" isSkewed>
         <div className="card text-center margin-auto">
           <h2>Clients Trust Us</h2>
           <p>
@@ -128,7 +128,7 @@ export default function HomePage() {
         </>
       </Section>
       <Section>LOGO STRIP HERE</Section>
-      <Section theme="funcy" isSkewed>
+      <Section theme="funky" isSkewed>
         <div className="card card--func-2 text-center margin-auto">
           <h2>Get In Touch</h2>
           <p>
