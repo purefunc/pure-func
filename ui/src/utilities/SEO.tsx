@@ -8,7 +8,7 @@ type Props = {
 
 export function SEO({ title = '', description = '' }: Props) {
   const pageTitle = title || 'Web Development Agency'
-  const pageDescription = description || 'The development agency that brings the func!'
+  const pageDescription = description || 'The development agency with websites that bring the func!'
 
   return (
     <Helmet>
