@@ -7,7 +7,8 @@
   --sectionTextColor: var(--textColor);
 
   &.section--theme__dark,
-  &.section--theme__primary {
+  &.section--theme__primary,
+  &.section--theme_deep {
     --sectionHeadingColor: var(--white);
     --sectionTextColor: var(--white);
 
@@ -21,6 +22,17 @@
 
   &.section--theme__dark {
     --sectionBgColor: var(--black);
+  }
+
+  &.section--theme__deep {
+    --sectionBgColor: var(--deep-purple);
+    &.section--skewed.section--hero .slash {
+      --sectionBgImage: url('../../images/bg-blur.png'), var(--deep-purple);
+      background-image: var(--sectionBgImage);
+      background-size: cover;
+      background-repeat: none;
+      background-position: left center;
+    }
   }
 
   &.section--theme__grey {
@@ -44,6 +56,13 @@
 
   &.section--theme__funky {
     --sectionBgColor: var(--funcGradient);
+    &.section--skewed .slash {
+      opacity: 0.2;
+    }
+  }
+
+  &.section--theme__funky-5 {
+    --sectionBgColor: var(--funcGradient-5);
     &.section--skewed .slash {
       opacity: 0.2;
     }
@@ -113,8 +132,8 @@
     color: var(--sectionHeadingColor);
   }
   background: var(--sectionBgColor);
-  background-image: var(--sectionBgImage);
   color: var(--sectionTextColor);
+  background-image: var(--sectionBgImage);
 }
 
 @media (min-width: 1112px) {
