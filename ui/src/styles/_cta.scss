@@ -30,12 +30,14 @@
     --buttonBg: var(--dangerColor);
     --buttonTextColor: var(--white);
     --buttonHoverBg: var(--dangerColor);
+    --buttonBorder: 2px solid var(--dangerColor);
   }
   &--white {
     --buttonBg: var(--white);
     --buttonTextColor: var(--primaryColor);
     --buttonHoverBg: var(--white);
     --buttonHoverColor: var(--primaryColor);
+    --buttonBorder: 2px solid var(--white);
   }
   &--white-ghost {
     --buttonBorder: 2px solid var(--white);
@@ -43,6 +45,8 @@
     --buttonBg: transparent;
     --buttonShadow: none;
     --buttonHoverBorderColor: var(--white);
+    --buttonHoverBg: var(--white);
+    --buttonHoverColor: var(--primaryColor);
   }
   &--ghost {
     --buttonBorder: 2px solid var(--primaryColor);
@@ -58,13 +62,6 @@
   &--footer {
     width: 12em;
   }
-}
-
-button.cta {
-  padding-left: 16px;
-  padding-right: 16px;
-  -webkit-transition-property: background-color, opacity;
-  transition-property: background-color, opacity;
 }
 
 // Button used to skip to content

@@ -2,34 +2,68 @@
   position: relative;
   /* Theme intentions */
   --sectionBgColor: none;
-  --sectionHeadlineColor: var(--headlineColor);
+  --sectionBgImage: none;
+  --sectionHeadingColor: var(--headingColor);
   --sectionTextColor: var(--textColor);
 
   &.section--theme__dark,
-  &.section--theme__primary {
-    --sectionHeadlineColor: var(--white);
+  &.section--theme__primary,
+  &.section--theme_deep {
+    --sectionHeadingColor: var(--white);
     --sectionTextColor: var(--white);
+
+    .cta {
+      --buttonBg: var(--white);
+      --buttonTextColor: var(--primaryColor);
+      --buttonHoverBg: var(--white);
+      --buttonHoverColor: var(--primaryColor);
+    }
   }
 
   &.section--theme__dark {
     --sectionBgColor: var(--black);
   }
 
+  &.section--theme__deep {
+    --sectionBgColor: var(--deep-purple);
+    &.section--skewed.section--hero .slash {
+      --sectionBgImage: url('../../images/bg-blur.png'), var(--deep-purple);
+      background-image: var(--sectionBgImage);
+      background-size: cover;
+      background-repeat: none;
+      background-position: left center;
+    }
+  }
+
   &.section--theme__grey {
-    --sectionBgColor: var(--grey);
+    --sectionBgColor: var(--greyGradient);
   }
 
   &.section--theme__primary {
-    --sectionBgColor: var(--purpleGradient);
+    --sectionBgColor: var(--primaryColor);
+    &.section--skewed.section--hero .slash {
+      --sectionBgImage: url('../../images/bg-blur.png'), var(--purpleGradient);
+      background-image: var(--sectionBgImage);
+      background-size: cover;
+      background-repeat: none;
+      background-position: left center;
+    }
   }
 
   &.section--theme__white {
     --sectionBgColor: var(--white);
   }
 
-  &.section--theme__funcy {
+  &.section--theme__funky {
     --sectionBgColor: var(--funcGradient);
-    &.section--skewed .slant {
+    &.section--skewed .slash {
+      opacity: 0.2;
+    }
+  }
+
+  &.section--theme__funky-5 {
+    --sectionBgColor: var(--funcGradient-5);
+    &.section--skewed .slash {
       opacity: 0.2;
     }
   }
@@ -37,7 +71,7 @@
   /* Skewed Section */
   &.section--skewed {
     background: none;
-    .slant {
+    .slash {
       --paperSkew: -10deg;
       --skewDir: 1;
       position: absolute;
@@ -48,6 +82,13 @@
       z-index: 0;
       background: var(--sectionBgColor);
       transform: skewY(calc(var(--paperSkew) * var(--skewDir))) translateY(-50%);
+    }
+  }
+
+  &.section--hero {
+    .slash {
+      height: 125%;
+      transform: skewY(calc(var(--paperSkew) * var(--skewDir))) translateY(-70%);
     }
   }
 
@@ -82,8 +123,17 @@
     }
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--sectionHeadingColor);
+  }
   background: var(--sectionBgColor);
   color: var(--sectionTextColor);
+  background-image: var(--sectionBgImage);
 }
 
 @media (min-width: 1112px) {
@@ -92,54 +142,3 @@
     --sectionPaddingBottom: calc(var(--sectionPaddingBottomMax) * 1px);
   }
 }
-
-// export const Paper = styled.div<{
-//   reverse?: boolean
-//   inverted?: boolean
-//   skew?: string
-// }>`
-//   --paperSkew: -5deg;
-//   --skewDir: 1;
-//   position: absolute;
-//   top: 50%;
-//   left: 0;
-//   height: 100%;
-//   width: 100%;
-//   z-index: 0;
-//   box-shadow: var(--sheetShadow);
-//   background: var(--sheetBg);
-//   transform: skewY(calc(var(--paperSkew) * var(--skewDir))) translateY(-50%);
-//   ${({ skew = 'small' }) => {
-//     if (skew === 'medium') {
-//       return css`
-//         --paperSkew: -15deg;
-//       `
-//     }
-//     return css`
-//       --paperSkew: -5deg;
-//     `
-//   }}
-//   ${({ reverse }) =>
-//     reverse &&
-//     css`
-//       --skewDir: -1;
-//     `}
-//   ${({ inverted }) =>
-//     inverted &&
-//     css`
-//       box-shadow: 0px 0px 22px rgba(0, 0, 0, 0.4) inset,
-//         0px 0px 4px rgba(0, 0, 0, 0.25) inset;
-//       background: var(--black);
-//     `}
-// `
-
-// <div style="overflow: hidden;">
-//   <svg
-//     preserveAspectRatio="none"
-//     viewBox="0 0 1200 120"
-//     xmlns="http://www.w3.org/2000/svg"
-//     style={{ fill: '#ffffff', width: '122%', height: 420, transform: 'scaleX(-1)' }}
-//   >
-//     <path d="M1200 120L0 16.48V0h1200v120z" />
-//   </svg>
-// </div>

@@ -5,7 +5,7 @@ import { Section } from 'components'
 export default function HomePage() {
   return (
     <>
-      <Section theme="primary">
+      <Section isHero theme="primary">
         <div className="grid">
           <div>
             <h1 className="margin-top-0">Websites That Bring The Func</h1>
@@ -22,7 +22,7 @@ export default function HomePage() {
           <div>IMAGE</div>
         </div>
       </Section>
-      <Section isSkewed>
+      <Section>
         <>
           <h2>Services</h2>
           <p>
@@ -70,8 +70,8 @@ export default function HomePage() {
           </p>
         </>
       </Section>
-      <Section theme="funcy" isSkewed>
-        <div className="card text-center margin-auto">
+      <Section theme="funky" isSkewed>
+        <div className="card card--padded card--func-4 text-center margin-auto">
           <h2>Clients Trust Us</h2>
           <p>
             Pure Func is able to achieve what other web developers can’t. We needed a fast website with high value
@@ -98,9 +98,9 @@ export default function HomePage() {
       </Section>
       <Section isSkewed theme="grey">
         <>
-          <h2>What Sets Us Apart</h2>
-          <div className="grid grid-cols-3">
-            <div className="card card--func">
+          <h2 className="margin-auto text-center">What Sets Us Apart</h2>
+          <div className="grid grid-cols-3 margins">
+            <div className="card card--func-3">
               <h5>An Ultramodern Approach</h5>
               <p>
                 We’re constantly studying and experimenting with emerging, state-of-the-art technologies that will give
@@ -108,7 +108,7 @@ export default function HomePage() {
                 architectures to create the most performant solution possible.
               </p>
             </div>
-            <div className="card card--func">
+            <div className="card card--func-3">
               <h5>Fully Custom Solutions</h5>
               <p>
                 From loading times to error handling, the quality of your customer experience hinges on the quality of
@@ -116,7 +116,7 @@ export default function HomePage() {
                 masterpiece that fulfills all of your needs with speed and efficiency.
               </p>
             </div>
-            <div className="card card--func">
+            <div className="card card--func-3">
               <h5>A Global Perspective</h5>
               <p>
                 Our team has worked with clients from all over the world, accommodating a wide variety of timezones and
@@ -128,7 +128,7 @@ export default function HomePage() {
         </>
       </Section>
       <Section>LOGO STRIP HERE</Section>
-      <Section theme="funcy" isSkewed>
+      <Section theme="funky" isSkewed>
         <div className="card card--func-2 text-center margin-auto">
           <h2>Get In Touch</h2>
           <p>
