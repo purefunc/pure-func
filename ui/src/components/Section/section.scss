@@ -60,7 +60,8 @@
 
   &.section--hero {
     .slash {
-      top: 25%;
+      height: 125%;
+      transform: skewY(calc(var(--paperSkew) * var(--skewDir))) translateY(-70%);
     }
   }
 
