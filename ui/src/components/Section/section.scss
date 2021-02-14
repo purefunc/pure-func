@@ -2,12 +2,12 @@
   position: relative;
   /* Theme intentions */
   --sectionBgColor: none;
-  --sectionHeadlineColor: var(--headlineColor);
+  --sectionHeadingColor: var(--headingColor);
   --sectionTextColor: var(--textColor);
 
   &.section--theme__dark,
   &.section--theme__primary {
-    --sectionHeadlineColor: var(--white);
+    --sectionHeadingColor: var(--white);
     --sectionTextColor: var(--white);
 
     .cta {
@@ -23,7 +23,7 @@
   }
 
   &.section--theme__grey {
-    --sectionBgColor: var(--grey);
+    --sectionBgColor: var(--greyGradient);
   }
 
   &.section--theme__primary {
@@ -102,7 +102,7 @@
   h4,
   h5,
   h6 {
-    color: var(--sectionHeadlineColor);
+    color: var(--sectionHeadingColor);
   }
   background: var(--sectionBgColor);
   color: var(--sectionTextColor);

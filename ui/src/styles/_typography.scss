@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Space+Mono:400|Work+Sans:400");
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400|Work+Sans:400');
 
 html {
   font-size: var(--baseFontSize);
@@ -43,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--titleColor);
+  color: var(--headingColor);
   margin: var(--headingMargins);
   font-family: var(--headingFont);
   font-weight: var(--fontWeightBold);

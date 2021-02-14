@@ -2,8 +2,8 @@
   /* Colors */
   --lilac: hsl(222, 100%, 75%);
 
-  --purple: hsl(264, 16%, 33%); /* #524763 */
-  --purple-10: hsl(264, 16%, 43%);
+  --purple: hsl(237, 45%, 54%); /* #555ABF */
+  --purple-10: hsl(237, 45%, 44%);
 
   --teal: hsl(180, 52%, 68%); /* #82d8d8 */
   --teal-10: hsl(180, 52%, 78%);
@@ -21,6 +21,8 @@
   --purpleGradient: linear-gradient(269.29deg, #32325d 0%, #4e34a1 99.59%);
   --funcGradient: linear-gradient(265.13deg, #a943c9 22.71%, #82a8ff 76.07%);
   --funcGradient-2: linear-gradient(95.04deg, rgba(85, 90, 191, 0.3) 33.05%, rgba(148, 14, 255, 0.3) 80.31%);
+  --funcGradient-3: linear-gradient(82.81deg, rgba(129, 166, 252, 0.2) 28.48%, rgba(169, 67, 201, 0.15) 77.67%);
+  --greyGradient: linear-gradient(95.04deg, #eeeeee 33.05%, #fcfcfc 80.31%);
 
   /* Colors intentions */
   --brandColor: var(--lilac);
@@ -35,7 +37,7 @@
   --cardBackground: var(--white);
   // --footerBackground: var(--black);
 
-  --titleColor: var(--black);
+  --headingColor: var(--purple);
   --textColor: var(--black);
   --footerColor: var(--white);
   --lineColor: var(--grey);
@@ -88,7 +90,7 @@
   --hoverTransition: 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
 
   /* Sizing */
-  --spaceScale: 1.25;
+  --spaceScale: 1.5;
   --baseSpaceSize: 1em;
 
   --space: var(--baseSpaceSize);
@@ -99,7 +101,7 @@
 
   --gridGap: var(--space);
 
-  --headingMargins: var(--largestSpace) 0 var(--space);
+  --headingMargins: var(--largestSpace) 0 var(--smallestSpace);
   --bodyFontMargins: 0 0 var(--space);
 
   --maxTextLayoutWidth: 737;
