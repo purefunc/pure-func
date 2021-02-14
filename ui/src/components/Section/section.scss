@@ -2,6 +2,7 @@
   position: relative;
   /* Theme intentions */
   --sectionBgColor: none;
+  --sectionBgImage: none;
   --sectionHeadingColor: var(--headingColor);
   --sectionTextColor: var(--textColor);
 
@@ -27,7 +28,14 @@
   }
 
   &.section--theme__primary {
-    --sectionBgColor: var(--purpleGradient);
+    --sectionBgColor: var(--primaryColor);
+    &.section--skewed.section--hero .slash {
+      --sectionBgImage: url('../../images/bg-blur.png'), var(--purpleGradient);
+      background-image: var(--sectionBgImage);
+      background-size: cover;
+      background-repeat: none;
+      background-position: left center;
+    }
   }
 
   &.section--theme__white {
@@ -105,6 +113,7 @@
     color: var(--sectionHeadingColor);
   }
   background: var(--sectionBgColor);
+  background-image: var(--sectionBgImage);
   color: var(--sectionTextColor);
 }
 

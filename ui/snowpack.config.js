@@ -1,6 +1,6 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
-const httpProxy = require('http-proxy');
-const proxy = httpProxy.createServer({target: 'http://localhost:8000'});
+const httpProxy = require('http-proxy')
+const proxy = httpProxy.createServer({ target: 'http://localhost:8000' })
 module.exports = {
   mount: {
     public: { url: '/', static: true },
@@ -11,6 +11,7 @@ module.exports = {
     '@snowpack/plugin-dotenv',
     '@snowpack/plugin-sass',
     '@snowpack/plugin-typescript',
+    'snowpack-plugin-relative-css-urls',
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
