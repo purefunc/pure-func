@@ -71,7 +71,7 @@ export default function HomePage() {
         </>
       </Section>
       <Section theme="funky" isSkewed>
-        <div className="card text-center margin-auto">
+        <div className="card card--padded card--func-4 text-center margin-auto">
           <h2>Clients Trust Us</h2>
           <p>
             Pure Func is able to achieve what other web developers can’t. We needed a fast website with high value
@@ -99,7 +99,7 @@ export default function HomePage() {
       <Section isSkewed theme="grey">
         <>
           <h2 className="margin-auto text-center">What Sets Us Apart</h2>
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-3 margins">
             <div className="card card--func-3">
               <h5>An Ultramodern Approach</h5>
               <p>

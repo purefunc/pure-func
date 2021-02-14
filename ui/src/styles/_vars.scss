@@ -5,6 +5,8 @@
   --purple: hsl(237, 45%, 54%); /* #555ABF */
   --purple-10: hsl(237, 45%, 44%);
 
+  --deep-purple: hsl(240, 30%, 28%); /* #32325D; */
+
   --teal: hsl(180, 52%, 68%); /* #82d8d8 */
   --teal-10: hsl(180, 52%, 78%);
 
@@ -22,6 +24,7 @@
   --funcGradient: linear-gradient(265.13deg, #a943c9 22.71%, #82a8ff 76.07%);
   --funcGradient-2: linear-gradient(95.04deg, rgba(85, 90, 191, 0.3) 33.05%, rgba(148, 14, 255, 0.3) 80.31%);
   --funcGradient-3: linear-gradient(82.81deg, rgba(129, 166, 252, 0.2) 28.48%, rgba(169, 67, 201, 0.15) 77.67%);
+  --funcGradient-4: linear-gradient(95.04deg, #555abf 33.05%, #940eff 80.31%);
   --greyGradient: linear-gradient(95.04deg, #eeeeee 33.05%, #fcfcfc 80.31%);
 
   /* Colors intentions */
@@ -38,7 +41,7 @@
   // --footerBackground: var(--black);
 
   --headingColor: var(--purple);
-  --textColor: var(--black);
+  --textColor: var(--deep-purple);
   --footerColor: var(--white);
   --lineColor: var(--grey);
 
