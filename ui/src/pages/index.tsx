@@ -5,7 +5,7 @@ import { Section } from 'components'
 export default function HomePage() {
   return (
     <>
-      <Section theme="primary">
+      <Section isHero theme="primary">
         <div className="grid">
           <div>
             <h1 className="margin-top-0">Websites That Bring The Func</h1>
