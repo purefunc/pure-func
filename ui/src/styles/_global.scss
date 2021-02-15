@@ -43,6 +43,11 @@ hr {
   border-top: var(--line);
 }
 
+ul.disc {
+  list-style: disc;
+  margin-left: var(--space);
+}
+
 /* Above large breakpoint */
 @media (min-width: 1112px) {
   html {

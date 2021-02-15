@@ -8,7 +8,7 @@
 
   &.section--theme__dark,
   &.section--theme__primary,
-  &.section--theme_deep {
+  &.section--theme__deep {
     --sectionHeadingColor: var(--white);
     --sectionTextColor: var(--white);
 
@@ -27,7 +27,7 @@
   &.section--theme__deep {
     --sectionBgColor: var(--deep-purple);
     &.section--skewed.section--hero .slash {
-      --sectionBgImage: url('../../images/bg-blur.png'), var(--deep-purple);
+      --sectionBgImage: url('../../images/bg-blur.png');
       background-image: var(--sectionBgImage);
       background-size: cover;
       background-repeat: none;

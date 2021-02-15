@@ -11,26 +11,26 @@ export function Plans() {
           of all sizes. Explore our subscription tiers to find the perfect fit.
         </p>
         <div className="grid margins">
-          <div className="card text-center">
-            <h3>
+          <div className="card">
+            <h3 className="text-center">
               <strong>Basic</strong>
             </h3>
-            <h4>$4.99/Month</h4>
+            <h4 className="text-center margin-top-0">$4.99/Month</h4>
             <hr />
-            <ul>
+            <ul className="disc margins">
               <li>Black and White QR Code image</li>
               <li>Responsive menu text that works with all devices</li>
               <li>Ability to add your logo</li>
             </ul>
             <p>* A link to our website will appear at the bottom of your menu with this plan</p>
           </div>
-          <div className="card text-center">
-            <h3>
+          <div className="card">
+            <h3 className="text-center">
               <strong>Pro</strong>
             </h3>
-            <h4>$19.99/Month</h4>
+            <h4 className="text-center margin-top-0">$19.99/Month</h4>
             <hr />
-            <ul className="disc">
+            <ul className="disc margins">
               <li>
                 <strong>ALL features from basic plan</strong>
               </li>
@@ -47,7 +47,7 @@ export function Plans() {
             <h3>
               <strong>Expert</strong>
             </h3>
-            <p>A solution for those who have multiple menus and custom design needs</p>
+            <p className="margins">A solution for those who have multiple menus and custom design needs</p>
             <h4>Coming Soon!</h4>
           </div>
         </div>
