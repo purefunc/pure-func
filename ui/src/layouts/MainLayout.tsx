@@ -2,12 +2,15 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import {
   AboutPage,
-  QrMenuPage,
-  QrMenuBetaPage,
-  QrMenuExamplesPage,
+  MenusPage,
+  MenusBetaPage,
+  MenusExamplesPage,
   NotFoundPage,
   DashboardLayout,
-  QrMenuPlansPage,
+  MenusPlansPage,
+  ContactPage,
+  ServicesPage,
+  SitesPage,
 } from './loadable'
 import HomePage from '../pages'
 
@@ -18,10 +21,13 @@ const SiteLayout = () => {
         {/* Static Pages */}
         <Route exact path="/" component={HomePage} />
         <Route exact path="/about" component={AboutPage} />
-        <Route exact path="/qr-menus" component={QrMenuPage} />
-        <Route exact path="/qr-menus/beta" component={QrMenuBetaPage} />
-        <Route exact path="/qr-menus/examples" component={QrMenuExamplesPage} />
-        <Route exact path="/qr-menus/plans" component={QrMenuPlansPage} />
+        <Route exact path="/contact" component={ContactPage} />
+        <Route exact path="/services" component={ServicesPage} />
+        <Route exact path="/sites" component={SitesPage} />
+        <Route exact path="/menus" component={MenusPage} />
+        <Route exact path="/menus/beta" component={MenusBetaPage} />
+        <Route exact path="/menus/examples" component={MenusExamplesPage} />
+        <Route exact path="/menus/plans" component={MenusPlansPage} />
         {/* Layouts */}
         <Route path="/dashboard" component={DashboardLayout} />
         {/* 404 Page */}
