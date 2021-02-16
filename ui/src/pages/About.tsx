@@ -1,6 +1,6 @@
 import React from 'react'
 import { SEO } from 'utilities'
-import { Section } from '../components'
+import { Section } from 'components'
 
 export default function AboutPage() {
   return (

@@ -3,27 +3,25 @@ import { Link } from 'react-router-dom'
 import { Section, Plans } from 'components'
 import { SEO } from 'utilities'
 
-export default function QrMenuPage() {
+export default function DigitalMenuPage() {
   return (
     <>
-      <SEO title="QR Menus" description="We have QR Menus!" />
-      <Section>
-        <>
-          <div className="grid">
-            <div className="mobile-reverse-item">
-              <h1 className="margin-top-0">
-                Meet the future <br /> of menus.
-              </h1>
-              <p className="large">
-                The future of menus has arrived—don’t get left behind. Our contactless, convenient QR code menus make it
-                easy for your customers to explore your delicious dishes without risking their health and safety.
-              </p>
-            </div>
-            <div>CUBE PLACEHOLDER</div>
+      <SEO title="Digital Menus" description="We have digital menus!" />
+      <Section isHero theme="primary">
+        <div className="grid">
+          <div className="mobile-reverse-item">
+            <h1 className="margin-top-0">
+              Meet the future <br /> of menus.
+            </h1>
+            <p className="large">
+              The future of menus has arrived—don’t get left behind. Our contactless, convenient QR code menus make it
+              easy for your customers to explore your delicious dishes without risking their health and safety.
+            </p>
           </div>
-        </>
+          <div>CUBE PLACEHOLDER</div>
+        </div>
       </Section>
-      <Section theme="white">
+      <Section>
         <div className="grid">
           <div>IMAGE</div>
           <div>
@@ -44,13 +42,13 @@ export default function QrMenuPage() {
         </div>
       </Section>
       <Plans />
-      <Section theme="white">
-        <>
-        <h2>
-            Ready to ride the QR wave?
-          </h2>
-          <Link to="/contact" className="cta">Contact</Link>
-        </>
+      <Section theme="funky" isSkewed>
+        <div className="card card--func-2 card--padded text-center margin-auto">
+          <h2>Ready to ride the QR wave?</h2>
+          <Link to="/contact" className="cta">
+            Contact
+          </Link>
+        </div>
       </Section>
     </>
   )

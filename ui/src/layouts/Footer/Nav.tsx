@@ -7,8 +7,11 @@ export function Nav() {
       <NavLink to="/about" aria-label="About page">
         About
       </NavLink>
-      <NavLink to="/qr-menus" aria-label="QR menus page">
-        QR Menus
+      <NavLink to="/menus" aria-label="Digital menus page">
+        Digital Menus
+      </NavLink>
+      <NavLink to="/sites" aria-label="Sites page">
+        Site Templates
       </NavLink>
     </nav>
   )

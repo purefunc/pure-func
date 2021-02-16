@@ -15,14 +15,14 @@ export const Nav = () => {
 
   return (
     <nav>
-      <NavLink className="nav-link" to="/about" aria-label="about page">
+      <NavLink className="nav-link" to="/about" aria-label="About page">
         About
       </NavLink>
-      <NavLink className="nav-link" to="/services" aria-label="services page">
+      <NavLink className="nav-link" to="/services" aria-label="Services page">
         Services
       </NavLink>
-      <NavLink className="nav-link" to="/qr-menus" aria-label="QR menus page">
-        QR Menus
+      <NavLink className="nav-link" to="/menus" aria-label="Digital Menus page">
+        Digital Menus
       </NavLink>
       {/* {!authState.isLoggedIn && <Login />}
       {authState.isLoggedIn && (
