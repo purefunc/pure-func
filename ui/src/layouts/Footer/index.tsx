@@ -8,8 +8,8 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="footnav footMobile footstack">
-        <div className="">
-          <NavLink className="" data-testid="logo-link" to="/" aria-label="home page">
+        <div>
+          <NavLink data-testid="logo-link" to="/" aria-label="home page">
             <Logo />
           </NavLink>
         </div>
