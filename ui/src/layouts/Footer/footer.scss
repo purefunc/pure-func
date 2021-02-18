@@ -55,5 +55,8 @@
     grid-template-rows: 1fr;
     grid-template-columns: auto;
     grid-auto-flow: row;
+    .dateMargin {
+      margin: auto;
+    }
   }
   }

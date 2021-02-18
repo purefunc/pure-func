@@ -31,7 +31,7 @@ export function Footer() {
         </div>
       </div>
       <div className="flex subFooter">
-        <div>&copy; {new Date().getFullYear()} Pure Func LLC</div>
+        <div className="dateMargin">&copy; {new Date().getFullYear()} Pure Func LLC</div>
         <a className="text-white" href="mailto:contact@purefunc.io">Email: contact@purefunc.io</a>
       </div>
     </footer>
