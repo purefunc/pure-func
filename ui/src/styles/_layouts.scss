@@ -16,6 +16,9 @@
   grid-gap: var(--gridGap);
   display: block;
   grid-template-columns: repeat(auto-fit, minmax(var(--colMinWidth), 1fr));
+  &--footer {
+    grid-template-columns: 1fr 4fr;
+  }
   &--split {
     grid-template-columns: 1fr minmax(0, 3fr);
   }
@@ -75,6 +78,12 @@
 
 .padding {
   padding: var(--space);
+  &--footer {
+  padding: 2em 10em 2em 10em;
+  }
+  &--subFooter {
+    padding:.45em 15.5em .45em 14em;
+  }
 }
 
 .container {
@@ -90,3 +99,4 @@
   &--normal {
   }
 }
+
