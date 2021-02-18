@@ -1,16 +1,59 @@
 .footer {
+  white-space: nowrap;
   color: var(--footerColor);
   background: var(--purpleGradient);
-  &--logo {
-    padding-right: 5em;
+}
+
+.footnav {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 5vh 13vw;
+}
+
+
+.footMobile {
+  @media only screen and (max-width: 600px) {
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto;
+    grid-auto-flow: row;
+    .butorder {
+      order: 1;
+    }
   }
 }
 
-.sub-footer {
+.footstack {
+  @media only screen and (max-width: 1000px) and (min-width: 600px) {
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto;
+    grid-auto-flow: row; 
+    .collapse {
+    justify-items: center;
+    align-items: center;
+    } 
+    button {
+      width: 9em;
+    }
+  }
+}
+
+.subFooter {
   background: var(--deep-purple);
   font-size: var(--smallestText);
-  color: grey;
+  color: var(--grey);
+  padding: 1vh 9vw;
   a {
-    color: grey;
+    color: var(--grey);
+  }
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto;
+    grid-auto-flow: row;
   }
   }
