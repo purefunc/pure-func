@@ -1,0 +1,89 @@
+.cta {
+  --buttonTextColor: var(--white);
+  --buttonBg: var(--primaryColor);
+  --buttonBorder: none;
+  --buttonShadow: var(--elevation-2);
+  --buttonHoverBg: var(--primaryLight);
+  --buttonHoverColor: var(--white);
+  --buttonHoverShadow: var(--elevation-2);
+  --buttonPadding: 5px 25px;
+
+  appearance: none;
+  color: var(--buttonTextColor);
+  background-color: var(--buttonBg);
+  border: var(--buttonBorder);
+  border-radius: var(--buttonRadius);
+  padding: var(--buttonPadding);
+  box-shadow: var(--buttonShadow);
+  transition: var(--hoverTransition);
+  outline: none;
+  &:hover {
+    color: var(--buttonHoverColor);
+    background-color: var(--buttonHoverBg);
+    border-color: var(--buttonHoverBorderColor);
+    box-shadow: var(--buttonHoverShadow);
+  }
+  &[disabled] {
+    opacity: 0.4;
+  }
+  &--cancel {
+    --buttonBg: var(--dangerColor);
+    --buttonTextColor: var(--white);
+    --buttonHoverBg: var(--dangerColor);
+    --buttonBorder: 2px solid var(--dangerColor);
+  }
+  &--white {
+    --buttonBg: var(--white);
+    --buttonTextColor: var(--primaryColor);
+    --buttonHoverBg: var(--white);
+    --buttonHoverColor: var(--primaryColor);
+    --buttonBorder: 2px solid var(--white);
+  }
+  &--white-ghost {
+    --buttonBorder: 2px solid var(--white);
+    --buttonTextColor: var(--white);
+    --buttonBg: transparent;
+    --buttonShadow: none;
+    --buttonHoverBorderColor: var(--white);
+    --buttonHoverBg: var(--white);
+    --buttonHoverColor: var(--primaryColor);
+  }
+  &--ghost {
+    --buttonBorder: 2px solid var(--primaryColor);
+    --buttonTextColor: var(--primaryColor);
+    --buttonBg: transparent;
+    --buttonShadow: none;
+    --buttonHoverBorderColor: var(--primaryLight);
+  }
+  &--small {
+    --buttonPadding: 5px 25px;
+    font-size: var(--smallText);
+  }
+}
+
+// Button used to skip to content
+a.skip-link {
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  color: var(--white);
+  background: var(--red);
+  &:active,
+  &:focus,
+  &:hover {
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: auto;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+.cta + .cta {
+  margin-left: 20px;
+}

@@ -1,0 +1,29 @@
+.header {
+  --headerBg: transparent;
+  background: var(--headerBg);
+  top: 0;
+  width: 100%;
+  // height: var(--headerHeight);
+  z-index: var(--headerLevel);
+  position: absolute;
+  // box-shadow: var(--elevation-2);
+  .header__inner {
+    position: relative;
+    padding: 0 var(--space);
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    nav .nav-link {
+      color: var(--white);
+      & + .nav-link {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 880px) {
+  .header nav {
+    display: none;
+  }
+}

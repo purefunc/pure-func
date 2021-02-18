@@ -1,0 +1,11 @@
+.footer {
+  color: var(--footerColor);
+  background: var(--primaryColor);
+  &--grid {
+    // display: grid;
+    // grid-template-columns: 1fr minmax(0, 4fr);
+  }
+  &--bottom {
+    background: var(--black);
+  }
+}
