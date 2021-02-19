@@ -1,18 +1,48 @@
 .footer {
-  white-space: nowrap;
   color: var(--footerColor);
   background: var(--purpleGradient);
+  button {
+    min-width: 10rem;
+  }
 }
 
-.footnav {
+.footer--logo {
+  justify-self: center;
+  padding-top: var(--baseSpaceSize);
+}
+
+.footer--nav {
   display: grid;
   grid-template-columns: 1fr 3fr;
-  padding: 5vh 13vw;
+  padding: 2rem 6rem;
+  a {
+    white-space: nowrap;
+  }
+  @media only screen and (max-width: 1000px) and (min-width: 600px) {
+    padding: 0;
+    white-space: nowrap;
+    place-items: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto;
+    grid-auto-flow: row; 
+  }
 }
 
+.footer--bottom {
+  padding: .5rem var(--space);
+  white-space: nowrap;
+  background: var(--deep-purple);
+  font-size: var(--smallestText);
+  color: var(--grey);
+  a {
+    color: var(--grey);
+  }
+}
 
-.footMobile {
+.mobile--nav {
   @media only screen and (max-width: 600px) {
+    justify-content: space-around;
     display: grid;
     place-items: center;
     grid-template-rows: 1fr;
@@ -20,43 +50,6 @@
     grid-auto-flow: row;
     .butorder {
       order: 1;
-    }
-  }
-}
-
-.footstack {
-  @media only screen and (max-width: 1000px) and (min-width: 600px) {
-    display: grid;
-    place-items: center;
-    grid-template-rows: 1fr;
-    grid-template-columns: auto;
-    grid-auto-flow: row; 
-    .collapse {
-    justify-items: center;
-    align-items: center;
-    } 
-    button {
-      width: 9em;
-    }
-  }
-}
-
-.subFooter {
-  background: var(--deep-purple);
-  font-size: var(--smallestText);
-  color: var(--grey);
-  padding: 1vh 9vw;
-  a {
-    color: var(--grey);
-  }
-  @media only screen and (max-width: 600px) {
-    justify-content: center;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: auto;
-    grid-auto-flow: row;
-    .dateMargin {
-      margin: auto;
     }
   }
   }
