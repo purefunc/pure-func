@@ -1,55 +1,31 @@
 .footer {
   color: var(--footerColor);
   background: var(--purpleGradient);
-  button {
-    min-width: 10rem;
-  }
-}
-
-.footer--logo {
-  justify-self: center;
-  padding-top: var(--baseSpaceSize);
-}
-
-.footer--nav {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  padding: 2rem 6rem;
-  a {
-    white-space: nowrap;
-  }
-  @media only screen and (max-width: 1000px) and (min-width: 600px) {
-    padding: 0;
-    white-space: nowrap;
-    place-items: center;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: auto;
-    grid-auto-flow: row; 
-  }
-}
-
-.footer--bottom {
-  padding: .5rem var(--space);
-  white-space: nowrap;
-  background: var(--deep-purple);
-  font-size: var(--smallestText);
-  color: var(--grey);
-  a {
-    color: var(--grey);
-  }
-}
-
-.mobile--nav {
-  @media only screen and (max-width: 600px) {
-    justify-content: space-around;
-    display: grid;
-    place-items: center;
-    grid-template-rows: 1fr;
-    grid-template-columns: auto;
-    grid-auto-flow: row;
-    .butorder {
-      order: 1;
+  &--nav {
+    a {
+      display: block;
+    }
+    .cta + .cta {
+      margin: var(--space) 0;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      .cta:first-child {
+        margin-top: var(--space);
+      }
     }
   }
+  &--bottom {
+    padding-top: var(--space);
+    padding-bottom: var(--space);
+    background: var(--deep-purple);
+    font-size: var(--smallestText);
+    color: var(--grey);
+    a {
+      color: var(--grey);
+      & + a {
+        margin-left: var(--space);
+      }
+    }
   }
+}

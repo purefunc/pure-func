@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink , Link } from 'react-router-dom'
 import { Logo } from 'components'
 
 import './footer.scss'
@@ -7,33 +7,42 @@ import './footer.scss'
 export function Footer() {
   return (
     <footer className="footer">
-      <div className="footer--nav mobile--nav">
-        <div className="footer--logo">
-          <NavLink data-testid="logo-link" to="/" aria-label="home page">
-            <Logo />
-          </NavLink>
-        </div>
-        <div className="grid grid--cols-3 mobile--nav margin-0">
+      <div className="wrapper">
+        <div className="footer--nav container grid grid--cols-4">
+          <div className="footer--logo">
+            <NavLink data-testid="logo-link" to="/" aria-label="home page">
+              <Logo />
+            </NavLink>
+          </div>
+          <div>
             <NavLink className="text-white" to="/about" aria-label="About page">
               About
             </NavLink>
-            <NavLink className="text-white" to="/qr-menus" aria-label="QR menus page">
-              QR Menus
+            <NavLink className="text-white" to="/menus" aria-label="Digital Menus">
+              Digital Menus
             </NavLink>
-            <button className="cta cta--white-ghost butorder">Sign In</button>
-            <NavLink className="text-white" to="/services" aria-label="Services page">
-              Services
-            </NavLink>
-            <NavLink className="text-white" to="/contact" aria-label="Contact page">
-              Contact Us
-            </NavLink>
-            <button className="cta cta--white-ghost">Join</button>
-        </div>
+            </div>
+            <div>
+              <NavLink className="text-white" to="/services" aria-label="Services page">
+                Services
+              </NavLink>
+              <NavLink className="text-white" to="/contact" aria-label="Contact page">
+                Contact Us
+              </NavLink>
+            </div>
+            <div>
+                <button className="cta cta--white-ghost">Join</button>
+                <button className="cta cta--white-ghost">Sign In</button>
+            </div>
+          </div>
       </div>
-      <div className="flex mobile--nav footer--bottom">
-        <div className="">&copy; {new Date().getFullYear()} Pure Func LLC</div>
-        <a href="">Terms and Services</a>
-        <a className="" href="mailto:contact@purefunc.io">Email: contact@purefunc.io</a>
+      <div className="flex footer--bottom wrapper">
+        <div>&copy; {new Date().getFullYear()} Pure Func LLC</div>
+        <div>
+          <Link to="/terms">Terms & Conditions</Link>
+          <Link to="/privacy">Privacy Policy</Link>
+        </div>
+        <a href="mailto:contact@purefunc.io">Email: contact@purefunc.io</a>
       </div>
     </footer>
   )
