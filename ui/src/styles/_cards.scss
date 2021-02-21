@@ -18,6 +18,9 @@
   h6 {
     color: var(--headingColor);
   }
+  &--pastel {
+    --cardBackground: var(--pastel);
+  }
   &--func {
     --cardBackground: var(--funcGradient);
   }
