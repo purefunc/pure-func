@@ -1,0 +1,8 @@
+.logo-strip {
+  display: flex;
+  &--logo {
+    & + & {
+      margin-left: var(--space);
+    }
+  }
+}

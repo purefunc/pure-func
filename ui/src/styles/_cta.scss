@@ -8,6 +8,7 @@
   --buttonHoverShadow: var(--elevation-2);
   --buttonPadding: 5px 25px;
 
+  min-width: 10rem;
   appearance: none;
   color: var(--buttonTextColor);
   background-color: var(--buttonBg);

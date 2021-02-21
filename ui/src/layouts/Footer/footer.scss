@@ -1,11 +1,36 @@
 .footer {
   color: var(--footerColor);
-  background: var(--primaryColor);
-  &--grid {
-    // display: grid;
-    // grid-template-columns: 1fr minmax(0, 4fr);
+  background: var(--purpleGradient);
+  &--nav {
+    align-items: flex-start;
+    a {
+      display: block;
+      & + a {
+        margin-top: var(--space);
+      }
+    }
+    .cta + .cta {
+      margin: var(--space) 0;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      a {
+        margin-top: var(--space);
+      }
+      .cta:first-child {
+        margin-top: var(--space);
+      }
+    }
   }
   &--bottom {
-    background: var(--black);
+    background: var(--deep-purple);
+    font-size: var(--smallestText);
+    color: var(--grey);
+    a {
+      color: var(--grey);
+      & + a {
+        margin-left: var(--space);
+      }
+    }
   }
 }
