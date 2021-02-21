@@ -1,0 +1,57 @@
+html {
+  /* Layout vars */
+  --layoutWidthMax: 1224px;
+  --layoutWidthMin: 375px;
+  --scrollbarWidth: 0px;
+  --gutterWidth: var(--space);
+  --windowWidth: calc(100vw - var(--scrollbarWidth));
+  --layoutWidth: calc(var(--windowWidth) - var(--gutterWidth) * 2);
+
+  box-sizing: border-box;
+  font-size: var(--baseFontSize);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: var(--backgroundColor);
+}
+
+#modal-root {
+  position: relative;
+  z-index: var(--highestLevel);
+}
+
+main {
+  // padding-top: var(--headerHeight);
+  overflow: hidden;
+}
+
+blockquote {
+  margin: 10px;
+  padding: 2em;
+  background: var(--cardBackground);
+  box-shadow: var(--elevation-3);
+}
+
+hr {
+  border-top: var(--line);
+}
+
+ul.disc {
+  list-style: disc;
+  margin-left: var(--space);
+}
+
+/* Above large breakpoint */
+@media (min-width: 1112px) {
+  html {
+    --layoutWidth: var(--layoutWidthMax);
+    --gutterWidth: var(--largeSpace);
+  }
+}

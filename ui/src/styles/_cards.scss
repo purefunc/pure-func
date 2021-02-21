@@ -1,0 +1,57 @@
+.section .card {
+  --cardPadding: var(--space);
+  --cardBorderRadius: 8px;
+  --cardElevation: none;
+  --maxCardWidth: 680px;
+
+  border-radius: var(--cardBorderRadius);
+  background: var(--cardBackground);
+  box-shadow: var(--cardElevation);
+  padding: var(--cardPadding);
+  color: var(--textColor);
+  max-width: var(--maxCardWidth);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--headingColor);
+  }
+  &--pastel {
+    --cardBackground: var(--pastel);
+  }
+  &--func {
+    --cardBackground: var(--funcGradient);
+  }
+  &--func-2 {
+    --cardBackground: var(--funcGradient-2);
+    --headingColor: var(--deep-purple);
+  }
+  &--func-3 {
+    --cardBackground: var(--funcGradient-3);
+  }
+  &--func-4 {
+    --cardBackground: var(--funcGradient-4);
+    --textColor: var(--white);
+    --headingColor: var(--white);
+  }
+  &--full-width {
+    --maxCardWidth: none;
+  }
+  &--padded {
+    --cardPadding: var(--largestSpace);
+  }
+  & > *:first-child {
+    margin-top: 0;
+  }
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
+  @for $i from 0 through 5 {
+    &--elevation-#{$i} {
+      --cardElevation: var(--elevation-#{$i});
+    }
+  }
+}
