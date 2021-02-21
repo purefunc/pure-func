@@ -1,5 +1,9 @@
 .logo-strip {
   display: flex;
+  justify-content: space-around;
+  opacity: 0.5;
+  transform: rotate(-10deg);
+  padding: var(--space);
   &--logo {
     & + & {
       margin-left: var(--space);

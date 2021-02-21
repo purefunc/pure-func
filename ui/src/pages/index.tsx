@@ -134,9 +134,7 @@ export default function HomePage() {
           </div>
         </>
       </Section>
-      <Section>
-        <LogoStrip />
-      </Section>
+      <LogoStrip />
       <Section theme="funky" isSkewed>
         <div className="card card--func-2 text-center margin-auto">
           <h2>Get In Touch</h2>
