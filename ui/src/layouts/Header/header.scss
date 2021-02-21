@@ -3,6 +3,7 @@
   background: var(--headerBg);
   top: 0;
   width: 100%;
+
   // height: var(--headerHeight);
   z-index: var(--headerLevel);
   position: absolute;
@@ -13,10 +14,12 @@
     margin: 0 auto;
     height: 100%;
     width: 100%;
-    nav .nav-link {
-      color: var(--white);
-      & + .nav-link {
-        margin-left: 20px;
+    display: flex;
+    nav {
+      flex-grow: 2;
+      .nav-link {
+        color: var(--white);
+        margin-left: var(--space);
       }
     }
   }
