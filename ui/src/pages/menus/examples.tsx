@@ -2,8 +2,8 @@ import React from 'react'
 import { SEO } from 'utilities'
 import { Section } from 'components'
 import { Link } from 'react-router-dom'
-import basicSvg from 'images/qr-menu/basic-qr.svg'
-import plusSvg from 'images/qr-menu/plus-qr.svg'
+import basicSvg from 'images/menus/basic-qr.svg'
+import plusSvg from 'images/menus/plus-qr.svg'
 
 export default function ExamplesPage() {
   return (

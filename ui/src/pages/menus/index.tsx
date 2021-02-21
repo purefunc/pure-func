@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Section, Plans } from 'components'
 import { SEO } from 'utilities'
-import phoneImg from '../../images/qr-menu/phone-qr.png'
+import phoneImg from '../../images/menus/phone-qr.png'
 
 export default function DigitalMenuPage() {
   return (
