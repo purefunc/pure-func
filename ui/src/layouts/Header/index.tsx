@@ -6,14 +6,14 @@ import './header.scss'
 export function Header() {
   return (
     <header className="header flex">
-      <div className="header__inner flex wrapper">
-        <div>
-          <h1 className="margin-0 logo">
-            <NavLink data-testid="logo-link" to="/" aria-label="home page">
-              <Logo />
-            </NavLink>
-          </h1>
-          <nav>
+      <div className="header__inner wrapper">
+        <h1 className="margin-0 logo">
+          <NavLink data-testid="logo-link" to="/" aria-label="home page">
+            <Logo />
+          </NavLink>
+        </h1>
+        <nav className="flex">
+          <div>
             <NavLink className="nav-link" to="/about" aria-label="About page">
               About
             </NavLink>
@@ -23,7 +23,8 @@ export function Header() {
             <NavLink className="nav-link" to="/menus" aria-label="Digital Menus page">
               Digital Menus
             </NavLink>
-            {/* {!authState.isLoggedIn && <Login />}
+          </div>
+          {/* {!authState.isLoggedIn && <Login />}
       {authState.isLoggedIn && (
         <>
         <button className="cta cta--cancel cta--small" onClick={logoff}>
@@ -31,14 +32,13 @@ export function Header() {
         </button>
         </>
       )} */}
-          </nav>
-        </div>
-        <div>
-          <Link className="cta cta--white cta--small" to="/contact">
-            Contact Us
-          </Link>
-          <button className="cta cta--white-ghost cta--small">Sign Up</button>
-        </div>
+          <div>
+            <Link className="cta cta--white cta--small" to="/contact">
+              Contact Us
+            </Link>
+            <button className="cta cta--white-ghost cta--small">Sign Up</button>
+          </div>
+        </nav>
       </div>
     </header>
   )
