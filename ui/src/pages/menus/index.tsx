@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Section, Plans } from 'components'
+import { Section } from 'components'
 import { SEO } from 'utilities'
 import phoneImg from '../../images/menus/phone-qr.png'
 import basicSvg from 'images/menus/basic-qr.svg'
