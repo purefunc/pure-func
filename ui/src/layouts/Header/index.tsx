@@ -5,10 +5,11 @@ import { useAuth } from 'global'
 import { Login } from '../Login/Login'
 
 import './header.scss'
+import { Dropdown } from './Dropdown'
 
 export function Header() {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const { isLoggedIn } = useAuth()
+  const { state, dispatch } = useAuth()
 
   const closeModal = () => {
     setIsModalOpen(false)
@@ -28,14 +29,20 @@ export function Header() {
         </h1>
         <nav className="flex">
           <div>
-            <NavLink className="nav-link" to="/about" aria-label="About page">
-              About
-            </NavLink>
             <NavLink className="nav-link" to="/services" aria-label="Services page">
               Services
             </NavLink>
-            <NavLink className="nav-link" to="/menus" aria-label="Digital Menus page">
-              Digital Menus
+            <span className="nav-link">Products</span>
+            {/* <Dropdown>
+              <NavLink className="nav-link" to="/menus" aria-label="Digital Menu page">
+                Digital Menus
+              </NavLink>
+              <NavLink className="nav-link" to="/sites" aria-label="Website Templates page">
+                Website Templates
+              </NavLink>
+            </Dropdown> */}
+            <NavLink className="nav-link" to="/about" aria-label="About page">
+              About
             </NavLink>
           </div>
           <div>
@@ -44,15 +51,15 @@ export function Header() {
             </Link>
             <button
               onClick={() => {
-                if (isLoggedIn) {
-                  logoff()
+                if (state.isLoggedIn) {
+                  // TODO: ADD LOGOFF FUNCTION
                 } else {
                   openModal()
                 }
               }}
               className="cta cta--white-ghost cta--small"
             >
-              {isLoggedIn ? 'Log Out' : 'Sign Up'}
+              {state.isLoggedIn ? 'Log Out' : 'Join'}
             </button>
             <Modal isActive={isModalOpen} closeAction={closeModal}>
               <Login />
