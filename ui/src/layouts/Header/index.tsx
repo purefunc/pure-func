@@ -1,9 +1,23 @@
-import React from 'react'
-import { Logo } from 'components'
+import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
+import { Logo, Modal } from 'components'
+import { useAuth } from 'global'
+import { Login } from '../Login/Login'
+
 import './header.scss'
 
 export function Header() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+  const { isLoggedIn } = useAuth()
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
+
+  const openModal = () => {
+    setIsModalOpen(true)
+  }
+
   return (
     <header className="header flex">
       <div className="header__inner wrapper">
@@ -24,19 +38,25 @@ export function Header() {
               Digital Menus
             </NavLink>
           </div>
-          {/* {!authState.isLoggedIn && <Login />}
-      {authState.isLoggedIn && (
-        <>
-        <button className="cta cta--cancel cta--small" onClick={logoff}>
-        Logoff
-        </button>
-        </>
-      )} */}
           <div>
             <Link className="cta cta--white cta--small" to="/contact">
               Contact Us
             </Link>
-            <button className="cta cta--white-ghost cta--small">Sign Up</button>
+            <button
+              onClick={() => {
+                if (isLoggedIn) {
+                  logoff()
+                } else {
+                  openModal()
+                }
+              }}
+              className="cta cta--white-ghost cta--small"
+            >
+              {isLoggedIn ? 'Log Out' : 'Sign Up'}
+            </button>
+            <Modal isActive={isModalOpen} closeAction={closeModal}>
+              <Login />
+            </Modal>
           </div>
         </nav>
       </div>

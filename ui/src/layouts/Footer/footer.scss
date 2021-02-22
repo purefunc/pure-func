@@ -1,7 +1,7 @@
 .footer {
   color: var(--footerColor);
   background: var(--purpleGradient);
-  &--nav {
+  &__nav {
     align-items: flex-start;
     a {
       display: block;
@@ -22,7 +22,7 @@
       }
     }
   }
-  &--bottom {
+  &__bottom {
     background: var(--deep-purple);
     font-size: var(--smallestText);
     color: var(--grey);

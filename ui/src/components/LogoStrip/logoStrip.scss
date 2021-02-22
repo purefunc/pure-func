@@ -4,7 +4,7 @@
   opacity: 0.5;
   transform: rotate(-10deg);
   padding: var(--space);
-  &--logo {
+  &__logo {
     & + & {
       margin-left: var(--space);
     }
