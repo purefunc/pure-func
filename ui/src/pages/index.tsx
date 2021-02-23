@@ -106,7 +106,7 @@ export default function HomePage() {
       <Section isSkewed theme="grey">
         <>
           <h2 className="margin-auto text-center">What Sets Us Apart</h2>
-          <div className="grid grid-cols-3 margins">
+          <div className="grid grid--cols-3 margins">
             <div className="card card--pastel">
               <h5>An Ultramodern Approach</h5>
               <p>
@@ -134,9 +134,7 @@ export default function HomePage() {
           </div>
         </>
       </Section>
-      <Section>
-        <LogoStrip />
-      </Section>
+      <LogoStrip />
       <Section theme="funky" isSkewed>
         <div className="card card--func-2 text-center margin-auto">
           <h2>Get In Touch</h2>

@@ -15,14 +15,6 @@ import './logoStrip.scss'
 
 const logos = [
   {
-    src: cssLogo,
-    alt: 'CSS',
-  },
-  {
-    src: htmlLogo,
-    alt: 'HTML',
-  },
-  {
     src: reactLogo,
     alt: 'React',
   },
@@ -33,6 +25,10 @@ const logos = [
   {
     src: vueLogo,
     alt: 'Vue',
+  },
+  {
+    src: gatsbyLogo,
+    alt: 'Gatsby',
   },
   {
     src: jsLogo,
@@ -47,8 +43,12 @@ const logos = [
     alt: 'Figma',
   },
   {
-    src: gatsbyLogo,
-    alt: 'Gatsby',
+    src: cssLogo,
+    alt: 'CSS',
+  },
+  {
+    src: htmlLogo,
+    alt: 'HTML',
   },
   {
     src: wpLogo,
@@ -59,7 +59,7 @@ export function LogoStrip() {
   return (
     <div className="logo-strip">
       {logos.map(({ src, alt }) => (
-        <img className="logo-strip--logo" src={src} alt={alt + ' Logo'} />
+        <img className="logo-strip__logo" src={src} alt={alt + ' Logo'} />
       ))}
     </div>
   )

@@ -8,8 +8,8 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="wrapper">
-        <div className="footer--nav container flex">
-          <div className="footer--logo">
+        <div className="footer__nav container flex">
+          <div className="footer__logo">
             <NavLink data-testid="logo-link" to="/" aria-label="home page">
               <Logo />
             </NavLink>
@@ -36,7 +36,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="footer--bottom">
+      <div className="footer__bottom">
         <div className="wrapper">
           <div className="flex container">
             <span>&copy; {new Date().getFullYear()} Pure Func LLC</span>

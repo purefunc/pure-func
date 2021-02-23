@@ -54,4 +54,7 @@
       --cardElevation: var(--elevation-#{$i});
     }
   }
+  @media only screen and (max-width: 800px) {
+    --maxCardWidth: none;
+  }
 }

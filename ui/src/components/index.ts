@@ -1,4 +1,6 @@
 export * from './Logo'
 export * from './Section'
-export * from './Plans'
 export * from './LogoStrip'
+export * from './Icon'
+export * from './Modal'
+export * from './Portal'
