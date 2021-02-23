@@ -9,7 +9,7 @@ export default function ServicesPage() {
       <SEO title="Services" description="" />
       <Section isHero theme="funky-5">
         <div className="grid">
-          <div>
+          <div className="mobile-reverse-item">
             <h1 className="margin-top-0">Services Designed to Meet Your Modern Needs</h1>
             <p>
               From ecommerce to web apps, Pure Func offers a wide variety of services to choose from. Whether you’re
@@ -33,6 +33,8 @@ export default function ServicesPage() {
               Contentful, Sanity, and more. Interested in a stunning static website but need it right away? Check out
               our semi-custom development services (link) to get going right out of the box. See our custom website work
               in action for Tune & Flying Home Studio (link).
+            </p>
+            <ul>
               <li>
                 Satisfy your niche needs in no time with rich support for APIs, widgets, and plugins. No matter what
                 you're looking for, from customer reviews to contact forms, our team uses JAMStack architecture to add
@@ -47,7 +49,8 @@ export default function ServicesPage() {
                 Reach an international audience. Our team’s experience with multilingual compatibility ensures that your
                 site will look and feel perfect for a diverse group of people, not just English speakers.
               </li>
-            </p>
+            </ul>
+
             <div>IMAGE</div>
           </div>
         </div>
@@ -62,6 +65,8 @@ export default function ServicesPage() {
               seamless product listing and payment integration. Whether you’re looking to start from scratch or add to
               your existing platform, our custom Shopify themes weave powerful e-commerce functionality right into your
               stunning site. See our e-commerce work in action for ______.
+            </p>
+            <ul>
               <li>
                 Reap the benefits of our JAMStack architecture, including speed, flexibility, and customization. Our
                 quick loading times and custom functionality enhance the shopping experience for your valued customers
@@ -76,7 +81,7 @@ export default function ServicesPage() {
                 Join the community of over half a million Shopify sellers, and enjoy the immense support system and
                 documentation that comes with it.
               </li>
-            </p>
+            </ul>
             <div>IMAGE</div>
           </div>
         </div>
@@ -92,6 +97,8 @@ export default function ServicesPage() {
               full stack websites, including admin systems, analytics dashboards, social networks, and so much more. See
               our full stack web development work in action for Level Up Tutorials (link). Get your custom QR code menu
               started with Code My Menu.
+            </p>
+            <ul>
               <li>
                 Push the boundaries of the menu experience. Traditional paper menus force you to balance the trade off
                 between space and content. QR code menus eliminate the space factor, allowing you to include images and
@@ -107,7 +114,7 @@ export default function ServicesPage() {
                 but websites are built to be changed. When you cook up new dishes or switch your seasonal offerings, QR
                 code menus make the transition seamless.
               </li>
-            </p>
+            </ul>
             <div>IMAGE</div>
           </div>
         </div>
@@ -122,9 +129,9 @@ export default function ServicesPage() {
               caused thousands of businesses to switch to QR menus, and it looks like they’re here to stay. Our custom
               QR code menu creation service, Code My Menu, offers flexible, personalized solutions that are compatible
               with almost any mobile device.
-              <br></br>
-              See our full stack web development work in action for Level Up Tutorials (link).
-              <br></br>
+            </p>
+            See our full stack web development work in action for Level Up Tutorials (link).
+            <ul>
               <li>
                 Scale globally with multilingual compatibility. Our team has built sites in languages from all over the
                 world, and we know how to create user interfaces that look great no matter what language they’re
@@ -138,7 +145,7 @@ export default function ServicesPage() {
                 Grow your application while still maintaining speed and efficiency. From React to Next.js, we build both
                 the client and server side of our sites with the most modern, effective technology available.
               </li>
-            </p>
+            </ul>
             <div>IMAGE</div>
           </div>
         </div>
@@ -177,8 +184,8 @@ export default function ServicesPage() {
                 break your future success.
               </p>
             </div>
-            <div className="margin-auto text-center">
-              <Link to="/contact" className="cta margin-auto text-center">
+            <div>
+              <Link to="/contact" className="cta">
                 Contact Us
               </Link>
             </div>
