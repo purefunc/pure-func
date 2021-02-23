@@ -31,8 +31,11 @@ export default function ServicesPage() {
               designed to flatter your brand. Our static sites can be as simple or complex as you need, with the option
               to add in e-commerce with Shopify or manage content through your favorite CMS, including Wordpress,
               Contentful, Sanity, and more. Interested in a stunning static website but need it right away? Check out
-              our semi-custom development services (link) to get going right out of the box. See our custom website work
-              in action for Tune & Flying Home Studio (link).
+              our <Link to="/sites">semi-custom development services</Link> to get going right out of the box. See our
+              custom website work in action for{' '}
+              <a target="_blank" rel="nofollow noopener" href="https://flyinghomestudio.com/">
+                Tune & Flying Home Studio.
+              </a>
             </p>
             <ul>
               <li>
@@ -64,7 +67,10 @@ export default function ServicesPage() {
               offer all of the same benefits as our fast, adaptable brochure sites but with the added power of Shopify’s
               seamless product listing and payment integration. Whether you’re looking to start from scratch or add to
               your existing platform, our custom Shopify themes weave powerful e-commerce functionality right into your
-              stunning site. See our e-commerce work in action for ______.
+              stunning site. See our e-commerce work in action for{' '}
+              <a target="_blank" rel="nofollow noopener" href="https://www.rachio.com">
+                Rachio.
+              </a>
             </p>
             <ul>
               <li>
@@ -95,8 +101,11 @@ export default function ServicesPage() {
               with gorgeous, responsive user interfaces, these websites can accomplish anything you need with elegance
               and speed. The Pure Func team has experience building a wide variety of custom web apps, also known as
               full stack websites, including admin systems, analytics dashboards, social networks, and so much more. See
-              our full stack web development work in action for Level Up Tutorials (link). Get your custom QR code menu
-              started with Code My Menu.
+              our full stack web development work in action for{' '}
+              <a target="_blank" rel="nofollow noopener" href="https://www.leveluptutorials.com/?ref=purefunc">
+                Level Up Tutorials.{' '}
+              </a>{' '}
+              Get your custom QR code menu started with Code My Menu.
             </p>
             <ul>
               <li>
@@ -122,15 +131,20 @@ export default function ServicesPage() {
       <Section>
         <div className="grid">
           <div>
-            <h1 className="margin-top-0">QR Code Menus</h1>
+            <h1 className="margin-top-0">Digital Menus</h1>
             <p>
               If you’re a restaurant owner looking to stay on the cutting edge of the customer experience, building a
-              smooth, responsive QR code menu is crucial to the new digital age of ordering. The COVID-19 pandemic has
-              caused thousands of businesses to switch to QR menus, and it looks like they’re here to stay. Our custom
-              QR code menu creation service, Code My Menu, offers flexible, personalized solutions that are compatible
-              with almost any mobile device.
+              smooth, responsive Digital menu is crucial to the new digital age of ordering. The COVID-19 pandemic has
+              caused thousands of businesses to switch to Digital menus, and it looks like they’re here to stay. Our
+              custom Digital menu creation service, Code My Menu, offers flexible, personalized solutions that are
+              compatible with almost any mobile device.
             </p>
-            See our full stack web development work in action for Level Up Tutorials (link).
+            <p>
+              See our full stack web development work in action for{' '}
+              <a target="_blank" rel="nofollow noopener" href="https://www.leveluptutorials.com/?ref=purefunc">
+                Level Up Tutorials.
+              </a>{' '}
+            </p>
             <ul>
               <li>
                 Scale globally with multilingual compatibility. Our team has built sites in languages from all over the
