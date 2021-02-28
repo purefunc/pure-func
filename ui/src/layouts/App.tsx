@@ -23,9 +23,11 @@ const AppLayout = () => (
     <a className="skip-link" href="#main">
       Skip to content
     </a>
+    <div id="layout-wrapper">
     <Header />
     <MainLayout />
     <Footer />
+    </div>
   </>
 )
 
