@@ -8,8 +8,8 @@ export function Footer() {
   return (
     <footer className="footer">
       <div className="wrapper">
-        <div className="footer--nav container grid grid--cols-4">
-          <div className="footer--logo">
+        <div className="footer__nav container flex">
+          <div className="footer__logo">
             <NavLink data-testid="logo-link" to="/" aria-label="home page">
               <Logo />
             </NavLink>
@@ -18,7 +18,7 @@ export function Footer() {
             <NavLink className="text-white" to="/about" aria-label="About page">
               About
             </NavLink>
-            <NavLink className="text-white" to="/menus" aria-label="Digital Menus">
+            <NavLink className="text-white" to="/menus" aria-label="Digital Menus page">
               Digital Menus
             </NavLink>
           </div>
@@ -36,13 +36,17 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="footer--bottom">
+      <div className="footer__bottom">
         <div className="wrapper">
           <div className="flex container">
             <span>&copy; {new Date().getFullYear()} Pure Func LLC</span>
             <div>
-              <Link to="/terms">Terms & Conditions</Link>
-              <Link to="/privacy">Privacy Policy</Link>
+              <Link to="/terms" aria-label="Terms & Conditions page">
+                Terms & Conditions
+              </Link>
+              <Link to="/privacy" aria-label="Privacy Poiilicy Page">
+                Privacy Policy
+              </Link>
             </div>
             <a href="mailto:contact@purefunc.io">Email: contact@purefunc.io</a>
           </div>

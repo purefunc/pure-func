@@ -19,7 +19,7 @@ export function Section({ children, id = '', theme = '', isSkewed = false, isHer
       }`}
     >
       <div className="wrapper">
-        <section className="section--inner section--padding">{children}</section>
+        <section className="section__inner section--padding">{children}</section>
       </div>
       {(isSkewed || isHero) && <div className="slash" />}
     </div>

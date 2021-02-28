@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Section } from 'components'
+import { LogoStrip } from 'components'
 
 export default function HomePage() {
   return (
@@ -64,9 +65,9 @@ export default function HomePage() {
           </div>
           <h3>But Wait, There's More...</h3>
           <p>
-            Don't see exactly what you're looking for? Check out our full list of services (link) to explore even more
-            options. If you're still not sure that we're the right fit, get in touch (link) with our team to chat about
-            a custom solution.
+            Don't see exactly what you're looking for? Check out our <Link to="/services">full list of services</Link>{' '}
+            to explore even more options. If you're still not sure that we're the right fit,{' '}
+            <Link to="/contact">get in touch</Link> with our team to chat about a custom solution.
           </p>
         </>
       </Section>
@@ -87,11 +88,17 @@ export default function HomePage() {
           <div>
             <h2>Featured Project: Level Up Tutorials</h2>
             <p>
-              From interactive quizzes to admin UI, Pure Func has added several key new features to this popular web
-              development learning platform (affiliate link here). On the surface, we’ve crafted beautiful user
-              interfaces for both customer-facing and employee-facing content, and under the hood, our highly modern
-              tools and frameworks are just as elegant and high performing. Take a look at the site (link) to see for
-              yourself.
+              From interactive quizzes to admin UI, Pure Func has added several key new features to{' '}
+              <a target="_blank" rel="nofollow noopener" href="https://www.leveluptutorials.com/?ref=purefunc">
+                this popular web development learning platform
+              </a>
+              . On the surface, we’ve crafted beautiful user interfaces for both customer-facing and employee-facing
+              content, and under the hood, our highly modern tools and frameworks are just as elegant and high
+              performing. Take a look at{' '}
+              <a target="_blank" rel="nofollow noopener" href="https://www.leveluptutorials.com/?ref=purefunc">
+                the site
+              </a>{' '}
+              to see for yourself.
             </p>
           </div>
         </div>
@@ -99,8 +106,8 @@ export default function HomePage() {
       <Section isSkewed theme="grey">
         <>
           <h2 className="margin-auto text-center">What Sets Us Apart</h2>
-          <div className="grid grid-cols-3 margins">
-            <div className="card card--func-3">
+          <div className="grid grid--cols-3 margins">
+            <div className="card card--pastel">
               <h5>An Ultramodern Approach</h5>
               <p>
                 We’re constantly studying and experimenting with emerging, state-of-the-art technologies that will give
@@ -108,7 +115,7 @@ export default function HomePage() {
                 architectures to create the most performant solution possible.
               </p>
             </div>
-            <div className="card card--func-3">
+            <div className="card card--pastel">
               <h5>Fully Custom Solutions</h5>
               <p>
                 From loading times to error handling, the quality of your customer experience hinges on the quality of
@@ -116,7 +123,7 @@ export default function HomePage() {
                 masterpiece that fulfills all of your needs with speed and efficiency.
               </p>
             </div>
-            <div className="card card--func-3">
+            <div className="card card--pastel">
               <h5>A Global Perspective</h5>
               <p>
                 Our team has worked with clients from all over the world, accommodating a wide variety of timezones and
@@ -127,7 +134,7 @@ export default function HomePage() {
           </div>
         </>
       </Section>
-      <Section>LOGO STRIP HERE</Section>
+      <LogoStrip />
       <Section theme="funky" isSkewed>
         <div className="card card--func-2 text-center margin-auto">
           <h2>Get In Touch</h2>

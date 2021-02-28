@@ -18,6 +18,9 @@
   h6 {
     color: var(--headingColor);
   }
+  &--pastel {
+    --cardBackground: var(--pastel);
+  }
   &--func {
     --cardBackground: var(--funcGradient);
   }
@@ -50,5 +53,8 @@
     &--elevation-#{$i} {
       --cardElevation: var(--elevation-#{$i});
     }
+  }
+  @media only screen and (max-width: 800px) {
+    --maxCardWidth: none;
   }
 }

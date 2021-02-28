@@ -5,12 +5,12 @@ const HomePage = lazy(() => import('../pages'))
 const AboutPage = lazy(() => import('../pages/about'))
 const MenusPage = lazy(() => import('../pages/menus'))
 const MenusBetaPage = lazy(() => import('../pages/menus/beta'))
-const MenusExamplesPage = lazy(() => import('../pages/menus/examples'))
 const NotFoundPage = lazy(() => import('../pages/404'))
-const MenusPlansPage = lazy(() => import('../pages/menus/plans'))
 const ContactPage = lazy(() => import('../pages/contact'))
 const ServicesPage = lazy(() => import('../pages/services'))
 const SitesPage = lazy(() => import('../pages/sites'))
+const PrivacyPage = lazy(() => import('../pages/privacy'))
+const TermsPage = lazy(() => import('../pages/terms'))
 
 const DashboardLayout = lazy(() => import('./DashboardLayout'))
 
@@ -27,8 +27,8 @@ const SiteLayout = () => {
           <Route exact path="/sites" component={SitesPage} />
           <Route exact path="/menus" component={MenusPage} />
           <Route exact path="/menus/beta" component={MenusBetaPage} />
-          <Route exact path="/menus/examples" component={MenusExamplesPage} />
-          <Route exact path="/menus/plans" component={MenusPlansPage} />
+          <Route exact path="/privacy" component={PrivacyPage} />
+          <Route exact path="/terms" component={TermsPage} />
           {/* Layouts */}
           <Route path="/dashboard" component={DashboardLayout} />
           {/* 404 Page */}
