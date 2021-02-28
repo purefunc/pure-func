@@ -7,6 +7,7 @@ html {
   --windowWidth: calc(100vw - var(--scrollbarWidth));
   --layoutWidth: calc(var(--windowWidth) - var(--gutterWidth) * 2);
 
+  height: 100%;
   box-sizing: border-box;
   font-size: var(--baseFontSize);
 }
@@ -18,6 +19,7 @@ html {
 }
 
 body {
+  height: 100%;
   margin: 0;
   background-color: var(--backgroundColor);
 }
@@ -28,10 +30,8 @@ body {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  // padding-top: var(--headerHeight);
+    // padding-top: var(--headerHeight);
+  flex-grow: 1;
   overflow: hidden;
 }
 
@@ -59,22 +59,16 @@ ul.disc {
   }
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
-}
 
-#article {
+// ? necessary to keep footer on bottom at all times
+
+#layout-wrapper {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: stretch;
 }
 
-main {
-  flex-grow: 1;
-}
-
-header, main, footer {
+header.header, main#main, footer.footer {
   flex-shrink: 0;
 }
