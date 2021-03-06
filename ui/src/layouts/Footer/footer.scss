@@ -3,7 +3,7 @@
   color: var(--footerColor);
   background: var(--purpleGradient);
   &__nav {
-    --alignItems: flex-start;
+    align-items: flex-start;
     a {
       display: block;
       & + a {

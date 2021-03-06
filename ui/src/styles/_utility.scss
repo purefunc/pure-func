@@ -15,6 +15,11 @@
   }
 }
 
+// rounds corners of anything
+.rounded {
+  border-radius: var(--cardRadius);
+}
+
 /* --- Mobile Classes (Below medium screen size) --- */
 @media (max-width: 600px) {
   /* Change order of grid item on mobile

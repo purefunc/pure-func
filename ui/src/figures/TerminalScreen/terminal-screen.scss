@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   background: var(--deepPurple);
-  border-radius: 8px;
+  border-radius: var(--cardRadius);
   box-shadow: var(--elevation-3);
   &__code {
     color: var(--brandColor);
@@ -13,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 0 0 8px 8px;
+    border-radius: 0 0 var(--cardRadius) var(--cardRadius);
     background: var(--black);
     color: var(--brandColor);
     overflow: hidden;

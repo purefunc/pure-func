@@ -22,15 +22,16 @@ export default function AboutPage() {
       <Section>
         <div className="grid">
           <div>
-            <h1 className="margin-top-0">Meet Our Founder, Eric</h1>
+            <h1 className="margin-top-0">Meet Our Founder</h1>
             <p>
               Eric Sartorius is a digital nomad that enjoys coding from all around the globe. He has been developing
               websites since 2014 and has worked with clients from all corners of the earth. Outside of web development,
-              he’s an experienced movement coach and enjoys all forms of motion from breakdancing to parkour. If there’s
-              one piece of advice he could give young web developers, it would be to ___!
+              he’s constantly active and enjoys all forms of motion from breakdancing to martial arts. If there’s one
+              piece of advice he could give young web developers, it would be to make things for fun and not get too
+              wrapped up in the work side of things!
             </p>
           </div>
-          <img src={ericImg} alt="Eric Sartorius" />
+          <img src={ericImg} alt="Eric Sartorius" className="rounded" />
         </div>
       </Section>
       <Section theme="funky" isSkewed>

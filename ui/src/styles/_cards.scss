@@ -1,10 +1,9 @@
 .section .card {
   --cardPadding: var(--space);
-  --cardBorderRadius: 8px;
   --cardElevation: none;
   --maxCardWidth: 680px;
 
-  border-radius: var(--cardBorderRadius);
+  border-radius: var(--cardRadius);
   background: var(--cardBackground);
   box-shadow: var(--cardElevation);
   padding: var(--cardPadding);
