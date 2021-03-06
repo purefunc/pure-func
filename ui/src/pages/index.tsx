@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Section } from 'components'
-import { LogoStrip } from 'components'
+import { Section, LogoStrip } from 'components'
+import { TerminalScreen, Laptop } from 'figures'
 
 export default function HomePage() {
   return (
@@ -20,7 +20,7 @@ export default function HomePage() {
               Contact Us
             </Link>
           </div>
-          <div>IMAGE</div>
+          <Laptop />
         </div>
       </Section>
       <Section>
@@ -61,7 +61,9 @@ export default function HomePage() {
                 Learn More
               </Link>
             </div>
-            <div>IMAGE HERE</div>
+            <div>
+              <TerminalScreen />
+            </div>
           </div>
           <h3>But Wait, There's More...</h3>
           <p>

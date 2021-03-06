@@ -1,0 +1,31 @@
+.terminal-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--deepPurple);
+  border-radius: 8px;
+  box-shadow: var(--elevation-3);
+  &__code {
+    color: var(--brandColor);
+    overflow: hidden;
+  }
+  &__bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 8px 8px;
+    background: var(--black);
+    color: var(--brandColor);
+    overflow: hidden;
+    &__tag {
+      background: var(--brandColor);
+      padding: 10px;
+      color: var(--textColor);
+      margin-right: var(--smallestSpace);
+    }
+    &__menu {
+      padding: 4px;
+      color: var(--gray);
+    }
+  }
+}

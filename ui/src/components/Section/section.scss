@@ -29,7 +29,7 @@
   }
 
   &.section--theme__deep {
-    --sectionBgColor: var(--deep-purple);
+    --sectionBgColor: var(--deepPurple);
     &.section--skewed.section--hero .slash {
       --sectionBgImage: url('../../images/bg-blur.png');
       background-image: var(--sectionBgImage);
