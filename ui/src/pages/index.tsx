@@ -72,7 +72,7 @@ export default function HomePage() {
         </>
       </Section>
       <Section theme="funky" isSkewed>
-        <div className="card card--padded card--func-4 text-center margin-auto">
+        <div className="card card--padded card--funky-2 text-center margin-auto">
           <h2>Clients Trust Us</h2>
           <p>
             Pure Func is able to achieve what other web developers can’t. We needed a fast website with high value
@@ -103,11 +103,11 @@ export default function HomePage() {
           </div>
         </div>
       </Section>
-      <Section isSkewed theme="grey">
+      <Section isSkewed theme="gray">
         <>
           <h2 className="margin-auto text-center">What Sets Us Apart</h2>
           <div className="grid grid--cols-3 margins">
-            <div className="card card--pastel">
+            <div className="card card--lightBlue">
               <h5>An Ultramodern Approach</h5>
               <p>
                 We’re constantly studying and experimenting with emerging, state-of-the-art technologies that will give
@@ -115,7 +115,7 @@ export default function HomePage() {
                 architectures to create the most performant solution possible.
               </p>
             </div>
-            <div className="card card--pastel">
+            <div className="card card--lightBlue">
               <h5>Fully Custom Solutions</h5>
               <p>
                 From loading times to error handling, the quality of your customer experience hinges on the quality of
@@ -123,7 +123,7 @@ export default function HomePage() {
                 masterpiece that fulfills all of your needs with speed and efficiency.
               </p>
             </div>
-            <div className="card card--pastel">
+            <div className="card card--lightBlue">
               <h5>A Global Perspective</h5>
               <p>
                 Our team has worked with clients from all over the world, accommodating a wide variety of timezones and
@@ -136,7 +136,7 @@ export default function HomePage() {
       </Section>
       <LogoStrip />
       <Section theme="funky" isSkewed>
-        <div className="card card--func-2 text-center margin-auto">
+        <div className="card card--deep text-center margin-auto">
           <h2>Get In Touch</h2>
           <p>
             Potential client? Curious new developer? #1 Pure Func fan? As long as you're not a robot, we want to hear

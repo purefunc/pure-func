@@ -6,7 +6,7 @@ export default function SitesPage() {
   return (
     <>
       <SEO title="Sites" description="Get In Touch" />
-      <Section isHero theme="deep">
+      <Section isHero theme="primary">
         <div className="grid">
           <div>
             <h1 className="margin-top-0">Want a Quick and Easy Solution? Try Our One Page Website Builder</h1>

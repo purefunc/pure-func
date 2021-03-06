@@ -11,7 +11,7 @@ export function Footer() {
         <div className="footer__nav container flex">
           <div className="footer__logo">
             <NavLink data-testid="logo-link" to="/" aria-label="home page">
-              <Logo />
+              <Logo isWhite />
             </NavLink>
           </div>
           <div>

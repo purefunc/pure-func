@@ -17,7 +17,7 @@ export default function ContactPage() {
             </p>
             <p>*required fields</p>
           </div>
-          <div>MESSAGE INPUT PLACEHOLDER</div>
+          <div className="card card--lightBlue">MESSAGE INPUT PLACEHOLDER</div>
         </div>
       </Section>
     </>

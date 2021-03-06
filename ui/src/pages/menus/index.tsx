@@ -10,7 +10,7 @@ export default function DigitalMenuPage() {
   return (
     <>
       <SEO title="Digital Menus" description="We have digital menus!" />
-      <Section isHero theme="primary">
+      <Section isHero theme="funky">
         <div className="grid">
           <div className="mobile-reverse-item">
             <h1 className="margin-top-0">
@@ -126,7 +126,7 @@ export default function DigitalMenuPage() {
         </>
       </Section>
       <Section theme="funky" isSkewed>
-        <div className="card card--func-2 card--padded text-center margin-auto">
+        <div className="card card--deep card--padded text-center margin-auto">
           <h2>Ready to ride the QR wave?</h2>
           <Link to="/contact" className="cta">
             Contact

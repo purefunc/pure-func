@@ -37,7 +37,7 @@ export default function AboutPage() {
         </div>
       </Section>
       <Section theme="funky" isSkewed>
-        <div className="card card--func-2 text-center margin-auto">
+        <div className="card card--deep text-center margin-auto">
           <h2>Get In Touch</h2>
           <p>
             Potential client? Curious new developer? #1 Pure Func fan? As long as you're not a robot, we want to hear

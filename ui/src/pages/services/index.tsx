@@ -7,7 +7,7 @@ export default function ServicesPage() {
   return (
     <>
       <SEO title="Services" description="" />
-      <Section isHero theme="funky-5">
+      <Section isHero theme="funky">
         <div className="grid">
           <div className="mobile-reverse-item">
             <h1 className="margin-top-0">Services Designed to Meet Your Modern Needs</h1>
@@ -164,7 +164,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </Section>
-      <Section isSkewed theme="grey">
+      <Section isSkewed theme="gray">
         <>
           <h2 className="margin-auto text-center">Refactoring and Consulting</h2>
           <p className="margin-auto text-center">
@@ -175,7 +175,7 @@ export default function ServicesPage() {
             can guide you through your roadblocks and equip you to conquer them on your own in the future.{' '}
           </p>
           <div className="grid grid--cols-3 margins">
-            <div className="card card--pastel">
+            <div className="card card--lightBlue">
               <h5>Uninterrupted Progress</h5>
               <p>
                 Move on from complicated issues without sacrificing your goals. Getting stuck on a problem outside of
@@ -183,14 +183,14 @@ export default function ServicesPage() {
                 to meet your goals.
               </p>
             </div>
-            <div className="card card--pastel">
+            <div className="card card--lightBlue">
               <h5>Empowerment for the Whole Team</h5>
               <p>
                 Unlock new skills for your team. Through our mentorship and teaching opportunities, your team can grow
                 in new directions and learn valuable, modern development skills.
               </p>
             </div>
-            <div className="card card--pastel">
+            <div className="card card--lightBlue">
               <h5>A Firm Foundation</h5>
               <p>
                 Save time by making the right architecture decisions. Work with our team to make sure you’re picking the
