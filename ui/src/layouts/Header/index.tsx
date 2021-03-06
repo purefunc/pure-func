@@ -49,7 +49,7 @@ export function Header() {
             <Link className="cta cta--white cta--small" to="/contact">
               Contact Us
             </Link>
-            <button
+            {/* <button
               onClick={() => {
                 if (state.isLoggedIn) {
                   // TODO: ADD LOGOFF FUNCTION
@@ -63,7 +63,7 @@ export function Header() {
             </button>
             <Modal isActive={isModalOpen} closeAction={closeModal}>
               <Login />
-            </Modal>
+            </Modal> */}
           </div>
         </nav>
       </div>

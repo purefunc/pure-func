@@ -11,14 +11,20 @@ export default function BetaPage() {
         description="Welcome to the Pure Func Beta program! We are excited to let you in on our new features before they go public!"
         pathname="/beta"
       />
+      <Section isHero theme="primary">
+        <div className="grid">
+          <div>
+            <h2 className="margin-top-0">Thank you for your interest in our beta program!</h2>
+            <p className="large">
+              We are currently in the exiting process of building great reusable tools and easy payment processing for
+              you right now. If you still need a menu ASAP however, no worries! We still have tons of great features
+              available in our beta program.
+            </p>
+          </div>
+        </div>
+      </Section>
       <Section>
         <>
-          <h2>Thank you for your interest in our beta program!</h2>
-          <p className="large">
-            We are currently in the exiting process of building great reusable tools and easy payment processing for you
-            right now. If you still need a menu ASAP however, no worries! We still have tons of great features available
-            in our beta program.
-          </p>
           <h3>How the beta program works</h3>
           <ul className="disc">
             <li>
@@ -37,9 +43,11 @@ export default function BetaPage() {
               refund
             </li>
           </ul>
-          <Link to="/contact/" className="cta">
-            Contact Us To Apply
-          </Link>
+          <div className="margins">
+            <Link to="/contact" className="cta">
+              Contact Us To Apply
+            </Link>
+          </div>
         </>
       </Section>
     </>

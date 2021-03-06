@@ -30,10 +30,10 @@ export function Footer() {
               Contact Us
             </NavLink>
           </div>
-          <div>
+          {/* <div>
             <button className="cta cta--white-ghost">Join</button>
             <button className="cta cta--white-ghost">Sign In</button>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="footer__bottom">

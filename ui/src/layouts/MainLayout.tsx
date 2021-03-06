@@ -12,7 +12,7 @@ const SitesPage = lazy(() => import('../pages/sites'))
 // const PrivacyPage = lazy(() => import('../pages/privacy'))
 // const TermsPage = lazy(() => import('../pages/terms'))
 
-const DashboardLayout = lazy(() => import('./DashboardLayout'))
+// const DashboardLayout = lazy(() => import('./DashboardLayout'))
 
 const SiteLayout = () => {
   return (
@@ -30,7 +30,7 @@ const SiteLayout = () => {
           {/* <Route exact path="/privacy" component={PrivacyPage} />
           <Route exact path="/terms" component={TermsPage} /> */}
           {/* Layouts */}
-          <Route path="/dashboard" component={DashboardLayout} />
+          {/* <Route path="/dashboard" component={DashboardLayout} /> */}
           {/* 404 Page */}
           <Route component={NotFoundPage} />
         </Switch>
