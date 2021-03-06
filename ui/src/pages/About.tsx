@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from 'utilities'
-import { Section } from 'components'
+import { Section, Logo } from 'components'
+import ericImg from 'images/eric.jpg'
 
 export default function AboutPage() {
   const title = 'Who We Are'
@@ -15,13 +16,13 @@ export default function AboutPage() {
             <h1 className="margin-top-0">{title}</h1>
             <p>{description}</p>
           </div>
-          <div>IMAGE</div>
+          <Logo />
         </div>
       </Section>
       <Section>
         <div className="grid">
           <div>
-            <h1 className="margin-top-0">Meet Eric, Our Fearless Founder</h1>
+            <h1 className="margin-top-0">Meet Our Founder, Eric</h1>
             <p>
               Eric Sartorius is a digital nomad that enjoys coding from all around the globe. He has been developing
               websites since 2014 and has worked with clients from all corners of the earth. Outside of web development,
@@ -29,7 +30,7 @@ export default function AboutPage() {
               one piece of advice he could give young web developers, it would be to ___!
             </p>
           </div>
-          <div>IMAGE</div>
+          <img src={ericImg} alt="Eric Sartorius" />
         </div>
       </Section>
       <Section theme="funky" isSkewed>
