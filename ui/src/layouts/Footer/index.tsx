@@ -40,14 +40,14 @@ export function Footer() {
         <div className="wrapper">
           <div className="flex container">
             <span>&copy; {new Date().getFullYear()} Pure Func LLC</span>
-            <div>
+            {/* <div>
               <Link to="/terms" aria-label="Terms & Conditions page">
                 Terms & Conditions
               </Link>
               <Link to="/privacy" aria-label="Privacy Poiilicy Page">
                 Privacy Policy
               </Link>
-            </div>
+            </div> */}
             <a href="mailto:contact@purefunc.io">Email: contact@purefunc.io</a>
           </div>
         </div>
