@@ -1,13 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from 'utilities'
-
 import { Section } from 'components'
 
 export default function BetaPage() {
   return (
     <>
-      <SEO title="Beta Program" />
+      <SEO
+        title="Beta Program"
+        description="Welcome to the Pure Func Beta program! We are excited to let you in on our new features before they go public!"
+        pathname="/beta"
+      />
       <Section>
         <>
           <h2>Thank you for your interest in our beta program!</h2>

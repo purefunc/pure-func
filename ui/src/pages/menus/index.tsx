@@ -7,19 +7,18 @@ import basicSvg from 'images/menus/basic-qr.svg'
 import plusSvg from 'images/menus/plus-qr.svg'
 
 export default function DigitalMenuPage() {
+  const description =
+    'The future of menus has arrived—don’t get left behind. Our contactless, convenient QR code menus make it easy for your customers to explore your delicious dishes without risking their health and safety.'
   return (
     <>
-      <SEO title="Digital Menus" description="We have digital menus!" />
+      <SEO title="Meet the future of menus" description={description} pathname="/menus" />
       <Section isHero theme="funky">
         <div className="grid">
           <div className="mobile-reverse-item">
             <h1 className="margin-top-0">
               Meet the future <br /> of menus.
             </h1>
-            <p className="large">
-              The future of menus has arrived—don’t get left behind. Our contactless, convenient QR code menus make it
-              easy for your customers to explore your delicious dishes without risking their health and safety.
-            </p>
+            <p className="large">{description}</p>
           </div>
           <div>CUBE PLACEHOLDER</div>
         </div>

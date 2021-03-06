@@ -4,18 +4,17 @@ import { SEO } from 'utilities'
 import { Section } from 'components'
 
 export default function ServicesPage() {
+  const title = 'Services Designed to Meet Your Modern Needs'
+  const description =
+    'From ecommerce to web apps, Pure Func offers a wide variety of services to choose from. Whether you’re looking to upgrade your old site or start a custom project from scratch, our extensive menu of modern, relevant services will fulfill all of your web development needs.'
   return (
     <>
-      <SEO title="Services" description="" />
+      <SEO title={title} description={description} pathname="/services" />
       <Section isHero theme="funky">
         <div className="grid">
           <div className="mobile-reverse-item">
-            <h1 className="margin-top-0">Services Designed to Meet Your Modern Needs</h1>
-            <p>
-              From ecommerce to web apps, Pure Func offers a wide variety of services to choose from. Whether you’re
-              looking to upgrade your old site or start a custom project from scratch, our extensive menu of modern,
-              relevant services will fulfill all of your web development needs.
-            </p>
+            <h1 className="margin-top-0">{title}</h1>
+            <p>{description}</p>
             <Link to="/contact" className="cta">
               Contact Us
             </Link>

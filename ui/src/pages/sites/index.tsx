@@ -1,22 +1,20 @@
 import React from 'react'
-import { SEO } from 'utilities'
 import { Link } from 'react-router-dom'
+import { SEO } from 'utilities'
 import { Section } from 'components'
 
 export default function SitesPage() {
+  const title = 'Expertly Crafted Websites That Won’t Break the Bank'
+  const description =
+    'Our semi-custom websites are the perfect middle ground between a template and a fully custom project. Not only will you enjoy the speed and efficiency of selecting your favorite style from a variety of prebuilt options, but you’ll also get the help of an expert team who knows how to build lightning-fast, modern websites. It’s a win-win.'
   return (
     <>
-      <SEO title="Sites" description="Get In Touch" />
+      <SEO title={title} description={description} pathname="/sites" />
       <Section isHero theme="primary">
         <div className="grid">
           <div>
-            <h1 className="margin-top-0">Expertly Crafted Websites That Won’t Break the Bank</h1>
-            <p>
-              Our semi-custom websites are the perfect middle ground between a template and a fully
-              custom project. Not only will you enjoy the speed and efficiency of selecting your favorite
-              style from a variety of prebuilt options, but you’ll also get the help of an expert team who
-              knows how to build lightning-fast, modern websites. It’s a win-win. 
-            </p>
+            <h1 className="margin-top-0">{title}</h1>
+            <p>{description}</p>
           </div>
         </div>
       </Section>
@@ -25,10 +23,10 @@ export default function SitesPage() {
           <div>
             <h1 className="margin-top-0">Want a Quick and Easy Solution? Try Our One Page Website Builder</h1>
             <p>
-              Creating a fantastic website doesn't have to be expensive or time consuming!  If you're looking
-              for a modern, high-performance site but don't have the resources to build from scratch, our semi-custom
-              website templates are the perfect place to start. Simply use the one page website builder below to choose
-              the layout, colors, and style, and our team will build it ASAP just for you.
+              Creating a fantastic website doesn't have to be expensive or time consuming! If you're looking for a
+              modern, high-performance site but don't have the resources to build from scratch, our semi-custom website
+              templates are the perfect place to start. Simply use the one page website builder below to choose the
+              layout, colors, and style, and our team will build it ASAP just for you.
             </p>
             <h1 className="margin-top-0">How It Works</h1>
             <ul>
@@ -37,12 +35,12 @@ export default function SitesPage() {
                 add your signature styles, colors, and logos to make it your own.
               </li>
               <li>
-                Send us the information you’d like to feature. Once you’ve created your design and submitted it to our team,
-                we’ll work with you to integrate your own text and images into the site. 
+                Send us the information you’d like to feature. Once you’ve created your design and submitted it to our
+                team, we’ll work with you to integrate your own text and images into the site.
               </li>
               <li>
-                Enjoy your new smooth, modern single page website. We strive to get you up and running quickly, so you can sit
-                back and enjoy the booming traffic, buzz, and sales as soon as possible. 
+                Enjoy your new smooth, modern single page website. We strive to get you up and running quickly, so you
+                can sit back and enjoy the booming traffic, buzz, and sales as soon as possible.
               </li>
             </ul>
           </div>
