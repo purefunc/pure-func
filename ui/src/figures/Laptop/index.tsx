@@ -1,4 +1,6 @@
 import React from 'react'
+import { Logo } from '../../components'
+import tuneImg from 'images/tune-header.png'
 import './laptop.scss'
 
 export function Laptop() {
@@ -9,11 +11,12 @@ export function Laptop() {
           <div className="face-one">
             <div className="camera"></div>
             <div className="display">
+              <img src={tuneImg} alt="" />
               <div className="shade"></div>
             </div>
-            <span>MacBook Air</span>
+            <span>Pure Func</span>
           </div>
-          <img src="http://www.clker.com/cliparts/i/s/H/f/4/T/apple-logo-white.svg" className="logo" />
+          <Logo isShort isWhite />
         </div>
         <div className="body">
           <div className="face-one">
