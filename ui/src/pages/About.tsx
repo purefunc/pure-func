@@ -1,10 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from 'utilities'
-import { Section } from 'components'
+import { Section, EyeLogo } from 'components'
 import ericImg from 'images/eric.jpg'
-import { SphereLogo } from '../figures'
-import { EyeLogo } from '../components'
 
 export default function AboutPage() {
   const title = 'Who We Are'
@@ -19,8 +17,6 @@ export default function AboutPage() {
             <p>{description}</p>
           </div>
           <div className="flex flex--center" style={{ alignItems: 'flex-start' }}>
-            {/* <SphereLogo /> */}
-
             <EyeLogo style={{ width: '75%', height: '75%' }} />
           </div>
         </div>
