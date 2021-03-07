@@ -31,10 +31,6 @@ export default function HomePage() {
             modern makeover, or hit the ground running with a semi-custom template—our highly skilled developers have
             got you covered.
           </p>
-          <Link to="/contact" className="cta">
-            Contact Us
-          </Link>
-          <button className="cta">Contact Us</button>
           <div className="grid">
             <div>
               <h3>E-Commerce Integration</h3>
@@ -68,8 +64,9 @@ export default function HomePage() {
               <TerminalScreen />
             </div>
           </div>
-          <h3>But Wait, There's More...</h3>
-          <p>
+
+          <h3 className="margin-auto">But Wait, There's More...</h3>
+          <p className="margin-auto">
             Don't see exactly what you're looking for? Check out our <Link to="/services">full list of services</Link>{' '}
             to explore even more options. If you're still not sure that we're the right fit,{' '}
             <Link to="/contact">get in touch</Link> with our team to chat about a custom solution.
