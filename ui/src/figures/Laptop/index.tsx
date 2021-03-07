@@ -14,7 +14,7 @@ export function Laptop() {
               <img src={tuneImg} alt="" />
               <div className="shade"></div>
             </div>
-            <span>Pure Func</span>
+            <span>Down to Func</span>
           </div>
           <Logo isShort isWhite />
         </div>

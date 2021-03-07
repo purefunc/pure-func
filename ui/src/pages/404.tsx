@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from 'utilities'
 import { Section } from 'components'
+import { SphereLogo } from '../figures'
 
 export default function NotFoundPage() {
   return (
@@ -10,10 +11,11 @@ export default function NotFoundPage() {
       <Section isHero theme="primary">
         <div className="grid">
           <div className="text-center">
-            <h1 className="margin-auto">404</h1>
-            <p className="margin-auto">Oh no there is nothing here!</p>
+            <SphereLogo />
+            <h1 className="margin-top-0 margin-auto">404</h1>
+            <p className="margin-auto">There is nothing to see here!</p>
             <Link className="cta " to="/">
-              Back to the Func
+              Back to the func
             </Link>
           </div>
         </div>

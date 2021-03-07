@@ -37,8 +37,8 @@ export function Logo({ isWhite = false, isShort = false }: Props) {
         fill={isWhite ? 'none' : 'var(--white)'}
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M18.6084 36.9718C28.8855 36.9718 37.2167 28.6954 37.2167 18.4859C37.2167 8.27643 28.8855 0 18.6084 0C8.33125 0 0 8.27643 0 18.4859C0 28.6954 8.33125 36.9718 18.6084 36.9718ZM19.4543 11.8838C9.93037 15.7002 9.81156 21.1692 19.3948 24.8479C1.80455 22.4814 1.67936 13.5571 19.4543 11.8838ZM16.9341 29.2894C27.5598 23.0013 27.5204 13.7747 16.7959 7.68246C35.8309 13.3241 35.7372 21.7462 16.9341 29.2894Z"
         fill={isWhite ? 'var(--white)' : 'var(--brandColor)'}
       />
