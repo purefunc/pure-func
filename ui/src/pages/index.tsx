@@ -31,6 +31,10 @@ export default function HomePage() {
             modern makeover, or hit the ground running with a semi-custom template—our highly skilled developers have
             got you covered.
           </p>
+          <Link to="/contact" className="cta">
+            Contact Us
+          </Link>
+          <button className="cta">Contact Us</button>
           <div className="grid">
             <div>
               <h3>E-Commerce Integration</h3>

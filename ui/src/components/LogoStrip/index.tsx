@@ -59,7 +59,7 @@ export function LogoStrip() {
   return (
     <div className="logo-strip">
       {logos.map(({ src, alt }) => (
-        <img className="logo-strip__logo" src={src} alt={alt + ' Logo'} />
+        <img className="logo-strip__logo" src={src} alt={alt + ' Logo'} key={src} />
       ))}
     </div>
   )
