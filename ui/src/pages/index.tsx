@@ -24,13 +24,15 @@ export default function HomePage() {
       </Section>
       <Section>
         <>
-          <h2>Services</h2>
-          <p>
-            From business card sites to booming e-commerce platforms, our team offers a wide range of services that will
-            meet all of your development needs. Go big with a brand-new full stack site, refresh your old design with a
-            modern makeover, or hit the ground running with a semi-custom template—our highly skilled developers have
-            got you covered.
-          </p>
+          <div className="margin-left-largest">
+            <h2 className="margin-top-0">Services</h2>
+            <p>
+              From business card sites to booming e-commerce platforms, our team offers a wide range of services that
+              will meet all of your development needs. Go big with a brand-new full stack site, refresh your old design
+              with a modern makeover, or hit the ground running with a semi-custom template—our highly skilled
+              developers have got you covered.
+            </p>
+          </div>
           <div className="grid">
             <div>
               <h3>E-Commerce Integration</h3>
@@ -47,7 +49,7 @@ export default function HomePage() {
             </div>
             <div>IMAGE HERE</div>
           </div>
-          <div className="grid">
+          <div className="grid margin-left-largest">
             <div>
               <h3>Custom Full Stack Web Development</h3>
               <p>
@@ -64,7 +66,6 @@ export default function HomePage() {
               <TerminalScreen />
             </div>
           </div>
-
           <h3 className="margin-auto">But Wait, There's More...</h3>
           <p className="margin-auto">
             Don't see exactly what you're looking for? Check out our <Link to="/services">full list of services</Link>{' '}

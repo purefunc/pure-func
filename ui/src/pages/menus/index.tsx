@@ -26,17 +26,17 @@ export default function DigitalMenuPage() {
       <Section>
         <div className="grid">
           <div>
-            <img alt="phone" src={phoneImg} />
+            <img alt="Phone screen showing a menu" src={phoneImg} />
           </div>
           <div>
-            <h2>Update your offerings without all the hassle.</h2>
+            <h3 className="margin-top-0">Update your offerings without all the hassle.</h3>
             <p className="large">
               Switching up a paper menu can be tedious and expensive, even if you’re just changing a few items! With our
               custom QR menus, adding more dishes, moving through the seasons, and trying new ingredients becomes simple
               and convenient.
             </p>
 
-            <h2>Delight your customers with a squint-free dining experience.</h2>
+            <h3>Delight your customers with a squint-free dining experience.</h3>
             <p className="large">
               With an image or a PDF menu, your customers are probably spending more time zooming and squinting than
               actually exploring what you have to offer. Our custom QR menus are compatible with almost any mobile
@@ -79,8 +79,8 @@ export default function DigitalMenuPage() {
                 <li>QR Code with gradient and/or logo</li>
                 <li>Optional header image on menu</li>
                 {/* <li className="accent-text">Customizable color scheme</li> */}
-                <li className="accent-text">Image pop-ups for individual food items can be added</li>
-                <li className="accent-text">Food key to label items with tags (spicy, vegan, raw, etc.)</li>
+                <li>Image pop-ups for individual food items can be added</li>
+                <li>Food key to label items with tags (spicy, vegan, raw, etc.)</li>
                 <li>Free from our branding</li>
                 <li>And more planed features coming soon!</li>
               </ul>
@@ -97,23 +97,23 @@ export default function DigitalMenuPage() {
       </Section>
       <Section>
         <>
-          <div className="container center-text">
-            <h2 style={{ fontWeight: 'bold' }}>Your new QR menu could look as sleek as these.</h2>
-            <p className="large">
+          <div className="container text-center">
+            <h2 className="margin-auto margin-top-0">Your new QR menu could look as sleek as these.</h2>
+            <p className="large margin-auto">
               Check out some examples of real-life QR code menus we’ve made for customers just like you. For the best
               viewing experience, scan the codes below with the camera on your mobile device.
             </p>
             <div className="container grid">
-              <div className="LinkDiv">
+              <div>
                 <Link to="/examples/basic/">
                   <h4>Basic Menu</h4>
-                  <img src={basicSvg} alt="" />
+                  <img src={basicSvg} alt="Basic QR Code" />
                 </Link>
               </div>
-              <div className="LinkDiv">
+              <div>
                 <Link to="/examples/plus/">
                   <h4>Pro Menu</h4>
-                  <img src={plusSvg} alt="" />
+                  <img src={plusSvg} alt="Plus QR Code" />
                 </Link>
               </div>
               <div>

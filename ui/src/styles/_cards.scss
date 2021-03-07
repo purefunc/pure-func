@@ -18,7 +18,8 @@
     color: var(--headingColor);
   }
   &--funky-2,
-  &--deep {
+  &--deep,
+  &--primary {
     --textColor: var(--white);
     --headingColor: var(--white);
     .cta {
@@ -31,6 +32,9 @@
 
   &--lightBlue {
     --cardBackground: var(--lightBlue);
+  }
+  &--primary {
+    --cardBackground: var(--primaryColor);
   }
   &--deep {
     --cardBackground: var(--deepGradient);
