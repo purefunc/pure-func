@@ -12,7 +12,7 @@ export default function NotFoundPage() {
         <div className="grid">
           <div className="text-center">
             <SphereLogo />
-            <h1 className="margin-top-0 margin-auto">404</h1>
+            <h1 className="margin-auto margin-top-small">404</h1>
             <p className="margin-auto">There is nothing to see here!</p>
             <Link className="cta " to="/">
               Back to the func
