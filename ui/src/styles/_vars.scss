@@ -30,14 +30,14 @@
 
   /* Gradients */
   --deepGradient: linear-gradient(269.29deg, var(--truePurple) 0%, var(--deepPurple) 70.54%);
-  --buttonGradient: linear-gradient(95.92deg, #4752bc 18.13%, #5c1373 99.27%);
-  --buttonGradient-2: linear-gradient(95.04deg, var(--purple) 33.05%, #7c1e9a 80.31%);
+  // --buttonGradient: linear-gradient(95.92deg, #4752bc 18.13%, #5c1373 99.27%);
+  --buttonGradient: linear-gradient(to right, var(--purple) 0%, #7c1e9a 51%, #5c1373 100%);
+  --buttonGradient-2: linear-gradient(to right, var(--purple) 33.05%, #7c1e9a 80.31%);
   --purpleGradient: linear-gradient(269.29deg, var(--deepPurple) 0%, var(--truePurple) 99.59%);
   --funkyGradient: linear-gradient(265.13deg, var(--violet) 22.71%, var(--pastel) 76.07%);
   --funkyGradient-2: linear-gradient(95.04deg, var(--purple) 33.05%, var(--truePurple) 80.31%);
   --radialGradient: radial-gradient(50% 50% at 50% 50%, var(--teal) 28.12%, var(--pastel) 68.23%, var(--purple) 100%);
   --grayGradient: linear-gradient(95.04deg, var(--lighterGray) 33.05%, var(--white) 80.31%);
-
   /* Colors intentions */
   --brandColor: var(--pastel);
   --primaryColor: var(--purple);

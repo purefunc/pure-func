@@ -14,7 +14,9 @@ export default function ContactPage() {
           <div className="mobile-reverse-item">
             <h1 className="margin-top-0">{title}</h1>
             <p className="large">{description}</p>
-            <p>*required fields</p>
+            <p>
+              <i>* Required fields</i>
+            </p>
           </div>
           <div className="card card--lightBlue">MESSAGE INPUT PLACEHOLDER</div>
         </div>

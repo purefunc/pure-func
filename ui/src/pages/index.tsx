@@ -43,7 +43,7 @@ export default function HomePage() {
                 or add to your existing platform, our custom Shopify themes weave powerful e-commerce functionality
                 right into your stunning site.
               </p>
-              <Link className="cta" to="/services">
+              <Link className="cta cta--gradient" to="/services">
                 Learn More
               </Link>
             </div>
@@ -58,7 +58,7 @@ export default function HomePage() {
                 elegance and speed. The Pure Func team has experience building a wide variety of custom full stack
                 websites, including admin systems, analytics dashboards, social networks, and so much more.
               </p>
-              <Link className="cta" to="/services">
+              <Link className="cta cta--gradient" to="/services">
                 Learn More
               </Link>
             </div>

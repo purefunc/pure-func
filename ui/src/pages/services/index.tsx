@@ -15,7 +15,7 @@ export default function ServicesPage() {
           <div className="mobile-reverse-item">
             <h1 className="margin-top-0">{title}</h1>
             <p>{description}</p>
-            <Link to="/contact" className="cta">
+            <Link to="/contact" className="cta cta--gradient">
               Contact Us
             </Link>
           </div>
@@ -24,7 +24,7 @@ export default function ServicesPage() {
       <Section>
         <div className="grid">
           <div>
-            <h1 className="margin-top-0">Custom Websites</h1>
+            <h3 className="margin-top-0">Custom Websites</h3>
             <p>
               Bold. Smooth. Modern. Showcase the best of your work, products, and services with a custom user interface
               designed to flatter your brand. Our static sites can be as simple or complex as you need, with the option
@@ -60,7 +60,7 @@ export default function ServicesPage() {
       <Section>
         <div className="grid">
           <div>
-            <h1 className="margin-top-0">E-Commerce Integration</h1>
+            <h3 className="margin-top-0">E-Commerce Integration</h3>
             <p>
               Rack up sale after sale with a custom Shopify theme. Designed for your unique needs, our e-commerce sites
               offer all of the same benefits as our fast, adaptable brochure sites but with the added power of Shopify’s
@@ -94,7 +94,7 @@ export default function ServicesPage() {
       <Section>
         <div className="grid">
           <div>
-            <h1 className="margin-top-0">Custom Web Apps</h1>
+            <h3 className="margin-top-0">Custom Web Apps</h3>
             <p>
               Our custom web apps are more than just a pretty face. Equipped with powerful backend functionality along
               with gorgeous, responsive user interfaces, these websites can accomplish anything you need with elegance
@@ -130,7 +130,7 @@ export default function ServicesPage() {
       <Section>
         <div className="grid">
           <div>
-            <h1 className="margin-top-0">Digital Menus</h1>
+            <h3 className="margin-top-0">Digital Menus</h3>
             <p>
               If you’re a restaurant owner looking to stay on the cutting edge of the customer experience, building a
               smooth, responsive Digital menu is crucial to the new digital age of ordering. The COVID-19 pandemic has
@@ -198,7 +198,7 @@ export default function ServicesPage() {
               </p>
             </div>
             <div>
-              <Link to="/contact" className="cta">
+              <Link to="/contact" className="cta cta--gradient">
                 Contact Us
               </Link>
             </div>

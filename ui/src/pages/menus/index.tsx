@@ -19,6 +19,12 @@ export default function DigitalMenuPage() {
               Meet the future <br /> of menus.
             </h1>
             <p className="large">{description}</p>
+            <p>
+              <i>* Currently in beta but still accepting clients</i>
+            </p>
+            <Link to="/menus/beta" className="cta cta--gradient">
+              Get Beta Access
+            </Link>
           </div>
           <div>CUBE PLACEHOLDER</div>
         </div>
