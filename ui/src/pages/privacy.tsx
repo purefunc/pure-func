@@ -5,7 +5,7 @@ import { Section } from 'components'
 export default function PrivacyPage() {
   return (
     <>
-      <SEO title="Privacy Policy" description="" />
+      <SEO title="Privacy Policy" description="Pure Func Privacy Policy" pathname="/privacy" />
       <Section>
         <>
           <h1>Privacy Policy</h1>

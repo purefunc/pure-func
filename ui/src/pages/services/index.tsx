@@ -4,19 +4,18 @@ import { SEO } from 'utilities'
 import { Section } from 'components'
 
 export default function ServicesPage() {
+  const title = 'Services Designed to Meet Your Modern Needs'
+  const description =
+    'From ecommerce to web apps, Pure Func offers a wide variety of services to choose from. Whether you’re looking to upgrade your old site or start a custom project from scratch, our extensive menu of modern, relevant services will fulfill all of your web development needs.'
   return (
     <>
-      <SEO title="Services" description="" />
-      <Section isHero theme="funky-5">
+      <SEO title={title} description={description} pathname="/services" />
+      <Section isHero theme="funky">
         <div className="grid">
           <div className="mobile-reverse-item">
-            <h1 className="margin-top-0">Services Designed to Meet Your Modern Needs</h1>
-            <p>
-              From ecommerce to web apps, Pure Func offers a wide variety of services to choose from. Whether you’re
-              looking to upgrade your old site or start a custom project from scratch, our extensive menu of modern,
-              relevant services will fulfill all of your web development needs.
-            </p>
-            <Link to="/contact" className="cta">
+            <h1 className="margin-top-0">{title}</h1>
+            <p>{description}</p>
+            <Link to="/contact" className="cta cta--gradient">
               Contact Us
             </Link>
           </div>
@@ -25,7 +24,7 @@ export default function ServicesPage() {
       <Section>
         <div className="grid">
           <div>
-            <h1 className="margin-top-0">Custom Websites</h1>
+            <h3 className="margin-top-0">Custom Websites</h3>
             <p>
               Bold. Smooth. Modern. Showcase the best of your work, products, and services with a custom user interface
               designed to flatter your brand. Our static sites can be as simple or complex as you need, with the option
@@ -61,7 +60,7 @@ export default function ServicesPage() {
       <Section>
         <div className="grid">
           <div>
-            <h1 className="margin-top-0">E-Commerce Integration</h1>
+            <h3 className="margin-top-0">E-Commerce Integration</h3>
             <p>
               Rack up sale after sale with a custom Shopify theme. Designed for your unique needs, our e-commerce sites
               offer all of the same benefits as our fast, adaptable brochure sites but with the added power of Shopify’s
@@ -95,7 +94,7 @@ export default function ServicesPage() {
       <Section>
         <div className="grid">
           <div>
-            <h1 className="margin-top-0">Custom Web Apps</h1>
+            <h3 className="margin-top-0">Custom Web Apps</h3>
             <p>
               Our custom web apps are more than just a pretty face. Equipped with powerful backend functionality along
               with gorgeous, responsive user interfaces, these websites can accomplish anything you need with elegance
@@ -131,7 +130,7 @@ export default function ServicesPage() {
       <Section>
         <div className="grid">
           <div>
-            <h1 className="margin-top-0">Digital Menus</h1>
+            <h3 className="margin-top-0">Digital Menus</h3>
             <p>
               If you’re a restaurant owner looking to stay on the cutting edge of the customer experience, building a
               smooth, responsive Digital menu is crucial to the new digital age of ordering. The COVID-19 pandemic has
@@ -164,7 +163,7 @@ export default function ServicesPage() {
           </div>
         </div>
       </Section>
-      <Section isSkewed theme="grey">
+      <Section isSkewed theme="gray">
         <>
           <h2 className="margin-auto text-center">Refactoring and Consulting</h2>
           <p className="margin-auto text-center">
@@ -175,7 +174,7 @@ export default function ServicesPage() {
             can guide you through your roadblocks and equip you to conquer them on your own in the future.{' '}
           </p>
           <div className="grid grid--cols-3 margins">
-            <div className="card card--pastel">
+            <div className="card card--lightBlue">
               <h5>Uninterrupted Progress</h5>
               <p>
                 Move on from complicated issues without sacrificing your goals. Getting stuck on a problem outside of
@@ -183,14 +182,14 @@ export default function ServicesPage() {
                 to meet your goals.
               </p>
             </div>
-            <div className="card card--pastel">
+            <div className="card card--lightBlue">
               <h5>Empowerment for the Whole Team</h5>
               <p>
                 Unlock new skills for your team. Through our mentorship and teaching opportunities, your team can grow
                 in new directions and learn valuable, modern development skills.
               </p>
             </div>
-            <div className="card card--pastel">
+            <div className="card card--lightBlue">
               <h5>A Firm Foundation</h5>
               <p>
                 Save time by making the right architecture decisions. Work with our team to make sure you’re picking the
@@ -198,11 +197,11 @@ export default function ServicesPage() {
                 break your future success.
               </p>
             </div>
-            <div>
-              <Link to="/contact" className="cta">
-                Contact Us
-              </Link>
-            </div>
+          </div>
+          <div className="text-center margins">
+            <Link to="/contact" className="cta cta--gradient">
+              Contact Us
+            </Link>
           </div>
         </>
       </Section>

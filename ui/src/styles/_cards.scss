@@ -1,10 +1,9 @@
 .section .card {
   --cardPadding: var(--space);
-  --cardBorderRadius: 8px;
   --cardElevation: none;
   --maxCardWidth: 680px;
 
-  border-radius: var(--cardBorderRadius);
+  border-radius: var(--cardRadius);
   background: var(--cardBackground);
   box-shadow: var(--cardElevation);
   padding: var(--cardPadding);
@@ -18,24 +17,35 @@
   h6 {
     color: var(--headingColor);
   }
-  &--pastel {
-    --cardBackground: var(--pastel);
-  }
-  &--func {
-    --cardBackground: var(--funcGradient);
-  }
-  &--func-2 {
-    --cardBackground: var(--funcGradient-2);
-    --headingColor: var(--deep-purple);
-  }
-  &--func-3 {
-    --cardBackground: var(--funcGradient-3);
-  }
-  &--func-4 {
-    --cardBackground: var(--funcGradient-4);
+  &--funky-2,
+  &--deep,
+  &--primary {
     --textColor: var(--white);
     --headingColor: var(--white);
+    .cta {
+      --buttonBg: var(--white);
+      --buttonTextColor: var(--primaryColor);
+      --buttonHoverBg: var(--white);
+      --buttonHoverColor: var(--primaryColor);
+    }
   }
+
+  &--lightBlue {
+    --cardBackground: var(--lightBlue);
+  }
+  &--primary {
+    --cardBackground: var(--primaryColor);
+  }
+  &--deep {
+    --cardBackground: var(--deepGradient);
+  }
+  &--funky {
+    --cardBackground: var(--funkyGradient);
+  }
+  &--funky-2 {
+    --cardBackground: var(--funkyGradient-2);
+  }
+
   &--full-width {
     --maxCardWidth: none;
   }

@@ -1,52 +1,59 @@
 :root {
   /* Colors */
-  --lilac: hsl(222, 100%, 75%); /* #80a6ff */
-
-  --pastel: hsl(221, 94%, 94%); /* #DFE9FE */
-
+  --pastel: hsl(222, 100%, 75%); /* #82A8FF */
+  --lightBlue: hsl(221, 94%, 94%); /* #DFE9FE */
   --purple: hsl(237, 45%, 54%); /* #555ABF */
   --purple-10: hsl(237, 45%, 44%);
-
-  --deep-purple: hsl(240, 30%, 28%); /* #32325D; */
-
-  --teal: hsl(180, 52%, 68%); /* #82d8d8 */
-  --teal-10: hsl(180, 52%, 78%);
+  --truePurple: hsl(254, 51%, 42%); /* #4e34a1 */
+  --deepPurple: hsl(240, 30%, 28%); /* #32325D; */
+  --teal: hsl(192, 93%, 67%); /* #5DDBF9 */
+  --teal-10: hsl(192, 93%, 77%);
+  --yellow: hsl(41, 93%, 67%); /* #F9C75B */
+  --pink: hsl(316, 69%, 70%); /* #E77CCA　*/
+  --violet: hsl(286, 55%, 53%); /* A943C9 */
 
   --green: hsl(73, 70%, 66%); /* #cbe56c */
-  --yellow: hsl(51, 98%, 65%); /* #fde24f */
   --red: hsl(0, 75%, 60%); /* #e54b4b */
 
-  --black: hsl(0, 0%, 20%); /* #333333 */
-  --grey: hsl(0, 0%, 85%); /* #d8d8d8 */
-  --grey-10: hsl(0, 0, 75%);
-  --white: hsl(0, 0%, 100%); /* #ffffff */
+  /* Grayscale */
+  --white-hs: 0, 0%;
+  --pureBlack: hsl(var(--white-hs), 0%); /* #000000 */
+  --black: hsl(var(--white-hs), 20%); /* #333333 */
+  --darkestGray: hsl(var(--white-hs), 40%); /* #666666 */
+  --darkGray: hsl(var(--white-hs), 60%); /* #999999 */
+  --gray: hsl(var(--white-hs), 73%); /* #BBBBBB */
+  --lightGray: hsl(var(--white-hs), 80%); /* #CCCCCC */
+  --lighterGray: hsl(var(--white-hs), 93%); /* #EEEEEE */
+  --lightestGray: hsl(var(--white-hs), 96%); /* #F5F5F5 */
+  --white: hsl(var(--white-hs), 99%); /* #FCFCFC */
+  --pureWhite: hsl(var(--white-hs), 100%); /* #ffffff */
 
   /* Gradients */
-  --purpleGradient: linear-gradient(269.29deg, #32325d 0%, #4e34a1 99.59%);
-  --funcGradient: linear-gradient(265.13deg, #a943c9 22.71%, #82a8ff 76.07%);
-  --funcGradient-2: linear-gradient(95.04deg, rgba(85, 90, 191, 0.3) 33.05%, rgba(148, 14, 255, 0.3) 80.31%);
-  --funcGradient-3: linear-gradient(82.81deg, rgba(129, 166, 252, 0.2) 28.48%, rgba(169, 67, 201, 0.15) 77.67%);
-  --funcGradient-4: linear-gradient(95.04deg, #555abf 33.05%, #940eff 80.31%);
-  --funcGradient-5: linear-gradient(256.61deg, #82a8ff 0.62%, #a943c9 100%);
-  --greyGradient: linear-gradient(95.04deg, #eeeeee 33.05%, #fcfcfc 80.31%);
-
+  --deepGradient: linear-gradient(269.29deg, var(--truePurple) 0%, var(--deepPurple) 70.54%);
+  // --buttonGradient: linear-gradient(95.92deg, #4752bc 18.13%, #5c1373 99.27%);
+  --buttonGradient: linear-gradient(to right, var(--purple) 0%, #7c1e9a 51%, #5c1373 100%);
+  --buttonGradient-2: linear-gradient(to right, var(--purple) 33.05%, #7c1e9a 80.31%);
+  --purpleGradient: linear-gradient(269.29deg, var(--deepPurple) 0%, var(--truePurple) 99.59%);
+  --funkyGradient: linear-gradient(265.13deg, var(--violet) 22.71%, var(--pastel) 76.07%);
+  --funkyGradient-2: linear-gradient(95.04deg, var(--purple) 33.05%, var(--truePurple) 80.31%);
+  --radialGradient: radial-gradient(50% 50% at 50% 50%, var(--teal) 28.12%, var(--pastel) 68.23%, var(--purple) 100%);
+  --grayGradient: linear-gradient(95.04deg, var(--lighterGray) 33.05%, var(--white) 80.31%);
   /* Colors intentions */
-  --brandColor: var(--lilac);
+  --brandColor: var(--pastel);
   --primaryColor: var(--purple);
   --primaryLight: var(--purple-10);
-  --secondaryColor: var(--grey);
-  --secondaryLight: var(--grey-10);
+  --secondaryColor: var(--lightGray);
+  --secondaryLight: var(--gray);
   --accentColor: var(--teal);
   --accentLight: var(--teal-10);
 
   --backgroundColor: var(--white);
   --cardBackground: var(--white);
-  // --footerBackground: var(--black);
 
   --headingColor: var(--purple);
-  --textColor: var(--deep-purple);
+  --textColor: var(--deepPurple);
   --footerColor: var(--white);
-  --lineColor: var(--grey);
+  --lineColor: var(--lightGray);
 
   --dangerColor: var(--red);
   --successColor: var(--green);
@@ -71,7 +78,6 @@
   --smallText: calc(var(--baseFontSize) / var(--fontScale));
   --smallestText: calc(var(--smallText) / var(--fontScale));
 
-  --maxTextWidth: 737px;
   --fontWeightNormal: 300;
   --fontWeightSemibold: 400;
   --fontWeightBold: 500;
@@ -114,7 +120,7 @@
   --maxTextWidth: calc(var(--maxTextLayoutWidth) * 1px);
 
   /* Radii */
-  --cardRadius: 3px;
+  --cardRadius: 8px;
   --inputRadius: 6px;
   --buttonRadius: 4rem;
 

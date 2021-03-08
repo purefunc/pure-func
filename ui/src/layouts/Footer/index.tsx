@@ -11,7 +11,7 @@ export function Footer() {
         <div className="footer__nav container flex">
           <div className="footer__logo">
             <NavLink data-testid="logo-link" to="/" aria-label="home page">
-              <Logo />
+              <Logo isWhite />
             </NavLink>
           </div>
           <div>
@@ -30,24 +30,24 @@ export function Footer() {
               Contact Us
             </NavLink>
           </div>
-          <div>
+          {/* <div>
             <button className="cta cta--white-ghost">Join</button>
             <button className="cta cta--white-ghost">Sign In</button>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="footer__bottom">
         <div className="wrapper">
           <div className="flex container">
             <span>&copy; {new Date().getFullYear()} Pure Func LLC</span>
-            <div>
+            {/* <div>
               <Link to="/terms" aria-label="Terms & Conditions page">
                 Terms & Conditions
               </Link>
               <Link to="/privacy" aria-label="Privacy Poiilicy Page">
                 Privacy Policy
               </Link>
-            </div>
+            </div> */}
             <a href="mailto:contact@purefunc.io">Email: contact@purefunc.io</a>
           </div>
         </div>

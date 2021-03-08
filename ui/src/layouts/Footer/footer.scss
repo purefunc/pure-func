@@ -1,8 +1,9 @@
 .footer {
+  margin-top: auto;
   color: var(--footerColor);
   background: var(--purpleGradient);
   &__nav {
-    align-items: flex-start;
+    align-items: flex-start !important;
     a {
       display: block;
       & + a {
@@ -23,11 +24,11 @@
     }
   }
   &__bottom {
-    background: var(--deep-purple);
+    background: var(--deepPurple);
     font-size: var(--smallestText);
-    color: var(--grey);
+    color: var(--gray);
     a {
-      color: var(--grey);
+      color: var(--gray);
       & + a {
         margin-left: var(--space);
       }
