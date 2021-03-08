@@ -197,11 +197,11 @@ export default function ServicesPage() {
                 break your future success.
               </p>
             </div>
-            <div>
-              <Link to="/contact" className="cta cta--gradient">
-                Contact Us
-              </Link>
-            </div>
+          </div>
+          <div className="text-center margins">
+            <Link to="/contact" className="cta cta--gradient">
+              Contact Us
+            </Link>
           </div>
         </>
       </Section>
