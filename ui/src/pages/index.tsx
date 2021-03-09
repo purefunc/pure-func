@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Section, LogoStrip } from 'components'
+import { Section, LogoStrip, Icon } from 'components'
 import { TerminalScreen, Laptop } from 'figures'
 import { SEO } from '../utilities/SEO'
 
@@ -111,6 +111,9 @@ export default function HomePage() {
           <h2 className="margin-auto text-center">What Sets Us Apart</h2>
           <div className="grid grid--cols-3 margins">
             <div className="card card--lightBlue">
+              <div className="card card--icon card--elevation-2">
+                <Icon name="three-diagram" />
+              </div>
               <h5>An Ultramodern Approach</h5>
               <p>
                 We’re constantly studying and experimenting with emerging, state-of-the-art technologies that will give
@@ -119,6 +122,9 @@ export default function HomePage() {
               </p>
             </div>
             <div className="card card--lightBlue">
+              <div className="card card--icon card--elevation-2">
+                <Icon name="puzzle-piece" />
+              </div>
               <h5>Fully Custom Solutions</h5>
               <p>
                 From loading times to error handling, the quality of your customer experience hinges on the quality of
@@ -127,6 +133,9 @@ export default function HomePage() {
               </p>
             </div>
             <div className="card card--lightBlue">
+              <div className="card card--icon card--elevation-2">
+                <Icon name="globe" />
+              </div>
               <h5>A Global Perspective</h5>
               <p>
                 Our team has worked with clients from all over the world, accommodating a wide variety of timezones and

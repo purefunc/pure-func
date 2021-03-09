@@ -52,6 +52,11 @@
   &--padded {
     --cardPadding: var(--largestSpace);
   }
+  &--icon {
+    --cardPadding: var(--smallestSpace);
+    --cardBackground: var(--white);
+    display: inline-flex;
+  }
   & > *:first-child {
     margin-top: 0;
   }

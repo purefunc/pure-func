@@ -243,29 +243,58 @@ export function Icon({ color = 'var(--black)', name, onClick, style = {} }: Prop
       )
     case 'smiley-face':
       return (
-        <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <g clip-path="url(#clip0)">
-            <path
-              d="M29 58C23.2644 58 17.6575 56.2992 12.8885 53.1126C8.11945 49.9261 4.40245 45.3969 2.20751 40.0978C0.0125651 34.7988 -0.561731 28.9678 0.55724 23.3424C1.67621 17.7169 4.43819 12.5496 8.49392 8.49392C12.5496 4.43819 17.7169 1.67621 23.3424 0.55724C28.9678 -0.561731 34.7988 0.0125651 40.0978 2.20751C45.3969 4.40245 49.9261 8.11945 53.1126 12.8885C56.2992 17.6575 58 23.2644 58 29C58 36.6913 54.9447 44.0676 49.5061 49.5061C44.0676 54.9447 36.6913 58 29 58ZM29 2.56001C23.7707 2.56001 18.6588 4.11069 14.3107 7.01596C9.9627 9.92122 6.57382 14.0506 4.57264 18.8819C2.57146 23.7131 2.04786 29.0293 3.06805 34.1582C4.08824 39.2871 6.60641 43.9982 10.3041 47.6959C14.0018 51.3936 18.713 53.9118 23.8418 54.932C28.9707 55.9522 34.2869 55.4286 39.1182 53.4274C43.9494 51.4262 48.0788 48.0373 50.9841 43.6893C53.8893 39.3413 55.44 34.2294 55.44 29C55.4347 21.9893 52.6474 15.2673 47.6901 10.31C42.7327 5.35265 36.0107 2.56531 29 2.56001Z"
-              fill="#555ABF"
-            />
-            <path
-              d="M29 49.13C26.8709 49.1313 24.7624 48.7129 22.7952 47.8988C20.8279 47.0846 19.0404 45.8906 17.5349 44.3851C16.0294 42.8796 14.8354 41.0922 14.0212 39.1249C13.2071 37.1576 12.7887 35.0491 12.79 32.92C12.8001 32.5837 12.9381 32.264 13.176 32.026C13.4139 31.7881 13.7337 31.6501 14.07 31.64H43.93C44.2663 31.6501 44.5861 31.7881 44.824 32.026C45.0619 32.264 45.2 32.5837 45.21 32.92C45.2113 35.0491 44.7929 37.1576 43.9788 39.1249C43.1646 41.0922 41.9706 42.8796 40.4651 44.3851C38.9596 45.8906 37.1721 47.0846 35.2049 47.8988C33.2376 48.7129 31.1291 49.1313 29 49.13ZM15.44 34.2C15.758 37.5762 17.324 40.7124 19.8318 42.9952C22.3396 45.2779 25.6088 46.543 29 46.543C32.3912 46.543 35.6604 45.2779 38.1682 42.9952C40.676 40.7124 42.2421 37.5762 42.56 34.2H15.44Z"
-              fill="#555ABF"
-            />
-            <path
-              d="M22.6 23.71C22.2637 23.6999 21.9439 23.5618 21.706 23.3239C21.4681 23.086 21.3301 22.7662 21.32 22.43C21.2581 21.4271 20.8035 20.489 20.0548 19.8189C19.3061 19.1488 18.3236 18.8007 17.32 18.85C16.3164 18.8007 15.3339 19.1488 14.5852 19.8189C13.8365 20.489 13.3819 21.4271 13.32 22.43C13.32 22.7694 13.1852 23.095 12.9451 23.335C12.7051 23.5751 12.3795 23.71 12.04 23.71C11.7005 23.71 11.375 23.5751 11.1349 23.335C10.8949 23.095 10.76 22.7694 10.76 22.43C10.8226 20.7482 11.5472 19.1593 12.7758 18.0093C14.0045 16.8593 15.6378 16.2413 17.32 16.29C19.0039 16.2386 20.6398 16.8554 21.8706 18.0057C23.1015 19.156 23.8274 20.7464 23.89 22.43C23.8928 22.5996 23.8612 22.7681 23.7972 22.9253C23.7332 23.0825 23.6381 23.2252 23.5177 23.3447C23.3972 23.4643 23.2538 23.5582 23.0961 23.621C22.9384 23.6838 22.7697 23.714 22.6 23.71Z"
-              fill="#555ABF"
-            />
-            <path
-              d="M46 23.71C45.6637 23.7 45.3439 23.5619 45.106 23.324C44.8681 23.0861 44.7301 22.7663 44.72 22.43C44.6581 21.4272 44.2035 20.4891 43.4548 19.819C42.7061 19.1489 41.7236 18.8008 40.72 18.85C40.2215 18.819 39.7218 18.8873 39.25 19.051C38.7781 19.2146 38.3435 19.4705 37.9713 19.8035C37.5992 20.1366 37.2969 20.5403 37.0821 20.9912C36.8673 21.4421 36.7442 21.9312 36.72 22.43C36.72 22.7695 36.5851 23.0951 36.3451 23.3351C36.1051 23.5752 35.7795 23.71 35.44 23.71C35.1005 23.71 34.775 23.5752 34.5349 23.3351C34.2949 23.0951 34.16 22.7695 34.16 22.43C34.2726 20.7656 35.0132 19.206 36.232 18.0669C37.4508 16.9277 39.0567 16.2941 40.725 16.2941C42.3933 16.2941 43.9992 16.9277 45.218 18.0669C46.4368 19.206 47.1774 20.7656 47.29 22.43C47.2823 22.7688 47.1436 23.0914 46.903 23.3301C46.6625 23.5688 46.3388 23.7049 46 23.71Z"
-              fill="#555ABF"
-            />
-          </g>
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="17.5" stroke="#555ABF" />
+          <path
+            d="M18 30C24.6274 30 30 24.6274 30 18C30 11.3726 24.6274 6 18 6C11.3726 6 6 11.3726 6 18C6 24.6274 11.3726 30 18 30Z"
+            stroke="#555ABF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M24.545 20.1818C24.545 21.9178 23.8554 23.5827 22.6279 24.8102C21.4004 26.0377 19.7355 26.7273 17.9996 26.7273C16.2636 26.7273 14.5987 26.0377 13.3712 24.8102C12.1437 23.5827 11.4541 21.9178 11.4541 20.1818H24.545Z"
+            fill="url(#paint0_radial)"
+            stroke="url(#paint1_radial)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M13.6361 14.7273L12.9925 14.0837C12.5837 13.6773 12.0307 13.4492 11.4543 13.4492C10.8779 13.4492 10.3249 13.6773 9.91606 14.0837L9.27246 14.7273"
+            stroke="#555ABF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M22.3633 14.7273L23.0069 14.0837C23.4157 13.6773 23.9687 13.4492 24.5451 13.4492C25.1215 13.4492 25.6745 13.6773 26.0833 14.0837L26.7269 14.7273"
+            stroke="#555ABF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
           <defs>
-            <clipPath id="clip0">
-              <rect width="58" height="58" fill="white" />
-            </clipPath>
+            <radialGradient
+              id="paint0_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(17.9996 23.4546) rotate(90) scale(3.27273 6.54545)"
+            >
+              <stop offset="0.28125" stop-color="#5DDBF9" />
+              <stop offset="0.682292" stop-color="#82A8FF" />
+              <stop offset="1" stop-color="#555ABF" />
+            </radialGradient>
+            <radialGradient
+              id="paint1_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(17.9996 23.4546) rotate(90) scale(3.27273 6.54545)"
+            >
+              <stop offset="0.28125" stop-color="#5DDBF9" />
+              <stop offset="0.682292" stop-color="#82A8FF" />
+              <stop offset="1" stop-color="#555ABF" />
+            </radialGradient>
           </defs>
         </svg>
       )
@@ -386,6 +415,248 @@ export function Icon({ color = 'var(--black)', name, onClick, style = {} }: Prop
             stroke-linecap="round"
             stroke-linejoin="round"
           />
+        </svg>
+      )
+    case 'trophy':
+      return (
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="17.5" stroke="#555ABF" />
+          <path
+            d="M18.5 24C16.5109 24 14.6032 23.2099 13.1967 21.8033C11.7901 20.3968 11 18.4891 11 16.5V8H26V16.5C26 18.4891 25.2099 20.3968 23.8033 21.8033C22.3968 23.2099 20.4891 24 18.5 24Z"
+            stroke="#555ABF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M18.4999 24C17.9999 26 18.7299 29.71 14.1699 31H22.8298C18.2698 29.71 18.9999 26 18.4999 24Z"
+            fill="url(#paint0_radial)"
+            stroke="#555ABF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M26 17V9H30V13C30 14.0609 29.5785 15.0782 28.8284 15.8284C28.0782 16.5785 27.0609 17 26 17Z"
+            stroke="#555ABF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M11 17V9H7V13C7 14.0609 7.42149 15.0782 8.17163 15.8284C8.92178 16.5785 9.93913 17 11 17Z"
+            stroke="#555ABF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <defs>
+            <radialGradient
+              id="paint0_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(18.4999 27.5) rotate(90) scale(3.5 4.32996)"
+            >
+              <stop offset="0.28125" stop-color="#5DDBF9" />
+              <stop offset="0.682292" stop-color="#82A8FF" />
+              <stop offset="1" stop-color="#555ABF" />
+            </radialGradient>
+          </defs>
+        </svg>
+      )
+    case 'badge':
+      return (
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="17.5" stroke="#555ABF" />
+          <path
+            d="M18.3212 23C22.8161 23 26.4599 19.4183 26.4599 15C26.4599 10.5817 22.8161 7 18.3212 7C13.8264 7 10.1826 10.5817 10.1826 15C10.1826 19.4183 13.8264 23 18.3212 23Z"
+            fill="url(#paint0_radial)"
+            stroke="#555ABF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M18.3213 19C20.5687 19 22.3906 17.2091 22.3906 15C22.3906 12.7909 20.5687 11 18.3213 11C16.0738 11 14.252 12.7909 14.252 15C14.252 17.2091 16.0738 19 18.3213 19Z"
+            stroke="#555ABF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path d="M18.1386 23L14.5474 30L13.2147 26.55L10 27L13.052 21" stroke="#555ABF" stroke-linejoin="round" />
+          <path
+            d="M23.9489 21L27.0009 27L23.7861 26.55L22.3924 30L18.8623 23"
+            stroke="#555ABF"
+            stroke-linejoin="round"
+          />
+          <defs>
+            <radialGradient
+              id="paint0_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(18.3212 15) rotate(90) scale(8 8.13862)"
+            >
+              <stop offset="0.28125" stop-color="#5DDBF9" />
+              <stop offset="0.682292" stop-color="#82A8FF" />
+              <stop offset="1" stop-color="#555ABF" />
+            </radialGradient>
+          </defs>
+        </svg>
+      )
+    case 'mountain-top':
+      return (
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18" r="17.5" stroke="#555ABF" />
+          <path d="M13 18L14 20L16 17L18 20L20 17L22 20L23.41 17.66" stroke="#555ABF" stroke-linejoin="round" />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M18 10L7 27H30L18 10Z"
+            stroke="#555ABF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path d="M18 4V10" stroke="#555ABF" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M24 8H18V5H24L23 6.5L24 8Z"
+            fill="url(#paint0_radial)"
+            stroke="#555ABF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <defs>
+            <radialGradient
+              id="paint0_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(21 6.5) rotate(90) scale(1.5 3)"
+            >
+              <stop offset="0.28125" stop-color="#5DDBF9" />
+              <stop offset="0.682292" stop-color="#82A8FF" />
+              <stop offset="1" stop-color="#555ABF" />
+            </radialGradient>
+          </defs>
+        </svg>
+      )
+    case 'circle-timer':
+      return (
+        <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18.9304" r="17.5" stroke="#555ABF" />
+          <path
+            d="M18 29C23.5228 29 28 24.6181 28 19.2128C28 13.8075 23.5228 9.4256 18 9.4256C12.4772 9.4256 8 13.8075 8 19.2128C8 24.6181 12.4772 29 18 29Z"
+            stroke="#555ABF"
+            stroke-miterlimit="10"
+          />
+          <path
+            d="M24.4 22.5893C24.95 21.6106 25.25 20.4361 25.25 19.2127C25.25 15.6404 22.55 12.6553 19 12.166"
+            stroke="#555ABF"
+            stroke-miterlimit="10"
+            stroke-linecap="round"
+          />
+          <path
+            d="M26.2506 12.1169L24.5506 10.4531C24.4506 10.3552 24.4506 10.2084 24.5506 10.1105L24.9006 9.76798C25.0006 9.67011 25.1506 9.67011 25.2506 9.76798L26.9506 11.4318C27.0506 11.5297 27.0506 11.6765 26.9506 11.7744L26.6006 12.1169C26.5006 12.2148 26.3506 12.2148 26.2506 12.1169Z"
+            fill="#555ABF"
+          />
+          <path d="M25.3857 10.6021L24.0068 11.9516L24.6786 12.6091L26.0574 11.2596L25.3857 10.6021Z" fill="#555ABF" />
+          <path
+            d="M20 7.95744H16C15.7 7.95744 15.5 7.7617 15.5 7.46808V6.48936C15.5 6.19574 15.7 6 16 6H20C20.3 6 20.5 6.19574 20.5 6.48936V7.46808C20.5 7.7617 20.3 7.95744 20 7.95744Z"
+            fill="url(#paint0_radial)"
+          />
+          <path d="M19 7.46803H17V9.42547H19V7.46803Z" fill="#555ABF" />
+          <path
+            d="M18 20.6808C18.8284 20.6808 19.5 20.0235 19.5 19.2127C19.5 18.4019 18.8284 17.7446 18 17.7446C17.1716 17.7446 16.5 18.4019 16.5 19.2127C16.5 20.0235 17.1716 20.6808 18 20.6808Z"
+            fill="url(#paint1_radial)"
+            stroke="#555ABF"
+            stroke-miterlimit="10"
+          />
+          <path
+            d="M18 27.2872C18.4142 27.2872 18.75 26.9586 18.75 26.5532C18.75 26.1478 18.4142 25.8192 18 25.8192C17.5858 25.8192 17.25 26.1478 17.25 26.5532C17.25 26.9586 17.5858 27.2872 18 27.2872Z"
+            fill="#555ABF"
+          />
+          <path
+            d="M10.5 19.9467C10.9142 19.9467 11.25 19.6181 11.25 19.2127C11.25 18.8073 10.9142 18.4786 10.5 18.4786C10.0858 18.4786 9.75 18.8073 9.75 19.2127C9.75 19.6181 10.0858 19.9467 10.5 19.9467Z"
+            fill="#555ABF"
+          />
+          <path d="M19.0498 20.2404L22.4998 23.617" stroke="#555ABF" stroke-miterlimit="10" stroke-linecap="round" />
+          <defs>
+            <radialGradient
+              id="paint0_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(18 6.97872) rotate(90) scale(0.97872 2.5)"
+            >
+              <stop offset="0.28125" stop-color="#5DDBF9" />
+              <stop offset="0.682292" stop-color="#82A8FF" />
+              <stop offset="1" stop-color="#555ABF" />
+            </radialGradient>
+            <radialGradient
+              id="paint1_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(18 19.2127) rotate(90) scale(1.46808 1.5)"
+            >
+              <stop offset="0.28125" stop-color="#5DDBF9" />
+              <stop offset="0.682292" stop-color="#82A8FF" />
+              <stop offset="1" stop-color="#555ABF" />
+            </radialGradient>
+          </defs>
+        </svg>
+      )
+    case 'circle-house':
+      return (
+        <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="18" cy="18.9131" r="17.5" stroke="#555ABF" />
+          <path
+            d="M11 15.7915V27.7915C11 28.0567 11.1054 28.3111 11.2929 28.4986C11.4804 28.6861 11.7348 28.7915 12 28.7915L24 28.7915C24.2652 28.7915 24.5196 28.6861 24.7071 28.4986C24.8946 28.3111 25 28.0567 25 27.7915V15.7915H29L18 5.7915L7 15.7915L11 15.7915Z"
+            stroke="#555ABF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M15 15.2915C14.1716 15.2915 13.5 15.9631 13.5 16.7915C13.5 17.6199 14.1716 18.2915 15 18.2915C15.8284 18.2915 16.5 17.6199 16.5 16.7915C16.5 15.9631 15.8284 15.2915 15 15.2915Z"
+            fill="url(#paint0_radial)"
+            stroke="#555ABF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M21 21.2915C20.1716 21.2915 19.5 21.9631 19.5 22.7915C19.5 23.6199 20.1716 24.2915 21 24.2915C21.8284 24.2915 22.5 23.6199 22.5 22.7915C22.5 21.9631 21.8284 21.2915 21 21.2915Z"
+            fill="url(#paint1_radial)"
+            stroke="#555ABF"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path d="M15 23.7915L22 14.7915" stroke="#555ABF" stroke-linecap="round" stroke-linejoin="round" />
+          <defs>
+            <radialGradient
+              id="paint0_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(15 16.7915) rotate(-90) scale(1.5)"
+            >
+              <stop offset="0.28125" stop-color="#5DDBF9" />
+              <stop offset="0.682292" stop-color="#82A8FF" />
+              <stop offset="1" stop-color="#555ABF" />
+            </radialGradient>
+            <radialGradient
+              id="paint1_radial"
+              cx="0"
+              cy="0"
+              r="1"
+              gradientUnits="userSpaceOnUse"
+              gradientTransform="translate(21 22.7915) rotate(-90) scale(1.5)"
+            >
+              <stop offset="0.28125" stop-color="#5DDBF9" />
+              <stop offset="0.682292" stop-color="#82A8FF" />
+              <stop offset="1" stop-color="#555ABF" />
+            </radialGradient>
+          </defs>
         </svg>
       )
     default:
