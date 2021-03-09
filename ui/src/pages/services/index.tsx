@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from 'utilities'
-import { Section } from 'components'
+import { Section, Icon } from 'components'
 
 export default function ServicesPage() {
   const title = 'Services Designed to Meet Your Modern Needs'
@@ -38,16 +38,25 @@ export default function ServicesPage() {
             </p>
             <ul>
               <li>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="globe" />
+                </div>
                 Satisfy your niche needs in no time with rich support for APIs, widgets, and plugins. No matter what
                 you're looking for, from customer reviews to contact forms, our team uses JAMStack architecture to add
                 powerful functionality to your site without hurting its performance.
               </li>
               <li>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="circle-lock" />
+                </div>
                 Tie in your preferred content management system (CMS) to seamlessly integrate new blog posts, photos, or
                 portfolio pieces into your site. We're all about convenience, and we strive to make content management
                 as simple as possible for all of our clients.
               </li>
               <li>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="thunder-bolt" />
+                </div>
                 Reach an international audience. Our team’s experience with multilingual compatibility ensures that your
                 site will look and feel perfect for a diverse group of people, not just English speakers.
               </li>
@@ -73,16 +82,25 @@ export default function ServicesPage() {
             </p>
             <ul>
               <li>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="circle-meter" />
+                </div>
                 Reap the benefits of our JAMStack architecture, including speed, flexibility, and customization. Our
                 quick loading times and custom functionality enhance the shopping experience for your valued customers
                 and keep them coming back for more.
               </li>
               <li>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="circle-plus" />
+                </div>
                 Use what you already have, or start from square one. If you’re looking to expand your existing site into
                 e-commerce, we can integrate a custom Shopify theme right into your platform. If you’re new to the world
                 wide web, no worries--our static site development and e-commerce services go hand-in-hand.
               </li>
               <li>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="circle-bubble" />
+                </div>
                 Join the community of over half a million Shopify sellers, and enjoy the immense support system and
                 documentation that comes with it.
               </li>
@@ -108,16 +126,25 @@ export default function ServicesPage() {
             </p>
             <ul>
               <li>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="circle-timer" />
+                </div>
                 Push the boundaries of the menu experience. Traditional paper menus force you to balance the trade off
                 between space and content. QR code menus eliminate the space factor, allowing you to include images and
                 details for every single item.
               </li>
               <li>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="circle-house" />
+                </div>
                 Give everyone the chance to explore your delicious dishes. PDF menus are not responsive, which means it
                 takes a whole lot of zooming and scrolling to navigate them. Our QR menus are web pages, so they scale
                 perfectly on almost any mobile device.
               </li>
               <li>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="smiley-face" />
+                </div>
                 Efficiently add, remove, and edit your offerings. Updating paper menus can be costly and time-consuming,
                 but websites are built to be changed. When you cook up new dishes or switch your seasonal offerings, QR
                 code menus make the transition seamless.
@@ -146,15 +173,24 @@ export default function ServicesPage() {
             </p>
             <ul>
               <li>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="circle-check" />
+                </div>
                 Scale globally with multilingual compatibility. Our team has built sites in languages from all over the
                 world, and we know how to create user interfaces that look great no matter what language they’re
                 translated into.
               </li>
               <li>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="circle-check" />
+                </div>
                 Unlock an infinite range of functionality. The sky’s the limit when it comes to full stack sites, which
                 use databases and servers to add powerful functionality to your UI.
               </li>
               <li>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="circle-check" />
+                </div>
                 Grow your application while still maintaining speed and efficiency. From React to Next.js, we build both
                 the client and server side of our sites with the most modern, effective technology available.
               </li>
@@ -175,6 +211,9 @@ export default function ServicesPage() {
           </p>
           <div className="grid grid--cols-3 margins">
             <div className="card card--lightBlue">
+              <div className="card card--icon card--elevation-2">
+                <Icon name="trophy" />
+              </div>
               <h5>Uninterrupted Progress</h5>
               <p>
                 Move on from complicated issues without sacrificing your goals. Getting stuck on a problem outside of
@@ -183,6 +222,9 @@ export default function ServicesPage() {
               </p>
             </div>
             <div className="card card--lightBlue">
+              <div className="card card--icon card--elevation-2">
+                <Icon name="badge" />
+              </div>
               <h5>Empowerment for the Whole Team</h5>
               <p>
                 Unlock new skills for your team. Through our mentorship and teaching opportunities, your team can grow
@@ -190,6 +232,9 @@ export default function ServicesPage() {
               </p>
             </div>
             <div className="card card--lightBlue">
+              <div className="card card--icon card--elevation-2">
+                <Icon name="mountain-top" />
+              </div>
               <h5>A Firm Foundation</h5>
               <p>
                 Save time by making the right architecture decisions. Work with our team to make sure you’re picking the
