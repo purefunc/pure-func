@@ -12,7 +12,7 @@ export default function DigitalMenuPage() {
   return (
     <>
       <SEO title="Meet the future of menus" description={description} pathname="/menus" />
-      <Section isHero theme="funky">
+      <Section isHero theme="primary">
         <div className="grid">
           <div className="mobile-reverse-item">
             <h1 className="margin-top-0">
