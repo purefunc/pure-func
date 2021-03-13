@@ -5,7 +5,7 @@
   --buttonShadow: var(--elevation-2);
   --buttonHoverBg: var(--primaryLight);
   --buttonHoverColor: var(--white);
-  --buttonHoverShadow: var(--elevation-2);
+  --buttonHoverShadow: var(--elevation-3);
   --buttonPadding: 5px 15px;
   --buttonMinWidth: 8rem;
 
@@ -39,9 +39,8 @@
   &--white {
     --buttonBg: var(--white);
     --buttonTextColor: var(--primaryColor);
-    --buttonHoverBg: var(--white);
     --buttonHoverColor: var(--primaryColor);
-    --buttonBorder: 2px solid var(--white);
+    --buttonHoverBg: var(--lightestGray);
   }
   &--ghost {
     --buttonBorder: 2px solid var(--primaryColor);

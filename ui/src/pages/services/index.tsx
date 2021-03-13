@@ -15,7 +15,7 @@ export default function ServicesPage() {
           <div className="mobile-reverse-item">
             <h1 className="margin-top-0">{title}</h1>
             <p>{description}</p>
-            <Link to="/contact" className="cta cta--gradient">
+            <Link to="/contact" className="cta cta--white">
               Contact Us
             </Link>
           </div>

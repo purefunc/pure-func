@@ -15,13 +15,6 @@
   &.section--theme__deep {
     --sectionHeadingColor: var(--white);
     --sectionTextColor: var(--white);
-
-    .cta {
-      --buttonBg: var(--white);
-      --buttonTextColor: var(--primaryColor);
-      --buttonHoverBg: var(--white);
-      --buttonHoverColor: var(--primaryColor);
-    }
   }
 
   &.section--theme__dark {
