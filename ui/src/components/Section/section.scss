@@ -85,6 +85,9 @@
   .section__inner {
     /* Size intentions */
     &.section--padding {
+    &.section--notop {
+      padding-top: 0;
+    }
       --sectionPaddingNormalMax: 80;
       --sectionPaddingMin: 40;
       --sectionPaddingMax: var(--sectionPaddingNormalMax);
