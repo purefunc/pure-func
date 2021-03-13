@@ -17,6 +17,28 @@
     display: flex;
     nav {
       flex-grow: 2;
+      .dropdown-menu {
+        background: transparent;
+        position: absolute;
+        left: var(--space);
+        display: none;
+        width: 230px;
+      }
+      .nav-dropdown {
+        position: relative;
+        &:hover .dropdown-menu, &:focus-within .dropdown-menu {
+            display: block;
+            padding: var(--smallSpace);
+            visibility: visible;
+            opacity: 1;
+            background: var(--white);
+            border-radius: var(--cardRadius);
+            .nav-link {
+              color: var(--textColor);
+              margin-left: 0;
+            }
+          }
+      }
       .nav-link {
         color: var(--white);
         margin-left: var(--space);

@@ -28,19 +28,27 @@ export function Header() {
           </NavLink>
         </h1>
         <nav className="flex">
-          <div>
+          <div className="flex">
             <NavLink className="nav-link" to="/services" aria-label="Services page">
               Services
             </NavLink>
-            <span className="nav-link">Products</span>
-            {/* <Dropdown>
-              <NavLink className="nav-link" to="/menus" aria-label="Digital Menu page">
-                Digital Menus
-              </NavLink>
-              <NavLink className="nav-link" to="/sites" aria-label="Website Templates page">
-                Website Templates
-              </NavLink>
-            </Dropdown> */}
+            <div className="nav-dropdown">
+              <NavLink className="nav-link" to="/menus" aria-haspopup aria-label="Products">Products</NavLink>
+                <div className="dropdown-menu" aria-label="dropdown-menu">
+                  <ul>
+                    <li>
+                      <NavLink className="nav-link" to="/menus" aria-label="Digital Menu page">
+                      Digital Menus
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink className="nav-link" to="/sites" aria-label="Website Templates page">
+                      Website Templates
+                      </NavLink>
+                    </li>
+                  </ul>
+                  </div>
+                </div>
             <NavLink className="nav-link" to="/about" aria-label="About page">
               About
             </NavLink>
