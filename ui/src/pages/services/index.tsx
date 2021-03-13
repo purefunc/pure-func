@@ -10,7 +10,7 @@ export default function ServicesPage() {
   return (
     <>
       <SEO title={title} description={description} pathname="/services" />
-      <Section isHero theme="funky">
+      <Section isHero theme="primary">
         <div className="grid">
           <div className="mobile-reverse-item">
             <h1 className="margin-top-0">{title}</h1>
