@@ -1,0 +1,16 @@
+.screen {
+  transition: 0.6s ease all;
+  transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+  border-radius: var(--cardRadius);
+  &:hover {
+    transform: perspective(0) rotateY(0) translateY(0) rotateX(0) scale(1);
+  }
+  svg {
+    // backdrop-filter: blur(10px);
+    width: 100%;
+    height: auto;
+    background: rgba(23, 12, 61, 0.3);
+    border-radius: var(--cardRadius);
+    box-shadow: var(--elevation-4);
+  }
+}

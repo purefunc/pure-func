@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Section, LogoStrip, Icon } from 'components'
-import { TerminalScreen, Laptop } from 'figures'
+import { TerminalScreen, Laptop, Screen } from 'figures'
 import { SEO } from '../utilities/SEO'
 
 export default function HomePage() {
@@ -19,7 +19,8 @@ export default function HomePage() {
               Contact Us
             </Link>
           </div>
-          <Laptop />
+          <Screen />
+          {/* <Laptop /> */}
         </div>
       </Section>
       <Section>
