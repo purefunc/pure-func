@@ -48,7 +48,7 @@ export default function HomePage() {
                 Learn More
               </Link>
             </div>
-            <div>IMAGE HERE</div>
+            <div>IMAGE</div>
           </div>
           <div className="grid margin-left-largest">
             <div>
@@ -63,7 +63,7 @@ export default function HomePage() {
                 Learn More
               </Link>
             </div>
-            <div>
+            <div style={{ alignSelf: 'end' }}>
               <TerminalScreen />
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function HomePage() {
               <div className="card card--icon card--elevation-2">
                 <Icon name="three-diagram" />
               </div>
-              <h5>An Ultramodern Approach</h5>
+              <h5 className="margin-top-small">An Ultramodern Approach</h5>
               <p>
                 We’re constantly studying and experimenting with emerging, state-of-the-art technologies that will give
                 your website a competitive edge. Our team leverages the latest and greatest frameworks, languages, and
@@ -126,7 +126,7 @@ export default function HomePage() {
               <div className="card card--icon card--elevation-2">
                 <Icon name="puzzle-piece" />
               </div>
-              <h5>Fully Custom Solutions</h5>
+              <h5 className="margin-top-small">Fully Custom Solutions</h5>
               <p>
                 From loading times to error handling, the quality of your customer experience hinges on the quality of
                 the code that powers it. That’s why we craft every website from scratch, creating a fully custom
@@ -137,7 +137,7 @@ export default function HomePage() {
               <div className="card card--icon card--elevation-2">
                 <Icon name="globe" />
               </div>
-              <h5>A Global Perspective</h5>
+              <h5 className="margin-top-small">A Global Perspective</h5>
               <p>
                 Our team has worked with clients from all over the world, accommodating a wide variety of timezones and
                 languages. Whether you’re already targeting an international audience or looking to expand, a global
