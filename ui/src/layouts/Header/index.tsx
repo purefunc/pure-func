@@ -54,7 +54,7 @@ export function Header() {
             </NavLink>
           </div>
           <div>
-            <Link className="cta cta--white" to="/contact">
+            <Link className="cta cta--white cta--small" to="/contact">
               Contact Us
             </Link>
             {/* <button
