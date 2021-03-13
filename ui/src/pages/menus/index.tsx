@@ -22,7 +22,7 @@ export default function DigitalMenuPage() {
             <p>
               <i>* Currently in beta but still accepting clients</i>
             </p>
-            <Link to="/menus/beta" className="cta cta--gradient">
+            <Link to="/menus/beta" className="cta cta--white">
               Get Beta Access
             </Link>
           </div>
