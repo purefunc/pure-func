@@ -77,7 +77,7 @@ export default function ServicesPage() {
         </div>
       </Section>
       <Section>
-        <div className="grid grid--split-2">
+        <div className="grid grid--split__reverse">
           <div></div>
           <div>
             <h3 className="margin-top-0">E-Commerce Integration</h3>
@@ -94,7 +94,7 @@ export default function ServicesPage() {
             </p>
           </div>
         </div>
-        <div className="grid grid--split-2">
+        <div className="grid grid--split__reverse">
           <div>
             <ul>
               <li className="flex flex--start">

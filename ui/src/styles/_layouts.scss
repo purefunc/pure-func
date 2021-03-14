@@ -19,7 +19,7 @@
   &--split {
     grid-template-columns: 3fr minmax(0, 3fr);
   }
-  &--split-2 {
+  &--split__reverse {
     grid-template-columns: 3fr minmax(0, 3fr);
   }
   @for $i from 2 through 4 {
@@ -82,7 +82,7 @@
   &-left-largest {
     margin-left: var(--largestSpace);
   }
-  &-right {
+  &-right-small {
     margin-right: var(--smallSpace);
   }
   &-auto {
