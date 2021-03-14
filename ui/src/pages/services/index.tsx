@@ -37,14 +37,14 @@ export default function ServicesPage() {
                 . Get your custom QR code menu started with Code My Menu.
               </p>
         <div className="grid grid--split">
-          <div>
+          <div className="flex">
             <img src={tuneimg} alt="Tune Flying Home Studio website" className="rounded" />
           </div>
         <div>
           <ul>
             <li>
               <div className="flex flex--start">  
-                <div className="margin-right card card--icon card--elevation-2">
+                <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="circle-timer" />
                 </div>
                   Push the boundaries of the menu experience. Traditional paper menus force you to balance the trade off
@@ -54,7 +54,7 @@ export default function ServicesPage() {
             </li>
               <li>
                 <div className="flex flex--start margin-top-small">
-                  <div className="margin-right card card--icon card--elevation-2">
+                  <div className="margin-right-small card card--icon card--elevation-2">
                     <Icon name="circle-house" />
                   </div>
                     Give everyone the chance to explore your delicious dishes. PDF menus are not responsive, which means it
@@ -64,7 +64,7 @@ export default function ServicesPage() {
             </li>
               <li>
                 <div className="flex flex--start margin-top-small">
-                  <div className="margin-right card card--icon card--elevation-2">
+                  <div className="margin-right-small card card--icon card--elevation-2">
                     <Icon name="smiley-face" />
                   </div>
                     Efficiently add, remove, and edit your offerings. Updating paper menus can be costly and time-consuming,
@@ -98,7 +98,7 @@ export default function ServicesPage() {
           <div>
             <ul>
               <li className="flex flex--start">
-                <div className="margin-right card card--icon card--elevation-2">
+                <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="circle-meter" />
                 </div>
                 Reap the benefits of our JAMStack architecture, including speed, flexibility, and customization. Our
@@ -106,7 +106,7 @@ export default function ServicesPage() {
                 and keep them coming back for more.
               </li>
               <li className="flex flex--start margin-top-small">
-                <div className="margin-right card card--icon card--elevation-2">
+                <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="circle-plus" />
                 </div>
                 Use what you already have, or start from square one. If you’re looking to expand your existing site into
@@ -114,7 +114,7 @@ export default function ServicesPage() {
                 wide web, no worries--our static site development and e-commerce services go hand-in-hand.
               </li>
               <li className="flex flex--start margin-top-small">
-                <div className="margin-right card card--icon card--elevation-2">
+                <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="circle-bubble" />
                 </div>
                 Join the community of over half a million Shopify sellers, and enjoy the immense support system and
@@ -122,7 +122,7 @@ export default function ServicesPage() {
               </li>
             </ul>
             </div>
-          <div>
+          <div className="flex">
             <img src={tuneimg} alt="Tune Flying Home Studio website" className="rounded" />
           </div>
         </div>
@@ -142,13 +142,13 @@ export default function ServicesPage() {
           .
         </p>
         <div className="grid grid--split">
-          <div>
+          <div className="flex">
           <img src={tuneimg} alt="Tune Flying Home Studio website" className="rounded" />
           </div>
           <div>
             <ul>
               <li className="flex flex--start">
-                <div className="margin-right card card--icon card--elevation-2">
+                <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="globe" />
                 </div>
                 Satisfy your niche needs in no time with rich support for APIs, widgets, and plugins. No matter what
@@ -156,7 +156,7 @@ export default function ServicesPage() {
                 powerful functionality to your site without hurting its performance.
               </li>
               <li className="flex flex--start margin-top-small">
-                <div className="margin-right card card--icon card--elevation-2">
+                <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="circle-lock" />
                 </div>
                 Tie in your preferred content management system (CMS) to seamlessly integrate new blog posts, photos, or
@@ -164,7 +164,7 @@ export default function ServicesPage() {
                 as simple as possible for all of our clients.
               </li>
               <li className="flex flex--start margin-top-small">
-                <div className="margin-right card card--icon card--elevation-2">
+                <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="thunder-bolt" />
                 </div>
                 Reach an international audience. Our team’s experience with multilingual compatibility ensures that your
@@ -174,7 +174,15 @@ export default function ServicesPage() {
           </div>
         </div>
       </Section>
-      <Section isSkewed theme="gray">
+        <div className="section section--banner section--padding">
+          <div className="card card--white text-center margin-auto">
+            <h4>Interested in a stunning static website but need it right away?</h4>
+          <p>
+            Check out our semi custom development services to get going right out of the box.
+            </p>
+          </div>
+        </div>
+      <Section>
         <>
           <h2 className="margin-auto text-center">Refactoring and Consulting</h2>
           <p className="margin-auto text-center">

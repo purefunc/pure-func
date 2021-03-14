@@ -58,6 +58,12 @@
     }
   }
 
+  &.section--banner {
+    z-index: 1;
+    background: var(--funkyGradient);
+    padding: var(--largestSpace);
+  }
+
   /* Skewed Section */
   &.section--skewed {
     background: none;
