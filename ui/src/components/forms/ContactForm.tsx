@@ -72,15 +72,15 @@ export function ContactForm() {
         onSubmit={handleSubmit}
         className="margins"
       >
-        <label>
+        <label htmlFor="name">
           <span> Name*</span>
           <input type="text" name="name" required onChange={handleChange} />
         </label>
-        <label>
+        <label htmlFor="email">
           Email*
           <input type="email" name="email" required onChange={handleChange} />
         </label>
-        <label>
+        <label htmlFor="category">
           Area(s) of Interest*
           <select onChange={handleChange} name="category">
             {options.map((option) => (
@@ -88,7 +88,7 @@ export function ContactForm() {
             ))}
           </select>
         </label>
-        <label>
+        <label htmlFor="message">
           Message*
           <textarea name="message" required onChange={handleChange}></textarea>
         </label>
