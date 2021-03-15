@@ -54,7 +54,7 @@ export function ContactForm() {
       })
   }
   return (
-    <div className="card card--lightBlue">
+    <div className="card card--lightBlue contact-form">
       {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
       <input type="hidden" name="form-name" value="contact" />
       <p hidden>
@@ -73,10 +73,9 @@ export function ContactForm() {
         className="margins"
       >
         <label>
-          Name*
+          <span> Name*</span>
           <input type="text" name="name" required onChange={handleChange} />
         </label>
-
         <label>
           Email*
           <input type="email" name="email" required onChange={handleChange} />
@@ -94,9 +93,11 @@ export function ContactForm() {
           <textarea name="message" required onChange={handleChange}></textarea>
         </label>
         {error && <p className="red-text small">{error}</p>}
-        <button type="submit" className="cta">
-          Send
-        </button>
+        <div className="text-center">
+          <button type="submit" className="cta cta--gradient">
+            Send
+          </button>
+        </div>
       </form>
     </div>
   )
