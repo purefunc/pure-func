@@ -29,7 +29,7 @@ export default function SitesPage() {
                 <div className="card card--icon card--elevation-2">
                   <Icon name="brush-monitor" />
                 </div>
-                <h5>Step 1</h5>
+                <h5 className="margin-top-small">Step 1</h5>
                 <p>
                   Customize your site’s design with the tool below. Choose one of our hand-crafted website templates,
                   then add your signature styles, colors, and logos to make it your own.
@@ -39,7 +39,7 @@ export default function SitesPage() {
                 <div className="card card--icon card--elevation-2">
                   <Icon name="bubble-chat" />
                 </div>
-                <h5>Step 2</h5>
+                <h5 className="margin-top-small">Step 2</h5>
                 <p>
                   Send us the information you’d like to feature. Once you’ve created your design and submitted it to our
                   team, we’ll work with you to integrate your own text and images into the site.
@@ -49,7 +49,7 @@ export default function SitesPage() {
                 <div className="card card--icon card--elevation-2">
                   <Icon name="smiley-face2" />
                 </div>
-                <h5>Step 3</h5>
+                <h5 className="margin-top-small">Step 3</h5>
                 <p>
                   Enjoy your new smooth, modern single page website. We strive to get you up and running quickly, so you
                   can sit back and enjoy the booming traffic, buzz, and sales as soon as possible.
