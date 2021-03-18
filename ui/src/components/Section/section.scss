@@ -53,15 +53,13 @@
 
   &.section--theme__funky {
     --sectionBgColor: var(--funkyGradient);
+    .card {
+      box-shadow: var(--elevation-3);
+    }
     &.section--skewed .slash {
       opacity: 0.2;
+      transform: skewY(0) translateY(-50%);
     }
-  }
-
-  &.section--banner {
-    z-index: 1;
-    background: var(--funkyGradient);
-    padding: var(--largestSpace);
   }
 
   /* Skewed Section */
@@ -91,12 +89,12 @@
   .section__inner {
     /* Size intentions */
     &.section--padding {
-    &.section--padding__top-0 {
-      padding-top: 0;
-    }
-    &.section--padding__bottom-0 {
-      padding-bottom: 0;
-    }
+      &.section--padding__top-0 {
+        padding-top: 0;
+      }
+      &.section--padding__bottom-0 {
+        padding-bottom: 0;
+      }
       --sectionPaddingNormalMax: 80;
       --sectionPaddingMin: 40;
       --sectionPaddingMax: var(--sectionPaddingNormalMax);

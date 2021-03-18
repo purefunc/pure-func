@@ -174,14 +174,14 @@ export default function ServicesPage() {
           </div>
         </div>
       </Section>
-        <div className="section section--banner section--padding">
-          <div className="card card--white text-center margin-auto">
-            <h4>Interested in a stunning static website but need it right away?</h4>
+      <Section theme="funky" isSkewed>
+        <div className="card card--padded text-center margin-auto">
+          <h4>Interested in a stunning static website but need it right away?</h4>
           <p>
-            Check out our semi custom development services to get going right out of the box.
-            </p>
-          </div>
+            Check out our semi-custom development services to get going right out of the box.
+          </p>
         </div>
+      </Section>
       <Section>
         <>
           <h2 className="margin-auto text-center">Refactoring and Consulting</h2>
