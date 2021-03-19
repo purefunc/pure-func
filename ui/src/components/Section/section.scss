@@ -38,6 +38,9 @@
 
   &.section--theme__primary {
     --sectionBgColor: var(--primaryColor);
+    &#banner {
+      background: var(--funkyGradient);
+    }
     &.section--skewed.section--hero .slash {
       --sectionBgImage: url('../../images/bg-blur.png'), var(--deepGradient);
       background-image: var(--sectionBgImage);
@@ -58,7 +61,6 @@
     }
     &.section--skewed .slash {
       opacity: 0.2;
-      transform: skewY(0) translateY(-50%);
     }
   }
 
