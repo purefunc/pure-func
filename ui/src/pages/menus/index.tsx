@@ -36,14 +36,14 @@ export default function DigitalMenuPage() {
             <img alt="Phone screen showing a menu" src={phoneImg} />
           </div>
           <div>
-            <h3 className="margin-top-small">Update your offerings without all the hassle.</h3>
+            <h4 className="margin-top-small">Update your offerings without all the hassle.</h4>
             <p className="large">
               Switching up a paper menu can be tedious and expensive, even if you’re just changing a few items! With our
               custom QR menus, adding more dishes, moving through the seasons, and trying new ingredients becomes simple
               and convenient.
             </p>
 
-            <h3>Delight your customers with a squint-free dining experience.</h3>
+            <h4>Delight your customers with a squint-free dining experience.</h4>
             <p className="large">
               With an image or a PDF menu, your customers are probably spending more time zooming and squinting than
               actually exploring what you have to offer. Our custom QR menus are compatible with almost any mobile
@@ -112,16 +112,20 @@ export default function DigitalMenuPage() {
             </p>
             <div className="container grid">
               <div>
-                <Link to="/examples/basic/">
-                  <h4>Basic Menu</h4>
+                {/* <Link to="/examples/basic/"> */}
+                <h4>Basic Menu</h4>
+                <div className="card card--elevation-3 ">
                   <img src={basicSvg} alt="Basic QR Code" />
-                </Link>
+                </div>
+                {/* </Link> */}
               </div>
               <div>
-                <Link to="/examples/plus/">
-                  <h4>Pro Menu</h4>
+                {/* <Link to="/examples/plus/"> */}
+                <h4>Pro Menu</h4>
+                <div className="card card--elevation-3 ">
                   <img src={plusSvg} alt="Plus QR Code" />
-                </Link>
+                </div>
+                {/* </Link> */}
               </div>
               <div>
                 <h4>Expert Menu</h4>
