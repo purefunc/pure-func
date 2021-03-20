@@ -17,6 +17,12 @@ export default function SitesPage() {
               Try Our One Page Website Builder
             </h1>
             <p>{description}</p>
+            <p>
+              <i>* Currently in beta but still accepting clients</i>
+            </p>
+            <Link to="/beta" className="cta cta--white">
+              Get Beta Access
+            </Link>
           </div>
         </div>
       </Section>

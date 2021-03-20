@@ -5,6 +5,7 @@ import { SEO } from 'utilities'
 import phoneImg from '../../images/menus/phone-qr.png'
 import basicSvg from 'images/menus/basic-qr.svg'
 import plusSvg from 'images/menus/plus-qr.svg'
+import { QrCodes } from '../../figures/QR/QrCodes'
 
 export default function DigitalMenuPage() {
   const description =
@@ -22,11 +23,11 @@ export default function DigitalMenuPage() {
             <p>
               <i>* Currently in beta but still accepting clients</i>
             </p>
-            <Link to="/menus/beta" className="cta cta--white">
+            <Link to="/beta" className="cta cta--white">
               Get Beta Access
             </Link>
           </div>
-          <div>CUBE PLACEHOLDER</div>
+          <QrCodes />
         </div>
       </Section>
       <Section>
@@ -35,7 +36,7 @@ export default function DigitalMenuPage() {
             <img alt="Phone screen showing a menu" src={phoneImg} />
           </div>
           <div>
-            <h3 className="margin-top-0">Update your offerings without all the hassle.</h3>
+            <h3 className="margin-top-small">Update your offerings without all the hassle.</h3>
             <p className="large">
               Switching up a paper menu can be tedious and expensive, even if you’re just changing a few items! With our
               custom QR menus, adding more dishes, moving through the seasons, and trying new ingredients becomes simple
@@ -51,7 +52,7 @@ export default function DigitalMenuPage() {
           </div>
         </div>
       </Section>
-      <Section isSkewed theme="primary">
+      <Section isSkewed theme="funky">
         <>
           <h2 className="text-center margin-auto">Find a plan that works for you.</h2>
           <p className="text-center margin-auto">

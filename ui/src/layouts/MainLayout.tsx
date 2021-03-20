@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import HomePage from '../pages'
 import AboutPage from '../pages/about'
 import MenusPage from '../pages/menus'
-import MenusBetaPage from '../pages/menus/beta'
+import BetaPage from '../pages/beta'
 import NotFoundPage from '../pages/404'
 import ContactPage from '../pages/contact'
 import ServicesPage from '../pages/services'
@@ -20,7 +20,7 @@ const SiteLayout = () => {
         <Route exact path="/services" component={ServicesPage} />
         <Route exact path="/sites" component={SitesPage} />
         <Route exact path="/menus" component={MenusPage} />
-        <Route exact path="/menus/beta" component={MenusBetaPage} />
+        <Route exact path="/beta" component={BetaPage} />
         {/* <Route exact path="/privacy" component={PrivacyPage} />
           <Route exact path="/terms" component={TermsPage} /> */}
         {/* Layouts */}
