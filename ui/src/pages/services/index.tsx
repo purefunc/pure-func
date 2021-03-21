@@ -174,8 +174,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </Section>
-      <Section theme="primary" id="banner">
-        <div className="card card--padded text-center margin-auto" id="card">
+      <Section theme="funky">
+        <div className="card card--padded text-center margin-auto">
           <h4>Interested in a stunning static website but need it right away?</h4>
           <p>
             Check out our semi-custom development services to get going right out of the box.
