@@ -111,7 +111,7 @@
   --smallSpace: calc(var(--baseSpaceSize) / var(--spaceScale));
   --smallestSpace: calc(var(--smallSpace) / var(--spaceScale));
 
-  --gridGap: var(--space);
+  --gridGap: var(--largestSpace);
 
   --headingMargins: var(--largestSpace) 0 var(--smallestSpace);
   --bodyFontMargins: 0 0 var(--space);

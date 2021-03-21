@@ -20,6 +20,11 @@
   border-radius: var(--cardRadius);
 }
 
+// Indent on desktop, part of current design layout
+.indent {
+  margin-left: var(--largestSpace);
+}
+
 /* --- Mobile Classes (Below medium screen size) --- */
 @media (max-width: 600px) {
   /* Change order of grid item on mobile
@@ -31,5 +36,9 @@
   /* Hide item on mobile */
   .mobile_hidden {
     display: none;
+  }
+
+  .indent {
+    margin-left: 0;
   }
 }

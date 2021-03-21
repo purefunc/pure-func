@@ -28,7 +28,6 @@ const createUniversalPortal = (children: ReactNode) => {
 
 const Portal = ({ children }: { children: ReactNode }) => createUniversalPortal(children)
 
-export default Portal
 `
 
 export function TerminalScreen() {

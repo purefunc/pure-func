@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Section, LogoStrip, Icon } from 'components'
 import { TerminalScreen, Laptop, Screen } from 'figures'
+import ecommerceImg from 'images/ecommerce.png'
+import lutImg from 'images/lut-scott.png'
 import { SEO } from '../utilities/SEO'
 
 export default function HomePage() {
@@ -19,21 +21,21 @@ export default function HomePage() {
               Contact Us
             </Link>
           </div>
-          <Screen />
+          <div className="margins">
+            <Screen />
+          </div>
           {/* <Laptop /> */}
         </div>
       </Section>
       <Section>
         <>
-          <div className="margin-left-largest">
-            <h2 className="margin-top-0">Services</h2>
-            <p>
-              From business card sites to booming e-commerce platforms, our team offers a wide range of services that
-              will meet all of your development needs. Go big with a brand-new full stack site, refresh your old design
-              with a modern makeover, or hit the ground running with a semi-custom template—our highly skilled
-              developers have got you covered.
-            </p>
-          </div>
+          <h2 className="margin-top-0 margin-auto">Services</h2>
+          <p className="margin-auto">
+            From business card sites to booming e-commerce platforms, our team offers a wide range of services that will
+            meet all of your development needs. Go big with a brand-new full stack site, refresh your old design with a
+            modern makeover, or hit the ground running with a semi-custom template—our highly skilled developers have
+            got you covered.
+          </p>
           <div className="grid">
             <div>
               <h3>E-Commerce Integration</h3>
@@ -48,11 +50,11 @@ export default function HomePage() {
                 Learn More
               </Link>
             </div>
-            <div>IMAGE</div>
+            <img src={ecommerceImg} alt="E-commerce" className="margins" />
           </div>
-          <div className="grid margin-left-largest">
+          <div className="grid indent">
             <div>
-              <h3>Custom Full Stack Web Development</h3>
+              <h3 className="margin-top-small">Custom Full Stack Web Development</h3>
               <p>
                 Our full stack websites are more than just a pretty face. Equipped with powerful backend functionality
                 along with gorgeous, responsive user interfaces, these websites can accomplish anything you need with
@@ -63,7 +65,7 @@ export default function HomePage() {
                 Learn More
               </Link>
             </div>
-            <div style={{ alignSelf: 'end' }}>
+            <div className="margins" style={{ alignSelf: 'end' }}>
               <TerminalScreen />
             </div>
           </div>
@@ -88,9 +90,9 @@ export default function HomePage() {
       </Section>
       <Section>
         <div className="grid">
-          <div>VIDEO HERE</div>
+          <img src={lutImg} alt="Scott Tolinski of Level Up Tutorials" className="margins" />
           <div>
-            <h2>Featured Project: Level Up Tutorials</h2>
+            <h2 className="margin-top-small">Featured Project: Level Up Tutorials</h2>
             <p>
               From interactive quizzes to admin UI, Pure Func has added several key new features to{' '}
               <a target="_blank" rel="nofollow noopener" href="https://www.leveluptutorials.com/?ref=purefunc">

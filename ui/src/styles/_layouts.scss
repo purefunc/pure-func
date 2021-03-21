@@ -14,7 +14,7 @@
   --colMinWidth: calc((var(--layoutWidth) / 3) - (var(--gridGap) * 2));
   margin: 0 auto;
   grid-gap: var(--gridGap);
-  display: grid;
+  display: block;
   grid-template-columns: repeat(auto-fit, minmax(var(--colMinWidth), 1fr));
   &--split {
     grid-template-columns: 3fr minmax(0, 3fr);
@@ -52,9 +52,10 @@
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 800px) {
   .grid {
-    grid-template-columns: 1fr;
+    // grid-template-columns: 1fr;
+    display: grid;
   }
 }
 
@@ -79,12 +80,15 @@
   &-top-small {
     margin-top: var(--smallSpace);
   }
+<<<<<<< HEAD
   &-left-largest {
     margin-left: var(--largestSpace);
   }
   &-right-small {
     margin-right: var(--smallSpace);
   }
+=======
+>>>>>>> 1e122c91edbebe18498c99f38895e88da9932f14
   &-auto {
     margin-left: auto;
     margin-right: auto;
