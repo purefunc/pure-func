@@ -29,15 +29,13 @@ export default function HomePage() {
       </Section>
       <Section>
         <>
-          <div className="indent">
-            <h2 className="margin-top-0">Services</h2>
-            <p>
-              From business card sites to booming e-commerce platforms, our team offers a wide range of services that
-              will meet all of your development needs. Go big with a brand-new full stack site, refresh your old design
-              with a modern makeover, or hit the ground running with a semi-custom template—our highly skilled
-              developers have got you covered.
-            </p>
-          </div>
+          <h2 className="margin-top-0 margin-auto">Services</h2>
+          <p className="margin-auto">
+            From business card sites to booming e-commerce platforms, our team offers a wide range of services that will
+            meet all of your development needs. Go big with a brand-new full stack site, refresh your old design with a
+            modern makeover, or hit the ground running with a semi-custom template—our highly skilled developers have
+            got you covered.
+          </p>
           <div className="grid">
             <div>
               <h3>E-Commerce Integration</h3>
