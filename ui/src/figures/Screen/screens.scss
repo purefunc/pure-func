@@ -3,9 +3,6 @@
   position: relative;
   transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
   border-radius: var(--cardRadius);
-  &:hover {
-    transform: perspective(0) rotateY(0) translateY(0) rotateX(0) scale(1);
-  }
   svg {
     border-radius: var(--cardRadius);
     box-shadow: var(--elevation-4);
