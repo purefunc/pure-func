@@ -122,7 +122,7 @@ export default function DigitalMenuPage() {
               <div>
                 {/* <Link to="/examples/plus/"> */}
                 <h4>Pro Menu</h4>
-                <div className="card card--elevation-3 ">
+                <div className="card card--elevation-3">
                   <img src={plusSvg} alt="Plus QR Code" />
                 </div>
                 {/* </Link> */}
