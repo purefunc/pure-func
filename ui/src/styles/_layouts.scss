@@ -17,7 +17,10 @@
   display: block;
   grid-template-columns: repeat(auto-fit, minmax(var(--colMinWidth), 1fr));
   &--split {
-    grid-template-columns: 1fr minmax(0, 3fr);
+    grid-template-columns: 3fr minmax(0, 3fr);
+  }
+  &--split__reverse {
+    grid-template-columns: 3fr minmax(0, 3fr);
   }
   @for $i from 2 through 4 {
     &--cols-#{$i} {
@@ -43,6 +46,9 @@
   }
   &--center {
     --justifyContent: center;
+  }
+  &--start {
+    --alignItems: flex-start;
   }
 }
 
@@ -73,6 +79,12 @@
   }
   &-top-small {
     margin-top: var(--smallSpace);
+  }
+  &-left-largest {
+    margin-left: var(--largestSpace);
+  }
+  &-right-small {
+    margin-right: var(--smallSpace);
   }
   &-auto {
     margin-left: auto;
