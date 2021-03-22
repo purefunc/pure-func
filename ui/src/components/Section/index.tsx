@@ -14,14 +14,14 @@ export function Section({ children, id = '', theme = '', isSkewed = false, isHer
   return (
     <div
       id={id}
-      className={`section ${theme ? `section--theme__${theme}` : ''} ${isSkewed || isHero ? `section--skewed` : ''} ${
+      className={`section ${theme ? `section--theme__${theme}` : ''} ${isSkewed || isHero || theme === "funky" ? `section--skewed` : ''} ${
         isHero ? `section--hero` : ''
       }`}
     >
       <div className="wrapper">
         <section className="section__inner section--padding">{children}</section>
       </div>
-      {(isSkewed || isHero) && <div className="slash" />}
+      {(isSkewed || isHero || theme === "funky") && <div className={`slash ${theme === "funky" && !isSkewed ? `no-skew` : ``}`} />}
     </div>
   )
 }

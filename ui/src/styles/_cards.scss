@@ -29,7 +29,6 @@
       --buttonHoverColor: var(--primaryColor);
     }
   }
-
   &--lightBlue {
     --cardBackground: var(--lightBlue);
   }
@@ -52,6 +51,12 @@
   &--padded {
     --cardPadding: var(--largestSpace);
   }
+  &--icon {
+    --cardPadding: var(--smallestSpace);
+    --cardBackground: var(--white);
+    display: inline-flex;
+  }
+
   & > *:first-child {
     margin-top: 0;
   }
@@ -62,6 +67,10 @@
   @for $i from 0 through 5 {
     &--elevation-#{$i} {
       --cardElevation: var(--elevation-#{$i});
+      transition: 0.3s ease box-shadow;
+      &.card--hover:hover {
+        --cardElevation: var(--elevation-#{$i + 1});
+      }
     }
   }
   @media only screen and (max-width: 800px) {

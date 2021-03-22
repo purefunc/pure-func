@@ -18,18 +18,24 @@ export function Footer() {
             <NavLink className="text-white" to="/about" aria-label="About page">
               About
             </NavLink>
-            <NavLink className="text-white" to="/menus" aria-label="Digital Menus page">
-              Digital Menus
-            </NavLink>
-          </div>
-          <div>
             <NavLink className="text-white" to="/services" aria-label="Services page">
               Services
             </NavLink>
-            <NavLink className="text-white" to="/contact" aria-label="Contact page">
-              Contact Us
-            </NavLink>
           </div>
+          <div>
+            <NavLink className="text-white" to="/menus" aria-label="Digital Menus page">
+              Digital Menus
+            </NavLink>
+            <NavLink className="text-white" to="/sites" aria-label="Website Templates page">
+              Website Templates
+            </NavLink>
+            {/* <NavLink className="text-white" to="/contact" aria-label="Contact page">
+              Contact Us
+            </NavLink> */}
+          </div>
+          <NavLink className="cta cta--white-ghost" to="/contact" aria-label="Contact page">
+            Contact Us
+          </NavLink>
           {/* <div>
             <button className="cta cta--white-ghost">Join</button>
             <button className="cta cta--white-ghost">Sign In</button>
