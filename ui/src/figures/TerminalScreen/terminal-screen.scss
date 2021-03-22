@@ -5,10 +5,9 @@
   background: var(--deepPurple);
   border-radius: var(--cardRadius);
   box-shadow: var(--elevation-3);
-  &__code {
-    color: var(--brandColor);
-    overflow: hidden;
-  }
+  overflow: hidden;
+  max-width: 100%;
+  transform: perspective(500px) rotateY(-20deg) translateY(-15px) rotateX(3deg) scale(1);
   &__bottom-nav {
     display: flex;
     justify-content: space-between;
@@ -27,5 +26,8 @@
       padding: 4px;
       color: var(--gray);
     }
+  }
+  @media only screen and (max-width: 800px) {
+    transform: perspective(800px) rotateY(30deg) translateY(15px) rotateX(3deg) scale(1);
   }
 }
