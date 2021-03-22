@@ -18,5 +18,6 @@
   "dependencies": {
   },
   "devDependencies": {
+    "snowpack": "^3.0.11"
   }
 }
