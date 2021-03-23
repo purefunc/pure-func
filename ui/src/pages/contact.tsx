@@ -1,6 +1,6 @@
 import React from 'react'
 import { SEO } from 'utilities'
-import { Section } from 'components'
+import { Section, ContactForm } from 'components'
 
 export default function ContactPage() {
   const title = 'Get In Touch'
@@ -18,7 +18,7 @@ export default function ContactPage() {
               <i>* Required fields</i>
             </p>
           </div>
-          <div className="card card--lightBlue">MESSAGE INPUT PLACEHOLDER</div>
+          <ContactForm />
         </div>
       </Section>
     </>
