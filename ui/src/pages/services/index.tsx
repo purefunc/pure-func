@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from 'utilities'
 import { Section, Icon } from 'components'
+import tuneimg from 'images/tune-header.png'
+import { TerminalScreen } from '../../figures/TerminalScreen'
 
 export default function ServicesPage() {
   const title = 'Services Designed to Meet Your Modern Needs'
@@ -22,52 +24,61 @@ export default function ServicesPage() {
         </div>
       </Section>
       <Section>
-        <div className="grid">
-          <div>
-            <h3 className="margin-top-0">Custom Websites</h3>
+          <h3 className="margin-top-0">Custom Web Apps</h3>
             <p>
-              Bold. Smooth. Modern. Showcase the best of your work, products, and services with a custom user interface
-              designed to flatter your brand. Our static sites can be as simple or complex as you need, with the option
-              to add in e-commerce with Shopify or manage content through your favorite CMS, including Wordpress,
-              Contentful, Sanity, and more. Interested in a stunning static website but need it right away? Check out
-              our <Link to="/sites">semi-custom development services</Link> to get going right out of the box. See our
-              custom website work in action for{' '}
-              <a target="_blank" rel="nofollow noopener" href="https://flyinghomestudio.com/">
-                Tune & Flying Home Studio.
-              </a>
-            </p>
-            <ul>
-              <li>
-                <div className="card card--icon card--elevation-2">
-                  <Icon name="globe" />
+              Our custom web apps are more than just a pretty face. Equipped with powerful backend functionality along
+              with gorgeous, responsive user interfaces, these websites can accomplish anything you need with elegance
+              and speed. The Pure Func team has experience building a wide variety of custom web apps, also known as
+              full stack websites, including admin systems, analytics dashboards, social networks, and so much more. See
+              our full stack web development work in action for{' '}
+              <a target="_blank" rel="nofollow noopener" href="https://www.leveluptutorials.com/?ref=purefunc">
+                Level Up Tutorials{' '}
+              </a>{' '}
+                . Get your custom QR code menu started with Code My Menu.
+              </p>
+        <div className="grid grid--split">
+          <div className="flex">
+            <img src={tuneimg} alt="Tune Flying Home Studio website" className="rounded" />
+          </div>
+        <div>
+          <ul>
+            <li>
+              <div className="flex flex--start">  
+                <div className="margin-right-small card card--icon card--elevation-2">
+                  <Icon name="circle-timer" />
                 </div>
-                Satisfy your niche needs in no time with rich support for APIs, widgets, and plugins. No matter what
-                you're looking for, from customer reviews to contact forms, our team uses JAMStack architecture to add
-                powerful functionality to your site without hurting its performance.
-              </li>
+                  Push the boundaries of the menu experience. Traditional paper menus force you to balance the trade off
+                  between space and content. QR code menus eliminate the space factor, allowing you to include images and
+                  details for every single item.
+              </div>
+            </li>
               <li>
-                <div className="card card--icon card--elevation-2">
-                  <Icon name="circle-lock" />
+                <div className="flex flex--start margin-top-small">
+                  <div className="margin-right-small card card--icon card--elevation-2">
+                    <Icon name="circle-house" />
+                  </div>
+                    Give everyone the chance to explore your delicious dishes. PDF menus are not responsive, which means it
+                    takes a whole lot of zooming and scrolling to navigate them. Our QR menus are web pages, so they scale
+                    perfectly on almost any mobile device.
                 </div>
-                Tie in your preferred content management system (CMS) to seamlessly integrate new blog posts, photos, or
-                portfolio pieces into your site. We're all about convenience, and we strive to make content management
-                as simple as possible for all of our clients.
-              </li>
+            </li>
               <li>
-                <div className="card card--icon card--elevation-2">
-                  <Icon name="thunder-bolt" />
+                <div className="flex flex--start margin-top-small">
+                  <div className="margin-right-small card card--icon card--elevation-2">
+                    <Icon name="smiley-face" />
+                  </div>
+                    Efficiently add, remove, and edit your offerings. Updating paper menus can be costly and time-consuming,
+                    but websites are built to be changed. When you cook up new dishes or switch your seasonal offerings, QR
+                    code menus make the transition seamless.
                 </div>
-                Reach an international audience. Our team’s experience with multilingual compatibility ensures that your
-                site will look and feel perfect for a diverse group of people, not just English speakers.
-              </li>
-            </ul>
-
-            <div>IMAGE</div>
+            </li>
+          </ul>
           </div>
         </div>
       </Section>
       <Section>
-        <div className="grid">
+        <div className="grid grid--split__reverse">
+          <div></div>
           <div>
             <h3 className="margin-top-0">E-Commerce Integration</h3>
             <p>
@@ -77,129 +88,101 @@ export default function ServicesPage() {
               your existing platform, our custom Shopify themes weave powerful e-commerce functionality right into your
               stunning site. See our e-commerce work in action for{' '}
               <a target="_blank" rel="nofollow noopener" href="https://www.rachio.com">
-                Rachio.
+                Rachio
               </a>
+              .
             </p>
+          </div>
+        </div>
+        <div className="grid grid--split__reverse">
+          <div>
             <ul>
-              <li>
-                <div className="card card--icon card--elevation-2">
+              <li className="flex flex--start">
+                <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="circle-meter" />
                 </div>
                 Reap the benefits of our JAMStack architecture, including speed, flexibility, and customization. Our
                 quick loading times and custom functionality enhance the shopping experience for your valued customers
                 and keep them coming back for more.
               </li>
-              <li>
-                <div className="card card--icon card--elevation-2">
+              <li className="flex flex--start margin-top-small">
+                <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="circle-plus" />
                 </div>
                 Use what you already have, or start from square one. If you’re looking to expand your existing site into
                 e-commerce, we can integrate a custom Shopify theme right into your platform. If you’re new to the world
                 wide web, no worries--our static site development and e-commerce services go hand-in-hand.
               </li>
-              <li>
-                <div className="card card--icon card--elevation-2">
+              <li className="flex flex--start margin-top-small">
+                <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="circle-bubble" />
                 </div>
                 Join the community of over half a million Shopify sellers, and enjoy the immense support system and
                 documentation that comes with it.
               </li>
             </ul>
-            <div>IMAGE</div>
+            </div>
+          <div className="flex">
+            <img src={tuneimg} alt="Tune Flying Home Studio website" className="rounded" />
           </div>
         </div>
       </Section>
       <Section>
-        <div className="grid">
-          <div>
-            <h3 className="margin-top-0">Custom Web Apps</h3>
+            <h3 className="margin-top-0">Custom Websites</h3>
             <p>
-              Our custom web apps are more than just a pretty face. Equipped with powerful backend functionality along
-              with gorgeous, responsive user interfaces, these websites can accomplish anything you need with elegance
-              and speed. The Pure Func team has experience building a wide variety of custom web apps, also known as
-              full stack websites, including admin systems, analytics dashboards, social networks, and so much more. See
-              our full stack web development work in action for{' '}
-              <a target="_blank" rel="nofollow noopener" href="https://www.leveluptutorials.com/?ref=purefunc">
-                Level Up Tutorials.{' '}
-              </a>{' '}
-              Get your custom QR code menu started with Code My Menu.
-            </p>
+              Bold. Smooth. Modern. Showcase the best of your work, products, and services with a custom user interface
+              designed to flatter your brand. Our static sites can be as simple or complex as you need, with the option
+              to add in e-commerce with Shopify or manage content through your favorite CMS, including Wordpress,
+              Contentful, Sanity, and more. Interested in a stunning static website but need it right away? Check out
+              our <Link to="/sites">semi-custom development services</Link> to get going right out of the box. See our
+              custom website work in action for{' '}
+              <a target="_blank" rel="nofollow noopener" href="https://flyinghomestudio.com/">
+            Tune & Flying Home Studio
+              </a>
+          .
+        </p>
+        <div className="grid grid--split">
+          <div className="flex">
+          <img src={tuneimg} alt="Tune Flying Home Studio website" className="rounded" />
+          </div>
+          <div>
             <ul>
-              <li>
-                <div className="card card--icon card--elevation-2">
-                  <Icon name="circle-timer" />
+              <li className="flex flex--start">
+                <div className="margin-right-small card card--icon card--elevation-2">
+                  <Icon name="globe" />
                 </div>
-                Push the boundaries of the menu experience. Traditional paper menus force you to balance the trade off
-                between space and content. QR code menus eliminate the space factor, allowing you to include images and
-                details for every single item.
+                Satisfy your niche needs in no time with rich support for APIs, widgets, and plugins. No matter what
+                you're looking for, from customer reviews to contact forms, our team uses JAMStack architecture to add
+                powerful functionality to your site without hurting its performance.
               </li>
-              <li>
-                <div className="card card--icon card--elevation-2">
-                  <Icon name="circle-house" />
+              <li className="flex flex--start margin-top-small">
+                <div className="margin-right-small card card--icon card--elevation-2">
+                  <Icon name="circle-lock" />
                 </div>
-                Give everyone the chance to explore your delicious dishes. PDF menus are not responsive, which means it
-                takes a whole lot of zooming and scrolling to navigate them. Our QR menus are web pages, so they scale
-                perfectly on almost any mobile device.
+                Tie in your preferred content management system (CMS) to seamlessly integrate new blog posts, photos, or
+                portfolio pieces into your site. We're all about convenience, and we strive to make content management
+                as simple as possible for all of our clients.
               </li>
-              <li>
-                <div className="card card--icon card--elevation-2">
-                  <Icon name="smiley-face" />
+              <li className="flex flex--start margin-top-small">
+                <div className="margin-right-small card card--icon card--elevation-2">
+                  <Icon name="thunder-bolt" />
                 </div>
-                Efficiently add, remove, and edit your offerings. Updating paper menus can be costly and time-consuming,
-                but websites are built to be changed. When you cook up new dishes or switch your seasonal offerings, QR
-                code menus make the transition seamless.
+                Reach an international audience. Our team’s experience with multilingual compatibility ensures that your
+                site will look and feel perfect for a diverse group of people, not just English speakers.
               </li>
             </ul>
-            <div>IMAGE</div>
           </div>
+        </div>
+      </Section>
+      <Section theme="funky">
+        <div className="card card--padded text-center margin-auto">
+          <h4>Interested in a stunning static website but need it right away?</h4>
+          <p>
+            Check out our semi-custom development services to get going right out of the box.
+          </p>
         </div>
       </Section>
       <Section>
-        <div className="grid">
-          <div>
-            <h3 className="margin-top-0">Digital Menus</h3>
-            <p>
-              If you’re a restaurant owner looking to stay on the cutting edge of the customer experience, building a
-              smooth, responsive Digital menu is crucial to the new digital age of ordering. The COVID-19 pandemic has
-              caused thousands of businesses to switch to Digital menus, and it looks like they’re here to stay. Our
-              custom Digital menu creation service, Code My Menu, offers flexible, personalized solutions that are
-              compatible with almost any mobile device.
-            </p>
-            <p>
-              See our full stack web development work in action for{' '}
-              <a target="_blank" rel="nofollow noopener" href="https://www.leveluptutorials.com/?ref=purefunc">
-                Level Up Tutorials.
-              </a>{' '}
-            </p>
-            <ul>
-              <li>
-                <div className="card card--icon card--elevation-2">
-                  <Icon name="circle-check" />
-                </div>
-                Scale globally with multilingual compatibility. Our team has built sites in languages from all over the
-                world, and we know how to create user interfaces that look great no matter what language they’re
-                translated into.
-              </li>
-              <li>
-                <div className="card card--icon card--elevation-2">
-                  <Icon name="circle-check" />
-                </div>
-                Unlock an infinite range of functionality. The sky’s the limit when it comes to full stack sites, which
-                use databases and servers to add powerful functionality to your UI.
-              </li>
-              <li>
-                <div className="card card--icon card--elevation-2">
-                  <Icon name="circle-check" />
-                </div>
-                Grow your application while still maintaining speed and efficiency. From React to Next.js, we build both
-                the client and server side of our sites with the most modern, effective technology available.
-              </li>
-            </ul>
-            <div>IMAGE</div>
-          </div>
-        </div>
-      </Section>
-      <Section isSkewed theme="gray">
         <>
           <h2 className="margin-auto text-center">Refactoring and Consulting</h2>
           <p className="margin-auto text-center">
