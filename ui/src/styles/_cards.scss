@@ -56,6 +56,21 @@
     --cardBackground: var(--white);
     display: inline-flex;
   }
+  //digital menus
+  &--pro {
+    color: var(--proCard);
+    li:first-child {
+      color: var(--textColor);
+    }
+    h3 {
+      color: var(--proCard);
+    }
+  }
+  &--expert {
+    h3 {
+      color: var(--expertCard);
+    }
+  }
 
   & > *:first-child {
     margin-top: 0;

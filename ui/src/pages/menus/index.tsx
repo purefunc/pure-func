@@ -73,7 +73,7 @@ export default function DigitalMenuPage() {
               </ul>
               <p>* A link to our website will appear at the bottom of your menu with this plan</p>
             </div>
-            <div className="card">
+            <div className="card card--pro">
               <h3 className="text-center">
                 <strong>Pro</strong>
               </h3>
@@ -92,7 +92,7 @@ export default function DigitalMenuPage() {
                 <li>And more planed features coming soon!</li>
               </ul>
             </div>
-            <div className="card text-center">
+            <div className="card card--expert text-center">
               <h3>
                 <strong>Expert</strong>
               </h3>
