@@ -58,17 +58,17 @@
   }
   //digital menus
   &--pro {
-    color: var(--proCard);
+    color: var(--violet);
     li:first-child {
       color: var(--textColor);
     }
     h3 {
-      color: var(--proCard);
+      color: var(--violet);
     }
   }
   &--expert {
     h3 {
-      color: var(--expertCard);
+      color: var(--teal);
     }
   }
 
