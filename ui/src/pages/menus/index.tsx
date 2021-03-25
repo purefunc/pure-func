@@ -75,7 +75,7 @@ export default function DigitalMenuPage() {
             </div>
             <div className="card">
               <h3 className="text-center">
-                <strong>Pro</strong>
+                <strong className="text-teal">Pro</strong>
               </h3>
               <h4 className="text-center margin-top-0">$19.99/Month</h4>
               <hr />
@@ -94,7 +94,7 @@ export default function DigitalMenuPage() {
             </div>
             <div className="card text-center">
               <h3>
-                <strong>Expert</strong>
+                <strong className="text-violet">Expert</strong>
               </h3>
               <p className="margins">A solution for those who have multiple menus and custom design needs</p>
               <h4>Coming Soon!</h4>
