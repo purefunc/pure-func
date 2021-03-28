@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 import HomePage from '../pages'
-import AboutPage from '../pages/about'
+import AboutPage from '../pages/aboutpage'
 import MenusPage from '../pages/menus'
 import BetaPage from '../pages/beta'
 import NotFoundPage from '../pages/404'
