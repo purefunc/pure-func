@@ -15,7 +15,7 @@
   }
 }
 
-// rounds corners of anything
+// Rounds corners of anything
 .rounded {
   border-radius: var(--cardRadius);
 }
@@ -23,6 +23,13 @@
 // Indent on desktop, part of current design layout
 .indent {
   margin-left: var(--largestSpace);
+}
+
+// Add eleveation shadow
+@for $i from 0 through 5 {
+  .elevation-#{$i} {
+    box-shadow: var(--elevation-#{$i});
+  }
 }
 
 /* --- Mobile Classes (Below medium screen size) --- */

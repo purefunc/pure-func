@@ -2,7 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from 'utilities'
 import { Section, Icon } from 'components'
-import tuneimg from 'images/tune-header.png'
+import tuneImg from 'images/tune-header.png'
+import rachioImg from 'images/rachio.jpg'
+import lutImg from 'images/lut-screenshot.jpg'
+
 import { TerminalScreen } from '../../figures/TerminalScreen'
 
 export default function ServicesPage() {
@@ -24,55 +27,55 @@ export default function ServicesPage() {
         </div>
       </Section>
       <Section>
-          <h3 className="margin-top-0">Custom Web Apps</h3>
-            <p>
-              Our custom web apps are more than just a pretty face. Equipped with powerful backend functionality along
-              with gorgeous, responsive user interfaces, these websites can accomplish anything you need with elegance
-              and speed. The Pure Func team has experience building a wide variety of custom web apps, also known as
-              full stack websites, including admin systems, analytics dashboards, social networks, and so much more. See
-              our full stack web development work in action for{' '}
-              <a target="_blank" rel="nofollow noopener" href="https://www.leveluptutorials.com/?ref=purefunc">
-                Level Up Tutorials{' '}
-              </a>{' '}
-                . Get your custom QR code menu started with Code My Menu.
-              </p>
+        <h3 className="margin-top-0">Custom Web Apps</h3>
+        <p>
+          Our custom web apps are more than just a pretty face. Equipped with powerful backend functionality along with
+          gorgeous, responsive user interfaces, these websites can accomplish anything you need with elegance and speed.
+          The Pure Func team has experience building a wide variety of custom web apps, also known as full stack
+          websites, including admin systems, analytics dashboards, social networks, and so much more. See our full stack
+          web development work in action for{' '}
+          <a target="_blank" rel="nofollow noopener" href="https://www.leveluptutorials.com/?ref=purefunc">
+            Level Up Tutorials{' '}
+          </a>{' '}
+          . Get your custom QR code menu started with Code My Menu.
+        </p>
         <div className="grid grid--split">
           <div className="flex">
-            <img src={tuneimg} alt="Tune Flying Home Studio website" className="rounded" />
+            <img src={lutImg} alt="Level Up Tutorials website" className="rounded elevation-3" />
           </div>
-        <div>
-          <ul>
-            <li>
-              <div className="flex flex--start">  
-                <div className="margin-right-small card card--icon card--elevation-2">
-                  <Icon name="circle-timer" />
-                </div>
+          <div>
+            <ul>
+              <li>
+                <div className="flex flex--start">
+                  <div className="margin-right-small card card--icon card--elevation-2">
+                    <Icon name="circle-timer" />
+                  </div>
                   Push the boundaries of the menu experience. Traditional paper menus force you to balance the trade off
-                  between space and content. QR code menus eliminate the space factor, allowing you to include images and
-                  details for every single item.
-              </div>
-            </li>
+                  between space and content. QR code menus eliminate the space factor, allowing you to include images
+                  and details for every single item.
+                </div>
+              </li>
               <li>
                 <div className="flex flex--start margin-top-small">
                   <div className="margin-right-small card card--icon card--elevation-2">
                     <Icon name="circle-house" />
                   </div>
-                    Give everyone the chance to explore your delicious dishes. PDF menus are not responsive, which means it
-                    takes a whole lot of zooming and scrolling to navigate them. Our QR menus are web pages, so they scale
-                    perfectly on almost any mobile device.
+                  Give everyone the chance to explore your delicious dishes. PDF menus are not responsive, which means
+                  it takes a whole lot of zooming and scrolling to navigate them. Our QR menus are web pages, so they
+                  scale perfectly on almost any mobile device.
                 </div>
-            </li>
+              </li>
               <li>
                 <div className="flex flex--start margin-top-small">
                   <div className="margin-right-small card card--icon card--elevation-2">
                     <Icon name="smiley-face" />
                   </div>
-                    Efficiently add, remove, and edit your offerings. Updating paper menus can be costly and time-consuming,
-                    but websites are built to be changed. When you cook up new dishes or switch your seasonal offerings, QR
-                    code menus make the transition seamless.
+                  Efficiently add, remove, and edit your offerings. Updating paper menus can be costly and
+                  time-consuming, but websites are built to be changed. When you cook up new dishes or switch your
+                  seasonal offerings, QR code menus make the transition seamless.
                 </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </Section>
@@ -121,29 +124,29 @@ export default function ServicesPage() {
                 documentation that comes with it.
               </li>
             </ul>
-            </div>
+          </div>
           <div className="flex">
-            <img src={tuneimg} alt="Tune Flying Home Studio website" className="rounded" />
+            <img src={rachioImg} alt="Rachio website" className="rounded elevation-3" />
           </div>
         </div>
       </Section>
       <Section>
-            <h3 className="margin-top-0">Custom Websites</h3>
-            <p>
-              Bold. Smooth. Modern. Showcase the best of your work, products, and services with a custom user interface
-              designed to flatter your brand. Our static sites can be as simple or complex as you need, with the option
-              to add in e-commerce with Shopify or manage content through your favorite CMS, including Wordpress,
-              Contentful, Sanity, and more. Interested in a stunning static website but need it right away? Check out
-              our <Link to="/sites">semi-custom development services</Link> to get going right out of the box. See our
-              custom website work in action for{' '}
-              <a target="_blank" rel="nofollow noopener" href="https://flyinghomestudio.com/">
+        <h3 className="margin-top-0">Custom Websites</h3>
+        <p>
+          Bold. Smooth. Modern. Showcase the best of your work, products, and services with a custom user interface
+          designed to flatter your brand. Our static sites can be as simple or complex as you need, with the option to
+          add in e-commerce with Shopify or manage content through your favorite CMS, including Wordpress, Contentful,
+          Sanity, and more. Interested in a stunning static website but need it right away? Check out our{' '}
+          <Link to="/sites">semi-custom development services</Link> to get going right out of the box. See our custom
+          website work in action for{' '}
+          <a target="_blank" rel="nofollow noopener" href="https://flyinghomestudio.com/">
             Tune & Flying Home Studio
-              </a>
+          </a>
           .
         </p>
         <div className="grid grid--split">
           <div className="flex">
-          <img src={tuneimg} alt="Tune Flying Home Studio website" className="rounded" />
+            <img src={tuneImg} alt="Tune Flying Home Studio website" className="rounded elevation-3" />
           </div>
           <div>
             <ul>
@@ -177,9 +180,7 @@ export default function ServicesPage() {
       <Section theme="funky">
         <div className="card card--padded text-center margin-auto">
           <h4>Interested in a stunning static website but need it right away?</h4>
-          <p>
-            Check out our semi-custom development services to get going right out of the box.
-          </p>
+          <p>Check out our semi-custom development services to get going right out of the box.</p>
         </div>
       </Section>
       <Section>

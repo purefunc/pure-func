@@ -81,9 +81,9 @@ export default function HomePage() {
         <div className="card card--padded card--funky-2 text-center margin-auto">
           <h2>Clients Trust Us</h2>
           <p>
-            Pure Func is able to achieve what other web developers can’t. We needed a fast website with high value
+            "Pure Func is able to achieve what other web developers can’t. We needed a fast website with high value
             content and high quality photographs, smooth language switcher, and is mobile-friendly. Pure func delivered
-            exactly what we needed! We are happy with the results and so are our clients!
+            exactly what we needed! We are happy with the results and so are our clients!"
           </p>
           <h5>Tune Kantharoup - Flying Home Studio</h5>
         </div>
