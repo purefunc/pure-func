@@ -1,51 +1,40 @@
 import React, { useState } from 'react'
 
-export function ContactForm() {
-  function encode(data) {
-    return Object.keys(data)
-      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&')
-  }
+const options = [
+  {
+    label: 'Consultation',
+    value: 'consultation',
+  },
+  {
+    label: 'Digital Menus',
+    value: 'digital menus',
+  },
+  {
+    label: 'Other',
+    value: 'other',
+  },
+]
 
+export function ContactForm() {
   const [state, setState] = useState({})
   const [error, setError] = useState('')
   const [isThankYouShowing, setIsThankYouShowing] = useState(false)
-  const options = [
-    {
-      label: 'Consultation',
-      value: 'consultation',
-    },
-    {
-      label: 'Digital Menus',
-      value: 'digital menus',
-    },
-    {
-      label: 'Other',
-      value: 'other',
-    },
-  ]
 
   const handleChange = (e) => {
     if (error) {
       setError('')
     }
     setState({ ...state, [e.target.name]: e.target.value })
-    console.log(e.target.name, e.target.value)
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    const form = e.target
-    fetch('/', {
+    fetch('https://formspree.io/f/xrgrzjwa', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...state,
-      }),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(state),
     })
-      .then((result) => {
-        console.log('result', result)
+      .then(() => {
         setIsThankYouShowing(true)
       })
       .catch((e) => {
@@ -56,27 +45,12 @@ export function ContactForm() {
   return (
     <div className="card card--lightBlue contact-form">
       {isThankYouShowing ? (
-        <h3>Thank you. We will get back to you shortly.</h3>
+        <h4 className="text-center">Thank you. We will get back to you shortly.</h4>
       ) : (
         <>
-          {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-          <input type="hidden" name="form-name" value="contact" />
-          <p hidden>
-            <label>
-              Don’t fill this out:
-              <input name="bot-field" onChange={handleChange} />
-            </label>
-          </p>
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
-            className="margins"
-          >
+          <form id="contact-form" method="POST" onSubmit={handleSubmit} className="margins">
             <label htmlFor="name">
-              <span> Name*</span>
+              Name*
               <input type="text" name="name" required onChange={handleChange} />
             </label>
             <label htmlFor="email">
@@ -87,7 +61,9 @@ export function ContactForm() {
               Area(s) of Interest*
               <select onChange={handleChange} name="category">
                 {options.map((option) => (
-                  <option value={option.value}>{option.label}</option>
+                  <option key={option.label} value={option.value}>
+                    {option.label}
+                  </option>
                 ))}
               </select>
             </label>
@@ -97,7 +73,7 @@ export function ContactForm() {
             </label>
             {error && <p className="red-text small">{error}</p>}
             <div className="text-center">
-              <button type="submit" className="cta cta--gradient">
+              <button id="contact-form-button" type="submit" className="cta cta--gradient">
                 Send
               </button>
             </div>
