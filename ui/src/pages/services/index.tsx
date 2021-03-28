@@ -198,7 +198,7 @@ export default function ServicesPage() {
               <div className="card card--icon card--elevation-2">
                 <Icon name="trophy" />
               </div>
-              <h5>Uninterrupted Progress</h5>
+              <h5 className="margin-top-small">Uninterrupted Progress</h5>
               <p>
                 Move on from complicated issues without sacrificing your goals. Getting stuck on a problem outside of
                 your team’s skill set may seem hopeless, but our consulting services will help you keep pushing forward
@@ -209,7 +209,7 @@ export default function ServicesPage() {
               <div className="card card--icon card--elevation-2">
                 <Icon name="badge" />
               </div>
-              <h5>Empowerment for the Whole Team</h5>
+              <h5 className="margin-top-small">Empowerment for the Whole Team</h5>
               <p>
                 Unlock new skills for your team. Through our mentorship and teaching opportunities, your team can grow
                 in new directions and learn valuable, modern development skills.
@@ -219,7 +219,7 @@ export default function ServicesPage() {
               <div className="card card--icon card--elevation-2">
                 <Icon name="mountain-top" />
               </div>
-              <h5>A Firm Foundation</h5>
+              <h5 className="margin-top-small">A Firm Foundation</h5>
               <p>
                 Save time by making the right architecture decisions. Work with our team to make sure you’re picking the
                 right languages, frameworks, and database structures for your app, crucial decisions that can make or
