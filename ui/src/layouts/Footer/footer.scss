@@ -31,11 +31,11 @@
     a {
       color: var(--gray);
       display: block;
-      }
+      
       & + a {
         margin-left: var(--space);
         
       }
     }
   }
-
+}
