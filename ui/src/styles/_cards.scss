@@ -9,6 +9,7 @@
   padding: var(--cardPadding);
   color: var(--textColor);
   max-width: var(--maxCardWidth);
+  position: relative;
   h1,
   h2,
   h3,
@@ -57,6 +58,10 @@
     display: inline-flex;
   }
 
+  + .card {
+    margin-top: var(--gridGap);
+  }
+
   & > *:first-child {
     margin-top: 0;
   }
@@ -75,5 +80,11 @@
   }
   @media only screen and (max-width: 800px) {
     --maxCardWidth: none;
+  }
+
+  @media only screen and (min-width: 800px) {
+    + .card {
+      margin-top: 0;
+    }
   }
 }

@@ -12,10 +12,7 @@ export default function SitesPage() {
       <Section isHero theme="primary">
         <div className="grid">
           <div>
-            <h1 className="margin-top-0">
-              Want a Quick and Easy Solution? <br />
-              Try Our One Page Website Builder
-            </h1>
+            <h1 className="margin-top-0">A Quick and Easy Website Solution</h1>
             <p>{description}</p>
             <p>
               <i>* Currently in beta but still accepting clients</i>

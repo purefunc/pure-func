@@ -1,11 +1,14 @@
-label {
+label,
+label span {
   display: block;
   font-size: var(--smallText);
+  margin: var(--smallestSpace) 0;
 }
 
 input,
 textarea,
 select {
+  width: 100%;
   padding: 4px 5px;
   border: var(--line);
   border-radius: var(--inputRadius);
@@ -20,6 +23,11 @@ textarea {
   color: var(--gray);
 }
 
+select::ms-expand {
+  display: none;
+}
+
 select {
   border: var(--line);
+  padding: 9px;
 }
