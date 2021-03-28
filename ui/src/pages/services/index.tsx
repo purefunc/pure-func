@@ -43,26 +43,30 @@ export default function ServicesPage() {
           <div className="flex">
             <img src={lutImg} alt="Level Up Tutorials website" className="rounded elevation-3" />
           </div>
-          <div>
-            <ul>
-              <li>
-                <div className="flex flex--start">
-                  <div className="margin-right-small card card--icon card--elevation-2">
-                    <Icon name="circle-timer" />
-                  </div>
-                  Push the boundaries of the menu experience. Traditional paper menus force you to balance the trade off
-                  between space and content. QR code menus eliminate the space factor, allowing you to include images
-                  and details for every single item.
+        <div>
+          <ul>
+            <li>
+              <div className="flex flex--start">  
+                <div className="margin-right-small card card--icon card--elevation-2">
+                  <Icon name="circle-timer" />
                 </div>
-              </li>
+                  <p>
+                  Push the boundaries of the menu experience. Traditional paper menus force you to balance the trade off
+                  between space and content. QR code menus eliminate the space factor, allowing you to include images and
+                  details for every single item.
+                  </p>
+              </div>
+            </li>
               <li>
                 <div className="flex flex--start margin-top-small">
                   <div className="margin-right-small card card--icon card--elevation-2">
                     <Icon name="circle-house" />
                   </div>
-                  Give everyone the chance to explore your delicious dishes. PDF menus are not responsive, which means
-                  it takes a whole lot of zooming and scrolling to navigate them. Our QR menus are web pages, so they
-                  scale perfectly on almost any mobile device.
+                    <p>
+                    Give everyone the chance to explore your delicious dishes. PDF menus are not responsive, which means it
+                    takes a whole lot of zooming and scrolling to navigate them. Our QR menus are web pages, so they scale
+                    perfectly on almost any mobile device.
+                    </p>
                 </div>
               </li>
               <li>
@@ -70,9 +74,11 @@ export default function ServicesPage() {
                   <div className="margin-right-small card card--icon card--elevation-2">
                     <Icon name="smiley-face" />
                   </div>
-                  Efficiently add, remove, and edit your offerings. Updating paper menus can be costly and
-                  time-consuming, but websites are built to be changed. When you cook up new dishes or switch your
-                  seasonal offerings, QR code menus make the transition seamless.
+                    <p>
+                    Efficiently add, remove, and edit your offerings. Updating paper menus can be costly and time-consuming,
+                    but websites are built to be changed. When you cook up new dishes or switch your seasonal offerings, QR
+                    code menus make the transition seamless.
+                    </p>
                 </div>
               </li>
             </ul>
@@ -104,24 +110,30 @@ export default function ServicesPage() {
                 <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="circle-meter" />
                 </div>
-                Reap the benefits of our JAMStack architecture, including speed, flexibility, and customization. Our
-                quick loading times and custom functionality enhance the shopping experience for your valued customers
-                and keep them coming back for more.
+                  <p>
+                  Reap the benefits of our JAMStack architecture, including speed, flexibility, and customization. Our
+                  quick loading times and custom functionality enhance the shopping experience for your valued customers
+                  and keep them coming back for more.
+                  </p>
               </li>
               <li className="flex flex--start margin-top-small">
                 <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="circle-plus" />
                 </div>
-                Use what you already have, or start from square one. If you’re looking to expand your existing site into
-                e-commerce, we can integrate a custom Shopify theme right into your platform. If you’re new to the world
-                wide web, no worries--our static site development and e-commerce services go hand-in-hand.
+                  <p>
+                  Use what you already have, or start from square one. If you’re looking to expand your existing site into
+                  e-commerce, we can integrate a custom Shopify theme right into your platform. If you’re new to the world
+                  wide web, no worries--our static site development and e-commerce services go hand-in-hand.
+                  </p>
               </li>
               <li className="flex flex--start margin-top-small">
                 <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="circle-bubble" />
                 </div>
-                Join the community of over half a million Shopify sellers, and enjoy the immense support system and
-                documentation that comes with it.
+                  <p>
+                  Join the community of over half a million Shopify sellers, and enjoy the immense support system and
+                  documentation that comes with it.
+                  </p>
               </li>
             </ul>
           </div>
@@ -154,24 +166,30 @@ export default function ServicesPage() {
                 <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="globe" />
                 </div>
-                Satisfy your niche needs in no time with rich support for APIs, widgets, and plugins. No matter what
-                you're looking for, from customer reviews to contact forms, our team uses JAMStack architecture to add
-                powerful functionality to your site without hurting its performance.
+                  <p>
+                  Satisfy your niche needs in no time with rich support for APIs, widgets, and plugins. No matter what
+                  you're looking for, from customer reviews to contact forms, our team uses JAMStack architecture to add
+                  powerful functionality to your site without hurting its performance.
+                  </p>
               </li>
               <li className="flex flex--start margin-top-small">
                 <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="circle-lock" />
                 </div>
-                Tie in your preferred content management system (CMS) to seamlessly integrate new blog posts, photos, or
-                portfolio pieces into your site. We're all about convenience, and we strive to make content management
-                as simple as possible for all of our clients.
+                  <p>
+                  Tie in your preferred content management system (CMS) to seamlessly integrate new blog posts, photos, or
+                  portfolio pieces into your site. We're all about convenience, and we strive to make content management
+                  as simple as possible for all of our clients.
+                  </p>
               </li>
               <li className="flex flex--start margin-top-small">
                 <div className="margin-right-small card card--icon card--elevation-2">
                   <Icon name="thunder-bolt" />
                 </div>
-                Reach an international audience. Our team’s experience with multilingual compatibility ensures that your
-                site will look and feel perfect for a diverse group of people, not just English speakers.
+                  <p>
+                  Reach an international audience. Our team’s experience with multilingual compatibility ensures that your
+                  site will look and feel perfect for a diverse group of people, not just English speakers.
+                  </p>
               </li>
             </ul>
           </div>
