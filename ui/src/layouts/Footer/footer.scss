@@ -17,6 +17,7 @@
     @media (max-width: 600px) {
       a {
         margin-top: var(--space);
+        
       }
       .cta:first-child {
         margin-top: var(--space);
@@ -29,9 +30,12 @@
     color: var(--gray);
     a {
       color: var(--gray);
+      display: block;
+      }
       & + a {
         margin-left: var(--space);
+        
       }
     }
   }
-}
+
