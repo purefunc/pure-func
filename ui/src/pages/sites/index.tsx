@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from 'utilities'
-import { Section } from 'components'
+import { Section, Icon } from 'components'
 
 export default function SitesPage() {
   const title = 'One Page Website Builder'
@@ -17,6 +17,12 @@ export default function SitesPage() {
               Try Our One Page Website Builder
             </h1>
             <p>{description}</p>
+            <p>
+              <i>* Currently in beta but still accepting clients</i>
+            </p>
+            <Link to="/beta" className="cta cta--white">
+              Get Beta Access
+            </Link>
           </div>
         </div>
       </Section>
@@ -26,21 +32,30 @@ export default function SitesPage() {
             <h2 className="margin-top-0 text-center margin-auto">How It Works</h2>
             <ol className="grid" style={{ listStyle: 'none' }}>
               <li className="card card--lightBlue">
-                <h5>Step 1</h5>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="brush-monitor" />
+                </div>
+                <h5 className="margin-top-small">Step 1</h5>
                 <p>
                   Customize your site’s design with the tool below. Choose one of our hand-crafted website templates,
                   then add your signature styles, colors, and logos to make it your own.
                 </p>
               </li>
               <li className="card card--lightBlue">
-                <h5>Step 1</h5>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="bubble-chat" />
+                </div>
+                <h5 className="margin-top-small">Step 2</h5>
                 <p>
                   Send us the information you’d like to feature. Once you’ve created your design and submitted it to our
                   team, we’ll work with you to integrate your own text and images into the site.
                 </p>
               </li>
               <li className="card card--lightBlue">
-                <h5>Step 1</h5>
+                <div className="card card--icon card--elevation-2">
+                  <Icon name="smiley-face2" />
+                </div>
+                <h5 className="margin-top-small">Step 3</h5>
                 <p>
                   Enjoy your new smooth, modern single page website. We strive to get you up and running quickly, so you
                   can sit back and enjoy the booming traffic, buzz, and sales as soon as possible.

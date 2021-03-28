@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Section, LogoStrip, Icon } from 'components'
-import { TerminalScreen, Laptop } from 'figures'
+import { TerminalScreen, Laptop, Screen } from 'figures'
+import ecommerceImg from 'images/ecommerce.png'
+import lutImg from 'images/lut-scott.png'
 import { SEO } from '../utilities/SEO'
 
 export default function HomePage() {
@@ -15,24 +17,25 @@ export default function HomePage() {
           <div>
             <h1 className="margin-top-0">{title}</h1>
             <p>{description}</p>
-            <Link to="/contact" className="cta">
+            <Link to="/contact" className="cta cta--white">
               Contact Us
             </Link>
           </div>
-          <Laptop />
+          <div className="margins">
+            <Screen />
+          </div>
+          {/* <Laptop /> */}
         </div>
       </Section>
       <Section>
         <>
-          <div className="margin-left-largest">
-            <h2 className="margin-top-0">Services</h2>
-            <p>
-              From business card sites to booming e-commerce platforms, our team offers a wide range of services that
-              will meet all of your development needs. Go big with a brand-new full stack site, refresh your old design
-              with a modern makeover, or hit the ground running with a semi-custom template—our highly skilled
-              developers have got you covered.
-            </p>
-          </div>
+          <h2 className="margin-top-0 margin-auto">Services</h2>
+          <p className="margin-auto">
+            From business card sites to booming e-commerce platforms, our team offers a wide range of services that will
+            meet all of your development needs. Go big with a brand-new full stack site, refresh your old design with a
+            modern makeover, or hit the ground running with a semi-custom template—our highly skilled developers have
+            got you covered.
+          </p>
           <div className="grid">
             <div>
               <h3>E-Commerce Integration</h3>
@@ -47,11 +50,11 @@ export default function HomePage() {
                 Learn More
               </Link>
             </div>
-            <div>IMAGE HERE</div>
+            <img src={ecommerceImg} alt="E-commerce" className="margins" />
           </div>
-          <div className="grid margin-left-largest">
+          <div className="grid indent">
             <div>
-              <h3>Custom Full Stack Web Development</h3>
+              <h3 className="margin-top-small">Custom Full Stack Web Development</h3>
               <p>
                 Our full stack websites are more than just a pretty face. Equipped with powerful backend functionality
                 along with gorgeous, responsive user interfaces, these websites can accomplish anything you need with
@@ -62,7 +65,7 @@ export default function HomePage() {
                 Learn More
               </Link>
             </div>
-            <div>
+            <div className="margins" style={{ alignSelf: 'end' }}>
               <TerminalScreen />
             </div>
           </div>
@@ -78,18 +81,18 @@ export default function HomePage() {
         <div className="card card--padded card--funky-2 text-center margin-auto">
           <h2>Clients Trust Us</h2>
           <p>
-            Pure Func is able to achieve what other web developers can’t. We needed a fast website with high value
+            "Pure Func is able to achieve what other web developers can’t. We needed a fast website with high value
             content and high quality photographs, smooth language switcher, and is mobile-friendly. Pure func delivered
-            exactly what we needed! We are happy with the results and so are our clients!
+            exactly what we needed! We are happy with the results and so are our clients!"
           </p>
           <h5>Tune Kantharoup - Flying Home Studio</h5>
         </div>
       </Section>
       <Section>
         <div className="grid">
-          <div>VIDEO HERE</div>
+          <img src={lutImg} alt="Scott Tolinski of Level Up Tutorials" className="margins" />
           <div>
-            <h2>Featured Project: Level Up Tutorials</h2>
+            <h2 className="margin-top-small">Featured Project: Level Up Tutorials</h2>
             <p>
               From interactive quizzes to admin UI, Pure Func has added several key new features to{' '}
               <a target="_blank" rel="nofollow noopener" href="https://www.leveluptutorials.com/?ref=purefunc">
@@ -114,7 +117,7 @@ export default function HomePage() {
               <div className="card card--icon card--elevation-2">
                 <Icon name="three-diagram" />
               </div>
-              <h5>An Ultramodern Approach</h5>
+              <h5 className="margin-top-small">An Ultramodern Approach</h5>
               <p>
                 We’re constantly studying and experimenting with emerging, state-of-the-art technologies that will give
                 your website a competitive edge. Our team leverages the latest and greatest frameworks, languages, and
@@ -125,7 +128,7 @@ export default function HomePage() {
               <div className="card card--icon card--elevation-2">
                 <Icon name="puzzle-piece" />
               </div>
-              <h5>Fully Custom Solutions</h5>
+              <h5 className="margin-top-small">Fully Custom Solutions</h5>
               <p>
                 From loading times to error handling, the quality of your customer experience hinges on the quality of
                 the code that powers it. That’s why we craft every website from scratch, creating a fully custom
@@ -136,7 +139,7 @@ export default function HomePage() {
               <div className="card card--icon card--elevation-2">
                 <Icon name="globe" />
               </div>
-              <h5>A Global Perspective</h5>
+              <h5 className="margin-top-small">A Global Perspective</h5>
               <p>
                 Our team has worked with clients from all over the world, accommodating a wide variety of timezones and
                 languages. Whether you’re already targeting an international audience or looking to expand, a global
