@@ -33,7 +33,7 @@ export default function AboutPage() {
               wrapped up in the work side of things!
             </p>
           </div>
-          <img src={ericImg} alt="Eric Sartorius" className="rounded" />
+          <img src={ericImg} alt="Eric Sartorius" className="rounded margin-auto" />
         </div>
       </Section>
       <Section theme="funky" isSkewed>
