@@ -5,6 +5,7 @@ import { SEO } from 'utilities'
 import phoneImg from '../../images/menus/phone-qr.png'
 import basicSvg from 'images/menus/basic-qr.svg'
 import plusSvg from 'images/menus/plus-qr.svg'
+import { QrCodes } from '../../figures/QR/QrCodes'
 
 export default function DigitalMenuPage() {
   const description =
@@ -22,11 +23,11 @@ export default function DigitalMenuPage() {
             <p>
               <i>* Currently in beta but still accepting clients</i>
             </p>
-            <Link to="/menus/beta" className="cta cta--white">
+            <Link to="/beta" className="cta cta--white">
               Get Beta Access
             </Link>
           </div>
-          <div>CUBE PLACEHOLDER</div>
+          <QrCodes />
         </div>
       </Section>
       <Section>
@@ -35,14 +36,14 @@ export default function DigitalMenuPage() {
             <img alt="Phone screen showing a menu" src={phoneImg} />
           </div>
           <div>
-            <h3 className="margin-top-0">Update your offerings without all the hassle.</h3>
+            <h4 className="margin-top-small">Update your offerings without all the hassle.</h4>
             <p className="large">
               Switching up a paper menu can be tedious and expensive, even if you’re just changing a few items! With our
               custom QR menus, adding more dishes, moving through the seasons, and trying new ingredients becomes simple
               and convenient.
             </p>
 
-            <h3>Delight your customers with a squint-free dining experience.</h3>
+            <h4>Delight your customers with a squint-free dining experience.</h4>
             <p className="large">
               With an image or a PDF menu, your customers are probably spending more time zooming and squinting than
               actually exploring what you have to offer. Our custom QR menus are compatible with almost any mobile
@@ -51,7 +52,7 @@ export default function DigitalMenuPage() {
           </div>
         </div>
       </Section>
-      <Section isSkewed theme="primary">
+      <Section isSkewed theme="funky">
         <>
           <h2 className="text-center margin-auto">Find a plan that works for you.</h2>
           <p className="text-center margin-auto">
@@ -74,7 +75,7 @@ export default function DigitalMenuPage() {
             </div>
             <div className="card">
               <h3 className="text-center">
-                <strong>Pro</strong>
+                <strong className="text-teal">Pro</strong>
               </h3>
               <h4 className="text-center margin-top-0">$19.99/Month</h4>
               <hr />
@@ -93,7 +94,7 @@ export default function DigitalMenuPage() {
             </div>
             <div className="card text-center">
               <h3>
-                <strong>Expert</strong>
+                <strong className="text-violet">Expert</strong>
               </h3>
               <p className="margins">A solution for those who have multiple menus and custom design needs</p>
               <h4>Coming Soon!</h4>
@@ -111,16 +112,20 @@ export default function DigitalMenuPage() {
             </p>
             <div className="container grid">
               <div>
-                <Link to="/examples/basic/">
-                  <h4>Basic Menu</h4>
+                {/* <Link to="/examples/basic/"> */}
+                <h4>Basic Menu</h4>
+                <div className="card card--elevation-3 ">
                   <img src={basicSvg} alt="Basic QR Code" />
-                </Link>
+                </div>
+                {/* </Link> */}
               </div>
               <div>
-                <Link to="/examples/plus/">
-                  <h4>Pro Menu</h4>
+                {/* <Link to="/examples/plus/"> */}
+                <h4>Pro Menu</h4>
+                <div className="card card--elevation-3">
                   <img src={plusSvg} alt="Plus QR Code" />
-                </Link>
+                </div>
+                {/* </Link> */}
               </div>
               <div>
                 <h4>Expert Menu</h4>

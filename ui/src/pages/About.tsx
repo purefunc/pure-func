@@ -16,8 +16,8 @@ export default function AboutPage() {
             <h1 className="margin-top-0">{title}</h1>
             <p>{description}</p>
           </div>
-          <div className="flex flex--center" style={{ alignItems: 'flex-start' }}>
-            <EyeLogo style={{ width: '75%', height: '75%' }} />
+          <div className="flex flex--center text-center padding" style={{ alignItems: 'flex-start' }}>
+            <EyeLogo style={{ width: '50%', height: '50%' }} />
           </div>
         </div>
       </Section>
@@ -33,7 +33,7 @@ export default function AboutPage() {
               wrapped up in the work side of things!
             </p>
           </div>
-          <img src={ericImg} alt="Eric Sartorius" className="rounded" />
+          <img src={ericImg} alt="Eric Sartorius" className="rounded margin-auto" />
         </div>
       </Section>
       <Section theme="funky" isSkewed>

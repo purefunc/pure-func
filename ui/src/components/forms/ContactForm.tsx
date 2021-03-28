@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './forms.scss'
 
 export function ContactForm() {
   function encode(data) {
