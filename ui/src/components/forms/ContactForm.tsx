@@ -34,12 +34,19 @@ export function ContactForm() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(state),
     })
-      .then(() => {
-        setIsThankYouShowing(true)
+      .then((res) => {
+        if (res.ok) {
+          setIsThankYouShowing(true)
+        } else {
+          if (res.status === 422) {
+            throw new Error('Make sure your email address is correct and try again')
+          }
+          throw new Error('Form could not be submitted. Please try again later.')
+        }
       })
       .catch((e) => {
         console.log('e', e)
-        setError('Form could not be submitted. Please try again later.')
+        setError(e?.message || 'Form could not be submitted. Please try again later.')
       })
   }
   return (
@@ -71,7 +78,7 @@ export function ContactForm() {
               Message*
               <textarea name="message" required onChange={handleChange}></textarea>
             </label>
-            {error && <p className="red-text small">{error}</p>}
+            {error && <p className="text-violet small">{error}</p>}
             <div className="text-center">
               <button id="contact-form-button" type="submit" className="cta cta--gradient">
                 Send
