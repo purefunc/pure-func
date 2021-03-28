@@ -475,7 +475,6 @@ export function Icon({ color = 'var(--black)', name, onClick, style = {} }: Prop
           <circle cx="18" cy="18" r="17.5" stroke="#555ABF" />
           <path
             d="M18.3212 23C22.8161 23 26.4599 19.4183 26.4599 15C26.4599 10.5817 22.8161 7 18.3212 7C13.8264 7 10.1826 10.5817 10.1826 15C10.1826 19.4183 13.8264 23 18.3212 23Z"
-            fill="url(#paint0_radial)"
             stroke="#555ABF"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -492,20 +491,6 @@ export function Icon({ color = 'var(--black)', name, onClick, style = {} }: Prop
             stroke="#555ABF"
             strokeLinejoin="round"
           />
-          <defs>
-            <radialGradient
-              id="paint0_radial"
-              cx="0"
-              cy="0"
-              r="1"
-              gradientUnits="userSpaceOnUse"
-              gradientTransform="translate(18.3212 15) rotate(90) scale(8 8.13862)"
-            >
-              <stop offset="0.28125" stopColor="#5DDBF9" />
-              <stop offset="0.682292" stopColor="#82A8FF" />
-              <stop offset="1" stopColor="#555ABF" />
-            </radialGradient>
-          </defs>
         </svg>
       )
     case 'mountain-top':
