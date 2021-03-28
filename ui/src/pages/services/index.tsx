@@ -39,7 +39,7 @@ export default function ServicesPage() {
           </a>{' '}
           . Get your custom QR code menu started with Code My Menu.
         </p>
-        <div className="grid grid--split">
+        <div className="grid">
           <div className="flex">
             <img src={lutImg} alt="Level Up Tutorials website" className="rounded elevation-3" />
           </div>
@@ -156,7 +156,7 @@ export default function ServicesPage() {
           </a>
           .
         </p>
-        <div className="grid grid--split">
+        <div className="grid">
           <div className="flex">
             <img src={tuneImg} alt="Tune Flying Home Studio website" className="rounded elevation-3" />
           </div>
