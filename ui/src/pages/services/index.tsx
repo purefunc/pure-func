@@ -103,8 +103,8 @@ export default function ServicesPage() {
             </p>
           </div>
         </div>
-        <div className="grid grid--split__reverse">
-          <div>
+        <div className="grid grid--split__reverse grid--mobile">
+          <div className="mobile_grid-reverse">
             <ul>
               <li className="flex flex--start">
                 <div className="margin-right-small card card--icon card--elevation-2">

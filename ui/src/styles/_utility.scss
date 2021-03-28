@@ -31,6 +31,15 @@
     box-shadow: var(--elevation-#{$i});
   }
 }
+/* --- Tablet Classes */
+@media (max-width: 800px) {
+  /* Change order of grid item on mobile
+  ? This class should be placed on the first item in a grid with 2 desktop columns to change it's order on tablets
+*/
+  .mobile_grid-reverse {
+    grid-row: 2;
+  }
+}
 
 /* --- Mobile Classes (Below medium screen size) --- */
 @media (max-width: 600px) {

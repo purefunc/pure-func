@@ -91,6 +91,9 @@
   .header {
     .header__inner {
       justify-content: space-between;
+      .logo {
+        margin-top: 6px;
+      }
       .menu-icon {
         display: block;
       }
