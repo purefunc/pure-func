@@ -2,7 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from 'utilities'
 import { Section, Icon } from 'components'
-import tuneimg from 'images/tune-header.png'
+import tuneImg from 'images/tune-header.png'
+import rachioImg from 'images/rachio.jpg'
+import lutImg from 'images/lut-screenshot.jpg'
+
 import { TerminalScreen } from '../../figures/TerminalScreen'
 
 export default function ServicesPage() {
@@ -24,21 +27,21 @@ export default function ServicesPage() {
         </div>
       </Section>
       <Section>
-          <h3 className="margin-top-0">Custom Web Apps</h3>
-            <p>
-              Our custom web apps are more than just a pretty face. Equipped with powerful backend functionality along
-              with gorgeous, responsive user interfaces, these websites can accomplish anything you need with elegance
-              and speed. The Pure Func team has experience building a wide variety of custom web apps, also known as
-              full stack websites, including admin systems, analytics dashboards, social networks, and so much more. See
-              our full stack web development work in action for{' '}
-              <a target="_blank" rel="nofollow noopener" href="https://www.leveluptutorials.com/?ref=purefunc">
-                Level Up Tutorials{' '}
-              </a>{' '}
-                . Get your custom QR code menu started with Code My Menu.
-              </p>
+        <h3 className="margin-top-0">Custom Web Apps</h3>
+        <p>
+          Our custom web apps are more than just a pretty face. Equipped with powerful backend functionality along with
+          gorgeous, responsive user interfaces, these websites can accomplish anything you need with elegance and speed.
+          The Pure Func team has experience building a wide variety of custom web apps, also known as full stack
+          websites, including admin systems, analytics dashboards, social networks, and so much more. See our full stack
+          web development work in action for{' '}
+          <a target="_blank" rel="nofollow noopener" href="https://www.leveluptutorials.com/?ref=purefunc">
+            Level Up Tutorials{' '}
+          </a>{' '}
+          . Get your custom QR code menu started with Code My Menu.
+        </p>
         <div className="grid grid--split">
           <div className="flex">
-            <img src={tuneimg} alt="Tune Flying Home Studio website" className="rounded" />
+            <img src={lutImg} alt="Level Up Tutorials website" className="rounded elevation-3" />
           </div>
         <div>
           <ul>
@@ -65,7 +68,7 @@ export default function ServicesPage() {
                     perfectly on almost any mobile device.
                     </p>
                 </div>
-            </li>
+              </li>
               <li>
                 <div className="flex flex--start margin-top-small">
                   <div className="margin-right-small card card--icon card--elevation-2">
@@ -77,8 +80,8 @@ export default function ServicesPage() {
                     code menus make the transition seamless.
                     </p>
                 </div>
-            </li>
-          </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </Section>
@@ -133,29 +136,29 @@ export default function ServicesPage() {
                   </p>
               </li>
             </ul>
-            </div>
+          </div>
           <div className="flex">
-            <img src={tuneimg} alt="Tune Flying Home Studio website" className="rounded" />
+            <img src={rachioImg} alt="Rachio website" className="rounded elevation-3" />
           </div>
         </div>
       </Section>
       <Section>
-            <h3 className="margin-top-0">Custom Websites</h3>
-            <p>
-              Bold. Smooth. Modern. Showcase the best of your work, products, and services with a custom user interface
-              designed to flatter your brand. Our static sites can be as simple or complex as you need, with the option
-              to add in e-commerce with Shopify or manage content through your favorite CMS, including Wordpress,
-              Contentful, Sanity, and more. Interested in a stunning static website but need it right away? Check out
-              our <Link to="/sites">semi-custom development services</Link> to get going right out of the box. See our
-              custom website work in action for{' '}
-              <a target="_blank" rel="nofollow noopener" href="https://flyinghomestudio.com/">
+        <h3 className="margin-top-0">Custom Websites</h3>
+        <p>
+          Bold. Smooth. Modern. Showcase the best of your work, products, and services with a custom user interface
+          designed to flatter your brand. Our static sites can be as simple or complex as you need, with the option to
+          add in e-commerce with Shopify or manage content through your favorite CMS, including Wordpress, Contentful,
+          Sanity, and more. Interested in a stunning static website but need it right away? Check out our{' '}
+          <Link to="/sites">semi-custom development services</Link> to get going right out of the box. See our custom
+          website work in action for{' '}
+          <a target="_blank" rel="nofollow noopener" href="https://flyinghomestudio.com/">
             Tune & Flying Home Studio
-              </a>
+          </a>
           .
         </p>
         <div className="grid grid--split">
           <div className="flex">
-          <img src={tuneimg} alt="Tune Flying Home Studio website" className="rounded" />
+            <img src={tuneImg} alt="Tune Flying Home Studio website" className="rounded elevation-3" />
           </div>
           <div>
             <ul>
@@ -195,9 +198,7 @@ export default function ServicesPage() {
       <Section theme="funky">
         <div className="card card--padded text-center margin-auto">
           <h4>Interested in a stunning static website but need it right away?</h4>
-          <p>
-            Check out our semi-custom development services to get going right out of the box.
-          </p>
+          <p>Check out our semi-custom development services to get going right out of the box.</p>
         </div>
       </Section>
       <Section>
@@ -215,7 +216,7 @@ export default function ServicesPage() {
               <div className="card card--icon card--elevation-2">
                 <Icon name="trophy" />
               </div>
-              <h5>Uninterrupted Progress</h5>
+              <h5 className="margin-top-small">Uninterrupted Progress</h5>
               <p>
                 Move on from complicated issues without sacrificing your goals. Getting stuck on a problem outside of
                 your team’s skill set may seem hopeless, but our consulting services will help you keep pushing forward
@@ -226,7 +227,7 @@ export default function ServicesPage() {
               <div className="card card--icon card--elevation-2">
                 <Icon name="badge" />
               </div>
-              <h5>Empowerment for the Whole Team</h5>
+              <h5 className="margin-top-small">Empowerment for the Whole Team</h5>
               <p>
                 Unlock new skills for your team. Through our mentorship and teaching opportunities, your team can grow
                 in new directions and learn valuable, modern development skills.
@@ -236,7 +237,7 @@ export default function ServicesPage() {
               <div className="card card--icon card--elevation-2">
                 <Icon name="mountain-top" />
               </div>
-              <h5>A Firm Foundation</h5>
+              <h5 className="margin-top-small">A Firm Foundation</h5>
               <p>
                 Save time by making the right architecture decisions. Work with our team to make sure you’re picking the
                 right languages, frameworks, and database structures for your app, crucial decisions that can make or
