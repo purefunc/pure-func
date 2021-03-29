@@ -8,7 +8,7 @@ import { SEO } from '../utilities/SEO'
 
 export default function HomePage() {
   const title = 'Websites That Bring The Func'
-  const description = `Stop settling for websites that sell your brand short. Here at Pure Func, we build sites that are just as modern and innovative as your company, and we specialize in crafting gorgeous user interfaces that neversacrifice performance. The bottom line? If you want a website that's exceptional in both form and function, you're in the right place.`
+  const description = `Stop settling for websites that sell your brand short. Here at Pure Func, we build sites that are just as modern and innovative as your company, and we specialize in crafting gorgeous user interfaces that never sacrifice performance. The bottom line? If you want a website that's exceptional in both form and function, you're in the right place.`
   return (
     <>
       <SEO title={title} description={description} pathname="/" />
