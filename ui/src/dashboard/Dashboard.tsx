@@ -1,5 +1,6 @@
 import React from 'react'
 import { SEO } from 'utilities'
+import { Section } from 'components'
 
 export function Dashboard() {
   return (

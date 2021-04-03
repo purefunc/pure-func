@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
-import { Logo, Modal } from 'components'
+import { Modal } from 'components'
 import { useAuth } from 'global'
 import { Login } from '../Login/Login'
-import { Dropdown } from './Dropdown'
 
 export function Nav() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -47,24 +46,24 @@ export function Nav() {
         </NavLink>
       </div>
       <div>
+        <button
+          onClick={() => {
+            if (state.isLoggedIn) {
+              // TODO: ADD LOGOFF FUNCTION
+            } else {
+              openModal()
+            }
+          }}
+          className="cta cta--white-ghost cta--small"
+        >
+          {state.isLoggedIn ? 'Log Out' : 'Sign In'}
+        </button>
         <Link className="cta cta--white cta--small" to="/contact">
           Contact Us
         </Link>
-        {/* <button
-        onClick={() => {
-          if (state.isLoggedIn) {
-            // TODO: ADD LOGOFF FUNCTION
-          } else {
-            openModal()
-          }
-        }}
-        className="cta cta--white-ghost cta--small"
-      >
-        {state.isLoggedIn ? 'Log Out' : 'Join'}
-      </button>
-      <Modal isActive={isModalOpen} closeAction={closeModal}>
-        <Login />
-      </Modal> */}
+        <Modal isActive={isModalOpen} closeAction={closeModal}>
+          <Login />
+        </Modal>
       </div>
     </nav>
   )

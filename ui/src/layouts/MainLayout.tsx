@@ -9,6 +9,8 @@ import ContactPage from '../pages/contact'
 import ServicesPage from '../pages/services'
 import SitesPage from '../pages/sites'
 
+import DashboardLayout from './DashboardLayout'
+
 const SiteLayout = () => {
   return (
     <main id="main">
@@ -24,7 +26,7 @@ const SiteLayout = () => {
         {/* <Route exact path="/privacy" component={PrivacyPage} />
           <Route exact path="/terms" component={TermsPage} /> */}
         {/* Layouts */}
-        {/* <Route path="/dashboard" component={DashboardLayout} /> */}
+        <Route path="/dashboard" component={DashboardLayout} />
         {/* 404 Page */}
         <Route component={NotFoundPage} />
       </Switch>

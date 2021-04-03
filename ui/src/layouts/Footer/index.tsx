@@ -29,17 +29,14 @@ export function Footer() {
             <NavLink className="text-white" to="/sites" aria-label="Website Templates page">
               Website Templates
             </NavLink>
-            {/* <NavLink className="text-white" to="/contact" aria-label="Contact page">
-              Contact Us
-            </NavLink> */}
           </div>
-          <NavLink className="cta cta--white-ghost" to="/contact" aria-label="Contact page">
+          <NavLink className="text-white" to="/contact" aria-label="Contact page">
             Contact Us
           </NavLink>
-          {/* <div>
-            <button className="cta cta--white-ghost">Join</button>
+          <div>
+            <button className="cta cta--white">Join</button>
             <button className="cta cta--white-ghost">Sign In</button>
-          </div> */}
+          </div>
         </div>
       </div>
       <div className="footer__bottom">
@@ -47,12 +44,12 @@ export function Footer() {
           <div className="flex container">
             <span>&copy; {new Date().getFullYear()} Pure Func LLC</span>
             {/* <div>
-              <Link to="/terms" aria-label="Terms & Conditions page">
+              <NavLink to="/terms" aria-label="Terms & Conditions page">
                 Terms & Conditions
-              </Link>
-              <Link to="/privacy" aria-label="Privacy Poiilicy Page">
+              </NavLink>
+              <NavLink to="/privacy" aria-label="Privacy Poiilicy Page">
                 Privacy Policy
-              </Link>
+              </NavLink>
             </div> */}
             <a href="mailto:contact@purefunc.io">Email: contact@purefunc.io</a>
           </div>
