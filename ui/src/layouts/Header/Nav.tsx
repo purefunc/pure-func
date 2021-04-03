@@ -23,11 +23,11 @@ export function Nav() {
         <NavLink className="nav-link" to="/services" aria-label="Services page">
           Services
         </NavLink>
-        <div className="nav-dropdown">
+        <div className="nav-dropdown dropdown">
           <NavLink className="nav-link" to="/menus" aria-haspopup aria-label="Products">
             Products
           </NavLink>
-          <div className="dropdown-menu" aria-label="dropdown-menu">
+          <div className="dropdown-menu dropdown-content" aria-label="dropdown-menu">
             <ul>
               <li>
                 <NavLink className="nav-link" to="/menus" aria-label="Digital Menu page">
