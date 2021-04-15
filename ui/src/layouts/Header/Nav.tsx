@@ -60,7 +60,7 @@ export function Nav() {
         <Link className="cta cta--white cta--small" to="/contact">
           Contact Us
         </Link>
-        <button
+        {/* <button
         onClick={() => {
           if (state.isLoggedIn) {
             // TODO: ADD LOGOFF FUNCTION
@@ -106,7 +106,7 @@ export function Nav() {
                 Sign in
               </button>
             </div>}
-        </Modal>
+        </Modal> */}
       </div>
     </nav>
   )
