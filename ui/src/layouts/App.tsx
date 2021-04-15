@@ -4,15 +4,20 @@ import { ContextProvider } from 'global'
 import { Header } from './Header'
 import { Footer } from './Footer'
 import MainLayout from './MainLayout'
+import { useScrollToTop } from 'hooks'
 
-const App = () => (
-  <ContextProvider>
-    <Switch>
-      <Route path="/" component={AppLayout} />
-      <Route component={NoMatch} />
-    </Switch>
-  </ContextProvider>
-)
+
+const App = () => {
+  useScrollToTop()
+  return (
+    <ContextProvider>
+      <Switch>
+        <Route path="/" component={AppLayout} />
+        <Route component={NoMatch} />
+      </Switch>
+    </ContextProvider>
+  )
+}
 
 const NoMatch = () => null
 

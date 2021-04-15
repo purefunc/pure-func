@@ -4,6 +4,8 @@ import { Logo, Modal } from 'components'
 import { useAuth } from 'global'
 import { Login } from '../Login/Login'
 import { Dropdown } from './Dropdown'
+import { SignUp } from '../Login/Signup'
+import { Reset } from '../Login/Reset'
 
 export function Nav() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -15,7 +17,14 @@ export function Nav() {
 
   const openModal = () => {
     setIsModalOpen(true)
+    setType('login')
   }
+
+  const [type, setType] = useState('login')
+
+  const toggleType = (val: string) => {
+    setType(val)
+  } 
 
   return (
     <nav className=" header__nav flex">
@@ -23,11 +32,12 @@ export function Nav() {
         <NavLink className="nav-link" to="/services" aria-label="Services page">
           Services
         </NavLink>
-        <div className="nav-dropdown">
+        <div className="dropdown">
           <NavLink className="nav-link" to="/menus" aria-haspopup aria-label="Products">
             Products
           </NavLink>
           <div className="dropdown-menu" aria-label="dropdown-menu">
+            <div className="triangle"></div>
             <ul>
               <li>
                 <NavLink className="nav-link" to="/menus" aria-label="Digital Menu page">
@@ -58,13 +68,45 @@ export function Nav() {
             openModal()
           }
         }}
-        className="cta cta--white-ghost cta--small"
-      >
+        className="cta cta--white-ghost cta--small">
         {state.isLoggedIn ? 'Log Out' : 'Join'}
-      </button>
-      <Modal isActive={isModalOpen} closeAction={closeModal}>
-        <Login />
-      </Modal> */}
+        </button>
+        <Modal isActive={isModalOpen} closeAction={closeModal}>
+          {type === 'login' &&
+            <div>
+              <Login />
+              <p>
+                Don't have an account?
+              </p>
+              <button className="cta cta--white cta--small" onClick={() => toggleType('signup')}>
+              Register
+              </button>
+              <p>
+                Forgot your password?
+              </p>
+              <button className="cta cta--white cta--small" onClick={() => toggleType('reset')}>
+                Reset
+              </button>
+            </div>}
+          {type === 'signup' &&
+            <div>
+              <SignUp />
+              <p>Already have an account?</p>
+              <button className="cta cta--white cta--small" onClick={() => toggleType('login')}>
+                Sign in
+              </button>
+            </div>}
+          {type === 'reset' &&
+            <div>
+              <Reset />
+              <p>
+                Already have an account?
+              </p>
+              <button className="cta cta--white cta--small" onClick={() => toggleType('login')}>
+                Sign in
+              </button>
+            </div>}
+        </Modal> */}
       </div>
     </nav>
   )
