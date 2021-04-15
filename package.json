@@ -15,7 +15,6 @@
     "format": "cd ui && prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "cd ui && prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
   },
-  "dependencies": {},
   "devDependencies": {
     "snowpack": "^3.0.11",
     "snowpack-plugin-relative-css-urls": "^1.1.1"

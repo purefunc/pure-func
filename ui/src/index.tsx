@@ -6,7 +6,6 @@ import { ApolloClient, InMemoryCache } from '@apollo/client'
 import { createUploadLink } from 'apollo-upload-client'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { HelmetProvider } from 'react-helmet-async'
-
 import './styles/index.scss'
 
 const uploadLink = createUploadLink({
