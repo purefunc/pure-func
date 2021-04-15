@@ -3,6 +3,12 @@ import { NavLink, Link } from 'react-router-dom'
 import { Modal } from 'components'
 import { useAuth } from 'global'
 import { Login } from '../Login/Login'
+<<<<<<< HEAD
+=======
+import { Dropdown } from './Dropdown'
+import { SignUp } from '../Login/Signup'
+import { Reset } from '../Login/Reset'
+>>>>>>> 74f48311e8bf504c59f301d19f7d47ab6c50aa99
 
 export function Nav() {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -14,7 +20,14 @@ export function Nav() {
 
   const openModal = () => {
     setIsModalOpen(true)
+    setType('login')
   }
+
+  const [type, setType] = useState('login')
+
+  const toggleType = (val: string) => {
+    setType(val)
+  } 
 
   return (
     <nav className=" header__nav flex">
@@ -22,11 +35,12 @@ export function Nav() {
         <NavLink className="nav-link" to="/services" aria-label="Services page">
           Services
         </NavLink>
-        <div className="nav-dropdown">
+        <div className="dropdown">
           <NavLink className="nav-link" to="/menus" aria-haspopup aria-label="Products">
             Products
           </NavLink>
           <div className="dropdown-menu" aria-label="dropdown-menu">
+            <div className="triangle"></div>
             <ul>
               <li>
                 <NavLink className="nav-link" to="/menus" aria-label="Digital Menu page">
