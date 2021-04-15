@@ -7,7 +7,6 @@ import { createUploadLink } from 'apollo-upload-client'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { HelmetProvider } from 'react-helmet-async'
 import './styles/index.scss'
-// import useScrollToTop from './hooks/useScrollToTop'
 
 const uploadLink = createUploadLink({
   credentials: 'include',
