@@ -6,8 +6,8 @@ import { ApolloClient, InMemoryCache } from '@apollo/client'
 import { createUploadLink } from 'apollo-upload-client'
 import { ApolloProvider } from '@apollo/react-hooks'
 import { HelmetProvider } from 'react-helmet-async'
-import ScrollToTop from './components/ScrollTotop'
 import './styles/index.scss'
+// import useScrollToTop from './hooks/useScrollToTop'
 
 const uploadLink = createUploadLink({
   credentials: 'include',
@@ -24,7 +24,6 @@ ReactDOM.render(
     <HelmetProvider>
       <ApolloProvider client={client}>
         <Router>
-          <ScrollToTop />
           <App />
         </Router>
       </ApolloProvider>
