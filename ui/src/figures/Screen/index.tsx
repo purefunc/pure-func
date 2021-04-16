@@ -1,9 +1,8 @@
 import React from 'react'
+import styled from 'styled-components'
 import { ScreenBg } from './ScreenBg'
 import ScreenBody from './ScreenBody'
 import ScreenHeader from './ScreenHeader'
-
-import './screens.scss'
 
 export function Screen() {
   return (
@@ -149,6 +148,20 @@ export function Screen() {
           </filter>
         </defs>
       </svg>
-    </div>
+    </Screen>
   )
 }
+
+const Screen = styled.div`
+  transition: 0.6s ease all;
+  position: relative;
+  transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+  border-radius: var(--cardRadius);
+  svg {
+    border-radius: var(--cardRadius);
+    box-shadow: var(--elevation-4);
+  }
+  @media (max-width: 880px) {
+    transform: perspective(800px) rotateY(-15deg) translateY(-20px) rotateX(10deg) scale(0.75);
+  }
+`

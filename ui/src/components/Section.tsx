@@ -1,4 +1,33 @@
-.section {
+import React, { ReactChild } from 'react'
+import styled from 'styled-components'
+
+type Props = {
+  children: ReactChild
+  id?: string
+  theme?: string
+  isSkewed?: boolean
+  isHero?: boolean
+}
+
+export function Section({ children, id = '', theme = '', isSkewed = false, isHero = false }: Props) {
+  return (
+    <SectionWrapper
+      id={id}
+      className={`${theme ? `section--theme__${theme}` : ''} ${
+        isSkewed || isHero || theme === 'funky' ? `section--skewed` : ''
+      } ${isHero ? `section--hero` : ''}`}
+    >
+      <div className="wrapper">
+        <section className="section__inner section--padding">{children}</section>
+      </div>
+      {(isSkewed || isHero || theme === 'funky') && (
+        <div className={`slash ${theme === 'funky' && !isSkewed ? `no-skew` : ``}`} />
+      )}
+    </SectionWrapper>
+  )
+}
+
+const SectionWrapper = styled.div`
   position: relative;
   /* Theme intentions */
   --sectionBgColor: none;
@@ -138,11 +167,11 @@
   background: var(--sectionBgColor);
   color: var(--sectionTextColor);
   background-image: var(--sectionBgImage);
-}
 
-@media (min-width: 1112px) {
-  .section .section--padding {
-    --sectionPaddingTop: calc(var(--sectionPaddingTopMax) * 1px);
-    --sectionPaddingBottom: calc(var(--sectionPaddingBottomMax) * 1px);
+  @media (min-width: 1112px) {
+    .section--padding {
+      --sectionPaddingTop: calc(var(--sectionPaddingTopMax) * 1px);
+      --sectionPaddingBottom: calc(var(--sectionPaddingBottomMax) * 1px);
+    }
   }
-}
+`
