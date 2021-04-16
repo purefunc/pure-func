@@ -16,7 +16,7 @@ module.exports = {
   routes: [
     /* Enable an SPA Fallback in development: */
     {
-      src: '/server/.*',
+      src: '/api/.*',
       dest: (req, res) => proxy.web(req, res),
     },
     { match: 'routes', src: '.*', dest: '/index.html' },

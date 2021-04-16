@@ -100,7 +100,7 @@ export const Login = () => {
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="cta cta--small" type="submit">
+          <button className="cta" type="submit">
             {loginLoading ? 'Loading...' : 'Login'}
           </button>
           {loginError && <span>{loginError.message}</span>}
