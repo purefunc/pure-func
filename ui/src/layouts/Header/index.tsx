@@ -14,7 +14,7 @@ export function Header() {
         <div className="header__inner wrapper">
           <h1 className="margin-0 logo">
             <NavLink data-testid="logo-link" to={isLoggedIn ? '/dashboard' : '/'} aria-label="home page">
-              <Logo isShort={isLoggedIn} />
+              <Logo isDark={isLoggedIn} />
             </NavLink>
           </h1>
           {!isLoggedIn && (
