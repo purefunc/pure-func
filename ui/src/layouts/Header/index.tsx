@@ -1,23 +1,32 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import { Logo } from 'components'
 import { Nav } from './Nav'
 import { MobileMenu } from './MobileMenu'
+import { SubNav } from './SubNav'
 
 export function Header() {
+  const isLoggedIn = true
   return (
-    <HeaderWrapper className="header flex">
-      <div className="header__inner wrapper">
-        <h1 className="margin-0 logo">
-          <NavLink data-testid="logo-link" to="/" aria-label="home page">
-            <Logo />
-          </NavLink>
-        </h1>
-        <Nav />
-        <MobileMenu />
-      </div>
-    </HeaderWrapper>
+    <>
+      <HeaderWrapper className="header flex" $isLoggedIn={isLoggedIn}>
+        <div className="header__inner wrapper">
+          <h1 className="margin-0 logo">
+            <NavLink data-testid="logo-link" to={isLoggedIn ? '/dashboard' : '/'} aria-label="home page">
+              <Logo isShort={isLoggedIn} />
+            </NavLink>
+          </h1>
+          {!isLoggedIn && (
+            <>
+              <Nav />
+              <MobileMenu />
+            </>
+          )}
+        </div>
+      </HeaderWrapper>
+      {isLoggedIn && <SubNav />}
+    </>
   )
 }
 
@@ -30,7 +39,14 @@ const HeaderWrapper = styled.header`
   // height: var(--headerHeight);
   z-index: var(--headerLevel);
   position: absolute;
-  // box-shadow: var(--elevation-2);
+  ${({ $isLoggedIn }) =>
+    $isLoggedIn &&
+    css`
+      border-bottom: var(--line);
+      --headerBg: var(--white);
+      position: relative;
+    `};
+
   .header__inner {
     position: relative;
     padding: 0 var(--space);
