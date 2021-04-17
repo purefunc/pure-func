@@ -1,12 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
 import { NavLink, Link } from 'react-router-dom'
 import { Logo } from 'components'
 
-import './footer.scss'
-
 export function Footer() {
   return (
-    <footer className="footer">
+    <FooterWrapper>
       <div className="wrapper">
         <div className="footer__nav container flex">
           <div className="footer__logo">
@@ -29,17 +28,14 @@ export function Footer() {
             <NavLink className="text-white" to="/sites" aria-label="Website Templates page">
               Website Templates
             </NavLink>
-            {/* <NavLink className="text-white" to="/contact" aria-label="Contact page">
-              Contact Us
-            </NavLink> */}
           </div>
-          <NavLink className="cta cta--white-ghost" to="/contact" aria-label="Contact page">
+          <NavLink className="text-white" to="/contact" aria-label="Contact page">
             Contact Us
           </NavLink>
-          {/* <div>
-            <button className="cta cta--white-ghost">Join</button>
+          <div>
+            <button className="cta cta--white">Join</button>
             <button className="cta cta--white-ghost">Sign In</button>
-          </div> */}
+          </div>
         </div>
       </div>
       <div className="footer__bottom">
@@ -47,17 +43,57 @@ export function Footer() {
           <div className="flex container">
             <span>&copy; {new Date().getFullYear()} Pure Func LLC</span>
             {/* <div>
-              <Link to="/terms" aria-label="Terms & Conditions page">
+              <NavLink to="/terms" aria-label="Terms & Conditions page">
                 Terms & Conditions
-              </Link>
-              <Link to="/privacy" aria-label="Privacy Poiilicy Page">
+              </NavLink>
+              <NavLink to="/privacy" aria-label="Privacy Poiilicy Page">
                 Privacy Policy
-              </Link>
+              </NavLink>
             </div> */}
             <a href="mailto:contact@purefunc.io">Email: contact@purefunc.io</a>
           </div>
         </div>
       </div>
-    </footer>
+    </FooterWrapper>
   )
 }
+
+const FooterWrapper = styled.footer`
+  margin-top: auto;
+  color: var(--footerColor);
+  background: var(--purpleGradient);
+  .footer__nav {
+    align-items: flex-start !important;
+    a {
+      display: block;
+      & + a {
+        margin-top: var(--space);
+      }
+    }
+    .cta + .cta {
+      margin: var(--space) 0;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      a {
+        margin-top: var(--space);
+      }
+      .cta:first-child {
+        margin-top: var(--space);
+      }
+    }
+  }
+  .footer__bottom {
+    background: var(--deepPurple);
+    font-size: var(--smallestText);
+    color: var(--gray);
+    a {
+      color: var(--gray);
+      display: block;
+
+      & + a {
+        margin-left: var(--space);
+      }
+    }
+  }
+`

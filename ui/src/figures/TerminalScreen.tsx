@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
+import styled from 'styled-components'
 // import Prism from 'prismjs'
 
-import './terminal-screen.scss'
-import { Code } from '../../utilities/Code/Code'
+import { Code } from '../utilities/Code/Code'
 
 // marked.setOptions({
 //   highlight: (code, lang) => {
@@ -41,7 +41,7 @@ export function TerminalScreen() {
   // }, [])
 
   return (
-    <figure className="terminal-screen">
+    <TerminalWrapper className="terminal-screen">
       <Code code={code} plugins={['line-numbers']} />
       <div className="terminal-screen__bottom-nav text-small">
         <div>
@@ -52,6 +52,40 @@ export function TerminalScreen() {
           <span>javascript v.1.2.0</span>
         </div>
       </div>
-    </figure>
+    </TerminalWrapper>
   )
 }
+
+const TerminalWrapper = styled.figure`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--deepPurple);
+  border-radius: var(--cardRadius);
+  box-shadow: var(--elevation-3);
+  overflow: hidden;
+  max-width: 100%;
+  transform: perspective(500px) rotateY(-20deg) translateY(-15px) rotateX(3deg) scale(1);
+  &__bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 var(--cardRadius) var(--cardRadius);
+    background: var(--black);
+    color: var(--brandColor);
+    overflow: hidden;
+    &__tag {
+      background: var(--brandColor);
+      padding: 10px;
+      color: var(--textColor);
+      margin-right: var(--smallestSpace);
+    }
+    &__menu {
+      padding: 4px;
+      color: var(--gray);
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    transform: perspective(800px) rotateY(30deg) translateY(15px) rotateX(3deg) scale(1);
+  }
+`
