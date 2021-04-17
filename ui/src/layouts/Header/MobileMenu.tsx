@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import styled from 'styled-components'
 import { Link, NavLink } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useScrollFreeze } from 'hooks'
@@ -33,7 +34,7 @@ const MenuModal = ({ isMenuOpen, closeMenu }: MenuModalProps) => {
 
   return (
     <>
-      <div className="mobile-menu-wrapper">
+      <MobileMenuWrapper className="mobile-menu-wrapper">
         <motion.div
           className="transport"
           initial={{ right: '100%' }}
@@ -75,7 +76,42 @@ const MenuModal = ({ isMenuOpen, closeMenu }: MenuModalProps) => {
             </nav>
           </div>
         </motion.div>
-      </div>
+      </MobileMenuWrapper>
     </>
   )
 }
+
+const MobileMenuWrapper = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  height: 100vh;
+  overflow-y: scroll;
+  pointer-events: none;
+  z-index: var(--highestLevel);
+  .transport {
+    width: 100%;
+    .mobile-menu {
+      padding: var(--largestSpace);
+      background: var(--lightBlue);
+      height: 100vh;
+      width: 100vw;
+      overflow-y: scroll;
+      margin-right: 1rem;
+      z-index: var(--highestLevel);
+      .mobile-nav {
+        .nav-link {
+          list-style: none;
+          display: block;
+          margin: 30px 0;
+          font-weight: 400;
+          font-size: var(--h4);
+        }
+        a {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+`

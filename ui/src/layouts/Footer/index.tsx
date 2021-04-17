@@ -62,7 +62,7 @@ const FooterWrapper = styled.footer`
   margin-top: auto;
   color: var(--footerColor);
   background: var(--purpleGradient);
-  &__nav {
+  .footer__nav {
     align-items: flex-start !important;
     a {
       display: block;
@@ -83,7 +83,7 @@ const FooterWrapper = styled.footer`
       }
     }
   }
-  &__bottom {
+  .footer__bottom {
     background: var(--deepPurple);
     font-size: var(--smallestText);
     color: var(--gray);

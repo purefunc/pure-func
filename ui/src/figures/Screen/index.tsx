@@ -6,7 +6,7 @@ import ScreenHeader from './ScreenHeader'
 
 export function Screen() {
   return (
-    <div className="screen">
+    <ScreenWrapper className="screen">
       <svg width="595" height="428" viewBox="0 0 595 428" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* <g filter="url(#filter0_b)"> */}
         <path
@@ -148,11 +148,11 @@ export function Screen() {
           </filter>
         </defs>
       </svg>
-    </Screen>
+    </ScreenWrapper>
   )
 }
 
-const Screen = styled.div`
+const ScreenWrapper = styled.div`
   transition: 0.6s ease all;
   position: relative;
   transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);

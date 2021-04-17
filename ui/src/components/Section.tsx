@@ -13,7 +13,7 @@ export function Section({ children, id = '', theme = '', isSkewed = false, isHer
   return (
     <SectionWrapper
       id={id}
-      className={`${theme ? `section--theme__${theme}` : ''} ${
+      className={`section ${theme ? `section--theme__${theme}` : ''} ${
         isSkewed || isHero || theme === 'funky' ? `section--skewed` : ''
       } ${isHero ? `section--hero` : ''}`}
     >

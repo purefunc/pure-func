@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { EyeLogo } from '../components'
 
 export function SphereLogo() {
