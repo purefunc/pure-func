@@ -2,11 +2,13 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import { Logo } from 'components'
+import { useAuth } from 'global'
 import { Nav } from './Nav'
 import { MobileMenu } from './MobileMenu'
 import { SubNav } from './SubNav'
 
 export function Header() {
+  // const { state, dispatch } = useAuth()
   const isLoggedIn = true
   return (
     <>
@@ -17,12 +19,8 @@ export function Header() {
               <Logo isDark={isLoggedIn} />
             </NavLink>
           </h1>
-          {!isLoggedIn && (
-            <>
-              <Nav />
-              <MobileMenu />
-            </>
-          )}
+          <Nav isLoggedIn={isLoggedIn} />
+          {!isLoggedIn && <MobileMenu />}
         </div>
       </HeaderWrapper>
       {isLoggedIn && <SubNav />}
