@@ -12,12 +12,12 @@ export const UserMenu = ({ user }: Props) => {
           <NavLink className="nav-link" onClick={toggle} to="/dashboard" aria-label="dashboard">
             Dashboard
           </NavLink>
-          <NavLink className="nav-link" onClick={toggle} to="/dashboard/account" aria-label="account">
+          {/* <NavLink className="nav-link" onClick={toggle} to="/dashboard/account" aria-label="account">
             Account
-          </NavLink>
-          <NavLink className="nav-link" onClick={toggle} to="/dashboard/settings" aria-label="settings">
+          </NavLink> */}
+          {/* <NavLink className="nav-link" onClick={toggle} to="/dashboard/settings" aria-label="settings">
             Settings
-          </NavLink>
+          </NavLink> */}
         </>
       )}
     />

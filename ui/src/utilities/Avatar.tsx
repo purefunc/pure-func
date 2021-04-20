@@ -45,7 +45,6 @@ const AvatarContainer = styled.div<{ size?: number }>`
   overflow: hidden;
   position: relative;
   background: var(--primaryColor);
-  box-shadow: var(--elevation-3);
 
   svg {
     width: 100%;

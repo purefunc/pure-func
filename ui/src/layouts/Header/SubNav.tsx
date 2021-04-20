@@ -6,18 +6,18 @@ export function SubNav() {
   return (
     <NavWrapper>
       <div className="wrapper">
-        <NavLink className="nav-link" to="/dashboard">
+        {/* <NavLink className="nav-link" to="/dashboard/sites">
           Sites
-        </NavLink>
-        <NavLink className="nav-link" to="/dashboard">
+        </NavLink> */}
+        <NavLink className="nav-link" to="/dashboard/menus">
           Menus
         </NavLink>
-        <NavLink className="nav-link" to="/dashboard">
+        {/* <NavLink className="nav-link" to="/dashboard/billing">
           Billing
-        </NavLink>
-        <NavLink className="nav-link" to="/dashboard">
+        </NavLink> */}
+        {/* <NavLink className="nav-link" to="/dashboard/team-settings">
           Team Settings
-        </NavLink>
+        </NavLink> */}
       </div>
     </NavWrapper>
   )
@@ -26,7 +26,7 @@ export function SubNav() {
 const NavWrapper = styled.nav`
   width: 100%;
   background: var(--lightestGray);
-  box-shadow: var(--elevation-1);
+  border-bottom: var(--line);
   .nav-link + .nav-link {
     color: var(--textColor);
     margin-left: var(--space);
