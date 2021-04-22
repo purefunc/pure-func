@@ -1,5 +1,5 @@
 import React from 'react'
-
+import styled from 'styled-components'
 import cssLogo from 'images/logos/css-logo.svg'
 import htmlLogo from 'images/logos/html-logo.svg'
 import reactLogo from 'images/logos/react-logo.svg'
@@ -10,8 +10,6 @@ import tsLogo from 'images/logos/ts-logo.svg'
 import figmaLogo from 'images/logos/figma-logo.svg'
 import gatsbyLogo from 'images/logos/gatsby-logo.svg'
 import wpLogo from 'images/logos/wp-logo.svg'
-
-import './logoStrip.scss'
 
 const logos = [
   {
@@ -57,10 +55,31 @@ const logos = [
 ]
 export function LogoStrip() {
   return (
-    <div className="logo-strip">
+    <StripWrapper className="logo-strip">
       {logos.map(({ src, alt }) => (
         <img className="logo-strip__logo" src={src} alt={alt + ' Logo'} key={src} />
       ))}
-    </div>
+    </StripWrapper>
   )
 }
+
+const StripWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  opacity: 0.5;
+  transform: rotate(-10deg);
+  padding: var(--space);
+  &__logo {
+    & + & {
+      margin-left: var(--space);
+    }
+    @media (max-width: 800px) {
+      width: 50px;
+      height: auto;
+    }
+    @media (max-width: 600px) {
+      width: 25px;
+      height: auto;
+    }
+  }
+`

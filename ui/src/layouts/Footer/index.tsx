@@ -1,12 +1,11 @@
 import React from 'react'
+import styled from 'styled-components'
 import { NavLink, Link } from 'react-router-dom'
 import { Logo } from 'components'
 
-import './footer.scss'
-
 export function Footer() {
   return (
-    <footer className="footer">
+    <FooterWrapper>
       <div className="wrapper">
         <div className="footer__nav container flex">
           <div className="footer__logo">
@@ -55,6 +54,46 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>
+    </FooterWrapper>
   )
 }
+
+const FooterWrapper = styled.footer`
+  margin-top: auto;
+  color: var(--footerColor);
+  background: var(--purpleGradient);
+  .footer__nav {
+    align-items: flex-start !important;
+    a {
+      display: block;
+      & + a {
+        margin-top: var(--space);
+      }
+    }
+    .cta + .cta {
+      margin: var(--space) 0;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      a {
+        margin-top: var(--space);
+      }
+      .cta:first-child {
+        margin-top: var(--space);
+      }
+    }
+  }
+  .footer__bottom {
+    background: var(--deepPurple);
+    font-size: var(--smallestText);
+    color: var(--gray);
+    a {
+      color: var(--gray);
+      display: block;
+
+      & + a {
+        margin-left: var(--space);
+      }
+    }
+  }
+`

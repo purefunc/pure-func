@@ -1,4 +1,21 @@
-.sphere-logo {
+import React from 'react'
+import styled from 'styled-components'
+import { EyeLogo } from '../components'
+
+export function SphereLogo() {
+  return (
+    <SphereWrapper className="sphere-logo">
+      <figure className="ball">
+        <span className="shadow"></span>
+        <span className="iris">
+          <EyeLogo />
+        </span>
+      </figure>
+    </SphereWrapper>
+  )
+}
+
+const SphereWrapper = styled.div`
   width: 300px;
   height: 300px;
   display: inline-block;
@@ -90,4 +107,4 @@
       transform: none;
     }
   }
-}
+`

@@ -1,4 +1,116 @@
-.macbook {
+import React from 'react'
+import styled from 'styled-components'
+import { Logo } from '../components'
+import tuneImg from 'images/tune-header.png'
+
+export function Laptop() {
+  return (
+    <Mackbook className="macbook">
+      <div className="inner">
+        <div className="screen">
+          <div className="face-one">
+            <div className="camera"></div>
+            <div className="display">
+              <img src={tuneImg} alt="" />
+              <div className="shade"></div>
+            </div>
+            <span>Down to Func</span>
+          </div>
+          <Logo isShort isWhite />
+        </div>
+        <div className="body">
+          <div className="face-one">
+            <div className="touchpad"></div>
+            <div className="keyboard">
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key space"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+              <div className="key f"></div>
+            </div>
+          </div>
+          <div className="pad one"></div>
+          <div className="pad two"></div>
+          <div className="pad three"></div>
+          <div className="pad four"></div>
+        </div>
+      </div>
+      <div className="shadow"></div>
+    </Mackbook>
+  )
+}
+
+const Mackbook = styled.div`
   width: 150px;
   height: 96px;
   margin: auto;
@@ -376,4 +488,4 @@
       box-shadow: 0 0 60px 40px rgba(0, 0, 0, 0.3);
     }
   }
-}
+`

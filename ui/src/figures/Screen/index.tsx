@@ -1,13 +1,12 @@
 import React from 'react'
+import styled from 'styled-components'
 import { ScreenBg } from './ScreenBg'
 import ScreenBody from './ScreenBody'
 import ScreenHeader from './ScreenHeader'
 
-import './screens.scss'
-
 export function Screen() {
   return (
-    <div className="screen">
+    <ScreenWrapper className="screen">
       <svg width="595" height="428" viewBox="0 0 595 428" fill="none" xmlns="http://www.w3.org/2000/svg">
         {/* <g filter="url(#filter0_b)"> */}
         <path
@@ -149,6 +148,20 @@ export function Screen() {
           </filter>
         </defs>
       </svg>
-    </div>
+    </ScreenWrapper>
   )
 }
+
+const ScreenWrapper = styled.div`
+  transition: 0.6s ease all;
+  position: relative;
+  transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+  border-radius: var(--cardRadius);
+  svg {
+    border-radius: var(--cardRadius);
+    box-shadow: var(--elevation-4);
+  }
+  @media (max-width: 880px) {
+    transform: perspective(800px) rotateY(-15deg) translateY(-20px) rotateX(10deg) scale(0.75);
+  }
+`
