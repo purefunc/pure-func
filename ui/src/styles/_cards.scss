@@ -1,4 +1,5 @@
-.section .card {
+.section .card,
+.dashboard .card {
   --cardPadding: var(--space);
   --cardElevation: none;
   --maxCardWidth: 680px;
@@ -33,6 +34,9 @@
   &--lightBlue {
     --cardBackground: var(--lightBlue);
   }
+  &--lightestGray {
+    --cardBackground: var(--lightestGray);
+  }
   &--primary {
     --cardBackground: var(--primaryColor);
   }
@@ -56,6 +60,10 @@
     --cardPadding: var(--smallestSpace);
     --cardBackground: var(--white);
     display: inline-flex;
+  }
+
+  &--line {
+    border: var(--line);
   }
 
   + .card {

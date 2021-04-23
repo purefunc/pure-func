@@ -5,8 +5,6 @@ import gql from 'graphql-tag'
 import Cookies from 'js-cookie'
 import { Redirect } from 'react-router'
 
-import '../header/header.scss'
-
 const ME = gql`
   query GetMe {
     me {

@@ -1,12 +1,14 @@
 import React from 'react'
 import { SEO } from 'utilities'
-import { Section } from 'components'
+import { DashboardLayout } from 'components'
 
 export function Dashboard() {
   return (
     <>
       <SEO title="Dashboard" pathname="/dashboard" />
-      <h1>User Dashboard. shown when logged in</h1>
+      <DashboardLayout>
+        <p>I'm the dashboard</p>
+      </DashboardLayout>
     </>
   )
 }
