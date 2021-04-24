@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Section } from 'components'
 import { SEO } from 'utilities'
-import phoneImg from '../../images/menus/phone-qr.png'
+import phoneImg from 'images/menus/phone-qr.png'
 import basicSvg from 'images/menus/basic-qr.svg'
 import plusSvg from 'images/menus/plus-qr.svg'
-import { QrCodes } from '../../figures/QR/QrCodes'
+import { QrCodes } from 'figures/QR/QrCodes'
 
 export default function DigitalMenuPage() {
   const description =
@@ -112,20 +112,20 @@ export default function DigitalMenuPage() {
             </p>
             <div className="container grid">
               <div>
-                {/* <Link to="/examples/basic/"> */}
-                <h4>Basic Menu</h4>
-                <div className="card card--elevation-3 ">
-                  <img src={basicSvg} alt="Basic QR Code" />
-                </div>
-                {/* </Link> */}
+                <Link to="/menus/basic/">
+                  <h4>Basic Menu</h4>
+                  <div className="card card--elevation-3 ">
+                    <img src={basicSvg} alt="Basic QR Code" />
+                  </div>
+                </Link>
               </div>
               <div>
-                {/* <Link to="/examples/plus/"> */}
-                <h4>Pro Menu</h4>
-                <div className="card card--elevation-3">
-                  <img src={plusSvg} alt="Plus QR Code" />
-                </div>
-                {/* </Link> */}
+                <Link to="/menus/plus/">
+                  <h4>Pro Menu</h4>
+                  <div className="card card--elevation-3">
+                    <img src={plusSvg} alt="Plus QR Code" />
+                  </div>
+                </Link>
               </div>
               <div>
                 <h4>Expert Menu</h4>
