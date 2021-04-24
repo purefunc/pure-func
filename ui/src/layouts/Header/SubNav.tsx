@@ -6,18 +6,18 @@ export function SubNav() {
   return (
     <NavWrapper>
       <div className="wrapper">
-        {/* <NavLink className="nav-link" to="/dashboard/sites">
+        <NavLink className="nav-link" to="/dashboard/sites">
           Sites
-        </NavLink> */}
+        </NavLink>
         <NavLink className="nav-link" to="/dashboard/menus">
           Menus
         </NavLink>
         {/* <NavLink className="nav-link" to="/dashboard/billing">
           Billing
         </NavLink> */}
-        {/* <NavLink className="nav-link" to="/dashboard/team-settings">
+        <NavLink className="nav-link" to="/dashboard/teams">
           Team Settings
-        </NavLink> */}
+        </NavLink>
       </div>
     </NavWrapper>
   )
