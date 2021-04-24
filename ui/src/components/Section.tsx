@@ -53,7 +53,7 @@ const SectionWrapper = styled.div`
   &.section--theme__deep {
     --sectionBgColor: var(--deepPurple);
     &.section--skewed.section--hero .slash {
-      --sectionBgImage: url('../../images/bg-blur.png');
+      --sectionBgImage: url('../images/bg-blur.png');
       background-image: var(--sectionBgImage);
       background-size: cover;
       background-repeat: none;
@@ -69,7 +69,7 @@ const SectionWrapper = styled.div`
     --sectionBgColor: var(--primaryColor);
 
     &.section--skewed.section--hero .slash {
-      --sectionBgImage: url('../../images/bg-blur.png'), var(--deepGradient);
+      --sectionBgImage: url('../images/bg-blur.png'), var(--deepGradient);
       background-image: var(--sectionBgImage);
       background-size: cover;
       background-repeat: none;
