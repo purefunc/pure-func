@@ -7,10 +7,11 @@ type Props = {
   style?: object
 }
 
-export function Logo({ isWhite = false, isShort = false, isDark = false }: Props) {
+export function Logo({ isWhite = false, isShort = false, isDark = false, style = {} }: Props) {
   return (
     <svg
       className="logo"
+      style={style}
       width={isShort ? '45' : '182'}
       height="45"
       viewBox={`0 0 ${isShort ? '45' : '182'} 45`}

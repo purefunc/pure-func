@@ -31,3 +31,15 @@ export const Grid = styled.div<{ cols: number | number[] }>`
     `
   }}
 `
+
+// Used anytime we need padding and max width in a layout
+// if bg has color, needs to be wrapped in a div with a background color
+//  * width: "tight" or width in px
+export const Wrapper = styled.div`
+  max-width: var(--layoutWidthMax);
+  padding: 0 var(--gutterWidth);
+  margin: 0 auto;
+  ${media.large`
+    max-width: ${({ width }: { width: string }) => (width === 'tight' ? '940px' : width)};
+  `};
+`

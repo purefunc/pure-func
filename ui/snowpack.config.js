@@ -41,6 +41,7 @@ module.exports = {
     images: './src/images',
     global: './src/global',
     utilities: './src/utilities',
+    styles: './src/styles',
     figures: './src/figures',
   },
 }

@@ -3,7 +3,6 @@ import { NavLink, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { Modal } from 'components'
 import { useAuth } from 'global'
-import { Avatar } from 'utilities'
 import { Login } from '../Login/Login'
 import { UserMenu } from './UserMenu'
 
