@@ -9,7 +9,7 @@ import { SubNav } from './SubNav'
 
 export function Header() {
   // const { state, dispatch } = useAuth()
-  const isLoggedIn = true
+  const isLoggedIn = false
   return (
     <>
       <HeaderWrapper className="header flex" $isLoggedIn={isLoggedIn}>

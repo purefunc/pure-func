@@ -5,8 +5,15 @@ import { Modal } from 'components'
 import { useAuth } from 'global'
 import { Login } from '../Login/Login'
 import { UserMenu } from './UserMenu'
+import { SignUp } from '../Login/Signup'
+import { Reset } from '../Login/Reset'
 
 export function Nav({ isLoggedIn = false }) {
+   const [type, setType] = useState('login')
+
+  const toggleType = (val: string) => {
+    setType(val)
+  } 
   const [isModalOpen, setIsModalOpen] = useState(false)
   const { state, dispatch } = useAuth()
 
@@ -66,6 +73,42 @@ export function Nav({ isLoggedIn = false }) {
         </Link>
         <Modal isActive={isModalOpen} closeAction={closeModal}>
           <Login />
+        </Modal>
+         <Modal isActive={isModalOpen} closeAction={closeModal}>
+          {type === 'login' &&
+            <div>
+              <Login />
+              <p>
+                Don't have an account?
+              </p>
+              <button className="cta cta--white cta--small" onClick={() => toggleType('signup')}>
+              Register
+              </button>
+              <p>
+                Forgot your password?
+              </p>
+              <button className="cta cta--white cta--small" onClick={() => toggleType('reset')}>
+                Reset
+              </button>
+            </div>}
+          {type === 'signup' &&
+            <div>
+              <SignUp />
+              <p>Already have an account?</p>
+              <button className="cta cta--white cta--small" onClick={() => toggleType('login')}>
+                Sign in
+              </button>
+            </div>}
+          {type === 'reset' &&
+            <div>
+              <Reset />
+              <p>
+                Already have an account?
+              </p>
+              <button className="cta cta--white cta--small" onClick={() => toggleType('login')}>
+                Sign in
+              </button>
+            </div>}
         </Modal>
       </div>
     </>
