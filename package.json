@@ -10,12 +10,15 @@
     "build": "cd ui && vite build --reload",
     "buildAPI": "cd server && npm run build",
     "installUI": "cd ui && npm i",
-    "installAPI": "cd api && npm i",
+    "installAPI": "cd server && npm i",
     "test": "cd ui && web-test-runner \"src/**/*.test.tsx\"",
     "format": "cd ui && prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "cd ui && prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
   },
   "devDependencies": {
     "vite": "^2.1.5"
+  },
+  "dependencies": {
+    "concurrently": "^6.0.2"
   }
 }
