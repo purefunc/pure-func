@@ -4,14 +4,10 @@
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "node",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "jsx": "preserve",
     "baseUrl": "./",
-    /* paths - import rewriting/resolving */
     "paths": {
-      // If you configured any Snowpack aliases, add them here.
-      // Add this line to get types for streaming imports (packageOptions.source="remote"):
-      //     "*": [".snowpack/types/*"]
-      // More info: https://www.snowpack.dev/guides/streaming-imports
       "animation": ["./src/animation"],
       "animation*": ["./src/animation*"],
       "components": ["./src/components"],
@@ -27,7 +23,7 @@
       "utilities": ["./src/utilities"],
       "utilities*": ["./src/utilities*"]
     },
-    /* noEmit - Snowpack builds (emits) files, not tsc. */
+    "types": ["vite/client"],
     "noEmit": true,
     /* Additional Options */
     "strictNullChecks": true,
@@ -41,6 +37,7 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
+    "allowJs": false,
     "importsNotUsedAsValues": "error",
     "noImplicitAny": false
   }
