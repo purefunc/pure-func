@@ -2,13 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import { Logo } from 'components'
+import {useAuth} from 'global'
 
 export function Footer() {
-  const isLoggedIn = true
+  const { state, dispatch } = useAuth()
 
   return (
-    <FooterWrapper isLoggedIn={isLoggedIn}>
-      {!isLoggedIn && (
+    <FooterWrapper isLoggedIn={state.isLoggedIn}>
+      {!state.isLoggedIn && (
         <div className="wrapper">
           <div className="footer__nav container flex">
             <div className="footer__logo">
@@ -54,7 +55,7 @@ export function Footer() {
                 Privacy Policy
               </NavLink>
             </div> */}
-            {isLoggedIn && <Logo isShort style={{ opacity: 0.5 }} />}
+            {state.isLoggedIn && <Logo isShort style={{ opacity: 0.5 }} />}
             <a href="mailto:support@purefunc.io">Support: support@purefunc.io</a>
           </div>
         </div>
