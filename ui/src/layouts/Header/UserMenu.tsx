@@ -1,13 +1,14 @@
 import React from 'react'
 import { NavLink, useHistory } from 'react-router-dom'
+import Cookies from 'js-cookie'
 import { Dropdown } from 'components'
 import { Avatar } from 'utilities'
-import Cookies from 'js-cookie'
 import { useAuth, Types } from 'global'
 
 export const UserMenu = ({ user }: Props) => {
   const history = useHistory()
   const { dispatch: authDispatch } = useAuth()
+
   const logout = () => {
     Cookies.remove('token')
     authDispatch({ type: Types.Logoff })

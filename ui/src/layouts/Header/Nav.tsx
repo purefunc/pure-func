@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Modal } from 'components'
+import { Modal, Dropdown } from 'components'
 import { Login } from '../Login/Login'
 import { UserMenu } from './UserMenu'
 
@@ -54,7 +54,7 @@ export function Nav({ isLoggedIn = false }) {
           Contact Us
         </Link>
         <Modal isActive={isModalOpen} closeAction={closeModal}>
-          <Login closeAction={closeModal} />
+          <Login />
         </Modal>
       </div>
     </>
@@ -62,12 +62,19 @@ export function Nav({ isLoggedIn = false }) {
 
   const UserNavBar = (
     <div className="user-nav">
-      <NavLink className="dashboard-nav-link" to="/dashboard/sites" aria-label="Sites">
-        Sites
-      </NavLink>
-      <NavLink className="dashboard-nav-link" to="/dashboard/menus" aria-label="Menus">
-        Menus
-      </NavLink>
+      <Dropdown
+        menuIcon={<button className="cta cta--small cta--ghost">New +</button>}
+        renderMenuItems={(toggle) => (
+          <>
+            <NavLink className="dashboard-nav-link" to="/dashboard/sites/new" aria-label="Sites" onClick={toggle}>
+              Site
+            </NavLink>
+            <NavLink className="dashboard-nav-link" to="/dashboard/menus/new" aria-label="Menus" onClick={toggle}>
+              Menu
+            </NavLink>
+          </>
+        )}
+      />
     </div>
   )
 
@@ -92,6 +99,7 @@ const NavWrapper = styled.nav`
     }
     .dashboard-nav-link {
       color: var(--textColor);
+      display: block;
     }
   }
 `
