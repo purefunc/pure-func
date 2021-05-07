@@ -2,8 +2,16 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { Dropdown } from 'components'
 import { Avatar } from 'utilities'
+import Cookies from 'js-cookie'
+import { useAuth, Types } from 'global'
 
 export const UserMenu = ({ user }: Props) => {
+  const { dispatch: authDispatch } = useAuth()
+  const logout = () => {
+    Cookies.remove("token")
+    authDispatch({type: Types.Logoff})
+  }
+
   return (
     <Dropdown
       menuIcon={<Avatar userPhotoId={user?.photoId} size={40} />}
@@ -18,7 +26,7 @@ export const UserMenu = ({ user }: Props) => {
           {/* <NavLink className="nav-link" onClick={toggle} to="/dashboard/settings" aria-label="settings">
             Settings
           </NavLink> */}
-          <button>Logout</button>
+          <button onClick={logout}>Logout</button>
         </>
       )}
     />

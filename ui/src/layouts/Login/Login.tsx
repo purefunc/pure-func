@@ -35,7 +35,9 @@ export const Login = () => {
   const [isCredsChecked, setIsCredsChecked] = useState(false)
   const [isRedirecting] = useState(false)
 
-  const { data: credsOnServer } = useQuery(ME)
+  const { data: credsOnServer } = useQuery(ME, {
+  fetchPolicy: "no-cache"
+  })
   const [login, { data: loginData, loading: loginLoading, error: loginError }] = useMutation(LOGIN, {
     variables: {
       password,

@@ -49,11 +49,11 @@ app.use(bodyParser.json())
 apolloServer.applyMiddleware({
   app,
   cors: corsOptions,
-  path: "/api/graphql"
+  path: "/graphql"
 })
 
 // routes
-app.use("/api/uploads", require("./routes/uploads"))
+app.use("/uploads", require("./routes/uploads"))
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "build")))
