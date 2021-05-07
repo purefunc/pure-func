@@ -11,8 +11,8 @@ const DashboardLayout = () => (
     <Route exact path="/dashboard/teams" component={Teams} />
     <Route exact path="/dashboard/account" component={Account} />
     <Route exact path="/dashboard/menus" component={MenuListing} />
-    <Route path={['/dashboard/menus/edit/:id', '/dashboard/menus/new']} component={MenuFormWrapper} />
-
+    <Route path="/dashboard/menus/edit/:id" component={MenuFormWrapper} />
+    <Route exact path="/dashboard/menus/new" component={MenuFormWrapper} />
     <Route path="/dashboard/menus/:id" component={MenuWrapper} />
     <Route exact path="/dashboard/sites" component={SiteListing} />
     <Route path="/dashboard/sites/:id" component={SiteWrapper} />
