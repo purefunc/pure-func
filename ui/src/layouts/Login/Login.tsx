@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { useAuth, Types } from 'global'
 import { useQuery, useMutation } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import Cookies from 'js-cookie'
 import { Redirect } from 'react-router'
+import { useHistory } from 'react-router-dom'
+import { useAuth, Types } from 'global'
 
 const ME = gql`
   query GetMe {
@@ -28,7 +29,12 @@ const LOGIN = gql`
   }
 `
 
-export const Login = () => {
+type Props = {
+  closeAction?: () => void
+}
+
+export const Login = ({ closeAction = () => null }: Props) => {
+  const history = useHistory()
   const { dispatch: authDispatch } = useAuth()
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -36,7 +42,7 @@ export const Login = () => {
   const [isRedirecting] = useState(false)
 
   const { data: credsOnServer } = useQuery(ME, {
-  fetchPolicy: "no-cache"
+    fetchPolicy: 'no-cache',
   })
   const [login, { data: loginData, loading: loginLoading, error: loginError }] = useMutation(LOGIN, {
     variables: {
@@ -84,6 +90,8 @@ export const Login = () => {
           onSubmit={(e) => {
             e.preventDefault()
             login()
+            history.push('/dashboard')
+            closeAction()
           }}
         >
           <input
