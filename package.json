@@ -19,6 +19,7 @@
     "vite": "^2.1.5"
   },
   "dependencies": {
-    "concurrently": "^6.0.2"
+    "concurrently": "^6.0.2",
+    "formik": "^2.2.6"
   }
 }

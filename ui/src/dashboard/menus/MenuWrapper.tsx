@@ -1,6 +1,7 @@
 import React from 'react'
 import { SEO } from 'utilities'
 import { DashboardLayout } from 'components'
+import { MenuForm } from './MenuForm'
 
 export function MenuWrapper() {
   const id = '123'
@@ -8,7 +9,9 @@ export function MenuWrapper() {
   return (
     <>
       <SEO title={title} pathname={`/dashboard/menus/${id}`} />
-      <DashboardLayout title={title}>Menu Form goes here</DashboardLayout>
+      <DashboardLayout title={title}>
+        <MenuForm />
+      </DashboardLayout>
     </>
   )
 }
