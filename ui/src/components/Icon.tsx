@@ -25,6 +25,26 @@ export function Icon({ color = 'var(--black)', name, onClick, style = {} }: Prop
           </defs>
         </svg>
       )
+    case 'caret':
+      return (
+        <svg
+          width="16"
+          height="11"
+          viewBox="0 0 16 11"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          onClick={onClick}
+          style={style}
+          aria-labelledby="caret-icon"
+          className="icon"
+        >
+          <title>Caret</title>
+          <path
+            d="M1.2145 1.78892L1.21447 1.78889L1.21912 1.78436C1.88117 1.13919 2.97185 1.11413 3.64654 1.78892L8.00602 6.14904L12.3651 1.78932C12.3652 1.78923 12.3653 1.78914 12.3654 1.78905C12.6861 1.46771 13.1214 1.28711 13.5754 1.28711C14.0295 1.28711 14.4649 1.46773 14.7856 1.78912C15.4544 2.45819 15.4543 3.53997 14.7854 4.20896L9.20989 9.78528C8.54089 10.4544 7.459 10.4544 6.79 9.78528L1.2145 4.20896C0.545534 3.5399 0.545534 2.45798 1.2145 1.78892Z"
+            fill={color}
+          />
+        </svg>
+      )
     case 'hamburger':
       return (
         <svg
