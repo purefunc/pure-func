@@ -8,22 +8,21 @@ import { MobileMenu } from './MobileMenu'
 import { SubNav } from './SubNav'
 
 export function Header() {
-  // const { state, dispatch } = useAuth()
-  const isLoggedIn = true
+  const { state, dispatch } = useAuth()
   return (
     <>
-      <HeaderWrapper className="header flex" $isLoggedIn={isLoggedIn}>
+      <HeaderWrapper className="header flex" $isLoggedIn={state.isLoggedIn}>
         <div className="header__inner wrapper">
           <h1 className="margin-0 logo">
-            <NavLink data-testid="logo-link" to={isLoggedIn ? '/dashboard' : '/'} aria-label="home page">
-              <Logo isDark={isLoggedIn} />
+            <NavLink data-testid="logo-link" to={state.isLoggedIn ? '/dashboard' : '/'} aria-label="home page">
+              <Logo isDark={state.isLoggedIn} />
             </NavLink>
           </h1>
-          <Nav isLoggedIn={isLoggedIn} />
-          {!isLoggedIn && <MobileMenu />}
+          <Nav isLoggedIn={state.isLoggedIn} />
+          {!state.isLoggedIn && <MobileMenu />}
         </div>
       </HeaderWrapper>
-      {isLoggedIn && <SubNav />}
+      {state.isLoggedIn && <SubNav />}
     </>
   )
 }

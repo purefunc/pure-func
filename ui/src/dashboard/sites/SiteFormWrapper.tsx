@@ -2,13 +2,13 @@ import React from 'react'
 import { SEO } from 'utilities'
 import { DashboardLayout } from 'components'
 
-export function SiteWrapper() {
+export function SiteFormWrapper() {
   const id = '123'
   const title = 'Sites'
   return (
     <>
       <SEO title={title} pathname={`/dashboard/sites/${id}`} />
-      <DashboardLayout title={title}>Site goes here</DashboardLayout>
+      <DashboardLayout title={title}>Site Form goes here</DashboardLayout>
     </>
   )
 }
