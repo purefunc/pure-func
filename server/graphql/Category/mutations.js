@@ -5,7 +5,7 @@ module.exports = {
   Mutation: {
     createCategory: async (_, args) => {
       try {
-        const categoryData = args
+        const categoryData = args.category
         const res = await categoryDAO.create(categoryData)
         return res
       } catch (e) {
