@@ -5,7 +5,7 @@ module.exports = {
   Mutation: {
     createItem: async (_, args) => {
       try {
-        const itemData = args
+        const itemData = args.item
         const res = await itemDAO.create(itemData)
         return res
       } catch (e) {
@@ -25,11 +25,11 @@ module.exports = {
     editItem: async (_, args) => {
       try {
         const itemData = {}
-        if (args.name && args.name.length > 0)
-          itemData.name = args.name
-        itemData.description = args.description || ""
-        itemData.price = args.price || ""
-        itemData.images = args.images || ""
+        if (args.menu.name && args.menu.name.length > 0)
+          itemData.menu.name = args.menu.name
+        itemData.menu.description = args.menu.description || ""
+        itemData.menu.price = args.menu.price || ""
+        itemData.menu.images = args.menu.images || ""
 
         const res = await itemDAO.findByIdAndUpdate(args._id, itemData, {
           new: true

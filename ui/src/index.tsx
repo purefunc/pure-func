@@ -8,9 +8,12 @@ import { ApolloProvider } from '@apollo/react-hooks'
 import { HelmetProvider } from 'react-helmet-async'
 import './styles/index.scss'
 
+const isProd = Boolean(window.location.host.indexOf('purefunc.io') > -1);
+const apiUrl = isProd ? 'https://api.purefunc.io/graphql' : 'http://localhost:8000/graphql';
+
 const uploadLink = createUploadLink({
   credentials: 'include',
-  uri: '/api/graphql',
+  uri: apiUrl,
 })
 
 const client = new ApolloClient({
@@ -26,13 +29,7 @@ ReactDOM.render(
           <App />
         </Router>
       </ApolloProvider>
-    </HelmetProvider>{' '}
+    </HelmetProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 )
-
-// Hot Module Replacement (HMR) - Remove this snippet to remove HMR.
-// Learn more: https://snowpack.dev/concepts/hot-module-replacement
-if (import.meta.hot) {
-  import.meta.hot.accept()
-}

@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Modal } from 'components'
-import { useAuth } from 'global'
+import { Modal, Dropdown } from 'components'
 import { Login } from '../Login/Login'
 import { UserMenu } from './UserMenu'
 import { SignUp } from '../Login/Signup'
@@ -15,7 +14,6 @@ export function Nav({ isLoggedIn = false }) {
     setType(val)
   } 
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const { state, dispatch } = useAuth()
 
   const closeModal = () => {
     setIsModalOpen(false)
@@ -56,17 +54,8 @@ export function Nav({ isLoggedIn = false }) {
         </NavLink>
       </div>
       <div>
-        <button
-          onClick={() => {
-            if (state.isLoggedIn) {
-              // TODO: ADD LOGOFF FUNCTION
-            } else {
-              openModal()
-            }
-          }}
-          className="cta cta--white-ghost cta--small"
-        >
-          {state.isLoggedIn ? 'Log Out' : 'Sign In'}
+        <button onClick={openModal} className="cta cta--white-ghost cta--small">
+          Sign In
         </button>
         <Link className="cta cta--white cta--small" to="/contact">
           Contact Us
@@ -116,12 +105,22 @@ export function Nav({ isLoggedIn = false }) {
 
   const UserNavBar = (
     <div className="user-nav">
-      <NavLink className="dashboard-nav-link" to="/dashboard/sites" aria-label="Sites">
-        Sites
+      <NavLink className="dashboard-nav-link cta cta--small cta--ghost" to="/dashboard/menus/new" aria-label="Menus">
+        + New Menu
       </NavLink>
-      <NavLink className="dashboard-nav-link" to="/dashboard/menus" aria-label="Menus">
-        Menus
-      </NavLink>
+      {/* <Dropdown
+        menuIcon={<button className="cta cta--small cta--ghost">New +</button>}
+        renderMenuItems={(toggle) => (
+          <>
+            {/* <NavLink className="dashboard-nav-link" to="/dashboard/sites/new" aria-label="Sites" onClick={toggle}>
+              Site
+            </NavLink> 
+            <NavLink className="dashboard-nav-link" to="/dashboard/menus/new" aria-label="Menus" onClick={toggle}>
+              Menu
+            </NavLink>
+          </>
+        )}
+      /> */}
     </div>
   )
 
@@ -146,6 +145,7 @@ const NavWrapper = styled.nav`
     }
     .dashboard-nav-link {
       color: var(--textColor);
+      display: block;
     }
   }
 `

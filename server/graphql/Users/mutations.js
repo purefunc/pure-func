@@ -1,5 +1,5 @@
 const userDAO = require("../../models/user")
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcryptjs")
 const jsonwebtoken = require("jsonwebtoken")
 const logger = require("../../config/logger")
 
@@ -22,7 +22,7 @@ module.exports = {
         foundUser.password = bcrypt.hashSync(newPass, 10)
         foundUser.save()
         return true
-      } catch(e) {
+      } catch (e) {
         logger.error("Error changing password")
         logger.error(e)
         throw new Error("Error changing password")
@@ -39,12 +39,10 @@ module.exports = {
         userData.displayName = args.displayName || args.username
         const res = await userDAO.create(userData)
         return {
-          token: jsonwebtoken.sign(
-            { id: res._id, username: res.username },
-            process.env.JWT_SECRET,
-            { expiresIn: "1d" }
-          ),
-          user: res
+          token: jsonwebtoken.sign({ id: res._id, username: res.username }, process.env.JWT_SECRET, {
+            expiresIn: "1d",
+          }),
+          user: res,
         }
       } catch (e) {
         throw new Error("Error creating account")
@@ -60,15 +58,13 @@ module.exports = {
         if (args.password && args.password.length > 0) {
           userData.password = bcrypt.hashSync(args.password, 10)
         }
-        if (args.username && args.username.length > 0)
-          userData.username = args.username
-        if (args.displayName && args.displayName.length > 0)
-          userData.displayName = args.displayName
+        if (args.username && args.username.length > 0) userData.username = args.username
+        if (args.displayName && args.displayName.length > 0) userData.displayName = args.displayName
         if (args.email && args.email.length > 0) userData.email = args.email
         userData.isAdmin = args.isAdmin
 
         const res = await userDAO.findByIdAndUpdate(args._id, userData, {
-          new: true
+          new: true,
         })
         return res
       } catch (e) {
@@ -96,14 +92,14 @@ module.exports = {
             {
               id: foundUser._id,
               username: foundUser.username,
-              isAdmin: foundUser.isAdmin
+              isAdmin: foundUser.isAdmin,
             },
             process.env.JWT_SECRET,
             { expiresIn: "1d" }
           ),
-          user: foundUser
+          user: foundUser,
         }
-      } catch(e) {
+      } catch (e) {
         logger.error("Login error")
         logger.error(e)
         throw new Error("Login error")
@@ -118,6 +114,6 @@ module.exports = {
         logger.error(e)
         throw new Error(e.message)
       }
-    }
-  }
+    },
+  },
 }
