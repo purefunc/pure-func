@@ -5,8 +5,7 @@ module.exports = {
   Mutation: {
     createMenu: async (_, args) => {
       try {
-        const menuData = args
-        const res = await menuDAO.create(menuData)
+        const res = await menuDAO.create(args.menu)
         return res
       } catch (e) {
         logger.log("warn", "menu creation error", e)
