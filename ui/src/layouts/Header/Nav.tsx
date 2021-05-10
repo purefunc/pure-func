@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Modal, Dropdown } from 'components'
-import { Login } from '../Login/Login'
+import { Modal } from '../../components'
 import { UserMenu } from './UserMenu'
-import { SignUp } from '../Login/Signup'
-import { Reset } from '../Login/Reset'
+import { LoginModal } from '../Login/LoginModal'
 
 export function Nav({ isLoggedIn = false }) {
    const [type, setType] = useState('login')
@@ -61,43 +59,7 @@ export function Nav({ isLoggedIn = false }) {
           Contact Us
         </Link>
         <Modal isActive={isModalOpen} closeAction={closeModal}>
-          <Login />
-        </Modal>
-         <Modal isActive={isModalOpen} closeAction={closeModal}>
-          {type === 'login' &&
-            <div>
-              <Login />
-              <p>
-                Don't have an account?
-              </p>
-              <button className="cta cta--white cta--small" onClick={() => toggleType('signup')}>
-              Register
-              </button>
-              <p>
-                Forgot your password?
-              </p>
-              <button className="cta cta--white cta--small" onClick={() => toggleType('reset')}>
-                Reset
-              </button>
-            </div>}
-          {type === 'signup' &&
-            <div>
-              <SignUp />
-              <p>Already have an account?</p>
-              <button className="cta cta--white cta--small" onClick={() => toggleType('login')}>
-                Sign in
-              </button>
-            </div>}
-          {type === 'reset' &&
-            <div>
-              <Reset />
-              <p>
-                Already have an account?
-              </p>
-              <button className="cta cta--white cta--small" onClick={() => toggleType('login')}>
-                Sign in
-              </button>
-            </div>}
+          <LoginModal />
         </Modal>
       </div>
     </>

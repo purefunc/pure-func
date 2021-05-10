@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const SignUp = () => {
+export const SignUpForm = () => {
   return (
     <>
       <form>
