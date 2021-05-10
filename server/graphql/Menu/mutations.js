@@ -24,10 +24,10 @@ module.exports = {
     editMenu: async (_, args) => {
       try {
         const menuData = {}
-        if (args.title && args.title.length > 0)
-          menuData.title = args.title
-        menuData.logo = args.logo || ""
-        menuData.bgImage = args.bgImage || ""
+        if (args.menu,title && args.menu.title.length > 0)
+          menuData.menu.title = args.menu.title
+        menuData.menu.logo = args.menu.logo || ""
+        menuData.menu.bgImage = args.menu.bgImage || ""
 
         const res = await menuDAO.findByIdAndUpdate(args._id, menuData, {
           new: true

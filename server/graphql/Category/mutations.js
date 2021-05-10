@@ -25,11 +25,11 @@ module.exports = {
     editCategory: async (_, args) => {
       try {
         const categoryData = {}
-        if (args.name && args.name.length > 0)
-          categoryData.name = args.name
-        categoryData.description = args.description || ""
-        categoryData.price = args.price || ""
-        categoryData.images = args.images || []
+        if (args.menu.name && args.menu.name.length > 0)
+          categoryData.menu.name = args.menu.name
+        categoryData.menu.description = args.menu.description || ""
+        categoryData.menu.price = args.menu.price || ""
+        categoryData.menu.images = args.menu.images || []
 
         const res = await categoryDAO.findByIdAndUpdate(args._id, categoryData, {
           new: true
