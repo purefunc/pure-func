@@ -15,8 +15,8 @@ const DashboardLayout = () => (
     <Route exact path="/dashboard/menus/new" component={MenuFormWrapper} />
     <Route path="/dashboard/menus/:id" component={MenuWrapper} />
     <Route exact path="/dashboard/sites" component={SiteListing} />
-    <Route path="/dashboard/sites/:id" component={SiteWrapper} />
-    <Route path="/dashboard/sites/edit/:id" component={SiteFormWrapper} />
+    {/* <Route path="/dashboard/sites/:id" component={SiteWrapper} />
+    <Route path="/dashboard/sites/edit/:id" component={SiteFormWrapper} /> */}
     <Route render={() => <Redirect to="/dashboard" />} />
   </Switch>
 )

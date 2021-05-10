@@ -4,8 +4,9 @@ const mongoose = require("mongoose")
 const itemSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true
+    required: true,
   },
+  id: String,
   description: String,
   price: String,
   images: [String],

@@ -62,19 +62,22 @@ export function Nav({ isLoggedIn = false }) {
 
   const UserNavBar = (
     <div className="user-nav">
-      <Dropdown
+      <NavLink className="dashboard-nav-link cta cta--small cta--ghost" to="/dashboard/menus/new" aria-label="Menus">
+        + New Menu
+      </NavLink>
+      {/* <Dropdown
         menuIcon={<button className="cta cta--small cta--ghost">New +</button>}
         renderMenuItems={(toggle) => (
           <>
-            <NavLink className="dashboard-nav-link" to="/dashboard/sites/new" aria-label="Sites" onClick={toggle}>
+            {/* <NavLink className="dashboard-nav-link" to="/dashboard/sites/new" aria-label="Sites" onClick={toggle}>
               Site
-            </NavLink>
+            </NavLink> 
             <NavLink className="dashboard-nav-link" to="/dashboard/menus/new" aria-label="Menus" onClick={toggle}>
               Menu
             </NavLink>
           </>
         )}
-      />
+      /> */}
     </div>
   )
 

@@ -1,21 +1,30 @@
 module.exports = `
   type Menu {
-      _id: ID!
-      title: String!
-      logo: String
-      bgImage: String
-      categories: [Category]
+    _id: ID!
+    title: String!
+    description: String
+    logo: String
+    bgImage: String
+    categories: [Category]
   }
 
+  input MenuInput {
+    title: String!
+    description: String
+    logo: String
+    bgImage: String
+    categories: [CategoryInput]
+  }  
+
   extend type Query {
-      menus: [Menu]
-      menu(_id: ID): Menu
-      menuByTitle(title: String): Menu
+    menus: [Menu]
+    menu(_id: ID): Menu
+    menuByTitle(title: String): Menu
   }
 
   extend type Mutation {
-    createMenu(title: String!, logo: String, bgImage: String, categories: [ID]): Menu
-    editMenu(_id: ID!, title: String, logo: String, bgImage: String): Menu
+    createMenu(menu: MenuInput!): Menu
+    editMenu(menu: MenuInput!, id: ID!): Menu
     deleteMenu(_id: ID!): DeleteResponse
     addCategoryToMenu(categoryId: ID!, menuId: ID!): Boolean
     removeCategoryFromMenu(categoryId: ID!, menuId: ID!): Boolean
