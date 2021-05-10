@@ -1,0 +1,39 @@
+fragment menuFields on Menu {
+  _id
+  title
+  description
+  logo
+  bgImage
+}
+
+# Queries
+
+query menu($_id: ID!) {
+  menu(_id: $_id) {
+    ...menuFields
+  }
+}
+
+query menus {
+  menus {
+    ...menuFields
+  }
+}
+
+# Mutations
+
+mutation createMenu($menu: MenuInput!) {
+  createMenu(menu: $menu) {
+    ...menuFields
+  }
+}
+
+mutation updatePost($post: PostInput!, $id: ID!) {
+  updateMenu(menu: $menu, id: $id) {
+    ...menuFields
+  }
+}
+
+mutation deleteMenu($_id: ID!) {
+  deleteMenu(_id: $_id)
+}

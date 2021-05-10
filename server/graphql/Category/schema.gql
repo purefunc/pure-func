@@ -1,23 +1,32 @@
 module.exports = `
   type Category {
-      _id: ID!
-      name: String!
-      images: [String]
-      description: String
-      price: String
-      notes: [Note]
-      items: [Item]
+    _id: ID!
+    name: String!
+    images: [String]
+    description: String
+    price: String
+    notes: [Note]
+    items: [Item]
+  }
+
+  input CategoryInput {
+    name: String!
+    images: [String]
+    description: String
+    price: String
+    notes: [ID]
+    items: [ID]
   }
 
   extend type Query {
-      categories: [Category]
-      category(_id: ID): Category
-      categoryByName(name: String): Category
+    categories: [Category]
+    category(_id: ID): Category
+    categoryByName(name: String): Category
   }
 
   extend type Mutation {
-    createCategory(name: String!, images: [String], description: String, price: String, notes: [ID], items: [ID]): Category
-    editCategory(_id: ID!, name: String, images: [String], description: String, price: String): Category
+    createCategory(category: CategoryInput!): Category
+    editCategory(category: CategoryInput!, _id: ID!): Category
     deleteCategory(_id: ID!): DeleteResponse
     addNoteToCategory(noteId: ID!, categoryId: ID!): Boolean
     removeNoteFromCategory(noteId: ID!, categoryId: ID!): Boolean
