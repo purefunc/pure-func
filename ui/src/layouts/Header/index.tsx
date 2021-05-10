@@ -8,12 +8,7 @@ import { MobileMenu } from './MobileMenu'
 import { SubNav } from './SubNav'
 
 export function Header() {
-<<<<<<< HEAD
-  // const { state, dispatch } = useAuth()
-  const isLoggedIn = false
-=======
   const { state, dispatch } = useAuth()
->>>>>>> 884d3dd0417e81febef2cdd642e585b3dad780ea
   return (
     <>
       <HeaderWrapper className="header flex" $isLoggedIn={state.isLoggedIn}>
