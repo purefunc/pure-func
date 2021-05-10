@@ -2,15 +2,20 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-export function MenuCard() {
-  const id = '123'
+export function MenuCard({menu}) {
+ 
   return (
     <CardWrapper className="card card--line card--full-width">
-      Menu Card
-      <Link className="cta" to={`/dashboard/menus/${id}`}>
+      <h4>
+        {menu.title}
+      </h4>
+      <p>
+        {menu.description}
+      </p>
+      <Link className="cta" to={`/dashboard/menus/${menu._id}`}>
         View
       </Link>
-      <Link className="cta" to={`/dashboard/menus/edit/${id}`}>
+      <Link className="cta" to={`/dashboard/menus/edit/${menu._id}`}>
         Edit
       </Link>
     </CardWrapper>
