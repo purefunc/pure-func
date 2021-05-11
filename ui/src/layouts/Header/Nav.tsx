@@ -1,11 +1,16 @@
 import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Modal, Dropdown } from 'components'
-import { Login } from '../Login/Login'
+import { Modal } from '../../components'
 import { UserMenu } from './UserMenu'
+import { LoginModal } from '../Login/LoginModal'
 
 export function Nav({ isLoggedIn = false }) {
+   const [type, setType] = useState('login')
+
+  const toggleType = (val: string) => {
+    setType(val)
+  } 
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const closeModal = () => {
@@ -54,7 +59,7 @@ export function Nav({ isLoggedIn = false }) {
           Contact Us
         </Link>
         <Modal isActive={isModalOpen} closeAction={closeModal}>
-          <Login />
+          <LoginModal />
         </Modal>
       </div>
     </>

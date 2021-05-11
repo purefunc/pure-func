@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const Reset = () => {
+export const PasswordResetForm = () => {
   return (
     <>
       <form>

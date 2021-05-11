@@ -33,7 +33,7 @@ type Props = {
   closeAction?: () => void
 }
 
-export const Login = ({ closeAction = () => null }: Props) => {
+export const LoginForm = ({ closeAction = () => null }: Props) => {
   const history = useHistory()
   const { dispatch: authDispatch } = useAuth()
   const [username, setUsername] = useState('')
