@@ -1,0 +1,16 @@
+module.exports = `
+  type Subscription {
+      _id: ID!
+      productId: String
+  }
+
+  extend type Query {
+    subscriptions: [Subscription]
+    subscription(_id: ID!): Subscription
+  }
+
+  extend type Mutation {
+    createSubscription(priceId: String!): Subscription
+    cancelSubscription(_id: ID!): DeleteResponse
+  }
+`
