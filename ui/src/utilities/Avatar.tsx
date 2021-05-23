@@ -41,9 +41,10 @@ const AvatarContainer = styled.div<{ size?: number }>`
   border-radius: var(--size);
   position: relative;
   background: var(--primaryColor);
-  
+  text-align: justify;
 
   svg {
+    position: absolute;
     width: 100%;
     height: auto;
     padding: 10%;
