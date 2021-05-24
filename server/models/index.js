@@ -29,4 +29,5 @@ module.exports.connect = uri => {
   require("./team")
   require("./role")
   require("./membership")
+  require("./subscription")
 }

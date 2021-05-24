@@ -54,6 +54,7 @@ apolloServer.applyMiddleware({
 
 // routes
 app.use("/uploads", require("./routes/uploads"))
+app.use("/stripe", require("./routes/stripe"))
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "build")))
