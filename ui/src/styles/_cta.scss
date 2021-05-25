@@ -37,17 +37,15 @@
     --buttonBorder: 2px solid var(--dangerColor);
   }
   &--white {
+    --buttonBorder: 2px solid var(--white);
     --buttonBg: var(--white);
     --buttonTextColor: var(--primaryColor);
     --buttonHoverColor: var(--primaryColor);
     --buttonHoverBg: var(--lightestGray);
   }
   &--ghost {
-    --buttonBorder: 2px solid var(--primaryColor);
     --buttonTextColor: var(--primaryColor);
     --buttonBg: transparent;
-    --buttonShadow: none;
-    --buttonHoverBorderColor: var(--primaryLight);
   }
   &--white-ghost {
     --buttonBorder: 2px solid var(--white);

@@ -29,8 +29,6 @@ export const Dropdown = ({ renderMenuItems, style = {}, menuIcon = '' }: Dropdow
             style={{
               pointerEvents: isMenuToggled ? 'all' : 'none',
               transformOrigin: 'top center',
-              // transformStyle: 'preserve-3d',
-              // transformOrigin: ' 50% 50px',
             }}
             exit={{ opacity: 0, scaleY: 0.9 }}
             animate={{ opacity: 1, scaleY: 1.0 }}
@@ -60,14 +58,14 @@ const MenuContainer = styled(motion.div)`
   padding: var(--space);
   right: 0;
   min-width: 200px;
-  text-align: right;
+  text-align: center;
   z-index: 5;
   box-shadow: var(--elevation-5);
 
   > .nav-link {
     text-decoration: none;
     color: var(--textColor);
-    margin-top: var(--space);
+    margin-top: var(--smallestSpace);
     display: block;
     &:first-of-type {
       margin-top: 0;
@@ -75,21 +73,15 @@ const MenuContainer = styled(motion.div)`
   }
 
   button {
-    font-size: var(--baseNavSize);
     border: none;
     width: 100%;
-    text-align: right;
     background: transparent;
     text-transform: none;
     font-weight: 600;
-    font-size: 0.8em;
-    padding: 0.5rem 0;
+    padding: 0;
     color: var(--textColor);
     box-shadow: none;
-
-    &:hover {
-      background: transparent;
-    }
+    margin-top: var(--smallestSpace);
   }
 `
 

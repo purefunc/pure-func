@@ -36,7 +36,7 @@ type Props = {
 
 const AvatarContainer = styled.div<{ size?: number }>`
   ${({ size }) => `--size: ${size}px;`};
-  width: var(--size);
+   width: var(--size);
   min-width: var(--size);
   height: var(--size);
   line-height: var(--size);
@@ -49,10 +49,9 @@ const AvatarContainer = styled.div<{ size?: number }>`
   svg {
     width: 100%;
     height: auto;
-    padding: 25%;
   }
 
-  img {
+ img {
     width: 100%;
     height: auto;
   }
