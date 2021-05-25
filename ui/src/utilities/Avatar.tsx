@@ -36,17 +36,23 @@ type Props = {
 
 const AvatarContainer = styled.div<{ size?: number }>`
   ${({ size }) => `--size: ${size}px;`};
+   width: var(--size);
   min-width: var(--size);
   height: var(--size);
+  line-height: var(--size);
   border-radius: var(--size);
+  text-align: center;
+  overflow: hidden;
   position: relative;
   background: var(--primaryColor);
-  text-align: justify;
 
   svg {
-    position: absolute;
     width: 100%;
     height: auto;
-    padding: 10%;
+  }
+
+ img {
+    width: 100%;
+    height: auto;
   }
 `

@@ -70,10 +70,6 @@ const MenuContainer = styled(motion.div)`
     &:first-of-type {
       margin-top: 0;
     }
-    &:hover {
-      background: var(--pastel);
-      border-radius: 8px;
-    }
   }
 
   button {
@@ -86,10 +82,6 @@ const MenuContainer = styled(motion.div)`
     color: var(--textColor);
     box-shadow: none;
     margin-top: var(--smallestSpace);
-    &:hover {
-      background: var(--pastel);
-      border-radius: 8px;
-    }
   }
 `
 
