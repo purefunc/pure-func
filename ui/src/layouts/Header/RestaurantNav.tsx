@@ -21,7 +21,6 @@ export function RestaurantNav({ name = '', logo = '' }: Props) {
 }
 
 const MenuHeader = styled.header`
-  margin-top: var(--headerHeight);
   border-bottom: var(--line);
   padding: var(--space);
   .restaurant-name {
