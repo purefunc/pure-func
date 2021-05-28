@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { Modal } from '../../components'
 import { UserMenu } from './UserMenu'
 import { LoginModal } from '../Login/LoginModal'
+import { Button } from '../../components/Button'
 
 export function Nav({ isLoggedIn = false }) {
    const [type, setType] = useState('login')
@@ -52,12 +53,12 @@ export function Nav({ isLoggedIn = false }) {
         </NavLink>
       </div>
       <div>
-        <button onClick={openModal} className="cta cta--white-ghost cta--small">
+        <Button color={'white'} onClick={openModal} className="">
           Sign In
-        </button>
-        <Link className="cta cta--white cta--small" to="/contact">
+        </Button>
+        <Button className="contact" onClick={() => window.location.href='/contact'}>
           Contact Us
-        </Link>
+        </Button>
         <Modal isActive={isModalOpen} closeAction={closeModal}>
           <LoginModal />
         </Modal>
@@ -101,6 +102,9 @@ const NavWrapper = styled.nav`
     $isLoggedIn &&
     `justify-content: flex-end;
   `};
+   .contact {
+    margin-left: var(--smallSpace);
+  }
   .user-nav {
     > * + * {
       margin-left: var(--space);
