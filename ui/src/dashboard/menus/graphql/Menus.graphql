@@ -28,7 +28,7 @@ mutation createMenu($menu: MenuInput!) {
   }
 }
 
-mutation updatePost($post: PostInput!, $id: ID!) {
+mutation updateMenu($menu: MenuInput!, $id: ID!) {
   updateMenu(menu: $menu, id: $id) {
     ...menuFields
   }
