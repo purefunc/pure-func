@@ -6,7 +6,7 @@ import { useAuth, Types } from 'global'
 import { Nav } from './Nav'
 import { MobileMenu } from './MobileMenu'
 import { SubNav } from './SubNav'
-import { useQuery } from '@apollo/react-hooks'
+import { useLazyQuery, useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import { useHistory, useLocation } from 'react-router-dom'
 
@@ -25,14 +25,23 @@ export function Header() {
   const history = useHistory()
   const location = useLocation()
   const [isCredsChecked, setIsCredsChecked] = useState(false)
+  const [isCredsProcessed, setIsCredsProcessed] = useState(false)
 
-  const { data: credsOnServer } = useQuery(ME, {
+  const [checkCreds, {data: credsOnServer}] = useLazyQuery(ME, {
     fetchPolicy: 'no-cache',
   })
   
   // Check if user is logged in
   useEffect(() => {
-    if (!isCredsChecked && credsOnServer && credsOnServer.me && credsOnServer.me.displayName) {
+    if(!isCredsChecked) {
+      checkCreds()
+      setIsCredsChecked(true)
+    }
+  }, [isCredsChecked])
+
+  // Processed when creds return
+  useEffect(() => {
+    if (!isCredsProcessed && credsOnServer && credsOnServer.me && credsOnServer.me.displayName) {
       dispatch({
         type: Types.Login,
         payload: {
@@ -41,14 +50,13 @@ export function Header() {
           isAdmin: credsOnServer.me.isAdmin,
         },
       })
-      setIsCredsChecked(true)
-      
+      setIsCredsProcessed(true)
       // Redirect to Dashboard if at home
-      if(location.pathname = "/") {
+      if(location.pathname == "/") {
         history.push("/dashboard")
       }
     }
-  }, [credsOnServer, isCredsChecked, dispatch])
+  }, [credsOnServer, isCredsProcessed, dispatch])
 
   return (
     <>
