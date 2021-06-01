@@ -95,7 +95,7 @@ module.exports = {
               isAdmin: foundUser.isAdmin,
             },
             process.env.JWT_SECRET,
-            { expiresIn: "1d" }
+            { expiresIn: "30d" }
           ),
           user: foundUser,
         }

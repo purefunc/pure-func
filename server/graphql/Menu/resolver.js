@@ -20,7 +20,10 @@ module.exports = {
     },
   },
   Query: {
-    menus() {
+    allMenus(_, args, {userIsAdmin}) {
+      if(!userIsAdmin) {
+        throw new Error("Only admins can see this")
+      }
       const menus = menuDAO.find().exec()
       if (!menus) {
         throw new Error("Error")
