@@ -17,8 +17,8 @@ module.exports = `
   }  
 
   extend type Query {
-    menus: [Menu]
-    menu(_id: ID): Menu
+    allMenus: [Menu]
+    menu(_id: ID!): Menu
     menuByTitle(title: String): Menu
   }
 

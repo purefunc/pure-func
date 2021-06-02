@@ -16,23 +16,30 @@ module.exports = {
       return bgImage
     },
     categories({ categories }) {
-      return categoryDAO.find({_id: categories})
+      return categoryDAO.find({ _id: categories })
     },
   },
   Query: {
-    menus() {
+    allMenus(_, args, {userIsAdmin}) {
+      if(!userIsAdmin) {
+        throw new Error("Only admins can see this")
+      }
       const menus = menuDAO.find().exec()
       if (!menus) {
         throw new Error("Error")
       }
       return menus
     },
-    menu(obj, args) {
-      const myMenu = menuDAO.findOne({ _id: { $eq: args.id } })
-      if (!myMenu) {
-        throw new Error("Error")
+    async menu(_, { _id }) {
+      try {
+        const menu = await menuDAO.findOne({ _id: { $eq: _id } })
+        if (!menu) {
+          throw new Error()
+        }
+        return menu
+      } catch (e) {
+        console.error(e)
       }
-      return myMenu
     },
     menuByTitle(obj, args) {
       const myMenu = categoryDAO.findOne({ title: { $eq: args.title } })
@@ -41,5 +48,5 @@ module.exports = {
       }
       return myMenu
     },
-  }
+  },
 }

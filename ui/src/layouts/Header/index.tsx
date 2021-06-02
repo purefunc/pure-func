@@ -1,14 +1,63 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import styled, { css } from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import { Logo } from 'components'
-import { useAuth } from 'global'
+import { useAuth, Types } from 'global'
 import { Nav } from './Nav'
 import { MobileMenu } from './MobileMenu'
 import { SubNav } from './SubNav'
+import { useLazyQuery, useQuery } from '@apollo/react-hooks'
+import gql from 'graphql-tag'
+import { useHistory, useLocation } from 'react-router-dom'
+
+const ME = gql`
+  query GetMe {
+    me {
+      displayName
+      username
+      isAdmin
+    }
+  }
+`
 
 export function Header() {
   const { state, dispatch } = useAuth()
+  const history = useHistory()
+  const location = useLocation()
+  const [isCredsChecked, setIsCredsChecked] = useState(false)
+  const [isCredsProcessed, setIsCredsProcessed] = useState(false)
+
+  const [checkCreds, {data: credsOnServer}] = useLazyQuery(ME, {
+    fetchPolicy: 'no-cache',
+  })
+  
+  // Check if user is logged in
+  useEffect(() => {
+    if(!isCredsChecked) {
+      checkCreds()
+      setIsCredsChecked(true)
+    }
+  }, [isCredsChecked])
+
+  // Processed when creds return
+  useEffect(() => {
+    if (!isCredsProcessed && credsOnServer && credsOnServer.me && credsOnServer.me.displayName) {
+      dispatch({
+        type: Types.Login,
+        payload: {
+          displayName: credsOnServer.me.displayName,
+          username: credsOnServer.me.username,
+          isAdmin: credsOnServer.me.isAdmin,
+        },
+      })
+      setIsCredsProcessed(true)
+      // Redirect to Dashboard if at home
+      if(!location.pathname.startsWith("/dashboard")) {
+        history.push("/dashboard")
+      }
+    }
+  }, [credsOnServer, isCredsProcessed, dispatch])
+
   return (
     <>
       <HeaderWrapper className="header flex" $isLoggedIn={state.isLoggedIn}>

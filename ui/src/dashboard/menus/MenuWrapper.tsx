@@ -1,12 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
+import { useParams } from 'react-router-dom'
+import { useQuery, gql } from '@apollo/client'
 import { SEO } from 'utilities'
 import { Grid } from 'styles'
 import { MenuCategory } from './MenuCategory'
 import { RestaurantNav } from '../../layouts/Header/RestaurantNav'
 
+const GET_MENU = gql`
+  query menu($_id: ID!) {
+    menu(_id: $_id) {
+      _id
+      title
+      description
+      logo
+      bgImage
+    }
+  }
+`
+
 export function MenuWrapper() {
-  const id = '123'
+  const { id } = useParams()
+  const { data } = useQuery(GET_MENU, { variables: { _id: id } })
+  if (!data) return null
+  const { menu } = data
+
   const note = {
     description: 'everything contains a ton of gluten, dairy, meat, and peanuts',
   }
@@ -35,13 +53,9 @@ export function MenuWrapper() {
     notes: [note],
     items: [item, item, item, item, item],
   }
-  const menu = {
-    title: 'Funk Food',
-    description: 'This is the funkiest food you will ever see',
-    logo: '',
-    bgImage: '',
-    categories: [category, category, category],
-  }
+
+  const categories = [category, category, category]
+
   return (
     <>
       <SEO title={`Menu - ${menu.title}`} pathname={`/dashboard/menus/${id}`} />
@@ -52,7 +66,7 @@ export function MenuWrapper() {
           {menu.description && <h4>{menu.description}</h4>}
         </div>
         <Grid as="ul" className="categories">
-          {menu.categories.map((category) => (
+          {categories.map((category) => (
             <MenuCategory category={category} key={category.name} />
           ))}
         </Grid>

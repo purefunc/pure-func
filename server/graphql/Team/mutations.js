@@ -53,9 +53,9 @@ module.exports = {
         return false
       }
     },
-    removeRestaurantFromTeam: (_, args) => {
+    removeRestaurantFromTeam: async (_, args) => {
       try {
-        teamDAO
+        await teamDAO
           .updateOne(
             { _id: { $eq: args.teamId } },
             { $pull: { restaurants: args.restaurantId } }
@@ -67,16 +67,14 @@ module.exports = {
         return false
       }
     },
-    addUserToTeam: (_, args) => {
+    addUserToTeam: async (_, args) => {
       try {
-        teamDAO
-          .updateOne(
-            { _id: { $eq: args.teamId } },
+        await teamDAO.findByIdAndUpdate(args.teamId,
             { $addToSet: { users: args.userId } }
           )
           .exec()
-        userDAO.updateOne(
-          { _id : {$eq: args.userId}},
+        await userDAO.findByIdAndUpdate(
+          args.userId,
           { $addToSet: {teams: args.teamId}}
         )
         .exec()
@@ -86,15 +84,15 @@ module.exports = {
         return false
       }
     },
-    removeUserFromTeam: (_, args) => {
+    removeUserFromTeam: async (_, args) => {
       try {
-        teamDAO
+        await teamDAO
           .updateOne(
             { _id: { $eq: args.teamId } },
             { $pull: { users: args.userId } }
           )
           .exec()
-        userDAO
+        await userDAO
             .updateOne(
               {_id: {$eq: args.userId}},
               {$pull: {teams: args.teamId}}

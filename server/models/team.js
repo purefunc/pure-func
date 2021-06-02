@@ -9,6 +9,7 @@ const teamSchema = new mongoose.Schema({
   owner: String,
   users: [String],
   restaurants: [String],
+  menus: [String],
 })
 
 teamSchema.index({ name: 1 })
