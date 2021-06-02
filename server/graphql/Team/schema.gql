@@ -9,7 +9,7 @@ module.exports = `
   }
 
   extend type Query {
-      teams: [Team]
+      allTeams: [Team]
       team(_id: ID!): Team
       teamsForUser(userId: String!): [Team]
       teamsForOwner(userId: String!): [Team]

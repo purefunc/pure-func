@@ -25,7 +25,10 @@ module.exports = {
     },
   },
   Query: {
-    teams() {
+    allTeams(_, args, {userIsAdmin}) {
+      if(!userIsAdmin) {
+        throw new Error("Only admins can see this")
+      }
       const teams = teamDAO.find().exec()
       if (!teams) {
         throw new Error("Error")

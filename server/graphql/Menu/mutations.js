@@ -39,11 +39,11 @@ module.exports = {
         throw new Error("Error updating menu")
       }
     },
-    addCategoryToMenu: (_, args) => {
+    addCategoryToMenu: async (_, args) => {
       try {
-        menuDAO
-          .updateOne(
-            { _id: { $eq: args.menuId } },
+        await menuDAO
+          .findByIdAndUpdate(
+            args.menuId,
             { $addToSet: { categories: args.categoryId } }
           )
           .exec()
@@ -53,11 +53,11 @@ module.exports = {
         return false
       }
     },
-    removeCategoryFromMenu: (_, args) => {
+    removeCategoryFromMenu: async (_, args) => {
       try {
-        menuDAO
-          .updateOne(
-            { _id: { $eq: args.menuId } },
+        await menuDAO
+          .findByIdAndUpdate(
+            args.menuId,
             { $pull: { categories: args.categoryId } }
           )
           .exec()

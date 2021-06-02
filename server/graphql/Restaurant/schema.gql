@@ -8,7 +8,7 @@ module.exports = `
   }
 
   extend type Query {
-      restaurants: [Restaurant]
+      allRestaurants: [Restaurant]
       restaurant(_id: ID!): Restaurant
       restaurantsByEmail(email: String!): [Restaurant]
       restaurantsByName(name: String!): [Restaurant]

@@ -16,7 +16,10 @@ module.exports = {
     },
   },
   Query: {
-    tags() {
+    allTags(_, args, {userIsAdmin}) {
+      if(!userIsAdmin) {
+        throw new Error("Only admins can see this")
+      }
       const tags = tagDAO.find().exec()
       if (!tags) {
         throw new Error("Error")

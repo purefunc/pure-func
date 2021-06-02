@@ -20,7 +20,10 @@ module.exports = {
     },
   },
   Query: {
-    restaurants() {
+    allRestaurants(_, args, {userIsAdmin}) {
+      if(!userIsAdmin) {
+        throw new Error("Only admins can see this")
+      }
       const restaurants = restaurantDAO.find().exec()
       if (!restaurants) {
         throw new Error("Error")

@@ -27,7 +27,10 @@ module.exports = {
     }
   },
   Query: {
-    categories() {
+    allCategories(_, args, {userIsAdmin}) {
+      if(!userIsAdmin) {
+        throw new Error("Only admins can see this")
+      }
       const categories = categoryDAO.find().exec()
       if (!categories) {
         throw new Error("Error")

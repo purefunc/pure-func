@@ -5,7 +5,7 @@ module.exports = `
   }
 
   extend type Query {
-      notes: [Note]
+      allNotes: [Note]
       note(_id: ID): Note
   }
 
