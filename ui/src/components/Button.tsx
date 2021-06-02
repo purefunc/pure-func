@@ -1,42 +1,46 @@
 import styled, { css } from 'styled-components'
 
-const whiteGhostButton = css`
+const whiteButtonStyle = css`
+ --buttonTextColor: var(--white);
+--buttonBg: var(--white);
+--buttonShadow: var(--elevation-2);
+--buttonHoverBg: var(--primaryLight);
+--buttonHoverColor: var(--white);
+--buttonHoverShadow: var(--elevation-3);
 --buttonBorder: 2px solid var(--white);
---buttonTextColor: var(--white);
+`
+const outlineButtonStyle = css`
+--buttonBorder: 2px solid var(--white);
+color: var(--white);
 --buttonBg: transparent;
 --buttonShadow: none;
 --buttonHoverBorderColor: var(--white);
 --buttonHoverBg: var(--white);
 --buttonHoverColor: var(--primaryColor);
-  padding: 2px 15px;
-  min-width: none;
-  display: inline-block;
-  text-align: center;
-  appearance: none;
-  color: var(--buttonTextColor);
-  background-color: var(--buttonBg);
-  border: var(--buttonBorder);
-  border-radius: var(--buttonRadius);
-  box-shadow: var(--buttonShadow);
-  transition: var(--hoverTransition);
-  outline: none;
-  &:hover {
-    color: var(--buttonHoverColor);
-    background-color: var(--buttonHoverBg);
-    border-color: var(--buttonHoverBorderColor);
-    box-shadow: var(--buttonHoverShadow);
-  }
 `
+
 const whiteSmallButton = css`
-  --buttonTextColor: var(--primaryColor);
+  --buttonTextColor: var(--white);
   --buttonBg: var(--white);
   --buttonShadow: var(--elevation-2);
   --buttonHoverBg: var(--primaryLight);
   --buttonHoverColor: var(--white);
   --buttonHoverShadow: var(--elevation-3);
   --buttonBorder: 2px solid var(--white);
-  
-  padding: 2px 15px;
+`
+const gradientButtonStyle = css`
+  background-size: 200% auto;
+  background-image: var(--buttonGradient);
+  transition: 0.5s;
+  color: var(--white);
+  &:hover {
+    color: var(--white);
+    background: var(--funkyGradient);
+  }
+`
+
+export const baseButtonStyle = css`
+  padding: 4px 25px ;
   min-width: none;
   display: inline-block;
   text-align: center;
@@ -57,26 +61,15 @@ const whiteSmallButton = css`
     opacity: 0.4;
   }
 `
-const orangeButtonStyle = css`
-  
-`
-
-export const baseButtonStyle = css`
-
-`
-
-const outlineButtonStyle = css`
-
-`
 
 export const Button = styled.button<{
   color?: string
 }>`
   ${baseButtonStyle};
   ${({ color }) => {
-    if (color === 'white') return whiteGhostButton
     if (color === 'outline') return outlineButtonStyle
-    if (color === 'orange') return orangeButtonStyle
+    if (color === 'white') return whiteButtonStyle
+    if (color === 'gradient') return gradientButtonStyle
     return whiteSmallButton
   }};
 `

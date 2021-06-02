@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Section, LogoStrip, Icon } from 'components'
+import { Button } from '../components/Button'
 import { TerminalScreen, Laptop, Screen } from 'figures'
 import ecommerceImg from 'images/ecommerce.png'
 import lutImg from 'images/lut-scott.png'
@@ -17,9 +18,9 @@ export default function HomePage() {
           <div>
             <h1 className="margin-top-0">{title}</h1>
             <p>{description}</p>
-            <Link to="/contact" className="cta cta--white">
-              Contact Us
-            </Link>
+            <Button as={Link} to="/contact">
+              Contact
+            </Button>
           </div>
           <div className="margins">
             <Screen />
@@ -46,9 +47,9 @@ export default function HomePage() {
                 or add to your existing platform, our custom Shopify themes weave powerful e-commerce functionality
                 right into your stunning site.
               </p>
-              <Link className="cta cta--gradient" to="/services">
+               <Button color='gradient' as={Link} to="/services">
                 Learn More
-              </Link>
+              </Button>
             </div>
             <img src={ecommerceImg} alt="E-commerce" className="margins" />
           </div>
@@ -61,9 +62,9 @@ export default function HomePage() {
                 elegance and speed. The Pure Func team has experience building a wide variety of custom full stack
                 websites, including admin systems, analytics dashboards, social networks, and so much more.
               </p>
-              <Link className="cta cta--gradient" to="/services">
+              <Button color='gradient' as={Link} to="/services">
                 Learn More
-              </Link>
+              </Button>
             </div>
             <div className="margins" style={{ alignSelf: 'end' }}>
               <TerminalScreen />
@@ -157,9 +158,9 @@ export default function HomePage() {
             Potential client? Curious new developer? #1 Pure Func fan? As long as you're not a robot, we want to hear
             from you! Fill out our contact form, and a member of our team will be in touch as soon as possible.
           </p>
-          <Link to="/contact" className="cta">
+          <Button color='white' as={Link} to="/contact">
             Contact Us
-          </Link>
+          </Button>
         </div>
       </Section>
     </>

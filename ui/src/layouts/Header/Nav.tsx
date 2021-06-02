@@ -53,10 +53,10 @@ export function Nav({ isLoggedIn = false }) {
         </NavLink>
       </div>
       <div>
-        <Button color={'white'} onClick={openModal} className="">
+        <Button color='outline' onClick={openModal}>
           Sign In
         </Button>
-        <Button className="contact" onClick={() => window.location.href='/contact'}>
+        <Button color='white' as={Link} to='/contact' className="contact">
           Contact Us
         </Button>
         <Modal isActive={isModalOpen} closeAction={closeModal}>
@@ -102,7 +102,7 @@ const NavWrapper = styled.nav`
     $isLoggedIn &&
     `justify-content: flex-end;
   `};
-   .contact {
+  .contact {
     margin-left: var(--smallSpace);
   }
   .user-nav {

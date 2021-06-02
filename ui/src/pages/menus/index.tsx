@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Section } from 'components'
+import { Button } from 'components/Button'
 import { SEO } from 'utilities'
 import phoneImg from 'images/menus/phone-qr.png'
 import basicSvg from 'images/menus/basic-qr.svg'
@@ -23,9 +24,9 @@ export default function DigitalMenuPage() {
             <p>
               <i>* Currently in beta but still accepting clients</i>
             </p>
-            <Link to="/beta" className="cta cta--white">
-              Get Beta Access
-            </Link>
+            <Button color='white' as={Link} to="/contact">
+              Get Beta Access *
+            </Button>
           </div>
           <QrCodes />
         </div>
@@ -138,9 +139,9 @@ export default function DigitalMenuPage() {
       <Section theme="funky" isSkewed>
         <div className="card card--deep card--padded text-center margin-auto">
           <h2>Ready to ride the QR wave?</h2>
-          <Link to="/contact" className="cta">
-            Contact
-          </Link>
+          <Button color='white' as={Link} to="/contact">
+            Contact Us
+          </Button>
         </div>
       </Section>
     </>

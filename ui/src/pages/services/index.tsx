@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from 'utilities'
+import { Button } from 'components/Button'
 import { Section, Icon } from 'components'
 import tuneImg from 'images/tune-header.png'
 import rachioImg from 'images/rachio.jpg'
@@ -20,9 +21,9 @@ export default function ServicesPage() {
           <div className="mobile-reverse-item">
             <h1 className="margin-top-0">{title}</h1>
             <p>{description}</p>
-            <Link to="/contact" className="cta cta--white">
+            <Button as={Link} to="/contact">
               Contact Us
-            </Link>
+            </Button>
           </div>
         </div>
       </Section>
@@ -246,9 +247,9 @@ export default function ServicesPage() {
             </div>
           </div>
           <div className="text-center margins">
-            <Link to="/contact" className="cta cta--gradient">
+            <Button color='gradient' as={Link} to="/contact">
               Contact Us
-            </Link>
+            </Button>
           </div>
         </>
       </Section>

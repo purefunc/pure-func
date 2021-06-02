@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from 'utilities'
 import { Section, EyeLogo } from 'components'
+import { Button } from 'components/Button'
 import ericImg from 'images/eric.jpg'
 
 export default function AboutPage() {
@@ -43,9 +44,9 @@ export default function AboutPage() {
             Potential client? Curious new developer? #1 Pure Func fan? As long as you're not a robot, we want to hear
             from you! Fill out our contact form, and a member of our team will be in touch as soon as possible.
           </p>
-          <Link to="/contact" className="cta">
+          <Button color='white' as={Link} to="/contact">
             Contact Us
-          </Link>
+          </Button>
         </div>
       </Section>
     </>

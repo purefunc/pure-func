@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Button } from 'components/Button'
 
 const options = [
   {
@@ -80,9 +81,9 @@ export function ContactForm() {
             </label>
             {error && <p className="text-violet small">{error}</p>}
             <div className="text-center">
-              <button id="contact-form-button" type="submit" className="cta cta--gradient">
+              <Button color='gradient' id="contact-form-button" type="submit">
                 Send
-              </button>
+              </Button>
             </div>
           </form>
         </>
