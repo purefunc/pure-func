@@ -10,7 +10,10 @@ module.exports = {
     },
   },
   Query: {
-    subscriptions() {
+    allSubscriptions(_, args, {userIsAdmin}) {
+      if(!userIsAdmin) {
+        throw new Error("Only admins can see this")
+      }
       const subscriptions = subscriptionDAO.find().exec()
       if (!subscriptions) {
         throw new Error("Error")

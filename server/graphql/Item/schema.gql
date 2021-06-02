@@ -22,7 +22,7 @@ module.exports = `
   }
 
   extend type Query {
-    items: [Item]
+    allItems: [Item]
     item(_id: ID): Item
     itemByName(name: String): Item
   }

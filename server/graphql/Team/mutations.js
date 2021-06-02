@@ -39,11 +39,11 @@ module.exports = {
         throw new Error("Error updating team")
       }
     },
-    addRestaurantToTeam: (_, args) => {
+    addRestaurantToTeam: async (_, args) => {
       try {
-        teamDAO
-          .updateOne(
-            { _id: { $eq: args.teamId } },
+        await teamDAO
+          .findByIdAndUpdate(
+            args.teamId,
             { $addToSet: { restaurants: args.restaurantId } }
           )
           .exec()
@@ -56,8 +56,8 @@ module.exports = {
     removeRestaurantFromTeam: async (_, args) => {
       try {
         await teamDAO
-          .updateOne(
-            { _id: { $eq: args.teamId } },
+          .findByIdAndUpdate(
+            args.teamId,
             { $pull: { restaurants: args.restaurantId } }
           )
           .exec()
@@ -69,14 +69,13 @@ module.exports = {
     },
     addUserToTeam: async (_, args) => {
       try {
-        await teamDAO
-          .updateOne(
-            { _id: { $eq: args.teamId } },
+        await teamDAO.findByIdAndUpdate(
+            args.teamId,
             { $addToSet: { users: args.userId } }
           )
           .exec()
-        await userDAO.updateOne(
-          { _id : {$eq: args.userId}},
+        await userDAO.findByIdAndUpdate(
+          args.userId,
           { $addToSet: {teams: args.teamId}}
         )
         .exec()
@@ -89,14 +88,14 @@ module.exports = {
     removeUserFromTeam: async (_, args) => {
       try {
         await teamDAO
-          .updateOne(
-            { _id: { $eq: args.teamId } },
+          .findByIdAndUpdate(
+            args.teamId,
             { $pull: { users: args.userId } }
           )
           .exec()
         await userDAO
-            .updateOne(
-              {_id: {$eq: args.userId}},
+            .findByIdAndUpdate(
+              args.userId,
               {$pull: {teams: args.teamId}}
             )
             .exec()

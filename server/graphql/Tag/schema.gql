@@ -7,7 +7,7 @@ module.exports = `
   }
 
   extend type Query {
-      tags: [Tag]
+      allTags: [Tag]
       tag(_id: ID): Tag
       tagByName(name: String): Tag
   }

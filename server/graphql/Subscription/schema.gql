@@ -5,7 +5,7 @@ module.exports = `
   }
 
   extend type Query {
-    subscriptions: [Subscription]
+    allSubscriptions: [Subscription]
     subscription(_id: ID!): Subscription
   }
 

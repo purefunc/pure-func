@@ -10,7 +10,10 @@ module.exports = {
     },
   },
   Query: {
-    notes() {
+    allNotes(_, args, {userIsAdmin}) {
+      if(!userIsAdmin) {
+        throw new Error("Only admins can see this")
+      }
       const notes = noteDAO.find().exec()
       if (!notes) {
         throw new Error("Error")

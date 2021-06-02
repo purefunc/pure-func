@@ -41,11 +41,11 @@ module.exports = {
         throw new Error("Error updating category")
       }
     },
-    addNoteToCategory: (_, args) => {
+    addNoteToCategory: async (_, args) => {
       try {
-        categoryDAO
-          .updateOne(
-            { _id: { $eq: args.categoryId } },
+        await categoryDAO
+          .findByIdAndUpdate(
+            args.categoryId,
             { $addToSet: { notes: args.noteId } }
           )
           .exec()
@@ -55,11 +55,11 @@ module.exports = {
         return false
       }
     },
-    removeNoteFromCategory: (_, args) => {
+    removeNoteFromCategory: async (_, args) => {
       try {
-        categoryDAO
-          .updateOne(
-            { _id: { $eq: args.categoryId } },
+        await categoryDAO
+          .findByIdAndUpdate(
+            args.categoryId,
             { $pull: { notes: args.noteId } }
           )
           .exec()
@@ -69,11 +69,11 @@ module.exports = {
         return false
       }
     },
-    addItemToCategory: (_, args) => {
+    addItemToCategory: async (_, args) => {
       try {
-        categoryDAO
-          .updateOne(
-            { _id: { $eq: args.categoryId } },
+        await categoryDAO
+          .findByIdAndUpdate(
+            args.categoryId,
             { $addToSet: { items: args.itemId } }
           )
           .exec()
@@ -83,11 +83,11 @@ module.exports = {
         return false
       }
     },
-    removeItemFromCategory: (_, args) => {
+    removeItemFromCategory: async (_, args) => {
       try {
-        categoryDAO
-          .updateOne(
-            { _id: { $eq: args.categoryId } },
+        await categoryDAO
+          .findByIdAndUpdate(
+            args.categoryId,
             { $pull: { items: args.itemId } }
           )
           .exec()

@@ -12,6 +12,7 @@ const itemSchema = new mongoose.Schema({
   images: [String],
   notes: [String],
   tags: [String],
+  isAvailable: Boolean,
 })
 
 itemSchema.index({ name: 1 })

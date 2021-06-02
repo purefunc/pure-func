@@ -12,7 +12,7 @@ module.exports = `
   }
 
   extend type Query {
-    memberships: [Membership]
+    allMemberships: [Membership]
     membership(_id: ID!): Membership
     membershipsForTeam(teamId: String!): [Membership]
   }

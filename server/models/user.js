@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
   displayName: String,
   email: String,
   password: { type: String, required: true },
-  restaurants: [String],
+  teams: [String],
   isAdmin: Boolean
 })
 

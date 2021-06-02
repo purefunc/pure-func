@@ -52,7 +52,7 @@ export function Header() {
       })
       setIsCredsProcessed(true)
       // Redirect to Dashboard if at home
-      if(location.pathname == "/") {
+      if(!location.pathname.startsWith("/dashboard")) {
         history.push("/dashboard")
       }
     }
