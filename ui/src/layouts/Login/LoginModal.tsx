@@ -17,6 +17,7 @@ export const LoginModal = () => {
     <>
       {type === 'login' &&
         <div>
+          <h3>Login</h3>
           <LoginForm />
           <p>
             Don't have an account?
@@ -32,7 +33,8 @@ export const LoginModal = () => {
           </p>
           </div>}
           {type === 'signup' &&
-            <div>
+        <div>
+              <h3>Sign Up</h3>
               <SignUpForm />
               <p>Already have an account?
                 <p onClick={() => toggleType('login')}>
@@ -41,15 +43,16 @@ export const LoginModal = () => {
               </p>
             </div>}
           {type === 'reset' &&
-            <div>
-              <PasswordResetForm />
-              <p>
-                Already have an account?
-                <p onClick={() => toggleType('login')}>
-                  Sign in
-                </p>
+        <div>
+          <h3>Reset Password</h3>
+            <PasswordResetForm />
+            <p>
+              Already have an account?
+              <p onClick={() => toggleType('login')}>
+                Sign in
               </p>
-            </div>}
+            </p>
+        </div>}
     </>
   )
 }

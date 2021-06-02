@@ -60,7 +60,7 @@ export const LoginForm = ({ closeAction = () => null }: Props) => {
           closeAction()
         }}
       >
-        <h5>User Name</h5>
+        <h5>Username</h5>
         <input
           type="text"
           name="username"

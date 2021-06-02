@@ -84,6 +84,10 @@ const ModalWrapper = styled.div`
     background: var(--white);
     box-shadow: var(--elevation-5);
     text-align: center;
+    h3 {
+      margin-top: var(--space);
+      font-weight: 800;
+    } 
     h5 {
       margin-top: var(--space);
     }
@@ -95,7 +99,6 @@ const ModalWrapper = styled.div`
       margin: var(--smallSpace) 0;
       > p {
         margin-left: var(--smallSpace);
-        background-image: linear-gradient( 180deg, #0000 70%,var(--teal) 0);
       }
     }
     input + button {
