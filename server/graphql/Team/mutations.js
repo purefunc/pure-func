@@ -69,14 +69,12 @@ module.exports = {
     },
     addUserToTeam: async (_, args) => {
       try {
-        await teamDAO
-          .updateOne(
-            { _id: { $eq: args.teamId } },
+        await teamDAO.findByIdAndUpdate(args.teamId,
             { $addToSet: { users: args.userId } }
           )
           .exec()
-        await userDAO.updateOne(
-          { _id : {$eq: args.userId}},
+        await userDAO.findByIdAndUpdate(
+          args.userId,
           { $addToSet: {teams: args.teamId}}
         )
         .exec()
