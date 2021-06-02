@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { LoginForm } from '../Login/Login'
 import { SignUpForm } from '../Login/Signup'
 import { PasswordResetForm } from '../Login/Reset'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
 
 
 export const LoginModal = () => {
@@ -13,39 +15,40 @@ export const LoginModal = () => {
 
   return (
     <>
-       {type === 'login' &&
-            <div>
-              <LoginForm />
-              <p>
-                Don't have an account?
-              </p>
-              <button className="cta cta--white cta--small" onClick={() => toggleType('signup')}>
+      {type === 'login' &&
+        <div>
+          <LoginForm />
+          <p>
+            Don't have an account?
+            <p className="" onClick={() => toggleType('signup')}>
               Register
-              </button>
-              <p>
-                Forgot your password?
-              </p>
-              <button className="cta cta--white cta--small" onClick={() => toggleType('reset')}>
-                Reset
-              </button>
-            </div>}
+            </p>
+          </p>
+          <p>
+            Forgot your password?
+            <p className="" onClick={() => toggleType('reset')}>
+              Reset
+            </p>
+          </p>
+          </div>}
           {type === 'signup' &&
             <div>
               <SignUpForm />
-              <p>Already have an account?</p>
-              <button className="cta cta--white cta--small" onClick={() => toggleType('login')}>
-                Sign in
-              </button>
+              <p>Already have an account?
+                <p onClick={() => toggleType('login')}>
+                  Sign in
+                </p>
+              </p>
             </div>}
           {type === 'reset' &&
             <div>
               <PasswordResetForm />
               <p>
                 Already have an account?
+                <p onClick={() => toggleType('login')}>
+                  Sign in
+                </p>
               </p>
-              <button className="cta cta--white cta--small" onClick={() => toggleType('login')}>
-                Sign in
-              </button>
             </div>}
     </>
   )

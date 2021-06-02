@@ -4,7 +4,7 @@ export const PasswordResetForm = () => {
   return (
     <>
       <form>
-        <p>Submit your email to have a recovery email sent to your inbox.</p>
+        <h5>Submit your email to have a recovery email sent to your inbox.</h5>
         <input type="email" name="email" placeholder="email" />
         <button className="cta" type="submit">
           Submit

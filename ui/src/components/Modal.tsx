@@ -70,7 +70,6 @@ const ModalWrapper = styled.div`
   top: 0;
   left: 0;
   width: 100vw;
-  align-items: center;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -84,6 +83,24 @@ const ModalWrapper = styled.div`
     border-radius: var(--cardRadius);
     background: var(--white);
     box-shadow: var(--elevation-5);
+    text-align: center;
+    h5 {
+      margin-top: var(--space);
+    }
+    input + input {
+      margin-top: var(--smallestSpace);
+    }
+    p {
+      display: inline-block;
+      margin: var(--smallSpace) 0;
+      > p {
+        margin-left: var(--smallSpace);
+        background-image: linear-gradient( 180deg, #0000 70%,var(--teal) 0);
+      }
+    }
+    input + button {
+      margin: 15px 20px;
+    }
     & > div {
       padding: 0 var(--modalPadding) var(--modalPadding) var(--modalPadding);
       & > *:first-child {
@@ -95,6 +112,9 @@ const ModalWrapper = styled.div`
     }
   }
   .modal__close-button {
+    padding: var(--smallestSpace);
+    position: absolute;
+    left: var(--space);
     pointer-events: all;
     z-index: 1;
   }

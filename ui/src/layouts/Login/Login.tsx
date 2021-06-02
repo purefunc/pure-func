@@ -60,6 +60,7 @@ export const LoginForm = ({ closeAction = () => null }: Props) => {
           closeAction()
         }}
       >
+        <h5>User Name</h5>
         <input
           type="text"
           name="username"
@@ -67,6 +68,7 @@ export const LoginForm = ({ closeAction = () => null }: Props) => {
           placeholder="Username"
           onChange={(e) => setUsername(e.target.value)}
         />
+          <h5>Password</h5>
         <input
           type="password"
           name="password"
