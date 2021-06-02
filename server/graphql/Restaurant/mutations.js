@@ -40,11 +40,11 @@ module.exports = {
         throw new Error("Error updating restaurant")
       }
     },
-    addMenuToRestaurant: (_, args) => {
+    addMenuToRestaurant: async (_, args) => {
       try {
-        restaurantDAO
-          .updateOne(
-            { _id: { $eq: args.restaurantId } },
+        await restaurantDAO
+          .findByIdAndUpdate(
+            args.restaurantId,
             { $addToSet: { menus: args.menuId } }
           )
           .exec()
@@ -54,11 +54,11 @@ module.exports = {
         return false
       }
     },
-    removeMenuFromRestaurant: (_, args) => {
+    removeMenuFromRestaurant: async (_, args) => {
       try {
-        restaurantDAO
-          .updateOne(
-            { _id: { $eq: args.restaurantId } },
+        await restaurantDAO
+          .findByIdAndUpdate(
+            args.restaurantId,
             { $pull: { menus: args.menuId } }
           )
           .exec()

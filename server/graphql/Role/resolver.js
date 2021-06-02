@@ -25,7 +25,10 @@ module.exports = {
     },
   },
   Query: {
-    roles() {
+    allRoles(_, args, {userIsAdmin}) {
+      if(!userIsAdmin) {
+        throw new Error("Only admins can see this")
+      }
       const roles = roleDAO.find().exec()
       if (!roles) {
         throw new Error("Error")

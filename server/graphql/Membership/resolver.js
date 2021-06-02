@@ -21,7 +21,10 @@ module.exports = {
     },
   },
   Query: {
-    memberships() {
+    allMemberships(_, args, {userIsAdmin}) {
+      if(!userIsAdmin) {
+        throw new Error("Only admins can see this")
+      }
       const memberships = membershipDAO.find().exec()
       if (!memberships) {
         throw new Error("Error")

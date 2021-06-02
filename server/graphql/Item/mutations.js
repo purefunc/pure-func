@@ -41,11 +41,11 @@ module.exports = {
         throw new Error("Error updating item")
       }
     },
-    addNoteToItem: (_, args) => {
+    addNoteToItem: async (_, args) => {
       try {
-        itemDAO
-          .updateOne(
-            { _id: { $eq: args.itemId } },
+        await itemDAO
+          .findByIdAndUpdate(
+            args.itemId,
             { $addToSet: { notes: args.noteId } }
           )
           .exec()
@@ -55,11 +55,11 @@ module.exports = {
         return false
       }
     },
-    removeNoteFromItem: (_, args) => {
+    removeNoteFromItem: async (_, args) => {
       try {
-        itemDAO
-          .updateOne(
-            { _id: { $eq: args.itemId } },
+        await itemDAO
+          .findByIdAndUpdate(
+            args.itemId,
             { $pull: { notes: args.noteId } }
           )
           .exec()
@@ -69,11 +69,11 @@ module.exports = {
         return false
       }
     },
-    addTagToItem: (_, args) => {
+    addTagToItem: async (_, args) => {
       try {
-        itemDAO
-          .updateOne(
-            { _id: { $eq: args.itemId } },
+        await itemDAO
+          .findByIdAndUpdate(
+            args.itemId,
             { $addToSet: { tags: args.tagId } }
           )
           .exec()
@@ -83,11 +83,11 @@ module.exports = {
         return false
       }
     },
-    removeTagFromItem: (_, args) => {
+    removeTagFromItem: async (_, args) => {
       try {
-        itemDAO
-          .updateOne(
-            { _id: { $eq: args.itemId } },
+        await itemDAO
+          .findByIdAndUpdate(
+            args.itemId,
             { $pull: { tags: args.tagId } }
           )
           .exec()

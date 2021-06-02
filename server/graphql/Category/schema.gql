@@ -19,7 +19,7 @@ module.exports = `
   }
 
   extend type Query {
-    categories: [Category]
+    allCategories: [Category]
     category(_id: ID): Category
     categoryByName(name: String): Category
   }

@@ -24,7 +24,10 @@ module.exports = {
     }
   },
   Query: {
-    users() {
+    allUsers(_, args, {userIsAdmin}) {
+      if(!userIsAdmin) {
+        throw new Error("Only admins can see this")
+      }
       const users = userDAO.find().exec()
       if (!users) {
         throw new Error("Error")

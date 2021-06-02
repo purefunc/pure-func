@@ -123,7 +123,10 @@ module.exports = {
     }
   },
   Query: {
-    items() {
+    allItems(_, args, {userIsAdmin}) {
+      if(!userIsAdmin) {
+        throw new Error("Only admins can see this")
+      }
       const items = itemDAO.find().exec()
       if (!items) {
         throw new Error("Error")
