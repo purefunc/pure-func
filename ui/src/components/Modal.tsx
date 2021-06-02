@@ -89,16 +89,23 @@ const ModalWrapper = styled.div`
       font-weight: 800;
     } 
     h5 {
-      margin-top: var(--space);
+      float: left;
+      margin: var(--space) var(--space) 0 var(--space);
     }
+    input {
+      margin-top: var(--smallestSpace);
+    } 
     input + input {
       margin-top: var(--smallestSpace);
     }
     p {
-      display: inline-block;
-      margin: var(--smallSpace) 0;
+      display: block;
+      margin: var(--smallSpace);
       > p {
+        display: inline-block;
+        margin: 0;
         margin-left: var(--smallSpace);
+        font-weight: 900;
       }
     }
     input + button {
