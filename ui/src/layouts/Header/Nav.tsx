@@ -6,11 +6,11 @@ import { UserMenu } from './UserMenu'
 import { LoginModal } from '../Login/LoginModal'
 
 export function Nav({ isLoggedIn = false }) {
-   const [type, setType] = useState('login')
+  const [type, setType] = useState('login')
 
   const toggleType = (val: string) => {
     setType(val)
-  } 
+  }
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const closeModal = () => {
@@ -67,18 +67,24 @@ export function Nav({ isLoggedIn = false }) {
 
   const UserNavBar = (
     <div className="user-nav">
-      <NavLink className="dashboard-nav-link cta cta--small cta--ghost" to="/dashboard/menus/new" aria-label="Menus">
+      <NavLink className="dashboard-nav-link cta cta--small cta--ghost" to="/dashboard/new/menu" aria-label="Menus">
         + New Menu
       </NavLink>
       {/* <Dropdown
         menuIcon={<button className="cta cta--small cta--ghost">New +</button>}
         renderMenuItems={(toggle) => (
           <>
-            {/* <NavLink className="dashboard-nav-link" to="/dashboard/sites/new" aria-label="Sites" onClick={toggle}>
+            <NavLink className="dashboard-nav-link" to="/dashboard/new/site" aria-label="Sites" onClick={toggle}>
               Site
-            </NavLink> 
-            <NavLink className="dashboard-nav-link" to="/dashboard/menus/new" aria-label="Menus" onClick={toggle}>
+            </NavLink>
+            <NavLink className="dashboard-nav-link" to="/dashboard/new/menu" aria-label="Menus" onClick={toggle}>
               Menu
+            </NavLink>
+            <NavLink className="dashboard-nav-link" to="/dashboard/new/restaurant" aria-label="Menus" onClick={toggle}>
+              Restaurant
+            </NavLink>
+            <NavLink className="dashboard-nav-link" to="/dashboard/new/pid" aria-label="Menus" onClick={toggle}>
+              PID Tag
             </NavLink>
           </>
         )}

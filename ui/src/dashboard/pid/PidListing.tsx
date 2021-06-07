@@ -2,12 +2,14 @@ import React from 'react'
 import { SEO } from 'utilities'
 import { DashboardLayout } from 'components'
 
-export function SiteFormWrapper() {
-  const title = 'Sites'
+export function PidListing() {
+  const title = 'PID Listing'
   return (
     <>
       <SEO title={title} />
-      <DashboardLayout title={title}>Site Form goes here</DashboardLayout>
+      <DashboardLayout title={title}>
+        <p>I'm the pid listing page</p>
+      </DashboardLayout>
     </>
   )
 }

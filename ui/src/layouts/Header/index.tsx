@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import { Logo } from 'components'
@@ -16,24 +16,28 @@ const ME = gql`
       displayName
       username
       isAdmin
+      teams {
+        _id
+      }
     }
   }
 `
 
 export function Header() {
+  const teamId = '123'
   const { state, dispatch } = useAuth()
   const history = useHistory()
   const location = useLocation()
   const [isCredsChecked, setIsCredsChecked] = useState(false)
   const [isCredsProcessed, setIsCredsProcessed] = useState(false)
 
-  const [checkCreds, {data: credsOnServer}] = useLazyQuery(ME, {
+  const [checkCreds, { data: credsOnServer }] = useLazyQuery(ME, {
     fetchPolicy: 'no-cache',
   })
-  
+
   // Check if user is logged in
   useEffect(() => {
-    if(!isCredsChecked) {
+    if (!isCredsChecked) {
       checkCreds()
       setIsCredsChecked(true)
     }
@@ -52,8 +56,8 @@ export function Header() {
       })
       setIsCredsProcessed(true)
       // Redirect to Dashboard if at home
-      if(!location.pathname.startsWith("/dashboard")) {
-        history.push("/dashboard")
+      if (!location.pathname.startsWith('/dashboard')) {
+        history.push('/dashboard')
       }
     }
   }, [credsOnServer, isCredsProcessed, dispatch])
@@ -63,7 +67,11 @@ export function Header() {
       <HeaderWrapper className="header flex" $isLoggedIn={state.isLoggedIn}>
         <div className="header__inner wrapper">
           <h1 className="margin-0 logo">
-            <NavLink data-testid="logo-link" to={state.isLoggedIn ? '/dashboard' : '/'} aria-label="home page">
+            <NavLink
+              data-testid="logo-link"
+              to={state.isLoggedIn ? `/dashboard/teams/${teamId}/overview` : '/'}
+              aria-label="home page"
+            >
               <Logo isDark={state.isLoggedIn} />
             </NavLink>
           </h1>

@@ -1,19 +1,14 @@
 import React from 'react'
 import { SEO } from 'utilities'
 import { DashboardLayout } from 'components'
-import { Grid } from 'styles'
-import { SiteCard } from './SiteCard'
 
-export function SiteListing() {
-  const title = 'Sites Listing'
+export function RestaurantWrapper() {
+  const title = 'Restaurant'
   return (
     <>
       <SEO title={title} />
       <DashboardLayout title={title}>
-        <Grid>
-          <SiteCard />
-          <SiteCard />
-        </Grid>
+        <p>I'm the restaurant page</p>
       </DashboardLayout>
     </>
   )

@@ -3,11 +3,10 @@ import { SEO } from 'utilities'
 import { DashboardLayout } from 'components'
 
 export function SiteWrapper() {
-  const id = '123'
   const title = 'Sites'
   return (
     <>
-      <SEO title={title} pathname={`/dashboard/sites/${id}`} />
+      <SEO title={title} />
       <DashboardLayout title={title}>Site goes here</DashboardLayout>
     </>
   )
