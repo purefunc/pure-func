@@ -5,6 +5,8 @@ import { Dropdown } from 'components'
 import { Avatar } from 'utilities'
 import { useAuth, Types } from 'global'
 
+// TODO: Add teams list for user
+
 export const UserMenu = ({ user }: Props) => {
   const history = useHistory()
   const { dispatch: authDispatch } = useAuth()
@@ -20,15 +22,9 @@ export const UserMenu = ({ user }: Props) => {
       menuIcon={<Avatar userPhotoId={user?.photoId} size={40} />}
       renderMenuItems={(toggle) => (
         <>
-          <NavLink className="nav-link" onClick={toggle} to="/dashboard" aria-label="dashboard">
-            Dashboard
+          <NavLink className="nav-link" onClick={toggle} to="/dashboard/user/settings" aria-label="account">
+            User Settings
           </NavLink>
-          <NavLink className="nav-link" onClick={toggle} to="/dashboard/account" aria-label="account">
-            Account
-          </NavLink>
-          {/* <NavLink className="nav-link" onClick={toggle} to="/dashboard/settings" aria-label="settings">
-            Settings
-          </NavLink> */}
           <button onClick={logout}>Logout</button>
         </>
       )}

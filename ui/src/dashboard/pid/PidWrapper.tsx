@@ -2,13 +2,13 @@ import React from 'react'
 import { SEO } from 'utilities'
 import { DashboardLayout } from 'components'
 
-export function Account() {
-  const title = 'Account'
+export function PidWrapper() {
+  const title = ''
   return (
     <>
-      <SEO title={title} pathname="/dashboard/account" />
+      <SEO title={title} />
       <DashboardLayout title={title}>
-        <p>I'm the account page</p>
+        <p>I'm the pid form wrapper page</p>
       </DashboardLayout>
     </>
   )

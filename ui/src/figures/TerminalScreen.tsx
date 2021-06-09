@@ -66,7 +66,7 @@ const TerminalWrapper = styled.figure`
   overflow: hidden;
   max-width: 100%;
   transform: perspective(500px) rotateY(-20deg) translateY(-15px) rotateX(3deg) scale(1);
-  &__bottom-nav {
+  .terminal-screen__bottom-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -74,13 +74,13 @@ const TerminalWrapper = styled.figure`
     background: var(--black);
     color: var(--brandColor);
     overflow: hidden;
-    &__tag {
+    .terminal-screen__bottom-nav__tag {
       background: var(--brandColor);
       padding: 10px;
       color: var(--textColor);
       margin-right: var(--smallestSpace);
     }
-    &__menu {
+    .terminal-screen__bottom-nav__menu {
       padding: 4px;
       color: var(--gray);
     }

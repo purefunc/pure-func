@@ -4,11 +4,10 @@ import { DashboardLayout } from 'components'
 import { MenuForm } from './MenuForm'
 
 export function MenuFormWrapper() {
-  const id = '123'
   const title = 'Menu'
   return (
     <>
-      <SEO title={title} pathname={`/dashboard/menus/${id}`} />
+      <SEO title={title} />
       <DashboardLayout title={title}>
         <MenuForm />
       </DashboardLayout>

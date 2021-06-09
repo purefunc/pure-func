@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Section, LogoStrip, Icon } from 'components'
-import { Button } from '../components/Button'
-import { TerminalScreen, Laptop, Screen } from 'figures'
+import { TerminalScreen, Screen } from 'figures'
 import ecommerceImg from 'images/ecommerce.png'
 import lutImg from 'images/lut-scott.png'
 import { SEO } from '../utilities/SEO'
@@ -18,14 +17,13 @@ export default function HomePage() {
           <div>
             <h1 className="margin-top-0">{title}</h1>
             <p>{description}</p>
-            <Button as={Link} to="/contact">
-              Contact
-            </Button>
+            <Link to="/contact" className="cta cta--white">
+              Contact Us
+            </Link>
           </div>
           <div className="margins">
             <Screen />
           </div>
-          {/* <Laptop /> */}
         </div>
       </Section>
       <Section>
@@ -47,9 +45,9 @@ export default function HomePage() {
                 or add to your existing platform, our custom Shopify themes weave powerful e-commerce functionality
                 right into your stunning site.
               </p>
-               <Button color='gradient' as={Link} to="/services">
+              <Link className="cta cta--gradient" to="/services">
                 Learn More
-              </Button>
+              </Link>
             </div>
             <img src={ecommerceImg} alt="E-commerce" className="margins" />
           </div>
@@ -62,9 +60,9 @@ export default function HomePage() {
                 elegance and speed. The Pure Func team has experience building a wide variety of custom full stack
                 websites, including admin systems, analytics dashboards, social networks, and so much more.
               </p>
-              <Button color='gradient' as={Link} to="/services">
+              <Link className="cta cta--gradient" to="/services">
                 Learn More
-              </Button>
+              </Link>
             </div>
             <div className="margins" style={{ alignSelf: 'end' }}>
               <TerminalScreen />
@@ -158,9 +156,9 @@ export default function HomePage() {
             Potential client? Curious new developer? #1 Pure Func fan? As long as you're not a robot, we want to hear
             from you! Fill out our contact form, and a member of our team will be in touch as soon as possible.
           </p>
-          <Button color='white' as={Link} to="/contact">
+          <Link to="/contact" className="cta">
             Contact Us
-          </Button>
+          </Link>
         </div>
       </Section>
     </>
