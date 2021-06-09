@@ -68,9 +68,12 @@ export function Nav({ isLoggedIn = false }) {
 
   const UserNavBar = (
     <div className="user-nav">
-      <NavLink className="dashboard-nav-link cta cta--small cta--ghost" to="/dashboard/new/menu" aria-label="Menus">
+      <Button color='white' as={Link} to='/dashboard/new/menu' className="dashboard-nav-link">
         + New Menu
-      </NavLink>
+      </Button>
+      {/* < className="dashboard-nav-link cta cta--small cta--ghost" to="/dashboard/new/menu" aria-label="Menus">
+       
+      </> */}
       {/* <Dropdown
         menuIcon={<button className="cta cta--small cta--ghost">New +</button>}
         renderMenuItems={(toggle) => (
@@ -118,6 +121,11 @@ const NavWrapper = styled.nav`
     .dashboard-nav-link {
       color: var(--textColor);
       display: block;
+      height: 45px;
+      &:hover {
+        color: var(--white);
+        border-color: var(--purple);
+      }
     }
   }
 `
