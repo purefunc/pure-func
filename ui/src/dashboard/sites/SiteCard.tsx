@@ -7,10 +7,10 @@ export function SiteCard() {
   return (
     <CardWrapper className="card card--line card--full-width">
       Site Card
-      <Link className="cta" to={`/dashboard/menus/${id}`}>
+      <Link className="cta" to={`/dashboard/sites/${id}`}>
         View
       </Link>
-      <Link className="cta" to={`/dashboard/menus/edit/${id}`}>
+      <Link className="cta" to={`/dashboard/sites/${id}/edit`}>
         Edit
       </Link>
     </CardWrapper>

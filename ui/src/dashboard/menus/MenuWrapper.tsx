@@ -58,7 +58,7 @@ export function MenuWrapper() {
 
   return (
     <>
-      <SEO title={`Menu - ${menu.title}`} pathname={`/dashboard/menus/${id}`} />
+      <SEO title={`Menu - ${menu.title}`} />
       <RestaurantNav name="RESTAURANT NAME" logo="" />
       <MenuLayout>
         <div className="menu-header">

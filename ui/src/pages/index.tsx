@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Section, LogoStrip, Icon } from 'components'
-import { TerminalScreen, Laptop, Screen } from 'figures'
+import { TerminalScreen, Screen } from 'figures'
 import ecommerceImg from 'images/ecommerce.png'
 import lutImg from 'images/lut-scott.png'
 import { SEO } from '../utilities/SEO'
@@ -24,7 +24,6 @@ export default function HomePage() {
           <div className="margins">
             <Screen />
           </div>
-          {/* <Laptop /> */}
         </div>
       </Section>
       <Section>

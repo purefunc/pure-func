@@ -1,20 +1,20 @@
 module.exports = `
   type Team {
-      _id: ID!
-      name: String
-      owner: User
-      users: [User]
-      restaurants: [Restaurant]
-      menus: [Menu]
+    _id: ID!
+    name: String
+    owner: User
+    users: [User]
+    restaurants: [Restaurant]
+    menus: [Menu]
   }
 
   extend type Query {
-      allTeams: [Team]
-      team(_id: ID!): Team
-      teamsForUser(userId: String!): [Team]
-      teamsForOwner(userId: String!): [Team]
-      teamsByName(name: String!): [Team]
-      teamsForRestaurant(restaurantId: String!): [Team]
+    allTeams: [Team]
+    team(_id: ID!): Team
+    teamsForUser(userId: String!): [Team]
+    teamsForOwner(userId: String!): [Team]
+    teamsByName(name: String!): [Team]
+    teamsForRestaurant(restaurantId: String!): [Team]
   }
 
   extend type Mutation {

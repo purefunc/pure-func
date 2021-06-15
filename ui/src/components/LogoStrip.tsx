@@ -69,7 +69,7 @@ const StripWrapper = styled.div`
   opacity: 0.5;
   transform: rotate(-10deg);
   padding: var(--space);
-  &__logo {
+  .logo-strip__logo {
     & + & {
       margin-left: var(--space);
     }

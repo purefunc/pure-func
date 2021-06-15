@@ -57,10 +57,10 @@ export function MenuListing() {
 
   return (
     <>
-      <SEO title={title} pathname="/dashboard/menus" />
+      <SEO title={title} />
       <DashboardLayout title={title}>
         <Grid cols={[1, 1, 2]}>
-          {menus.map(menu => (
+          {menus.map((menu) => (
             <MenuCard menu={menu} key={menu._id} />
           ))}
         </Grid>
