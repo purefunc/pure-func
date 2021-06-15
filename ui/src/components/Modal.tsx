@@ -83,34 +83,6 @@ const ModalWrapper = styled.div`
     border-radius: var(--cardRadius);
     background: var(--white);
     box-shadow: var(--elevation-5);
-    text-align: center;
-    h3 {
-      margin-top: var(--space);
-      font-weight: 800;
-    } 
-    h5 {
-      float: left;
-      margin: var(--space) var(--space) 0 var(--space);
-    }
-    input {
-      margin-top: var(--smallestSpace);
-    } 
-    input + input {
-      margin-top: var(--smallestSpace);
-    }
-    p {
-      display: block;
-      margin: var(--smallSpace);
-      > p {
-        display: inline-block;
-        margin: 0;
-        margin-left: var(--smallSpace);
-        font-weight: 900;
-      }
-    }
-    input + button {
-      margin: 15px 20px;
-    }
     & > div {
       padding: 0 var(--modalPadding) var(--modalPadding) var(--modalPadding);
       & > *:first-child {

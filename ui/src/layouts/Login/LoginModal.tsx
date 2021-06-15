@@ -11,43 +11,45 @@ export const LoginModal = () => {
     } 
 
   return (
-  <>
+    <>
     {type === 'login' &&
       <div>
-        <h3>Login</h3>
+        <h3 className="text-center">Login</h3>
         <LoginForm />
+        <div className="margin-top-small text-center">
         <p>
-          Don't have an account?
-          <p className="" onClick={() => toggleType('signup')}>
+          Don't have an account? {' '}
+          <a onClick={() => toggleType('signup')}>
             Register
-          </p>
+          </a>
         </p>
         <p>
-          Forgot your password?
-        <p className="" onClick={() => toggleType('reset')}>
-          Reset
-        </p>
-      </p>
+          Forgot your password? {' '}
+          <a onClick={() => toggleType('reset')}>
+            Reset
+          </a>
+          </p>
+        </div>
       </div>}
     {type === 'signup' &&
       <div>
-        <h3>Sign Up</h3>
+        <h3 className="text-center">Sign Up</h3>
         <SignUpForm />
-        <p>Already have an account?
-          <p onClick={() => toggleType('login')}>
+        <p className="margin-top-small text-center">Already have an account? {' '}
+          <a onClick={() => toggleType('login')}>
             Sign in
-          </p>
+          </a>
         </p>
       </div>}
     {type === 'reset' &&
       <div>
-        <h3>Reset Password</h3>
+        <h3 className="text-center">Reset Password</h3>
           <PasswordResetForm />
-          <p>
-            Already have an account?
-            <p className="modalLink" onClick={() => toggleType('login')}>
+          <p className="margin-top-small text-center">
+            Already have an account? {' '}
+            <a  onClick={() => toggleType('login')}>
               Sign in
-            </p>
+            </a>
           </p>
       </div>}
     </>

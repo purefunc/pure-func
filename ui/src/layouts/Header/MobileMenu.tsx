@@ -3,13 +3,16 @@ import styled from 'styled-components'
 import { Link, NavLink } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useScrollFreeze } from 'hooks'
-import { Icon, Portal } from 'components'
+import { Icon, Portal, Modal } from 'components'
+import { LoginModal } from '../Login/LoginModal'
 
 export const MobileMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
   const closeMenu = () => setIsMenuOpen(false)
+
+
 
   return (
     <>
@@ -31,6 +34,16 @@ type MenuModalProps = {
 const MenuModal = ({ isMenuOpen, closeMenu }: MenuModalProps) => {
   useScrollFreeze()
   const pointerEvents = isMenuOpen ? `all` : `none`
+
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
+
+  const openModal = () => {
+    setIsModalOpen(true)
+  }
 
   return (
     <>
@@ -69,10 +82,18 @@ const MenuModal = ({ isMenuOpen, closeMenu }: MenuModalProps) => {
               <NavLink to="/about" className="nav-link" onClick={closeMenu} aria-label="About page">
                 About
               </NavLink>
-
+              
               <Link className="cta cta--gradient" to="/contact/" onClick={closeMenu}>
                 Contact Us
               </Link>
+
+              <button onClick={openModal} className="cta cta--gradient">
+                Sign In
+              </button>
+
+              <Modal isActive={isModalOpen} closeAction={closeModal}>
+                <LoginModal />
+              </Modal>
             </nav>
           </div>
         </motion.div>
@@ -90,6 +111,9 @@ const MobileMenuWrapper = styled.div`
   overflow-y: scroll;
   pointer-events: none;
   z-index: var(--highestLevel);
+  .cta + .cta {
+    margin: var(--smallestSpace) 0;
+  }
   .transport {
     width: 100%;
     .mobile-menu {
