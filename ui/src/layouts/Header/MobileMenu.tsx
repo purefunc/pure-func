@@ -82,7 +82,7 @@ const MenuModal = ({ isMenuOpen, closeMenu }: MenuModalProps) => {
               <NavLink to="/about" className="nav-link" onClick={closeMenu} aria-label="About page">
                 About
               </NavLink>
-              
+
               <Link className="cta cta--gradient" to="/contact/" onClick={closeMenu}>
                 Contact Us
               </Link>
