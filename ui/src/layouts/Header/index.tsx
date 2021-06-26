@@ -9,6 +9,7 @@ import { SubNav } from './SubNav'
 import { useLazyQuery, useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import { useHistory, useLocation } from 'react-router-dom'
+import { TeamSelector } from './TeamSelector'
 
 const ME = gql`
   query GetMe {
@@ -72,9 +73,11 @@ export function Header() {
               to={state.isLoggedIn ? `/dashboard/teams/${teamId}/overview` : '/'}
               aria-label="home page"
             >
-              <Logo isDark={state.isLoggedIn} />
+              <Logo isDark={state.isLoggedIn} isShort />
             </NavLink>
           </h1>
+          {state.isLoggedIn && <TeamSelector />}
+
           <Nav isLoggedIn={state.isLoggedIn} />
           {!state.isLoggedIn && <MobileMenu />}
         </div>
