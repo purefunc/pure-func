@@ -19,13 +19,13 @@ const ME = gql`
       isAdmin
       teams {
         _id
+        name
       }
     }
   }
 `
 
 export function Header() {
-  const teamId = '123'
   const { state, dispatch } = useAuth()
   const history = useHistory()
   const location = useLocation()
@@ -35,6 +35,7 @@ export function Header() {
   const [checkCreds, { data: credsOnServer }] = useLazyQuery(ME, {
     fetchPolicy: 'no-cache',
   })
+  const teamId = credsOnServer?.me?.teams[0]._id
 
   // Check if user is logged in
   useEffect(() => {
@@ -76,7 +77,7 @@ export function Header() {
               <Logo isDark={state.isLoggedIn} isShort />
             </NavLink>
           </h1>
-          {state.isLoggedIn && <TeamSelector />}
+          {state.isLoggedIn && <TeamSelector teams={credsOnServer.me.teams} />}
 
           <Nav isLoggedIn={state.isLoggedIn} />
           {!state.isLoggedIn && <MobileMenu />}

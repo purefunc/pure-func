@@ -1,7 +1,10 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
 
-export function TeamSelector() {
+type Props = {
+  teams: object
+}
+export function TeamSelector({ teams }: Props) {
   let history = useHistory()
 
   const handleChange = (e) => {
@@ -9,17 +12,11 @@ export function TeamSelector() {
     history.push(`/dashboard/teams/${value}/overview/`)
   }
 
-  const options = [
-    { value: 1, label: 'one' },
-    { value: 2, label: 'two' },
-    { value: 3, label: 'three' },
-  ]
-
   return (
     <select onChange={handleChange} style={{ maxWidth: '200px' }}>
-      {options.map(({ label, value }) => (
-        <option key={label} value={value}>
-          {label}
+      {teams.map(({ _id, name }) => (
+        <option key={_id} value={_id}>
+          {name}
         </option>
       ))}
     </select>
