@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Modal } from '../../components'
+import { Modal } from 'components'
 import { UserMenu } from './UserMenu'
 import { LoginModal } from '../Login/LoginModal'
 

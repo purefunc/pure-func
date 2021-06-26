@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
 import { Logo, Modal } from 'components'
 import { useAuth } from 'global'
-import { LoginForm } from '../Login/Login'
+import { LoginModal } from '../Login/LoginModal'
 
 export function Footer() {
   const { state, dispatch } = useAuth()
@@ -75,7 +75,7 @@ export function Footer() {
         </div>
       </FooterWrapper>
       <Modal isActive={isModalOpen} closeAction={closeModal}>
-        <LoginForm closeAction={closeModal} />
+        <LoginModal />
       </Modal>
     </>
   )

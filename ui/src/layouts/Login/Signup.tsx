@@ -1,14 +1,25 @@
 import React, { useState } from 'react'
+import { Field } from 'components'
 
 export const SignUpForm = () => {
   return (
     <>
       <form>
-        <input type="email" name="email" placeholder="email" />
-        <input type="password" name="password" placeholder="Password" />
-        <button className="cta" type="submit">
-          Register
-        </button>
+        <Field
+          label="Email"
+          type="email"
+          name="email"
+        />
+        <Field
+          label="Password"
+          type="password"
+          name="password"
+        />
+        <div className="text-center">
+          <button className="cta" type="submit">
+            Register
+          </button>
+        </div>
       </form>
     </>
   )

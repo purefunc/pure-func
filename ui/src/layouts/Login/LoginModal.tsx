@@ -3,50 +3,47 @@ import { LoginForm } from '../Login/Login'
 import { SignUpForm } from '../Login/Signup'
 import { PasswordResetForm } from '../Login/Reset'
 
-
 export const LoginModal = () => {
-    const [type, setType] = useState('login')
+  const [type, setType] = useState('login')
 
-    const toggleType = (val: string) => {
-        setType(val)
-    } 
+  const toggleType = (val: string) => {
+    setType(val)
+  }
 
   return (
     <>
-       {type === 'login' &&
-            <div>
-              <LoginForm />
-              <p>
-                Don't have an account?
-              </p>
-              <button className="cta cta--white cta--small" onClick={() => toggleType('signup')}>
-              Register
-              </button>
-              <p>
-                Forgot your password?
-              </p>
-              <button className="cta cta--white cta--small" onClick={() => toggleType('reset')}>
-                Reset
-              </button>
-            </div>}
-          {type === 'signup' &&
-            <div>
-              <SignUpForm />
-              <p>Already have an account?</p>
-              <button className="cta cta--white cta--small" onClick={() => toggleType('login')}>
-                Sign in
-              </button>
-            </div>}
-          {type === 'reset' &&
-            <div>
-              <PasswordResetForm />
-              <p>
-                Already have an account?
-              </p>
-              <button className="cta cta--white cta--small" onClick={() => toggleType('login')}>
-                Sign in
-              </button>
-            </div>}
+      {type === 'login' && (
+        <div>
+          <h3 className="text-center margin-top-small">Login</h3>
+          <LoginForm />
+          <div className="margin-top-small text-center">
+            <p>
+              Don't have an account? <a onClick={() => toggleType('signup')}>Register</a>
+            </p>
+            <p>
+              Forgot your password? <a onClick={() => toggleType('reset')}>Reset</a>
+            </p>
+          </div>
+        </div>
+      )}
+      {type === 'signup' && (
+        <div>
+          <h3 className="text-center margin-top-small">Sign Up</h3>
+          <SignUpForm />
+          <p className="margin-top-small text-center">
+            Already have an account? <a onClick={() => toggleType('login')}>Sign in</a>
+          </p>
+        </div>
+      )}
+      {type === 'reset' && (
+        <div>
+          <h3 className="text-center margin-top-small">Reset Password</h3>
+          <PasswordResetForm />
+          <p className="margin-top-small text-center">
+            Already have an account? <a onClick={() => toggleType('login')}>Sign in</a>
+          </p>
+        </div>
+      )}
     </>
   )
 }
