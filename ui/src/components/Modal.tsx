@@ -70,6 +70,7 @@ const ModalWrapper = styled.div`
   top: 0;
   left: 0;
   width: 100vw;
+  align-items: center;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -94,9 +95,6 @@ const ModalWrapper = styled.div`
     }
   }
   .modal__close-button {
-    padding: var(--smallestSpace);
-    position: absolute;
-    left: var(--space);
     pointer-events: all;
     z-index: 1;
   }
