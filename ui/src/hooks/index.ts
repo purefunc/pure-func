@@ -6,5 +6,15 @@ import useTheme from './useTheme'
 import useWindowWidth from './useWindowWidth'
 import useIsoLayoutEffect from './useIsoLayoutEffect'
 import useCookie from './useCookie'
+export * from './useLocalStorage'
 
-export { useScrollToTop, useClickOutside, useIsoLayoutEffect, useRouter, useScrollFreeze, useTheme, useWindowWidth, useCookie }
+export {
+  useScrollToTop,
+  useClickOutside,
+  useIsoLayoutEffect,
+  useRouter,
+  useScrollFreeze,
+  useTheme,
+  useWindowWidth,
+  useCookie,
+}

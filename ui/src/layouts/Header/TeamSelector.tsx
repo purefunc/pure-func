@@ -1,14 +1,18 @@
+import { useAuth } from 'global'
 import React from 'react'
 import { useHistory } from 'react-router-dom'
+import { useLocalStorage } from 'hooks'
 
 type Props = {
   teams: object
 }
 export function TeamSelector({ teams }: Props) {
-  let history = useHistory()
+  const history = useHistory()
+  const [teamId, setTeamId] = useLocalStorage('team_id', teams[0]._id)
 
   const handleChange = (e) => {
     const value = e.target.value
+    setTeamId(value)
     history.push(`/dashboard/teams/${value}/overview/`)
   }
 

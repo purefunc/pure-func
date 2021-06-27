@@ -83,7 +83,7 @@ export function Header() {
           {!state.isLoggedIn && <MobileMenu />}
         </div>
       </HeaderWrapper>
-      {state.isLoggedIn && <SubNav />}
+      {state.isLoggedIn && <SubNav teamId={teamId} />}
     </>
   )
 }

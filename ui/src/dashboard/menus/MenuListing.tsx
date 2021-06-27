@@ -1,69 +1,80 @@
 import React from 'react'
+import { useQuery, gql } from '@apollo/client'
+import { useParams } from 'react-router-dom'
 import { SEO } from 'utilities'
 import { DashboardLayout } from 'components'
 import { Grid } from 'styles'
 import { MenuCard } from './MenuCard'
-import { useQuery, gql } from '@apollo/client'
 
-const GET_MENUS = gql`
-  query menus {
-    menus {
-      title
-      _id
-      description
-      logo
-      categories {
+const GET_TEAM = gql`
+  query team($_id: ID!) {
+    team(_id: $_id) {
+      menus {
+        title
         _id
-        name
-        images
         description
-        price
-        notes {
+        logo
+        categories {
           _id
-          description
-        }
-        items {
-          _id
-          id
           name
+          images
           description
           price
-          images
           notes {
             _id
             description
           }
-          tags {
+          items {
             _id
+            id
             name
-            symbol
             description
+            price
+            images
+            notes {
+              _id
+              description
+            }
+            tags {
+              _id
+              name
+              symbol
+              description
+            }
+            isAvailable
           }
-          isAvailable
         }
+        bgImage
       }
-      bgImage
     }
   }
 `
 
 export function MenuListing() {
-  const title = 'My  Menus'
+  const title = 'Menus'
+  const { id } = useParams()
 
-  const { data } = useQuery(GET_MENUS)
+  const { data } = useQuery(GET_TEAM, { variables: { _id: id } })
   if (!data) return null
-  const { menus } = data
-  console.log(menus)
+  const {
+    team: { menus },
+  } = data
 
   return (
     <>
       <SEO title={title} />
       <DashboardLayout title={title}>
-        <Grid cols={[1, 1, 2]}>
-          {menus.map((menu) => (
-            <MenuCard menu={menu} key={menu._id} />
-          ))}
-        </Grid>
+        {menus.length > 0 ? (
+          <Grid cols={[1, 1, 2]}>
+            {menus.map((menu) => (
+              <MenuCard menu={menu} key={menu._id} />
+            ))}
+          </Grid>
+        ) : (
+          <div>
+            <p>Looks like your team doesn't have any menus yet</p>
+          </div>
+        )}
       </DashboardLayout>
     </>
   )
