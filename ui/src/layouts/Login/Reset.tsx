@@ -1,14 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Field } from 'components'
 
 export const PasswordResetForm = () => {
   return (
     <>
       <form>
-        <p>Submit your email to have a recovery email sent to your inbox.</p>
-        <input type="email" name="email" placeholder="email" />
-        <button className="cta" type="submit">
-          Submit
-        </button>
+        <p className="text-center">Submit your email to have a recovery email sent to your inbox.</p>
+        <Field
+          placeholder="Email"
+        />
+        <div className="text-center margins">
+          <button className="cta" type="submit">
+            Submit
+          </button>
+        </div>
       </form>
     </>
   )

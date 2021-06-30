@@ -2,8 +2,7 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
-export function SubNav() {
-  const teamId = '123'
+export function SubNav({ teamId }) {
   return (
     <NavWrapper>
       <div className="wrapper">

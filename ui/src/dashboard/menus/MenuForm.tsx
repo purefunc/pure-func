@@ -59,9 +59,9 @@ export const MenuForm = () => {
       >
         {({ isSubmitting, dirty }) => (
           <Form>
-            <Field name="title" label="Title" />
+            <Field isFormik name="title" label="Title" />
             <ErrorMessage name="title" component="div" />
-            <Field as="textarea" label="Description" name="description" />
+            <Field isFormik as="textarea" label="Description" name="description" />
             <ErrorMessage name="description" component="div" />
             <button className="cta" type="submit" disabled={isSubmitting || !dirty}>
               Submit

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Field as FormikField } from 'formik'
 
-export const Field = ({ label = '', wrapperStyle = {}, instructions = '', ...props }) => {
+export const Field = ({ isFormik = false, label = '', wrapperStyle = {}, instructions = '', ...props }) => {
   if (props.type === 'checkbox') {
     return (
       <CheckboxWrapper style={wrapperStyle}>
@@ -18,7 +18,7 @@ export const Field = ({ label = '', wrapperStyle = {}, instructions = '', ...pro
             {label && <span>{label}</span>}
             {instructions && <span className="instructions">{instructions}</span>}
           </p>
-          <FormikField className="form-input" {...props} />
+          {isFormik ? <FormikField className="form-input" {...props} /> : <input className="form-input" {...props} />}
         </label>
       </FieldWrapper>
     )

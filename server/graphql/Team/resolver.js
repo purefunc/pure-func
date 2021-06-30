@@ -12,21 +12,21 @@ module.exports = {
       return name
     },
     owner({ owner }) {
-      return userDAO.find({_id: owner})
+      return userDAO.find({ _id: owner })
     },
     users({ users }) {
-      return userDAO.find({_id: {$in: users }})
+      return userDAO.find({ _id: { $in: users } })
     },
     restaurants({ restaurants }) {
-      return restaurantDAO.find({_id: {$in: restaurants}})
+      return restaurantDAO.find({ _id: { $in: restaurants } })
     },
     menus({ menus }) {
-      return menuDAO.find({_id: menus})
+      return menuDAO.find({ _id: menus })
     },
   },
   Query: {
-    allTeams(_, args, {userIsAdmin}) {
-      if(!userIsAdmin) {
+    allTeams(_, args, { userIsAdmin }) {
+      if (!userIsAdmin) {
         throw new Error("Only admins can see this")
       }
       const teams = teamDAO.find().exec()
@@ -35,8 +35,8 @@ module.exports = {
       }
       return teams
     },
-    team(obj, args) {
-      const myTeam = teamDAO.findOne({ _id: { $eq: args.id } })
+    team(obj, { _id }) {
+      const myTeam = teamDAO.findOne({ _id: { $eq: _id } })
       if (!myTeam) {
         throw new Error("Error")
       }
@@ -70,5 +70,5 @@ module.exports = {
       }
       return myTeam
     },
-  }
+  },
 }

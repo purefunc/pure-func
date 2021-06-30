@@ -9,6 +9,7 @@ import { SubNav } from './SubNav'
 import { useLazyQuery, useQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import { useHistory, useLocation } from 'react-router-dom'
+import { TeamSelector } from './TeamSelector'
 
 const ME = gql`
   query GetMe {
@@ -18,13 +19,13 @@ const ME = gql`
       isAdmin
       teams {
         _id
+        name
       }
     }
   }
 `
 
 export function Header() {
-  const teamId = '123'
   const { state, dispatch } = useAuth()
   const history = useHistory()
   const location = useLocation()
@@ -34,6 +35,7 @@ export function Header() {
   const [checkCreds, { data: credsOnServer }] = useLazyQuery(ME, {
     fetchPolicy: 'no-cache',
   })
+  const teamId = credsOnServer?.me?.teams[0]._id
 
   // Check if user is logged in
   useEffect(() => {
@@ -72,14 +74,16 @@ export function Header() {
               to={state.isLoggedIn ? `/dashboard/teams/${teamId}/overview` : '/'}
               aria-label="home page"
             >
-              <Logo isDark={state.isLoggedIn} />
+              <Logo isDark={state.isLoggedIn} isShort />
             </NavLink>
           </h1>
+          {state.isLoggedIn && <TeamSelector teams={credsOnServer.me.teams} />}
+
           <Nav isLoggedIn={state.isLoggedIn} />
           {!state.isLoggedIn && <MobileMenu />}
         </div>
       </HeaderWrapper>
-      {state.isLoggedIn && <SubNav />}
+      {state.isLoggedIn && <SubNav teamId={teamId} />}
     </>
   )
 }

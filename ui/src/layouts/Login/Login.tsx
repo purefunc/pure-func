@@ -4,6 +4,7 @@ import gql from 'graphql-tag'
 import Cookies from 'js-cookie'
 import { useHistory } from 'react-router-dom'
 import { useAuth, Types } from 'global'
+import { Field } from 'components'
 
 const LOGIN = gql`
   mutation CheckCreds($username: String!, $password: String!) {
@@ -60,24 +61,25 @@ export const LoginForm = ({ closeAction = () => null }: Props) => {
           closeAction()
         }}
       >
-        <input
+        <Field
+          label="Username"
           type="text"
           name="username"
           value={username}
-          placeholder="Username"
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <input
+          onChange={(e) => setUsername(e.target.value)} />
+        <Field
+          label="Password"
           type="password"
           name="password"
           value={password}
-          placeholder="Password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="cta" type="submit">
-          {loginLoading ? 'Loading...' : 'Login'}
-        </button>
-        {loginError && <span>{loginError.message}</span>}
+        <div className="text-center margins">
+          <button className="cta" type="submit">
+            {loginLoading ? 'Loading...' : 'Login'}
+          </button>
+            {loginError && <span>{loginError.message}</span>}
+        </div>
       </form>
     </>
   )
