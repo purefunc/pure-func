@@ -3,13 +3,14 @@ import React from 'react'
 import { Formik, Form, ErrorMessage } from 'formik'
 import { Field } from 'components'
 
-export const MenuForm = ({ onSubmit, data }) => {
+export const MenuForm = ({ onSubmit, menu }) => {
+  console.log('data', menu)
   const initialValues = {
-    title: data?.title || '',
-    description: data?.description || '',
-    bgImage: data?.bgImage || '',
-    logo: data?.logo || '',
-    categories: data?.categories || [],
+    title: menu?.title || '',
+    description: menu?.description || '',
+    bgImage: menu?.bgImage || '',
+    logo: menu?.logo || '',
+    categories: menu?.categories || [],
   }
 
   return (
@@ -34,7 +35,7 @@ export const MenuForm = ({ onSubmit, data }) => {
             <Field isFormik as="textarea" label="Description" name="description" />
             <ErrorMessage name="description" component="div" />
             <button className="cta" type="submit" disabled={isSubmitting || !dirty}>
-              {data!! ? 'Update' : 'Create'} Menu
+              {menu ? 'Update' : 'Create'} Menu
             </button>
           </Form>
         )}

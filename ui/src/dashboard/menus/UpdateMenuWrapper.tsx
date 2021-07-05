@@ -56,11 +56,14 @@ export function UpdateMenuWrapper() {
 
   const title = 'Update Menu'
 
+  if (!data) return null
+  const { menu } = data
+
   return (
     <>
       <SEO title={title} />
       <DashboardLayout title={title}>
-        <MenuForm onSubmit={onSubmit} data={data} />
+        <MenuForm onSubmit={onSubmit} menu={menu} />
       </DashboardLayout>
     </>
   )
