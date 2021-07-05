@@ -1,8 +1,9 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
+import { useMutation, gql } from '@apollo/client'
 import { SEO } from 'utilities'
 import { DashboardLayout } from 'components'
 import { MenuForm } from './MenuForm'
-import { useMutation, gql } from '@apollo/client'
 
 const CREATE_MENU = gql`
   mutation createMenu($menu: MenuInput!) {
@@ -11,6 +12,7 @@ const CREATE_MENU = gql`
       description
       logo
       bgImage
+      _id
     }
   }
 `
@@ -24,6 +26,7 @@ type MenuInput = {
 }
 
 export function CreateMenuWrapper() {
+  const history = useHistory()
   const title = 'Create Menu'
   const [createMenu] = useMutation(CREATE_MENU, {
     refetchQueries: ['menus'],
@@ -31,12 +34,15 @@ export function CreateMenuWrapper() {
 
   const onSubmit = (data: MenuInput) => {
     {
-      console.log('data', data)
       createMenu({
         variables: { menu: data },
-      }).catch((e) => {
-        console.error(e)
       })
+        .then((result) => {
+          history.push(`/dashboard/teams/${result.data.createMenu._id}/overview`)
+        })
+        .catch((e) => {
+          console.error(e)
+        })
     }
   }
 

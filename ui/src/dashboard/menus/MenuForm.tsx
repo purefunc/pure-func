@@ -3,8 +3,7 @@ import React from 'react'
 import { Formik, Form, ErrorMessage } from 'formik'
 import { Field } from 'components'
 
-export const MenuForm = ({ onSubmit, menu }) => {
-  console.log('data', menu)
+export const MenuForm = ({ onSubmit, menu = null }) => {
   const initialValues = {
     title: menu?.title || '',
     description: menu?.description || '',
