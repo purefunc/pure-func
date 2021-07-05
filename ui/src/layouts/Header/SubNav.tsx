@@ -6,6 +6,9 @@ export function SubNav({ teamId }) {
   return (
     <NavWrapper>
       <div className="wrapper">
+        <NavLink className="nav-link" to={`/dashboard/teams/${teamId}/overview`}>
+          Overview
+        </NavLink>
         {/* <NavLink className="nav-link" to={`/dashboard/teams/${teamId}/restaurants`}>
           Restaurants
         </NavLink> */}

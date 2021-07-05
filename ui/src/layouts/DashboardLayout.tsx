@@ -21,7 +21,7 @@ import {
 } from '../dashboard'
 import { useLocalStorage } from 'hooks'
 
-// TODO Make dashboard 4040 page and have redirect go to teams overview page of first team in list
+// TODO Make dashboard 404 page and have redirect go to teams overview page of first team in list
 
 const DashboardLayout = () => {
   const [teamId] = useLocalStorage('team_id', '')
