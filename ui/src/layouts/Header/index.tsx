@@ -57,9 +57,9 @@ export function Header() {
         },
       })
       setIsCredsProcessed(true)
-      // Redirect to Dashboard if at home
+      // Redirect to Team Overview if at home
       if (!location.pathname.startsWith('/dashboard')) {
-        history.push('/dashboard')
+        history.push(`/dashboard/teams/${teamId}/overview`)
       }
     }
   }, [credsOnServer, isCredsProcessed, dispatch])
