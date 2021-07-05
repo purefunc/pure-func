@@ -24,7 +24,7 @@ module.exports = `
 
   extend type Mutation {
     createMenu(menu: MenuInput!): Menu
-    editMenu(menu: MenuInput!, id: ID!): Menu
+    updateMenu(menu: MenuInput!, id: ID!): Menu
     deleteMenu(_id: ID!): DeleteResponse
     addCategoryToMenu(categoryId: ID!, menuId: ID!): Boolean
     removeCategoryFromMenu(categoryId: ID!, menuId: ID!): Boolean

@@ -43,7 +43,6 @@ export function MenuWrapper() {
     notes: [note, note, note],
     tags: [tag, tag],
     isAvailable: true, // If false, greyed out and says 'currently not available'
-    // TODO: Add isHidden to determine if item should be hidden from menu
   }
   const category = {
     name: 'Appetizers',

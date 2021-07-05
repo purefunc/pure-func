@@ -7,7 +7,8 @@ import {
   // TeamsMembers,
   MenuListing,
   MenuWrapper,
-  MenuFormWrapper,
+  CreateMenuWrapper,
+  UpdateMenuWrapper,
   // SiteListing,
   // SiteWrapper,
   // SiteFormWrapper,
@@ -41,8 +42,8 @@ const DashboardLayout = () => {
       {/* Menus */}
       <Route exact path="/dashboard/teams/:id/menus" component={MenuListing} />
       <Route exact path="/dashboard/menus/:id" component={MenuWrapper} />
-      <Route exact path="/dashboard/menus/:id/edit" component={MenuFormWrapper} />
-      <Route exact path="/dashboard/new/menu" component={MenuFormWrapper} />
+      <Route exact path="/dashboard/menus/:id/edit" component={UpdateMenuWrapper} />
+      <Route exact path="/dashboard/new/menu" component={CreateMenuWrapper} />
       {/* Sites */}
       {/* <Route exact path="/dashboard/teams/:id/sites" component={SiteListing} />
     <Route exact path="/dashboard/sites/:id" component={SiteWrapper} />
