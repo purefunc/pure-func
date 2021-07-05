@@ -27,7 +27,6 @@ const ME = gql`
 
 export function Header() {
   const { state, dispatch } = useAuth()
-  console.log('state', state)
   const history = useHistory()
   const location = useLocation()
   const [isCredsChecked, setIsCredsChecked] = useState(false)
