@@ -17,7 +17,7 @@ export function TeamSelector({ teams }: Props) {
   }
 
   return (
-    <select onChange={handleChange} style={{ maxWidth: '200px' }}>
+    <select onChange={handleChange} style={{ maxWidth: '200px' }} defaultValue={teamId}>
       {teams.map(({ _id, name }) => (
         <option key={_id} value={_id}>
           {name}
