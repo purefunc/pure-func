@@ -6,7 +6,7 @@ import { useAuth, Types } from 'global'
 import { Nav } from './Nav'
 import { MobileMenu } from './MobileMenu'
 import { SubNav } from './SubNav'
-import { useLazyQuery, useQuery } from '@apollo/react-hooks'
+import { useLazyQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import { useHistory, useLocation } from 'react-router-dom'
 import { TeamSelector } from './TeamSelector'
@@ -27,6 +27,7 @@ const ME = gql`
 
 export function Header() {
   const { state, dispatch } = useAuth()
+  console.log('state', state)
   const history = useHistory()
   const location = useLocation()
   const [isCredsChecked, setIsCredsChecked] = useState(false)

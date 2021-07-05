@@ -5,6 +5,7 @@ type InitialStateType = {
   username: string
   isLoggedIn: boolean
   isAdmin: boolean
+  email: string
 }
 
 type ActionMap<M extends { [index: string]: any }> = {
@@ -39,6 +40,7 @@ export const initialAuthValues = {
   username: '',
   isLoggedIn: false,
   isAdmin: false,
+  email: '',
 }
 
 export const AuthContext = createContext<{

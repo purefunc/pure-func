@@ -20,6 +20,12 @@ module.exports = `
     me: User
   }
 
+  input UserInput {
+    username: String!
+    displayName: String
+    email: String
+  }
+
   extend type Mutation {
     createUser(
       username: String!
@@ -29,9 +35,7 @@ module.exports = `
       isAdmin: Boolean
     ): Auth
     updateUser(
-      username: String
-      displayName: String
-      email: String
+      user: UserInput
     ): User
     editUser(
       _id: ID!
