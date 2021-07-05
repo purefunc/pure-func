@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client'
-import { useParams } from 'react-router-dom'
+import { useParams, NavLink } from 'react-router-dom'
 import { SEO } from 'utilities'
 import { DashboardLayout } from 'components'
 import { Grid } from 'styles'
@@ -73,6 +73,13 @@ export function MenuListing() {
         ) : (
           <div>
             <p>Looks like your team doesn't have any menus yet</p>
+            <NavLink
+              className="dashboard-nav-link cta cta--small cta--ghost"
+              to="/dashboard/new/menu"
+              aria-label="Menus"
+            >
+              + Add Menu
+            </NavLink>
           </div>
         )}
       </DashboardLayout>

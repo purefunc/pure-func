@@ -6,7 +6,7 @@ import { useAuth, Types } from 'global'
 import { Nav } from './Nav'
 import { MobileMenu } from './MobileMenu'
 import { SubNav } from './SubNav'
-import { useLazyQuery, useQuery } from '@apollo/react-hooks'
+import { useLazyQuery } from '@apollo/react-hooks'
 import gql from 'graphql-tag'
 import { useHistory, useLocation } from 'react-router-dom'
 import { TeamSelector } from './TeamSelector'
@@ -57,9 +57,9 @@ export function Header() {
         },
       })
       setIsCredsProcessed(true)
-      // Redirect to Dashboard if at home
+      // Redirect to Team Overview if at home
       if (!location.pathname.startsWith('/dashboard')) {
-        history.push('/dashboard')
+        history.push(`/dashboard/teams/${teamId}/overview`)
       }
     }
   }, [credsOnServer, isCredsProcessed, dispatch])

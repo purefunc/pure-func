@@ -52,6 +52,10 @@ h6 {
   line-height: var(--headingLineHeight);
 }
 
+.title {
+  text-transform: capitalize;
+}
+
 .text {
   /* --- Utility Classes --- */
   &-center {

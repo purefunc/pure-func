@@ -6,6 +6,9 @@ export function SubNav({ teamId }) {
   return (
     <NavWrapper>
       <div className="wrapper">
+        <NavLink className="nav-link" to={`/dashboard/teams/${teamId}/overview`}>
+          Overview
+        </NavLink>
         {/* <NavLink className="nav-link" to={`/dashboard/teams/${teamId}/restaurants`}>
           Restaurants
         </NavLink> */}
@@ -19,7 +22,7 @@ export function SubNav({ teamId }) {
           PID Tags
         </NavLink> */}
         <NavLink className="nav-link" to={`/dashboard/teams/${teamId}/billing`}>
-          Team Billing
+          Billing
         </NavLink>
         <NavLink className="nav-link" to={`/dashboard/teams/${teamId}/settings`}>
           Team Settings

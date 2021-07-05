@@ -17,6 +17,10 @@ module.exports = `
     teamsForRestaurant(restaurantId: String!): [Team]
   }
 
+  input TeamInput {
+    name: String
+  }
+
   extend type Mutation {
     createTeam(
       name: String
@@ -24,9 +28,8 @@ module.exports = `
       users: [String]
       restaurants: [String]
     ): Team
-    editTeam(
-      _id: ID!
-      name: String
+    updateTeam(
+      team: TeamInput
     ): Team
     deleteTeam(
       _id: ID!

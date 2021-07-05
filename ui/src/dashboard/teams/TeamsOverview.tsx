@@ -1,14 +1,30 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
+import { useQuery, gql } from '@apollo/client'
 import { SEO } from 'utilities'
 import { DashboardLayout } from 'components'
 
+const GET_TEAM = gql`
+  query team($_id: ID!) {
+    team(_id: $_id) {
+      name
+    }
+  }
+`
+
 export function TeamsOverview() {
-  const title = 'Teams Overview'
+  const { id } = useParams()
+  const { data } = useQuery(GET_TEAM, { variables: { _id: id } })
+
+  if (!data) return null
+  const { team } = data
+
+  const title = `${team.name || 'Teams'} Overview`
   return (
     <>
       <SEO title={title} />
       <DashboardLayout title={title}>
-        <p>I'm the teams overview</p>
+        <p>I'm the teams overview for {team.name}</p>
       </DashboardLayout>
     </>
   )
