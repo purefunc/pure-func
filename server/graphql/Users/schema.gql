@@ -32,7 +32,12 @@ module.exports = `
       password: String!
       displayName: String
       email: String!
-      isAdmin: Boolean
+    ): Auth
+    createAdmin(
+      username: String!
+      password: String!
+      displayName: String
+      email: String!
     ): Auth
     updateUser(
       user: UserInput
