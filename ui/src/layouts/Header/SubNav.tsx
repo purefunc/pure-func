@@ -22,7 +22,7 @@ export function SubNav({ teamId }) {
           PID Tags
         </NavLink> */}
         <NavLink className="nav-link" to={`/dashboard/teams/${teamId}/billing`}>
-          Team Billing
+          Billing
         </NavLink>
         <NavLink className="nav-link" to={`/dashboard/teams/${teamId}/settings`}>
           Team Settings
