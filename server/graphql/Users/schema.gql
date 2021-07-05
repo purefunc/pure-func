@@ -32,7 +32,12 @@ module.exports = `
       password: String!
       displayName: String
       email: String!
-      isAdmin: Boolean
+    ): Auth
+    createAdmin(
+      username: String!
+      password: String!
+      displayName: String
+      email: String!
     ): Auth
     updateUser(
       user: UserInput
@@ -42,8 +47,7 @@ module.exports = `
       username: String
       password: String
       displayName: String
-      email: String
-      isAdmin: Boolean): User
+      email: String): User
     login(username: String!, password: String): Auth
     changePassword(oldPass: String!, newPass: String!): Boolean
   }
