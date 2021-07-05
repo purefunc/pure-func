@@ -56,6 +56,24 @@ module.exports = {
         return false
       }
     },
+    addMenuToTeam: async (_, args) => {
+      try {
+        await teamDAO.findByIdAndUpdate(args.teamId, { $addToSet: { menus: args.menuId } }).exec()
+        return true
+      } catch (e) {
+        logger.log("warn", "addMenuToTeam error", e)
+        return false
+      }
+    },
+    removeMenuFromTeam: async (_, args) => {
+      try {
+        await teamDAO.findByIdAndUpdate(args.teamId, { $pull: { menus: args.menuId } }).exec()
+        return true
+      } catch (e) {
+        logger.log("warn", "removeMenuFromTeam error", e)
+        return false
+      }
+    },
     addUserToTeam: async (_, args) => {
       try {
         await teamDAO.findByIdAndUpdate(args.teamId, { $addToSet: { users: args.userId } }).exec()

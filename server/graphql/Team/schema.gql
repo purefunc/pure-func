@@ -42,6 +42,14 @@ module.exports = `
       teamId: ID!
       restaurantId: ID!,
     ): Boolean
+    addMenuToTeam(
+      teamId: ID!
+      menuId: ID!
+    ): Boolean
+    removeMenuFromTeam(
+      teamId: ID!
+      menuId: ID!,
+    ): Boolean
     addUserToTeam(
       teamId: ID!
       userId: ID!
