@@ -83,7 +83,6 @@ module.exports = {
         if (args.username && args.username.length > 0) userData.username = args.username
         if (args.displayName && args.displayName.length > 0) userData.displayName = args.displayName
         if (args.email && args.email.length > 0) userData.email = args.email
-        userData.isAdmin = args.isAdmin
 
         const res = await userDAO.findByIdAndUpdate(args._id, userData, {
           new: true,
