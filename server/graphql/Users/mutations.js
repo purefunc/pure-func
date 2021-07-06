@@ -37,6 +37,28 @@ module.exports = {
         const userData = args
         userData.password = bcrypt.hashSync(args.password, 10)
         userData.displayName = args.displayName || args.username
+        userData.isAdmin = false
+        const res = await userDAO.create(userData)
+        return {
+          token: jsonwebtoken.sign({ id: res._id, username: res.username }, process.env.JWT_SECRET, {
+            expiresIn: "1d",
+          }),
+          user: res,
+        }
+      } catch (e) {
+        throw new Error("Error creating account")
+      }
+    },
+    createAdmin: async (_, args, { userIsAdmin }) => {
+      if (!userIsAdmin) {
+        throw new Error("Only admins can make this change")
+      }
+
+      try {
+        const userData = args
+        userData.password = bcrypt.hashSync(args.password, 10)
+        userData.displayName = args.displayName || args.username
+        userData.isAdmin = true
         const res = await userDAO.create(userData)
         return {
           token: jsonwebtoken.sign({ id: res._id, username: res.username }, process.env.JWT_SECRET, {
@@ -61,7 +83,6 @@ module.exports = {
         if (args.username && args.username.length > 0) userData.username = args.username
         if (args.displayName && args.displayName.length > 0) userData.displayName = args.displayName
         if (args.email && args.email.length > 0) userData.email = args.email
-        userData.isAdmin = args.isAdmin
 
         const res = await userDAO.findByIdAndUpdate(args._id, userData, {
           new: true,

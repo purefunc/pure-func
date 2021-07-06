@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { useQuery, gql } from '@apollo/client'
 import { SEO } from 'utilities'
 import { Grid } from 'styles'
+import { DashboardLayout } from 'components'
 import { MenuCategory } from './MenuCategory'
 import { RestaurantNav } from '../../layouts/Header/RestaurantNav'
 
@@ -23,6 +24,7 @@ export function MenuWrapper() {
   const { id } = useParams()
   const { data } = useQuery(GET_MENU, { variables: { _id: id } })
   if (!data) return null
+  console.log('data', data)
   const { menu } = data
 
   const note = {
@@ -43,7 +45,6 @@ export function MenuWrapper() {
     notes: [note, note, note],
     tags: [tag, tag],
     isAvailable: true, // If false, greyed out and says 'currently not available'
-    // TODO: Add isHidden to determine if item should be hidden from menu
   }
   const category = {
     name: 'Appetizers',
@@ -56,9 +57,19 @@ export function MenuWrapper() {
 
   const categories = [category, category, category]
 
+  if (!menu)
+    return (
+      <DashboardLayout>
+        <div className="margin-auto text-center">
+          <h3 className="margin-top-0 margin-auto">Menu could not be found</h3>
+          <p className="margin-auto">You might not have access to this or the ID could be expired</p>
+        </div>
+      </DashboardLayout>
+    )
+
   return (
     <>
-      <SEO title={`Menu - ${menu.title}`} />
+      <SEO title={`Menu - ${menu?.title}`} />
       <RestaurantNav name="RESTAURANT NAME" logo="" />
       <MenuLayout>
         <div className="menu-header">

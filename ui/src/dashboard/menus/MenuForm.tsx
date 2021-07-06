@@ -1,39 +1,16 @@
 // Render Prop
 import React from 'react'
-import { Formik, Form, ErrorMessage, FieldArray } from 'formik'
-import { useMutation, gql } from '@apollo/client'
+import { Formik, Form, ErrorMessage } from 'formik'
 import { Field } from 'components'
 
-const CREATE_MENU = gql`
-  mutation createMenu($menu: MenuInput!) {
-    createMenu(menu: $menu) {
-      title
-      description
-      logo
-      bgImage
-    }
-  }
-`
-
-// TODO Refactor to graphql-codegen
-type MenuInput = {
-  title: string
-  description: string
-  logo: string
-  bgImage: string
-}
-
-export const MenuForm = () => {
+export const MenuForm = ({ onSubmit, menu = null }) => {
   const initialValues = {
-    title: '',
-    description: '',
-    bgImage: '',
-    logo: '',
-    categories: [],
+    title: menu?.title || '',
+    description: menu?.description || '',
+    bgImage: menu?.bgImage || '',
+    logo: menu?.logo || '',
+    categories: menu?.categories || [],
   }
-  const [createMenu] = useMutation(CREATE_MENU, {
-    refetchQueries: ['menus'],
-  })
 
   return (
     <div>
@@ -48,14 +25,7 @@ export const MenuForm = () => {
         //   }
         //   return errors
         // }}
-        onSubmit={(data: MenuInput) => {
-          console.log('data', data)
-          createMenu({
-            variables: { menu: data },
-          }).catch((e) => {
-            console.error(e)
-          })
-        }}
+        onSubmit={onSubmit}
       >
         {({ isSubmitting, dirty }) => (
           <Form>
@@ -64,7 +34,7 @@ export const MenuForm = () => {
             <Field isFormik as="textarea" label="Description" name="description" />
             <ErrorMessage name="description" component="div" />
             <button className="cta" type="submit" disabled={isSubmitting || !dirty}>
-              Submit
+              {menu ? 'Update' : 'Create'} Menu
             </button>
           </Form>
         )}
