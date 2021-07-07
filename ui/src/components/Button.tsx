@@ -19,7 +19,7 @@ const outlineButtonStyle = css`
   --buttonHoverColor: var(--primaryColor);
 `
 
-const dashboardWhiteButton = css`
+const dashboardWhiteButtonStyle = css`
   --buttonTextColor: var(--white);
   --buttonBg: var(--white);
   --buttonShadow: var(--elevation-2);
@@ -66,10 +66,10 @@ export const Button = styled.button<{
 }>`
   ${baseButtonStyle};
   ${({ color }) => {
-    if (color === 'dashboard') return dashboardWhiteButton
+    if (color === 'dashboard') return dashboardWhiteButtonStyle
     if (color === 'outline') return outlineButtonStyle
     if (color === 'white') return whiteButtonStyle
     if (color === 'gradient') return gradientButtonStyle
-    return whiteSmallButton
+    return whiteButtonStyle
   }};
 `

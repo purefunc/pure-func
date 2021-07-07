@@ -1,6 +1,6 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client'
-import { useParams, NavLink, Link } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { SEO } from 'utilities'
 import { DashboardLayout } from 'components'
 import { Button } from 'components/Button'

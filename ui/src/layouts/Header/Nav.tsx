@@ -56,7 +56,7 @@ export function Nav({ isLoggedIn = false }) {
         <Button color="outline" onClick={openModal}>
           Sign In
         </Button>
-        <Button color="white" as={Link} to="/contact" className="contact">
+        <Button color="white" as={Link} to="/contact" className="contact-button">
           Contact Us
         </Button>
         <Modal isActive={isModalOpen} closeAction={closeModal}>
@@ -71,9 +71,6 @@ export function Nav({ isLoggedIn = false }) {
       <Button color="dashboard" as={Link} to="/dashboard/new/menu">
         + New Menu
       </Button>
-      {/* < className="dashboard-nav-link cta cta--small cta--ghost" to="/dashboard/new/menu" aria-label="Menus">
-       
-      </> */}
       {/* <Dropdown
         menuIcon={<button className="cta cta--small cta--ghost">New +</button>}
         renderMenuItems={(toggle) => (
@@ -111,20 +108,12 @@ const NavWrapper = styled.nav`
     $isLoggedIn &&
     `justify-content: flex-end;
   `};
-  .contact {
+  .contact-button {
     margin-left: var(--smallSpace);
   }
   .user-nav {
     > * + * {
       margin-left: var(--space);
-    }
-    .dashboard-nav-link {
-      display: block;
-      height: 45px;
-      &:hover {
-        color: var(--button);
-        border-color: var(--purple);
-      }
     }
   }
 `

@@ -18,8 +18,8 @@ export default function SitesPage() {
             <p>
               <i>* Currently in beta but still accepting clients</i>
             </p>
-            <Button color='white' as={Link} to="/contact">
-            Get Beta Access *
+            <Button color="white" as={Link} to="/contact">
+              Get Beta Access
             </Button>
           </div>
         </div>
@@ -70,7 +70,7 @@ export default function SitesPage() {
             Potential client? Curious new developer? #1 Pure Func fan? As long as you're not a robot, we want to hear
             from you! Fill out our contact form, and a member of our team will be in touch as soon as possible.
           </p>
-          <Button color='white' as={Link} to="/contact">
+          <Button color="white" as={Link} to="/contact">
             Contact Us
           </Button>
         </div>

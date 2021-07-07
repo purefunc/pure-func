@@ -24,8 +24,8 @@ export default function DigitalMenuPage() {
             <p>
               <i>* Currently in beta but still accepting clients</i>
             </p>
-            <Button color='white' as={Link} to="/contact">
-              Get Beta Access *
+            <Button color="white" as={Link} to="/contact">
+              Get Beta Access
             </Button>
           </div>
           <QrCodes />
@@ -139,7 +139,7 @@ export default function DigitalMenuPage() {
       <Section theme="funky" isSkewed>
         <div className="card card--deep card--padded text-center margin-auto">
           <h2>Ready to ride the QR wave?</h2>
-          <Button color='white' as={Link} to="/contact">
+          <Button color="white" as={Link} to="/contact">
             Contact Us
           </Button>
         </div>

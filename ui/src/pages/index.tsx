@@ -47,7 +47,7 @@ export default function HomePage() {
                 right into your stunning site.
               </p>
               <Button color="gradient" as={Link} to="/services">
-                Learn more
+                Learn More
               </Button>
             </div>
             <img src={ecommerceImg} alt="E-commerce" className="margins" />
