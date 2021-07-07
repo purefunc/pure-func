@@ -21,7 +21,7 @@ export default function ServicesPage() {
           <div className="mobile-reverse-item">
             <h1 className="margin-top-0">{title}</h1>
             <p>{description}</p>
-            <Button as={Link} to="/contact">
+            <Button color="white" as={Link} to="/contact">
               Contact Us
             </Button>
           </div>
@@ -247,7 +247,7 @@ export default function ServicesPage() {
             </div>
           </div>
           <div className="text-center margins">
-            <Button color='gradient' as={Link} to="/contact">
+            <Button color="gradient" as={Link} to="/contact">
               Contact Us
             </Button>
           </div>

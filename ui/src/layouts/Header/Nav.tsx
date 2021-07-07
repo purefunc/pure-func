@@ -53,10 +53,10 @@ export function Nav({ isLoggedIn = false }) {
         </NavLink>
       </div>
       <div>
-        <Button color='outline' onClick={openModal}>
+        <Button color="outline" onClick={openModal}>
           Sign In
         </Button>
-        <Button color='white' as={Link} to='/contact' className="contact">
+        <Button color="white" as={Link} to="/contact" className="contact">
           Contact Us
         </Button>
         <Modal isActive={isModalOpen} closeAction={closeModal}>
@@ -68,7 +68,7 @@ export function Nav({ isLoggedIn = false }) {
 
   const UserNavBar = (
     <div className="user-nav">
-      <Button color='white' as={Link} to='/dashboard/new/menu' className="dashboard-nav-link">
+      <Button color="dashboard" as={Link} to="/dashboard/new/menu">
         + New Menu
       </Button>
       {/* < className="dashboard-nav-link cta cta--small cta--ghost" to="/dashboard/new/menu" aria-label="Menus">
@@ -119,11 +119,10 @@ const NavWrapper = styled.nav`
       margin-left: var(--space);
     }
     .dashboard-nav-link {
-      color: var(--textColor);
       display: block;
       height: 45px;
       &:hover {
-        color: var(--white);
+        color: var(--button);
         border-color: var(--purple);
       }
     }

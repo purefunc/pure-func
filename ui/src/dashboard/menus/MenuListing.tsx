@@ -1,8 +1,9 @@
 import React from 'react'
 import { useQuery, gql } from '@apollo/client'
-import { useParams, NavLink } from 'react-router-dom'
+import { useParams, NavLink, Link } from 'react-router-dom'
 import { SEO } from 'utilities'
 import { DashboardLayout } from 'components'
+import { Button } from 'components/Button'
 import { Grid } from 'styles'
 import { MenuCard } from './MenuCard'
 
@@ -73,13 +74,9 @@ export function MenuListing() {
         ) : (
           <div>
             <p>Looks like your team doesn't have any menus yet</p>
-            <NavLink
-              className="dashboard-nav-link cta cta--small cta--ghost"
-              to="/dashboard/new/menu"
-              aria-label="Menus"
-            >
+            <Button color="dashboard" as={Link} to="/dashboard/new/menu">
               + Add Menu
-            </NavLink>
+            </Button>
           </div>
         )}
       </DashboardLayout>
