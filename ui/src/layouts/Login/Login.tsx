@@ -5,6 +5,7 @@ import Cookies from 'js-cookie'
 import { useHistory } from 'react-router-dom'
 import { useAuth, Types } from 'global'
 import { Field } from 'components'
+import { useLocalStorage } from 'hooks'
 
 const LOGIN = gql`
   mutation CheckCreds($username: String!, $password: String!) {
@@ -35,7 +36,7 @@ export const LoginForm = ({ closeAction = () => null }: Props) => {
       username,
     },
   })
-
+  const teamId = useLocalStorage('team_id', '')
   // Authenticate from login
   useEffect(() => {
     if (loginData && loginData.login) {
@@ -57,7 +58,7 @@ export const LoginForm = ({ closeAction = () => null }: Props) => {
         onSubmit={(e) => {
           e.preventDefault()
           login()
-          history.push('/dashboard')
+          history.push(`/dashboard/teams/${teamId}/overview/`)
           closeAction()
         }}
       >
@@ -66,7 +67,8 @@ export const LoginForm = ({ closeAction = () => null }: Props) => {
           type="text"
           name="username"
           value={username}
-          onChange={(e) => setUsername(e.target.value)} />
+          onChange={(e) => setUsername(e.target.value)}
+        />
         <Field
           label="Password"
           type="password"
@@ -78,7 +80,7 @@ export const LoginForm = ({ closeAction = () => null }: Props) => {
           <button className="cta" type="submit">
             {loginLoading ? 'Loading...' : 'Login'}
           </button>
-            {loginError && <span>{loginError.message}</span>}
+          {loginError && <span>{loginError.message}</span>}
         </div>
       </form>
     </>
