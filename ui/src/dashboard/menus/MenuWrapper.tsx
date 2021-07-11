@@ -17,6 +17,36 @@ const GET_MENU = gql`
       description
       logo
       bgImage
+      categories {
+        name
+        _id
+        images
+        description
+        price
+        notes {
+          _id
+          description
+        }
+        items {
+          _id
+          id
+          name
+          description
+          price
+          images
+          notes {
+            _id
+            description
+          }
+          tags {
+            _id
+            name
+            symbol
+            description
+          }
+          isAvailable
+        }
+      }
     }
   }
 `
@@ -101,7 +131,6 @@ const MenuLayout = styled.div`
 const MenuKey = styled.ul`
   border-radius: var(--cardRadius);
   border: 1px solid var(--black);
-  max-width: 940px;
   li {
     margin: var(--space);
   }
