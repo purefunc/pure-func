@@ -18,7 +18,7 @@ query menus {
   menus {
     ...menuFields
   }
-}
+}x
 
 # Mutations
 
@@ -28,8 +28,8 @@ mutation createMenu($menu: MenuInput!) {
   }
 }
 
-mutation updateMenu($menu: MenuInput!, $id: ID!) {
-  updateMenu(menu: $menu, id: $id) {
+mutation updateMenu($menu: MenuInput!, $_id: ID!) {
+  updateMenu(menu: $menu, _id: $_id) {
     ...menuFields
   }
 }

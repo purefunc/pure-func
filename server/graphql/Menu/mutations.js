@@ -21,21 +21,16 @@ module.exports = {
         throw new Error("Error deleting menu")
       }
     },
-    updateMenu: async (_, args) => {
+    updateMenu: async (_, { menu, _id }) => {
       try {
-        const menuData = {}
-        if ((args.menu, title && args.menu.title.length > 0)) menuData.menu.title = args.menu.title
-        menuData.menu.logo = args.menu.logo || ""
-        menuData.menu.bgImage = args.menu.bgImage || ""
-
-        const res = await menuDAO.findByIdAndUpdate(args._id, menuData, {
+        const res = await menuDAO.findByIdAndUpdate(_id, menu, {
           new: true,
         })
         return res
       } catch (e) {
         logger.error("edit menu error")
         logger.error(e)
-        throw new Error("Error updating menu")
+        throw new Error(e)
       }
     },
     addCategoryToMenu: async (_, args) => {

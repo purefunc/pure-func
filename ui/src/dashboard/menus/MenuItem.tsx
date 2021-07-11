@@ -19,9 +19,7 @@ export function MenuItem({ item }) {
       {item.tags.length > 0 &&
         item.tags.map((tag) => (
           <Fragment key={tag.description}>
-            <p className="tag-symbol">
-              {tag.symbol} {tag.name}
-            </p>
+            <span className="tag-symbol">{tag.symbol}</span>
             {tag.description && <p className="tag-description">{tag.description}</p>}
           </Fragment>
         ))}
@@ -40,6 +38,9 @@ const ItemLi = styled.li`
   .item-price {
   }
   .tag-symbol {
+    & + .tag-symbol {
+      margin-left: var(--space);
+    }
   }
   .tag-description {
   }

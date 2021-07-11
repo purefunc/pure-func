@@ -7,6 +7,7 @@ import { Grid } from 'styles'
 import { DashboardLayout } from 'components'
 import { MenuCategory } from './MenuCategory'
 import { RestaurantNav } from '../../layouts/Header/RestaurantNav'
+import { menuKey } from '../../constants'
 
 const GET_MENU = gql`
   query menu($_id: ID!) {
@@ -16,6 +17,36 @@ const GET_MENU = gql`
       description
       logo
       bgImage
+      categories {
+        name
+        _id
+        images
+        description
+        price
+        notes {
+          _id
+          description
+        }
+        items {
+          _id
+          id
+          name
+          description
+          price
+          images
+          notes {
+            _id
+            description
+          }
+          tags {
+            _id
+            name
+            symbol
+            description
+          }
+          isAvailable
+        }
+      }
     }
   }
 `
@@ -30,11 +61,6 @@ export function MenuWrapper() {
   const note = {
     description: 'everything contains a ton of gluten, dairy, meat, and peanuts',
   }
-  const tag = {
-    name: 'vegan',
-    symbol: '',
-    description: 'its not real shrimp',
-  }
   const item = {
     id: 'A1', // Custom ID to tie to POS
     name: 'Shrimp poppers',
@@ -43,7 +69,7 @@ export function MenuWrapper() {
     price: '19.99',
     images: [],
     notes: [note, note, note],
-    tags: [tag, tag],
+    tags: [menuKey.vegan, menuKey.medium],
     isAvailable: true, // If false, greyed out and says 'currently not available'
   }
   const category = {
@@ -81,6 +107,14 @@ export function MenuWrapper() {
             <MenuCategory category={category} key={category.name} />
           ))}
         </Grid>
+        <h6>Key</h6>
+        <MenuKey>
+          {Object.entries(menuKey).map(([key, { symbol, name, description }]) => (
+            <li key={key}>
+              {symbol} {name} {description && `(${description})`}
+            </li>
+          ))}
+        </MenuKey>
       </MenuLayout>
     </>
   )
@@ -88,8 +122,16 @@ export function MenuWrapper() {
 
 const MenuLayout = styled.div`
   max-width: 940px;
-  margin: 0 auto;
+  margin: 0 auto var(--largestSpace);
   padding: var(--space);
   .menu-header {
+  }
+`
+
+const MenuKey = styled.ul`
+  border-radius: var(--cardRadius);
+  border: 1px solid var(--black);
+  li {
+    margin: var(--space);
   }
 `

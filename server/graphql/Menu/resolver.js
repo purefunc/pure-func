@@ -20,8 +20,8 @@ module.exports = {
     },
   },
   Query: {
-    allMenus(_, args, {userIsAdmin}) {
-      if(!userIsAdmin) {
+    allMenus(_, args, { userIsAdmin }) {
+      if (!userIsAdmin) {
         throw new Error("Only admins can see this")
       }
       const menus = menuDAO.find().exec()
@@ -41,8 +41,8 @@ module.exports = {
         console.error(e)
       }
     },
-    menuByTitle(obj, args) {
-      const myMenu = categoryDAO.findOne({ title: { $eq: args.title } })
+    menuByTitle(obj, { title }) {
+      const myMenu = categoryDAO.findOne({ title: { $eq: title } })
       if (!myMenu) {
         throw new Error("Error")
       }
