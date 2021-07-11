@@ -27,13 +27,13 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
         // }}
         onSubmit={onSubmit}
       >
-        {({ isSubmitting, dirty }) => (
+        {({ isSubmitting }) => (
           <Form>
             <Field isFormik name="title" label="Title" />
             <ErrorMessage name="title" component="div" />
             <Field isFormik as="textarea" label="Description" name="description" />
             <ErrorMessage name="description" component="div" />
-            <button className="cta" type="submit" disabled={isSubmitting || !dirty}>
+            <button className="cta" type="submit" disabled={isSubmitting}>
               {menu ? 'Update' : 'Create'} Menu
             </button>
           </Form>

@@ -6,8 +6,8 @@ import { DashboardLayout } from 'components'
 import { MenuForm } from './MenuForm'
 
 const UPDATE_MENU = gql`
-  mutation updateMenu($menu: MenuInput!) {
-    createMenu(menu: $menu) {
+  mutation updateMenu($menu: MenuInput!, $_id: ID!) {
+    updateMenu(menu: $menu, _id: $_id) {
       title
       description
       logo
@@ -39,19 +39,16 @@ type MenuInput = {
 export function UpdateMenuWrapper() {
   const { id } = useParams()
   const { data } = useQuery(GET_MENU, { variables: { _id: id } })
-  const [createMenu] = useMutation(UPDATE_MENU, {
+  const [updateMenu] = useMutation(UPDATE_MENU, {
     refetchQueries: ['menus'],
   })
 
   const onSubmit = (data: MenuInput) => {
-    {
-      console.log('data', data)
-      createMenu({
-        variables: { menu: data },
-      }).catch((e) => {
-        console.error(e)
-      })
-    }
+    updateMenu({
+      variables: { menu: data, _id: id },
+    }).catch((e) => {
+      console.error(e)
+    })
   }
 
   const title = 'Update Menu'
