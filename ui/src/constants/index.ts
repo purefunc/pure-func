@@ -1,0 +1,1 @@
+export { menuKey } from './menuKey'
