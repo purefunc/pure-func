@@ -2,13 +2,14 @@ const stripe = require('../config/stripe')
 const express = require('express')
 const router = new express.Router();
 const logger = require('../config/logger')
+const processInitialCheckout = require("../stripe/processInitialCheckout")
 
 router.post("/webhook", async (req, res) => {
   let data;
   let eventType;
 
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET
-  if(webhookSecret) {
+  if(webhookSecret && process.env.NODE_ENV === "production") {
     let event;
     let signature = req.headers['stripe-signature'];
 
@@ -32,8 +33,8 @@ router.post("/webhook", async (req, res) => {
 
   switch(eventType) {
     case 'checkout.session.completed':
-      // TODO: First time buy stuff here
       logger.log('info', "Checkout success");
+      processInitialCheckout(data.object)
       break;
     case 'invoice.paid':
       // TODO: Continued payment stuff
