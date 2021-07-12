@@ -5,7 +5,6 @@ import { TerminalScreen, Screen } from 'figures'
 import ecommerceImg from 'images/ecommerce.png'
 import lutImg from 'images/lut-scott.png'
 import { SEO } from '../utilities/SEO'
-import { GraphQLEnumType } from 'graphql'
 
 export default function HomePage() {
   const title = 'Websites That Bring The Func'
