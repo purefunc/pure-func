@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Link, NavLink } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useScrollFreeze } from 'hooks'
-import { Icon, Portal, Modal } from 'components'
+import { Icon, Portal, Modal, Button } from 'components'
 import { LoginModal } from '../Login/LoginModal'
 
 export const MobileMenu = () => {
@@ -11,8 +11,6 @@ export const MobileMenu = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
   const closeMenu = () => setIsMenuOpen(false)
-
-
 
   return (
     <>
@@ -87,9 +85,9 @@ const MenuModal = ({ isMenuOpen, closeMenu }: MenuModalProps) => {
                 Contact Us
               </Link>
 
-              <button onClick={openModal} className="cta cta--gradient">
+              <Button color="gradient" onClick={openModal}>
                 Sign In
-              </button>
+              </Button>
 
               <Modal isActive={isModalOpen} closeAction={closeModal}>
                 <LoginModal />

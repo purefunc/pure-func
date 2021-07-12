@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-router-dom'
-import { Logo, Modal } from 'components'
+import { Logo, Modal, Button } from 'components'
 import { useAuth } from 'global'
 import { LoginModal } from '../Login/LoginModal'
 
@@ -48,10 +48,12 @@ export function Footer() {
                 Contact Us
               </NavLink>
               <div>
-                <button className="cta cta--white">Join</button>
-                <button className="cta cta--white-ghost" onClick={openModal}>
+                <Button color="white" className="footer-button">
+                  Join
+                </Button>
+                <Button color="ghost" className="footer-button" onClick={openModal}>
                   Sign In
-                </button>
+                </Button>
               </div>
             </div>
           </div>
@@ -93,15 +95,12 @@ const FooterWrapper = styled.footer`
         margin-top: var(--space);
       }
     }
-    .cta + .cta {
-      margin: var(--space) 0;
+    .footer-button + .footer-button {
+      margin: var(--smallSpace) 0;
       display: block;
     }
     @media (max-width: 600px) {
       a {
-        margin-top: var(--space);
-      }
-      .cta:first-child {
         margin-top: var(--space);
       }
     }

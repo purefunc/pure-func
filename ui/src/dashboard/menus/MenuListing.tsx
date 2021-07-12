@@ -74,7 +74,7 @@ export function MenuListing() {
         ) : (
           <div>
             <p>Looks like your team doesn't have any menus yet</p>
-            <Button color="dashboard" as={Link} to="/dashboard/new/menu">
+            <Button as={Link} to="/dashboard/new/menu">
               + Add Menu
             </Button>
           </div>

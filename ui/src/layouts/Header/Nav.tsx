@@ -53,7 +53,7 @@ export function Nav({ isLoggedIn = false }) {
         </NavLink>
       </div>
       <div>
-        <Button color="outline" onClick={openModal}>
+        <Button color="ghost" onClick={openModal}>
           Sign In
         </Button>
         <Button color="white" as={Link} to="/contact" className="contact-button">
@@ -68,7 +68,7 @@ export function Nav({ isLoggedIn = false }) {
 
   const UserNavBar = (
     <div className="user-nav">
-      <Button color="dashboard" as={Link} to="/dashboard/new/menu">
+      <Button color="outline" as={Link} to="/dashboard/new/menu">
         + New Menu
       </Button>
       {/* <Dropdown

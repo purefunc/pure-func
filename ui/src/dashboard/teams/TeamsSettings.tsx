@@ -54,7 +54,7 @@ export function TeamsSettings() {
             <Form>
               <Field isFormik name="name" label="Team Name" />
               <ErrorMessage name="name" component="div" />
-              <Button color="dashboard" type="submit" disabled={isSubmitting || !dirty}>
+              <Button type="submit" disabled={isSubmitting || !dirty}>
                 Update Settings
               </Button>
             </Form>

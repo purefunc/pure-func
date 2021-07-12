@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 const whiteButtonStyle = css`
-  --buttonTextColor: var(--white);
+  --buttonTextColor: var(--primaryColor);
   --buttonBg: var(--white);
   --buttonShadow: var(--elevation-2);
   --buttonHoverBg: transparent;
@@ -9,7 +9,7 @@ const whiteButtonStyle = css`
   --buttonHoverShadow: var(--elevation-3);
   --buttonBorder: 2px solid var(--white);
 `
-const outlineButtonStyle = css`
+const ghostButtonStyle = css`
   --buttonBorder: 2px solid var(--white);
   color: var(--white);
   --buttonBg: transparent;
@@ -19,13 +19,13 @@ const outlineButtonStyle = css`
   --buttonHoverColor: var(--primaryColor);
 `
 
-const dashboardWhiteButtonStyle = css`
-  --buttonTextColor: var(--white);
-  --buttonBg: var(--white);
-  --buttonShadow: var(--elevation-2);
-  --buttonHoverColor: var(--primary);
-  --buttonHoverShadow: var(--elevation-3);
-  --buttonBorder: 2px solid var(--white);
+const outlineButtonStyle = css`
+  --buttonTextColor: var(--primaryColor);
+  --buttonBg: transparent;
+  --buttonBorder: 2px solid var(--primaryColor);
+  --buttonHoverBg: var(--primaryColor);
+  --buttonHoverColor: var(--white);
+  --buttonHoverBorderColor: var(--primaryColor);
 `
 
 const gradientButtonStyle = css`
@@ -39,13 +39,25 @@ const gradientButtonStyle = css`
 `
 
 export const baseButtonStyle = css`
-  padding: 4px 25px;
-  min-width: none;
+  --buttonTextColor: var(--white);
+  --buttonBg: var(--primaryColor);
+  --buttonBorder: none;
+  --buttonShadow: var(--elevation-2);
+  --buttonHoverBg: var(--primaryLight);
+  --buttonHoverColor: var(--white);
+  --buttonHoverShadow: var(--elevation-3);
+  --buttonPadding: 5px 15px;
+  --buttonMinWidth: 8rem;
+  --buttonPadding: 5px 15px;
+  --buttonMinWidth: 8rem;
   display: inline-block;
   text-align: center;
   appearance: none;
+  color: var(--buttonTextColor);
   background-color: var(--buttonBg);
   border: var(--buttonBorder);
+  padding: var(--buttonPadding);
+  min-width: var(--buttonMinWidth);
   border-radius: var(--buttonRadius);
   box-shadow: var(--buttonShadow);
   transition: var(--hoverTransition);
@@ -61,15 +73,22 @@ export const baseButtonStyle = css`
   }
 `
 
+export const smallButtonStyle = css`
+  --buttonPadding: 2px 15px;
+  --buttonMinWidth: none;
+  font-size: var(--smallText);
+`
+
 export const Button = styled.button<{
   color?: string
+  size?: string
 }>`
   ${baseButtonStyle};
+  ${({ size }) => size === 'small' && smallButtonStyle};
   ${({ color }) => {
-    if (color === 'dashboard') return dashboardWhiteButtonStyle
+    if (color === 'ghost') return ghostButtonStyle
     if (color === 'outline') return outlineButtonStyle
     if (color === 'white') return whiteButtonStyle
     if (color === 'gradient') return gradientButtonStyle
-    return whiteButtonStyle
   }};
 `
