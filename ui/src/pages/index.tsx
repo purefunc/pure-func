@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Section, LogoStrip, Icon } from 'components'
-import { Button } from 'components/Button'
+import { Section, LogoStrip, Icon, Button } from 'components'
 import { TerminalScreen, Screen } from 'figures'
 import ecommerceImg from 'images/ecommerce.png'
 import lutImg from 'images/lut-scott.png'

@@ -3,8 +3,7 @@ import { useMutation, useQuery, gql } from '@apollo/client'
 import { Formik, Form, ErrorMessage } from 'formik'
 import { SEO } from 'utilities'
 import { useParams, Link } from 'react-router-dom'
-import { DashboardLayout, Field } from 'components'
-import { Button } from 'components/Button'
+import { DashboardLayout, Field, Button } from 'components'
 
 const UPDATE_TEAM = gql`
   mutation updateTeam($team: UserInput!) {

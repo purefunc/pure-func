@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from 'utilities'
-import { Section, Icon } from 'components'
-import { Button } from 'components/Button'
+import { Section, Icon, Button } from 'components'
 
 export default function SitesPage() {
   const title = 'One Page Website Builder'
