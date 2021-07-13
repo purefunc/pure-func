@@ -1,5 +1,6 @@
 const categoryDAO = require("../../models/category")
 const menuDAO = require("../../models/menu")
+const teamDAO = require("../../models/team")
 
 module.exports = {
   Menu: {
@@ -17,6 +18,9 @@ module.exports = {
     },
     categories({ categories }) {
       return categoryDAO.find({ _id: categories })
+    },
+    team({ team }) {
+      return teamDAO.find({ _id: team })
     },
   },
   Query: {
