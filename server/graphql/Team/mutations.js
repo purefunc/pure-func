@@ -1,5 +1,6 @@
 const teamDAO = require("../../models/team")
 const userDAO = require("../../models/user")
+const menuDAO = require("../../models/menu")
 const logger = require("../../config/logger")
 
 module.exports = {
@@ -59,6 +60,7 @@ module.exports = {
     addMenuToTeam: async (_, args) => {
       try {
         await teamDAO.findByIdAndUpdate(args.teamId, { $addToSet: { menus: args.menuId } }).exec()
+        await menuDAO.findByIdAndUpdate(args.menuId, {team: teamId}).exec()
         return true
       } catch (e) {
         logger.log("warn", "addMenuToTeam error", e)
