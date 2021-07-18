@@ -12,6 +12,7 @@ const CREATE_MENU = gql`
       description
       logo
       bgImage
+      team
       _id
     }
   }

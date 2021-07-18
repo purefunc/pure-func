@@ -39,7 +39,7 @@ const ItemLi = styled.li`
   }
   .tag-symbol {
     & + .tag-symbol {
-      margin-left: var(--space);
+      margin-left: var(--menuSpace);
     }
   }
   .tag-description {

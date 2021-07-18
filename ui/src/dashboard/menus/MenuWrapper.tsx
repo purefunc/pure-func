@@ -94,10 +94,10 @@ export function MenuWrapper() {
     )
 
   return (
-    <>
+    <Menu>
       <SEO title={`Menu - ${menu?.title}`} />
       <RestaurantNav name="RESTAURANT NAME" logo="" />
-      <MenuLayout>
+      <MenuLayout className="menu-layout">
         <div className="menu-header">
           <h1>{menu.title}</h1>
           {menu.description && <h4>{menu.description}</h4>}
@@ -116,22 +116,58 @@ export function MenuWrapper() {
           ))}
         </MenuKey>
       </MenuLayout>
-    </>
+    </Menu>
   )
 }
 
+const Menu = styled.div`
+  --menuMaxWidth: 940px;
+  --menuBgColor: #fff;
+  --menuColor: #000;
+  --menuHeaderColor: #000;
+  --menuLineColor: #000;
+  --menuRadius: 0;
+  --menuBaseFontSize: 1em;
+  --menuFontScale: 1.25;
+  --menuBaseSpaceSize: 1em;
+  --menuSpaceScale: 1.5;
+  --menuLine: 1px solid var(--menuLineColor);
+  --menuFontFamily: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --menuSpace: var(--menuBaseSpaceSize);
+  --menuLargeSpace: calc(var(--menuSpace) * var(--menuSpaceScale));
+  --menuLargestSpace: calc(var(--menuLargeSpace) * var(--menuSpaceScale));
+  --menuSmallSpace: calc(var(--menuBaseSpaceSize) / var(--menuSpaceScale));
+  --menuSmallestSpace: calc(var(--menuSmallSpace) / var(--menuSpaceScale));
+
+  color: var(--menuColor);
+  background-color: var(--menuBgColor);
+  font-size: var(--menuBaseFontSize);
+  font-family: var(--menuFontFamily);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--menuHeaderColor);
+    font-family: var(--menuFontFamily);
+  }
+`
+
 const MenuLayout = styled.div`
-  max-width: 940px;
-  margin: 0 auto var(--largestSpace);
-  padding: var(--space);
+  max-width: var(--menuMaxWidth);
+  margin: 0 auto var(--menuLargestSpace);
+  padding: var(--menuSpace);
+
   .menu-header {
   }
 `
 
 const MenuKey = styled.ul`
-  border-radius: var(--cardRadius);
-  border: 1px solid var(--black);
+  border-radius: var(--menuRadius);
+  border: var(--menuLine);
   li {
-    margin: var(--space);
+    margin: var(--menuSpace);
   }
 `

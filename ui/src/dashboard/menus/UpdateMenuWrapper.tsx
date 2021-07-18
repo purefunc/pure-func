@@ -12,6 +12,7 @@ const UPDATE_MENU = gql`
       description
       logo
       bgImage
+      team
     }
   }
 `
@@ -24,6 +25,7 @@ const GET_MENU = gql`
       description
       logo
       bgImage
+      team
     }
   }
 `

@@ -27,9 +27,11 @@ export function MenuCategory({ category }) {
 }
 
 const CategoryLi = styled.li`
-  border: var(--line);
-  border-radius: var(--cardRadius);
-  padding: var(--space);
+  border: var(--menuLine);
+  border-radius: var(--menuRadius);
+  padding: var(--menuSpace);
+  font-family: var(--menuFontFamily);
+
   .category-name {
   }
   .category-price {
