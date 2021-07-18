@@ -1,4 +1,8 @@
 export const menuKey = {
+  glutenFree: {
+    name: 'Gluten Free',
+    symbol: 'GF',
+  },
   vegan: {
     name: 'Vegan',
     symbol: 'Ⓥ',

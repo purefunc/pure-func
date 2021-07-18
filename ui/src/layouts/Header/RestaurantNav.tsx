@@ -12,9 +12,10 @@ export function RestaurantNav({ name = '', logo = '' }: Props) {
     { value: 'en', name: 'English' },
     { value: 'kr', name: 'Korean' },
   ]
+
   return (
-    <MenuHeader className="flex">
-      <h1 className="restaurant-name">{name}</h1>
+    <MenuHeader className="menu-header">
+      <h1 className="restaurant-name">{name || logo}</h1>
       <LanguageSelect languages={languages} />
     </MenuHeader>
   )
@@ -23,6 +24,9 @@ export function RestaurantNav({ name = '', logo = '' }: Props) {
 const MenuHeader = styled.header`
   border-bottom: var(--line);
   padding: var(--space);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   .restaurant-name {
     margin: 0;
     font-size: var(--smallFontSize);
