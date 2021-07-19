@@ -7,8 +7,17 @@ const MembershipType = Object.freeze({
   MONTHLY: "MONTHLY",
 })
 
+const MembershipStatus = Object.freeze({
+  INITIALIZED: "INITIALIZED",
+  PENDING: "PENDING",
+  ACTIVE: "ACTIVE",
+  FAILED: "FAILED",
+  CANCELLED: "CANCELLED"
+})
+
 module.exports = {
   MembershipType,
+  MembershipStatus,
   Membership: {
     _id({ _id }) {
       return _id
@@ -19,6 +28,9 @@ module.exports = {
     type({ type }) {
       return type
     },
+    status({ status }) {
+      return status
+    }
   },
   Query: {
     allMemberships(_, __, { userIsAdmin }) {

@@ -10,6 +10,8 @@ const membershipSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  status: String,
+  renewalDate: Date
 })
 
 membershipSchema.index({ team: 1 })

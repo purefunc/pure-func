@@ -2,13 +2,22 @@ module.exports = `
   type Membership {
       _id: ID!
       team: Team
-      type: MembershipType 
+      type: MembershipType
+      status: MembershipStatus
   }
 
   enum MembershipType {
     FREE,
     STARTER,
     MONTHLY
+  }
+
+  enum MembershipStatus {
+    INITIALIZED,
+    PENDING,
+    ACTIVE,
+    FAILED,
+    CANCELLED
   }
 
   extend type Query {
