@@ -6,7 +6,7 @@ module.exports = `
     logo: String
     bgImage: String
     categories: [Category]
-    team: ID!
+    teamId: ID!
   }
 
   input MenuInput {
@@ -15,7 +15,7 @@ module.exports = `
     logo: String
     bgImage: String
     categories: [CategoryInput]
-    team: ID!
+    teamId: ID!
   }  
 
   extend type Query {

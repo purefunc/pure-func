@@ -19,8 +19,8 @@ module.exports = {
     categories({ categories }) {
       return categoryDAO.find({ _id: categories })
     },
-    team({ team }) {
-      return teamDAO.find({ _id: team })
+    teamId({ teamId }) {
+      return teamId
     },
   },
   Query: {

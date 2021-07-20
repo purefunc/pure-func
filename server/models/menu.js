@@ -10,7 +10,7 @@ const menuSchema = new Schema({
   logo: String,
   bgImage: String,
   categories: [String],
-  team: String,
+  teamId: String,
 })
 
 menuSchema.index({ title: 1 })
