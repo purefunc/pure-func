@@ -11,7 +11,7 @@ const membershipSchema = new mongoose.Schema({
     required: true
   },
   status: String,
-  renewalDate: Date
+  stripeSubId: String
 })
 
 membershipSchema.index({ team: 1 })

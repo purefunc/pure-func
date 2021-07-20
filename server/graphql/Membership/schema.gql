@@ -4,6 +4,7 @@ module.exports = `
       team: Team
       type: MembershipType
       status: MembershipStatus
+      stripeSubId: String
   }
 
   enum MembershipType {

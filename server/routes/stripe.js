@@ -2,7 +2,7 @@ const stripe = require('../config/stripe')
 const express = require('express')
 const router = new express.Router();
 const logger = require('../config/logger')
-const processInitialCheckout = require("../stripe/processInitialCheckout")
+const processPayments = require("../stripe/processPayments")
 
 router.post("/webhook", async (req, res) => {
   let data;
@@ -33,15 +33,14 @@ router.post("/webhook", async (req, res) => {
 
   switch(eventType) {
     case 'checkout.session.completed':
-      logger.log('info', "Checkout success");
-      processInitialCheckout(data.object)
+      processPayments.processInitialCheckout(data.object)
       break;
     case 'invoice.paid':
-      // TODO: Continued payment stuff
+      processPayments.processRenewalSuccess(data.object)
       logger.log('info', "Renewal complete");
       break;
     case 'invoice.payment_failed':
-      // TODO: Send the maffia to break some knees
+      processPayments.processRenewalFailure(data.object)
       logger.log('info', "Renewal failed");
       break;
     default:
