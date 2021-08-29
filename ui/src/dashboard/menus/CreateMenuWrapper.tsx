@@ -39,7 +39,7 @@ export function CreateMenuWrapper() {
         variables: { menu: data },
       })
         .then((result) => {
-          history.push(`/dashboard/teams/${result.data.createMenu._id}/overview`)
+          history.push(`/dashboard/teams/${result.data.createMenu._id}/menus`)
         })
         .catch((e) => {
           console.error(e)

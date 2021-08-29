@@ -13,7 +13,7 @@ export function TeamSelector({ teams }: Props) {
   const handleChange = (e) => {
     const value = e.target.value
     setTeamId(value)
-    history.push(`/dashboard/teams/${value}/overview/`)
+    history.push(`/dashboard/teams/${value}/menus/`)
   }
 
   return (

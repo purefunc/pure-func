@@ -59,7 +59,7 @@ export function Header() {
       setIsCredsProcessed(true)
       // Redirect to Team Overview if at home
       if (!location.pathname.startsWith('/dashboard')) {
-        history.push(`/dashboard/teams/${teamId}/overview`)
+        history.push(`/dashboard/teams/${teamId}/menus`)
       }
     }
   }, [credsOnServer, isCredsProcessed, dispatch])
@@ -71,7 +71,7 @@ export function Header() {
           <h1 className="margin-0 logo">
             <NavLink
               data-testid="logo-link"
-              to={state.isLoggedIn ? `/dashboard/teams/${teamId}/overview` : '/'}
+              to={state.isLoggedIn ? `/dashboard/teams/${teamId}/menus` : '/'}
               aria-label="home page"
             >
               <Logo isDark={state.isLoggedIn} isShort />

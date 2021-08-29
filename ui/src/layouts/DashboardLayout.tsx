@@ -30,7 +30,7 @@ const DashboardLayout = () => {
   return (
     <Switch>
       {/* Teams */}
-      <Route exact path="/dashboard/teams/:id/overview" component={TeamsOverview} />
+      {/* <Route exact path="/dashboard/teams/:id/overview" component={TeamsOverview} /> */}
       <Route exact path="/dashboard/teams/:id/billing" component={TeamsBilling} />
       <Route exact path="/dashboard/teams/:id/settings" component={TeamsSettings} />
       {/* <Route exact path="/dashboard/teams/:id/members" component={TeamsMembers} /> */}
@@ -56,7 +56,7 @@ const DashboardLayout = () => {
     <Route exact path="/dashboard/new/pid" component={PidFormWrapper} /> */}
       {/* User */}
       <Route exact path="/dashboard/user/settings" component={UserSettings} />
-      <Route render={() => <Redirect to={`/dashboard/teams/${teamId}/overview`} />} />
+      <Route render={() => <Redirect to={`/dashboard/teams/${teamId}/menus`} />} />
     </Switch>
   )
 }
