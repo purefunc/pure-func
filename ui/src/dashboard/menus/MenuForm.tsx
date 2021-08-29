@@ -1,7 +1,7 @@
 // Render Prop
 import React from 'react'
 import { Formik, Form, ErrorMessage } from 'formik'
-import { Field } from 'components'
+import { Field, Button } from 'components'
 
 export const MenuForm = ({ onSubmit, menu = null }) => {
   const initialValues = {
@@ -33,9 +33,9 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
             <ErrorMessage name="title" component="div" />
             <Field isFormik as="textarea" label="Description" name="description" />
             <ErrorMessage name="description" component="div" />
-            <button className="cta" type="submit" disabled={isSubmitting}>
+            <Button type="submit" disabled={isSubmitting}>
               {menu ? 'Update' : 'Create'} Menu
-            </button>
+            </Button>
           </Form>
         )}
       </Formik>

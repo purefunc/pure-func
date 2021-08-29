@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { Modal } from 'components'
+import { Modal, Button } from 'components'
 import { UserMenu } from './UserMenu'
 import { LoginModal } from '../Login/LoginModal'
 
@@ -52,12 +52,12 @@ export function Nav({ isLoggedIn = false }) {
         </NavLink>
       </div>
       <div>
-        <button onClick={openModal} className="cta cta--white-ghost cta--small">
+        <Button size="small" color="ghost" onClick={openModal}>
           Sign In
-        </button>
-        <Link className="cta cta--white cta--small" to="/contact">
+        </Button>
+        <Button size="small" color="white" as={Link} to="/contact" className="contact-button">
           Contact Us
-        </Link>
+        </Button>
         <Modal isActive={isModalOpen} closeAction={closeModal}>
           <LoginModal />
         </Modal>
@@ -67,9 +67,9 @@ export function Nav({ isLoggedIn = false }) {
 
   const UserNavBar = (
     <div className="user-nav">
-      <NavLink className="dashboard-nav-link cta cta--small cta--ghost" to="/dashboard/new/menu" aria-label="Menus">
+      <Button size="small" color="outline" as={Link} to="/dashboard/new/menu">
         + New Menu
-      </NavLink>
+      </Button>
       {/* <Dropdown
         menuIcon={<button className="cta cta--small cta--ghost">New +</button>}
         renderMenuItems={(toggle) => (
@@ -107,13 +107,12 @@ const NavWrapper = styled.nav`
     $isLoggedIn &&
     `justify-content: flex-end;
   `};
+  .contact-button {
+    margin-left: var(--smallSpace);
+  }
   .user-nav {
     > * + * {
       margin-left: var(--space);
-    }
-    .dashboard-nav-link {
-      color: var(--textColor);
-      display: block;
     }
   }
 `

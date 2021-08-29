@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { SEO } from 'utilities'
-import { Section, Icon } from 'components'
+import { Section, Icon, Button } from 'components'
 
 export default function SitesPage() {
   const title = 'One Page Website Builder'
@@ -17,9 +17,9 @@ export default function SitesPage() {
             <p>
               <i>* Currently in beta but still accepting clients</i>
             </p>
-            <Link to="/beta" className="cta cta--white">
+            <Button color="white" as={Link} to="/contact">
               Get Beta Access
-            </Link>
+            </Button>
           </div>
         </div>
       </Section>
@@ -69,9 +69,9 @@ export default function SitesPage() {
             Potential client? Curious new developer? #1 Pure Func fan? As long as you're not a robot, we want to hear
             from you! Fill out our contact form, and a member of our team will be in touch as soon as possible.
           </p>
-          <Link to="/contact" className="cta">
+          <Button color="white" as={Link} to="/contact">
             Contact Us
-          </Link>
+          </Button>
         </div>
       </Section>
     </>
