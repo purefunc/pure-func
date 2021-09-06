@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import {
-  TeamsOverview,
+  // TeamsOverview,
   TeamsBilling,
   TeamsSettings,
   // TeamsMembers,
@@ -41,7 +41,7 @@ const DashboardLayout = () => {
     <Route exact path="/dashboard/new/restaurant" component={RestaurantFormWrapper} /> */}
       {/* Menus */}
       <Route exact path="/dashboard/teams/:id/menus" component={MenuListing} />
-      <Route exact path="/dashboard/menus/:id" component={MenuWrapper} />
+      <Route exact path="/dashboard/menus/:id/preview" component={MenuWrapper} />
       <Route exact path="/dashboard/menus/:id/edit" component={UpdateMenuWrapper} />
       <Route exact path="/dashboard/new/menu" component={CreateMenuWrapper} />
       {/* Sites */}

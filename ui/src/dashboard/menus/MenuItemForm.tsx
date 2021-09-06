@@ -1,5 +1,5 @@
 import React from 'react'
-import { Formik, Form, ErrorMessage, FieldArray } from 'formik'
+import { ErrorMessage, FieldArray } from 'formik'
 import { Field, Button } from 'components'
 
 export function MenuItemForm({ items, categoryIndex, initialItem }) {
