@@ -2,6 +2,32 @@
 import React from 'react'
 import { Formik, Form, ErrorMessage } from 'formik'
 import { Field, Button } from 'components'
+import { MenuCategoryForm } from './MenuCategoryForm'
+
+const initialTag = {
+  description: '',
+  symbol: '',
+}
+
+const initialNote = {
+  description: '',
+}
+
+const initialItem = {
+  id: '',
+  name: '',
+  description: '',
+  price: '',
+  notes: [initialNote],
+  tags: [initialTag],
+}
+
+const initialCategory = {
+  name: '',
+  price: '',
+  notes: [initialNote],
+  items: [initialItem],
+}
 
 export const MenuForm = ({ onSubmit, menu = null }) => {
   const initialValues = {
@@ -9,7 +35,7 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
     description: menu?.description || '',
     bgImage: menu?.bgImage || '',
     logo: menu?.logo || '',
-    categories: menu?.categories || [],
+    categories: menu?.categories || [initialCategory],
   }
 
   return (
@@ -27,16 +53,20 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
         // }}
         onSubmit={onSubmit}
       >
-        {({ isSubmitting }) => (
-          <Form>
-            <Field isFormik name="title" label="Title" />
-            <ErrorMessage name="title" component="div" />
-            <Field isFormik as="textarea" label="Description" name="description" />
-            <ErrorMessage name="description" component="div" />
-            <Button type="submit" disabled={isSubmitting}>
-              {menu ? 'Update' : 'Create'} Menu
-            </Button>
-          </Form>
+        {({ isSubmitting, values }) => (
+          <>
+            <Form>
+              <Field isFormik name="title" label="Title" />
+              <ErrorMessage name="title" component="div" />
+              <Field isFormik as="textarea" label="Description" name="description" />
+              <ErrorMessage name="description" component="div" />
+              <Button type="submit" disabled={isSubmitting}>
+                {menu ? 'Update' : 'Create'} Menu
+              </Button>
+            </Form>
+            <hr className="margins" />
+            <MenuCategoryForm values={values} initialCategory={initialCategory} initialItem={initialItem} />
+          </>
         )}
       </Formik>
     </div>

@@ -45,8 +45,9 @@ const FieldWrapper = styled.div`
   }
 
   label.form-label {
-    p {
-      margin: 0;
+    p,
+    span {
+      margin-bottom: 0;
     }
   }
 
