@@ -8,7 +8,7 @@ export function RestaurantFormWrapper() {
     <>
       <SEO title={title} />
       <DashboardLayout title={title}>
-        <p>I'm the restaurants form wrapper page</p>
+        <p>Coming Soon</p>
       </DashboardLayout>
     </>
   )

@@ -4,6 +4,7 @@ import { Formik, Form, ErrorMessage } from 'formik'
 import { SEO } from 'utilities'
 import { useParams, Link } from 'react-router-dom'
 import { DashboardLayout, Field, Button } from 'components'
+import { TeamsMembers } from '.'
 
 const UPDATE_TEAM = gql`
   mutation updateTeam($team: UserInput!) {
@@ -17,6 +18,12 @@ const GET_TEAM = gql`
   query team($_id: ID!) {
     team(_id: $_id) {
       name
+      users {
+        _id
+        displayName
+        email
+        isAdmin
+      }
     }
   }
 `
@@ -59,6 +66,26 @@ export function TeamsSettings() {
             </Form>
           )}
         </Formik>
+      </DashboardLayout>
+      <DashboardLayout title="Team Members">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>E-mail</th>
+              <th />
+            </tr>
+          </thead>
+          <tbody>
+            {team.users.map(({ _id, email, displayName, isAdmin }) => (
+              <tr key={_id}>
+                <td>{displayName}</td>
+                <td>({email})</td>
+                {isAdmin && <td>Admin</td>}
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </DashboardLayout>
     </>
   )

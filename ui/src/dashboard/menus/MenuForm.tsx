@@ -4,32 +4,23 @@ import { Formik, Form, ErrorMessage } from 'formik'
 import { Field, Button } from 'components'
 import { MenuCategoryForm } from './MenuCategoryForm'
 
-const initialTag = {
-  description: '',
-  symbol: '',
-}
-
-const initialNote = {
-  description: '',
-}
-
-const initialItem = {
-  id: '',
-  name: '',
-  description: '',
-  price: '',
-  notes: [initialNote],
-  tags: [initialTag],
-}
-
-const initialCategory = {
-  name: '',
-  price: '',
-  notes: [initialNote],
-  items: [initialItem],
-}
-
 export const MenuForm = ({ onSubmit, menu = null }) => {
+  const initialItem = {
+    id: '',
+    name: '',
+    description: '',
+    price: '',
+    notes: [],
+    tags: [],
+  }
+
+  const initialCategory = {
+    name: '',
+    price: '',
+    notes: [],
+    items: [],
+  }
+
   const initialValues = {
     title: menu?.title || '',
     description: menu?.description || '',

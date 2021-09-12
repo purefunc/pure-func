@@ -8,7 +8,7 @@ export function RestaurantWrapper() {
     <>
       <SEO title={title} />
       <DashboardLayout title={title}>
-        <p>I'm the restaurant page</p>
+        <p>Coming Soon</p>
       </DashboardLayout>
     </>
   )

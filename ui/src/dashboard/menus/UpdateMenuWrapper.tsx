@@ -44,6 +44,7 @@ export function UpdateMenuWrapper() {
   })
 
   const onSubmit = (data: MenuInput) => {
+    console.log('data', data)
     updateMenu({
       variables: { menu: data, _id: id },
     }).catch((e) => {

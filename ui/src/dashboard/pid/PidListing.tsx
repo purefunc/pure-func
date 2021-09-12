@@ -8,7 +8,7 @@ export function PidListing() {
     <>
       <SEO title={title} />
       <DashboardLayout title={title}>
-        <p>I'm the pid listing page</p>
+        <p>Coming Soon</p>
       </DashboardLayout>
     </>
   )

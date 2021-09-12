@@ -8,7 +8,7 @@ export function TeamsBilling() {
     <>
       <SEO title={title} />
       <DashboardLayout title={title}>
-        <p>I'm the teams billing page</p>
+        <p>Coming Soon</p>
       </DashboardLayout>
     </>
   )

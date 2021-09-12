@@ -24,7 +24,7 @@ export function TeamsOverview() {
     <>
       <SEO title={title} />
       <DashboardLayout title={title}>
-        <p>I'm the teams overview for {team.name}</p>
+        <p>Coming Soon</p>
       </DashboardLayout>
     </>
   )
