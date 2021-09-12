@@ -30,7 +30,6 @@ body {
 }
 
 main {
-    // padding-top: var(--headerHeight);
   flex-grow: 1;
   overflow: hidden;
 }
@@ -59,7 +58,6 @@ ul.disc {
   }
 }
 
-
 // ? necessary to keep footer on bottom at all times
 
 #layout-wrapper {
@@ -69,6 +67,8 @@ ul.disc {
   align-items: stretch;
 }
 
-header.header, main#main, footer.footer {
+header.header,
+main#main,
+footer.footer {
   flex-shrink: 0;
 }

@@ -8,8 +8,8 @@ import { DashboardLayout } from 'components'
 import { MenuCategory } from './MenuCategory'
 import { RestaurantNav } from '../../layouts/Header/RestaurantNav'
 import { menuKey } from '../../constants'
-import './menu-themes.scss'
 import { MenuKey } from './MenuKey'
+import { menuTheme } from './menuTheme'
 
 const GET_MENU = gql`
   query menu($_id: ID!) {
@@ -53,13 +53,13 @@ const GET_MENU = gql`
   }
 `
 
-export function MenuWrapper() {
+export function MenuWrapper({ isMenuPage = false }) {
   const menuTheme = 'menu-theme__dark'
 
   const { id } = useParams()
   const { data } = useQuery(GET_MENU, { variables: { _id: id } })
   if (!data) return null
-  console.log('data', data)
+
   const { menu } = data
 
   const note = {
@@ -98,10 +98,10 @@ export function MenuWrapper() {
     )
 
   return (
-    <div className={`menu ${menuTheme}`}>
-      <SEO title={`Menu - ${menu?.title}`} />
+    <MenuLayout className={`menu ${menuTheme}`} $isMenuPage={isMenuPage}>
+      <SEO title={menu?.title} isMenuPage={isMenuPage} />
       <RestaurantNav name="RESTAURANT NAME" logo="" />
-      <MenuLayout className="menu-layout">
+      <div className="menu-content">
         <div className="menu-header">
           <h1 className="menu-title">{menu.title}</h1>
           {menu.description && <p className="menu-description">{menu.description}</p>}
@@ -113,22 +113,26 @@ export function MenuWrapper() {
         </Grid>
 
         <MenuKey menuKey={menuKey} />
-      </MenuLayout>
-    </div>
+      </div>
+    </MenuLayout>
   )
 }
 
 const MenuLayout = styled.div`
-  max-width: var(--menuMaxWidth);
-  margin: 0 auto var(--menuLargestSpace);
-  padding: var(--menuSpace);
+  ${menuTheme};
+  ${({ $isMenuPage }) => $isMenuPage && `height: 100%;`};
+  .menu-content {
+    max-width: var(--menuMaxWidth);
+    margin: 0 auto var(--menuLargestSpace);
+    padding: var(--menuSpace);
 
-  .menu-header {
-    .menu-title {
-      font-size: var(--menuTitleSize);
-    }
-    .menu-description {
-      font-size: var(--menuDescriptionSize);
+    .menu-header {
+      .menu-title {
+        font-size: var(--menuTitleSize);
+      }
+      .menu-description {
+        font-size: var(--menuDescriptionSize);
+      }
     }
   }
 `

@@ -7,7 +7,7 @@ export function MenuCard({ menu }) {
     <CardWrapper className="card card--line card--full-width">
       <h4>{menu.title}</h4>
       <p>{menu.description}</p>
-      <Link className="cta" to={`/dashboard/menus/${menu._id}`} target="_blank">
+      <Link className="cta" to={`/menu/${menu._id}`} target="_blank">
         View
       </Link>
       <Link className="cta" to={`/dashboard/menus/${menu._id}/preview`}>

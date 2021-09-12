@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { LanguageSelect } from '../../components/LanguageSelect'
 
@@ -8,15 +8,15 @@ type Props = {
 }
 
 export function RestaurantNav({ name = '', logo = '' }: Props) {
-  const languages = [
-    { value: 'en', name: 'English' },
-    { value: 'kr', name: 'Korean' },
-  ]
+  // const languages = [
+  //   { value: 'en', name: 'English' },
+  //   { value: 'kr', name: 'Korean' },
+  // ]
 
   return (
     <MenuHeader className="menu-header">
       <h1 className="restaurant-name">{name || logo}</h1>
-      <LanguageSelect languages={languages} />
+      {/* <LanguageSelect languages={languages} /> */}
     </MenuHeader>
   )
 }

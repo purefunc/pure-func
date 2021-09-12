@@ -8,9 +8,10 @@ type Props = {
   pathname?: string
   robots?: string
   children?: ReactChild
+  isMenuPage?: boolean
 }
 
-// ? Sitewide SEO Component for use on all pages
+// ? Site-wide SEO Component for use on all pages
 // * These properties will override the ones in Default Helmet
 //  * Pathname must be given for canonical URLs
 export function SEO({
@@ -20,13 +21,14 @@ export function SEO({
   title = 'Web Development Agency',
   robots = 'index, follow',
   children,
+  isMenuPage = false,
 }: Props) {
   const siteUrl = 'https://purefunc.io'
   const siteName = 'Pure Func'
   const siteTitle = `${title} - ${siteName}`
 
   return (
-    <Helmet title={title} titleTemplate={`${siteName} | %s`}>
+    <Helmet title={title} titleTemplate={isMenuPage ? undefined : `${siteName} | %s`}>
       {description && <meta name="description" content={description} />}
       {image && <meta name="image" content={`${siteUrl}${image}`} />}
       {robots && <meta name="robots" content={robots} />}

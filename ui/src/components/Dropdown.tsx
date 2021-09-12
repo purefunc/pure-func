@@ -19,13 +19,13 @@ export const Dropdown = ({ renderMenuItems, style = {}, menuIcon = '' }: Dropdow
   useClickOutside(ref, () => setIsMenuToggled(false))
 
   return (
-    <MenuWrapper data-testid="dropdown-menu" ref={ref} style={style}>
+    <MenuDropdownWrapper data-testid="dropdown-menu" ref={ref} style={style}>
       <MenuIcon data-testid="menu-icon" onClick={toggle}>
         {menuIcon || <Icon name="menu" color="var(--primaryColor)" />}
       </MenuIcon>
       <AnimatePresence>
         {isMenuToggled && (
-          <MenuContainer
+          <MenuDropdownContainer
             style={{
               pointerEvents: isMenuToggled ? 'all' : 'none',
               transformOrigin: 'top center',
@@ -36,21 +36,21 @@ export const Dropdown = ({ renderMenuItems, style = {}, menuIcon = '' }: Dropdow
             initial={{ opacity: 0, scaleY: 0.9 }}
           >
             {renderMenuItems(toggle)}
-          </MenuContainer>
+          </MenuDropdownContainer>
         )}
       </AnimatePresence>
-    </MenuWrapper>
+    </MenuDropdownWrapper>
   )
 }
 
-const MenuWrapper = styled.div`
+const MenuDropdownWrapper = styled.div`
   margin-left: var(--space);
   perspective: 400px;
   display: flex;
   justify-content: flex-end;
 `
 
-const MenuContainer = styled(motion.div)`
+const MenuDropdownContainer = styled(motion.div)`
   position: absolute;
   top: 120%;
   background: var(--white);

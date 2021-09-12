@@ -12,7 +12,9 @@ const App = () => {
   return (
     <ContextProvider>
       <Switch>
-        <Route exact path="/dashboard/menus/:id" component={MenuWrapper} />
+        <Route exact path="/menu/:id">
+          <MenuWrapper isMenuPage />
+        </Route>
         <Route path="/" component={AppLayout} />
         <Route component={NoMatch} />
       </Switch>
