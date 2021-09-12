@@ -81,7 +81,11 @@ export function TeamsSettings() {
               <tr key={_id}>
                 <td>{displayName}</td>
                 <td>({email})</td>
-                {isAdmin && <td>Admin</td>}
+                {isAdmin && (
+                  <td>
+                    <strong>Admin</strong>
+                  </td>
+                )}
               </tr>
             ))}
           </tbody>
