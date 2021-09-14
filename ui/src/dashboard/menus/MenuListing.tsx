@@ -64,20 +64,22 @@ export function MenuListing() {
     <>
       <SEO title={title} />
       <DashboardLayout title={title}>
-        {menus.length > 0 ? (
-          <Grid cols={[1, 1, 2]}>
-            {menus.map((menu) => (
-              <MenuCard menu={menu} key={menu._id} />
-            ))}
-          </Grid>
-        ) : (
-          <div>
-            <p>Looks like your team doesn't have any menus yet</p>
-            <Button as={Link} to="/dashboard/new/menu">
-              + Add Menu
-            </Button>
-          </div>
-        )}
+        <div className="card card--full-width card--lightestGray">
+          {menus.length > 0 ? (
+            <Grid cols={[1, 1, 2]}>
+              {menus.map((menu) => (
+                <MenuCard menu={menu} key={menu._id} />
+              ))}
+            </Grid>
+          ) : (
+            <div>
+              <p>Looks like your team doesn't have any menus yet</p>
+              <Button as={Link} to="/dashboard/new/menu">
+                + Add Menu
+              </Button>
+            </div>
+          )}
+        </div>
       </DashboardLayout>
     </>
   )

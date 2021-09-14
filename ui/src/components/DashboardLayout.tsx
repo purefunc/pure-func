@@ -6,7 +6,7 @@ export function DashboardLayout({ children, title = '' }) {
     <DashboardLayoutWrapper className="dashboard">
       <div className="wrapper">
         <h2 className="title">{title}</h2>
-        <div className="card card--full-width card--lightestGray">{children}</div>
+        {children}
       </div>
     </DashboardLayoutWrapper>
   )

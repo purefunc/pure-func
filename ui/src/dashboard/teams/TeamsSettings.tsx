@@ -45,51 +45,55 @@ export function TeamsSettings() {
     <>
       <SEO title={title} />
       <DashboardLayout title={title}>
-        <Formik
-          initialValues={initialValues}
-          onSubmit={(data) => {
-            console.log('data', data)
-            updateTeam({
-              variables: { team: data },
-            }).catch((e) => {
-              console.error(e)
-            })
-          }}
-        >
-          {({ isSubmitting, dirty }) => (
-            <Form>
-              <Field isFormik name="name" label="Team Name" />
-              <ErrorMessage name="name" component="div" />
-              <Button type="submit" disabled={isSubmitting || !dirty}>
-                Update Settings
-              </Button>
-            </Form>
-          )}
-        </Formik>
+        <div className="card card--full-width card--lightestGray">
+          <Formik
+            initialValues={initialValues}
+            onSubmit={(data) => {
+              console.log('data', data)
+              updateTeam({
+                variables: { team: data },
+              }).catch((e) => {
+                console.error(e)
+              })
+            }}
+          >
+            {({ isSubmitting, dirty }) => (
+              <Form>
+                <Field isFormik name="name" label="Team Name" />
+                <ErrorMessage name="name" component="div" />
+                <Button type="submit" disabled={isSubmitting || !dirty}>
+                  Update Settings
+                </Button>
+              </Form>
+            )}
+          </Formik>
+        </div>
       </DashboardLayout>
       <DashboardLayout title="Team Members">
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>E-mail</th>
-              <th />
-            </tr>
-          </thead>
-          <tbody>
-            {team.users.map(({ _id, email, displayName, isAdmin }) => (
-              <tr key={_id}>
-                <td>{displayName}</td>
-                <td>({email})</td>
-                {isAdmin && (
-                  <td>
-                    <strong>Admin</strong>
-                  </td>
-                )}
+        <div className="card card--full-width card--lightestGray">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>E-mail</th>
+                <th />
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {team.users.map(({ _id, email, displayName, isAdmin }) => (
+                <tr key={_id}>
+                  <td>{displayName}</td>
+                  <td>({email})</td>
+                  {isAdmin && (
+                    <td>
+                      <strong>Admin</strong>
+                    </td>
+                  )}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </DashboardLayout>
     </>
   )

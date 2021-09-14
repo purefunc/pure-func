@@ -8,7 +8,9 @@ export function TeamsBilling() {
     <>
       <SEO title={title} />
       <DashboardLayout title={title}>
-        <p>Coming Soon</p>
+        <div className="card card--full-width card--lightestGray">
+          <p>Coming Soon</p>
+        </div>
       </DashboardLayout>
     </>
   )

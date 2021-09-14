@@ -7,7 +7,7 @@ export function SiteFormWrapper() {
   return (
     <>
       <SEO title={title} />
-      <DashboardLayout title={title}>Site Form goes here</DashboardLayout>
+      <DashboardLayout title={title}>Site Form coming soon</DashboardLayout>
     </>
   )
 }

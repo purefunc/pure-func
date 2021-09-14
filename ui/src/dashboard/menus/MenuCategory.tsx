@@ -34,7 +34,7 @@ export function MenuCategory({ category }) {
 }
 
 const CategoryLi = styled.li`
-  border: var(--menuLine);
+  border: var(--menuLineSize) var(--menuLineStyle) var(--menuLineColor);
   border-radius: var(--menuRadius);
   padding: var(--menuSpace);
 

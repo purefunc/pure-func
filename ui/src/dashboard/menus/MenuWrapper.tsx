@@ -9,7 +9,7 @@ import { MenuCategory } from './MenuCategory'
 import { RestaurantNav } from '../../layouts/Header/RestaurantNav'
 import { menuKey } from '../../constants'
 import { MenuKey } from './MenuKey'
-import { menuTheme } from './menuTheme'
+import { menuTheme, MenuThemeSettings } from './menuTheme'
 
 const GET_MENU = gql`
   query menu($_id: ID!) {
@@ -53,9 +53,9 @@ const GET_MENU = gql`
   }
 `
 
-export function MenuWrapper({ isMenuPage = false }) {
-  const menuTheme = 'menu-theme__dark'
+const menuThemeSettings: MenuThemeSettings = {}
 
+export function MenuWrapper({ isMenuPage = false }) {
   const { id } = useParams()
   const { data } = useQuery(GET_MENU, { variables: { _id: id } })
   if (!data) return null
@@ -90,15 +90,17 @@ export function MenuWrapper({ isMenuPage = false }) {
   if (!menu)
     return (
       <DashboardLayout>
-        <div className="margin-auto text-center">
-          <h3 className="margin-top-0 margin-auto">Menu could not be found</h3>
-          <p className="margin-auto">You might not have access to this or the ID could be expired</p>
+        <div className="card card--full-width card--lightestGray">
+          <div className="margin-auto text-center">
+            <h3 className="margin-top-0 margin-auto">Menu could not be found</h3>
+            <p className="margin-auto">You might not have access to this or the ID could be expired</p>
+          </div>
         </div>
       </DashboardLayout>
     )
 
   return (
-    <MenuLayout className={`menu ${menuTheme}`} $isMenuPage={isMenuPage}>
+    <MenuLayout className="menu" theme={menuThemeSettings} $isMenuPage={isMenuPage}>
       <SEO title={menu?.title} isMenuPage={isMenuPage} />
       <RestaurantNav name="RESTAURANT NAME" logo="" />
       <div className="menu-content">

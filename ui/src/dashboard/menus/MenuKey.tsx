@@ -22,7 +22,7 @@ const KeyTitle = styled.h5`
 
 const MenuKeyWrapper = styled.ul`
   border-radius: var(--menuRadius);
-  border: var(--menuLine);
+  border: var(--menuLineSize) var(--menuLineStyle) var(--menuLineColor);
   li {
     margin: var(--menuSpace);
   }

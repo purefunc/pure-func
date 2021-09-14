@@ -29,31 +29,33 @@ export function UserSettings() {
     <>
       <SEO title={title} />
       <DashboardLayout title={title}>
-        <Formik
-          initialValues={initialValues}
-          onSubmit={(data) => {
-            console.log('data', data)
-            updateUser({
-              variables: { user: data },
-            }).catch((e) => {
-              console.error(e)
-            })
-          }}
-        >
-          {({ isSubmitting, dirty }) => (
-            <Form>
-              <Field isFormik name="username" label="Name" />
-              <ErrorMessage name="username" component="div" />
-              <Field isFormik name="displayName" label="Display Name" />
-              <ErrorMessage name="displayName" component="div" />
-              <Field isFormik name="email" type="email" label="E-mail" />
-              <ErrorMessage name="email" component="div" />
-              <Button type="submit" disabled={isSubmitting || !dirty}>
-                Update Settings
-              </Button>
-            </Form>
-          )}
-        </Formik>
+        <div className="card card--full-width card--lightestGray">
+          <Formik
+            initialValues={initialValues}
+            onSubmit={(data) => {
+              console.log('data', data)
+              updateUser({
+                variables: { user: data },
+              }).catch((e) => {
+                console.error(e)
+              })
+            }}
+          >
+            {({ isSubmitting, dirty }) => (
+              <Form>
+                <Field isFormik name="username" label="Name" />
+                <ErrorMessage name="username" component="div" />
+                <Field isFormik name="displayName" label="Display Name" />
+                <ErrorMessage name="displayName" component="div" />
+                <Field isFormik name="email" type="email" label="E-mail" />
+                <ErrorMessage name="email" component="div" />
+                <Button type="submit" disabled={isSubmitting || !dirty}>
+                  Update Settings
+                </Button>
+              </Form>
+            )}
+          </Formik>
+        </div>
       </DashboardLayout>
     </>
   )
