@@ -11,6 +11,7 @@ const menuSchema = new Schema({
   bgImage: String,
   categories: [String],
   teamId: String,
+  domains: [String],
 })
 
 menuSchema.index({ title: 1 })
