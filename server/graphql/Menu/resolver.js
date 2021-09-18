@@ -1,6 +1,5 @@
 const categoryDAO = require("../../models/category")
 const menuDAO = require("../../models/menu")
-const teamDAO = require("../../models/team")
 
 module.exports = {
   Menu: {
@@ -22,6 +21,9 @@ module.exports = {
     teamId({ teamId }) {
       return teamId
     },
+    domains({domains}) {
+      return domains
+    }
   },
   Query: {
     allMenus(_, args, { userIsAdmin }) {
@@ -46,7 +48,14 @@ module.exports = {
       }
     },
     menuByTitle(obj, { title }) {
-      const myMenu = categoryDAO.findOne({ title: { $eq: title } })
+      const myMenu = menuDAO.findOne({ title: { $eq: title } })
+      if (!myMenu) {
+        throw new Error("Error")
+      }
+      return myMenu
+    },
+    menuByDomain(obj, { domain }) {
+      const myMenu = menuDAO.findOne({ domains: title })
       if (!myMenu) {
         throw new Error("Error")
       }

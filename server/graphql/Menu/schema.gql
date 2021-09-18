@@ -7,6 +7,7 @@ module.exports = `
     bgImage: String
     categories: [Category]
     teamId: ID!
+    domains: [String]
   }
 
   input MenuInput {
@@ -22,6 +23,7 @@ module.exports = `
     allMenus: [Menu]
     menu(_id: ID!): Menu
     menuByTitle(title: String): Menu
+    menuByDomain(domain: String): Menu
   }
 
   extend type Mutation {
@@ -30,5 +32,7 @@ module.exports = `
     deleteMenu(_id: ID!): DeleteResponse
     addCategoryToMenu(categoryId: ID!, menuId: ID!): Boolean
     removeCategoryFromMenu(categoryId: ID!, menuId: ID!): Boolean
+    addDomainToMenu(_id: ID!, domain: String!): Boolean
+    removeDomainFromMenu(_id: ID!, domain: String!): Boolean
   }
 `

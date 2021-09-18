@@ -51,5 +51,25 @@ module.exports = {
         return false
       }
     },
+    addDomainToMenu: async (_, {_id, domain}) => {
+      try {
+        await menuDAO.findByIdAndUpdate(_id, { $addToSet: { domains: domain } }).exec()
+        return true
+      } catch (e) {
+        logger.error("addDomainToMenu error")
+        logger.error(e)
+        throw new Error(e)
+      }
+    },
+    removeDomainFromMenu: async (_, {_id, domain}) => {
+      try {
+        await menuDAO.findByIdAndUpdate(_id, { $pull: { domains: domain } }).exec()
+        return true
+      } catch (e) {
+        logger.error("addDomainToMenu error")
+        logger.error(e)
+        throw new Error(e)
+      }
+    },
   },
 }
