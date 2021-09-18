@@ -52,7 +52,7 @@ const MenuDropdownWrapper = styled.div`
 
 const MenuDropdownContainer = styled(motion.div)`
   position: absolute;
-  top: 120%;
+  top: 100%;
   background: var(--white);
   border-radius: var(--cardRadius);
   padding: var(--space);

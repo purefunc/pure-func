@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { Logo } from 'components'
 import { useAuth, Types } from 'global'
 import { Nav } from './Nav'
+import { useLocalStorage } from 'hooks'
 import { MobileMenu } from './MobileMenu'
 import { SubNav } from './SubNav'
 import { useLazyQuery } from '@apollo/react-hooks'
@@ -35,7 +36,7 @@ export function Header() {
   const [checkCreds, { data: credsOnServer }] = useLazyQuery(ME, {
     fetchPolicy: 'no-cache',
   })
-  const teamId = credsOnServer?.me?.teams[0]._id
+  const [teamId, setTeamId] = useLocalStorage('team_id', credsOnServer?.me?.teams[0]._id)
 
   // Check if user is logged in
   useEffect(() => {
@@ -68,16 +69,18 @@ export function Header() {
     <>
       <HeaderWrapper className="header flex" $isLoggedIn={state.isLoggedIn}>
         <div className="header__inner wrapper">
-          <h1 className="margin-0 logo">
-            <NavLink
-              data-testid="logo-link"
-              to={state.isLoggedIn ? `/dashboard/teams/${teamId}/menus` : '/'}
-              aria-label="home page"
-            >
-              <Logo isDark={state.isLoggedIn} isShort />
-            </NavLink>
-          </h1>
-          {state.isLoggedIn && <TeamSelector teams={credsOnServer.me.teams} />}
+          <div className="flex">
+            <h1 className="margin-0 logo">
+              <NavLink
+                data-testid="logo-link"
+                to={state.isLoggedIn ? `/dashboard/teams/${teamId}/menus` : '/'}
+                aria-label="home page"
+              >
+                <Logo isDark={state.isLoggedIn} isShort />
+              </NavLink>
+            </h1>
+            {state.isLoggedIn && <TeamSelector teams={credsOnServer.me.teams} teamId={teamId} setTeamId={setTeamId} />}
+          </div>
 
           <Nav isLoggedIn={state.isLoggedIn} />
           {!state.isLoggedIn && <MobileMenu />}
