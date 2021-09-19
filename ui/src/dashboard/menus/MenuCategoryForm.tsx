@@ -1,5 +1,5 @@
 import React from 'react'
-import { ErrorMessage, FieldArray, Formik } from 'formik'
+import { FieldArray } from 'formik'
 import { Field, Button } from 'components'
 import { MenuItemForm } from './MenuItemForm'
 import { MoneyField } from 'components/forms/MoneyField'
@@ -19,10 +19,8 @@ export function MenuCategoryForm({ values, initialCategory, initialItem }) {
                   type="text"
                   label="Category Name"
                 />
-                <ErrorMessage name={`categories.${index}.name`} component="div" className="field-error" />
                 {/* // TODO Update Formik on change */}
                 <MoneyField name={`categories.${index}.price`} placeholder="$2.99" label="Category Price" />
-                <ErrorMessage name={`categories.${index}.price`} component="div" className="field-error" />
                 <MenuItemForm items={category.items} categoryIndex={index} initialItem={initialItem} />
                 <Button type="button" size="small" onClick={() => remove(index)}>
                   X

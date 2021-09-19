@@ -1,5 +1,5 @@
 import React from 'react'
-import { ErrorMessage, FieldArray } from 'formik'
+import { FieldArray } from 'formik'
 import { Field, Button } from 'components'
 
 export function MenuItemForm({ items, categoryIndex, initialItem }) {
@@ -17,12 +17,6 @@ export function MenuItemForm({ items, categoryIndex, initialItem }) {
                   type="text"
                   label="Menu Item Name"
                 />
-                <ErrorMessage
-                  name={`categories.${categoryIndex}.items.${index}.name`}
-                  component="div"
-                  className="field-error"
-                />
-
                 <Field
                   isFormik
                   as="textarea"
@@ -31,24 +25,12 @@ export function MenuItemForm({ items, categoryIndex, initialItem }) {
                   type="text"
                   label="Menu Item Description"
                 />
-                <ErrorMessage
-                  name={`categories.${categoryIndex}.items.${index}.description`}
-                  component="div"
-                  className="field-error"
-                />
-
                 <Field
                   isFormik
                   name={`categories.${categoryIndex}.items.${index}.price`}
                   placeholder="$2.99"
                   label="Menu Item Price"
                 />
-                <ErrorMessage
-                  name={`categories.${categoryIndex}.items.${index}.price`}
-                  component="div"
-                  className="field-error"
-                />
-
                 <Button type="button" size="small" onClick={() => remove(index)}>
                   X
                 </Button>

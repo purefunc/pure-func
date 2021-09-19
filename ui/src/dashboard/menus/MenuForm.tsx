@@ -1,6 +1,6 @@
 // Render Prop
 import React from 'react'
-import { Formik, Form, ErrorMessage } from 'formik'
+import { Formik, Form } from 'formik'
 import { Field, Button } from 'components'
 import { MenuCategoryForm } from './MenuCategoryForm'
 
@@ -49,11 +49,8 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
             <div className="card card--full-width card--lightestGray">
               <Form>
                 <Field isFormik name="title" label="Title" />
-                <ErrorMessage name="title" component="div" />
                 <Field isFormik as="textarea" label="Description" name="description" />
-                <ErrorMessage name="description" component="div" />
                 <Field isFormik as="textarea" label="Disclaimer" name="disclaimer" />
-                <ErrorMessage name="disclaimer" component="div" />
                 <Button type="submit" disabled={isSubmitting}>
                   {menu ? 'Update' : 'Create'} Menu
                 </Button>

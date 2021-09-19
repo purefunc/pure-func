@@ -1,10 +1,9 @@
 import React from 'react'
 import { useMutation, useQuery, gql } from '@apollo/client'
-import { Formik, Form, ErrorMessage } from 'formik'
+import { Formik, Form } from 'formik'
 import { SEO } from 'utilities'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { DashboardLayout, Field, Button } from 'components'
-import { TeamsMembers } from '.'
 
 const UPDATE_TEAM = gql`
   mutation updateTeam($team: UserInput!) {
@@ -60,7 +59,6 @@ export function TeamsSettings() {
             {({ isSubmitting, dirty }) => (
               <Form>
                 <Field isFormik name="name" label="Team Name" />
-                <ErrorMessage name="name" component="div" />
                 <Button type="submit" disabled={isSubmitting || !dirty}>
                   Update Settings
                 </Button>

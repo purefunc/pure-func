@@ -1,6 +1,6 @@
 import React from 'react'
 import { useMutation, gql } from '@apollo/client'
-import { Formik, Form, ErrorMessage } from 'formik'
+import { Formik, Form } from 'formik'
 import { SEO } from 'utilities'
 import { DashboardLayout, Field, Button } from 'components'
 import { useAuth } from 'global'
@@ -44,11 +44,8 @@ export function UserSettings() {
             {({ isSubmitting, dirty }) => (
               <Form>
                 <Field isFormik name="username" label="Name" />
-                <ErrorMessage name="username" component="div" />
                 <Field isFormik name="displayName" label="Display Name" />
-                <ErrorMessage name="displayName" component="div" />
                 <Field isFormik name="email" type="email" label="E-mail" />
-                <ErrorMessage name="email" component="div" />
                 <Button type="submit" disabled={isSubmitting || !dirty}>
                   Update Settings
                 </Button>

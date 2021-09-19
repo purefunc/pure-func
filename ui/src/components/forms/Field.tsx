@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Field as FormikField } from 'formik'
+import { Field as FormikField, ErrorMessage } from 'formik'
 
 export const Field = ({ isFormik = false, label = '', wrapperStyle = {}, instructions = '', ...props }) => {
   if (props.type === 'checkbox') {
@@ -18,7 +18,14 @@ export const Field = ({ isFormik = false, label = '', wrapperStyle = {}, instruc
             {label && <span>{label}</span>}
             {instructions && <span className="instructions">{instructions}</span>}
           </p>
-          {isFormik ? <FormikField className="form-input" {...props} /> : <input className="form-input" {...props} />}
+          {isFormik ? (
+            <>
+              <FormikField className="form-input" {...props} />
+              <ErrorMessage name={props.name} component="div" className="field-error" />
+            </>
+          ) : (
+            <input className="form-input" {...props} />
+          )}
         </label>
       </FieldWrapper>
     )

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { useParams } from 'react-router-dom'
 import { useQuery, gql } from '@apollo/client'
@@ -10,6 +10,7 @@ import { RestaurantNav } from '../../layouts/Header/RestaurantNav'
 import { menuKey } from '../../constants'
 import { MenuKey } from './MenuKey'
 import { menuTheme, MenuThemeSettings } from './menuTheme'
+import { ThemeSettingPanel } from 'components/ThemeSettingPanel'
 
 const GET_MENU = gql`
   query menu($_id: ID!) {
@@ -57,6 +58,7 @@ const GET_MENU = gql`
 const menuThemeSettings: MenuThemeSettings = {}
 
 export function MenuWrapper({ isMenuPage = false }) {
+  const [isThemePanelActive, setIsThemePanelActive] = useState(true)
   const { id } = useParams()
   const { data } = useQuery(GET_MENU, { variables: { _id: id } })
   if (!data) return null
@@ -102,6 +104,7 @@ export function MenuWrapper({ isMenuPage = false }) {
 
   return (
     <MenuLayout className="menu" theme={menuThemeSettings} $isMenuPage={isMenuPage}>
+      <ThemeSettingPanel isActive={isThemePanelActive} closeAction={() => setIsThemePanelActive(false)} />
       <SEO title={menu?.title} isMenuPage={isMenuPage} />
       <RestaurantNav name="RESTAURANT NAME" logo="" />
       <div className="menu-content">
