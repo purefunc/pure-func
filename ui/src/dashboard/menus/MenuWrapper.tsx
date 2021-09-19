@@ -17,6 +17,7 @@ const GET_MENU = gql`
       _id
       title
       description
+      disclaimer
       logo
       bgImage
       categories {
@@ -115,6 +116,11 @@ export function MenuWrapper({ isMenuPage = false }) {
         </Grid>
 
         <MenuKey menuKey={menuKey} />
+        {menu.disclaimer && (
+          <>
+            <hr className="margins" /> <p className="menu-disclaimer">{menu.disclaimer}</p>
+          </>
+        )}
       </div>
     </MenuLayout>
   )
@@ -134,6 +140,9 @@ const MenuLayout = styled.div`
       }
       .menu-description {
         font-size: var(--menuDescriptionSize);
+      }
+      .menu-disclaimer {
+        font-size: var(--menuDisclaimerSize);
       }
     }
   }

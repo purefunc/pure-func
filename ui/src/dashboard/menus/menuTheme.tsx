@@ -24,6 +24,7 @@ export type MenuThemeSettings = {
     menuRadius: string
     menuTitleSize: string
     menuDescriptionSize: string
+    menuDisclaimerSize: string
     categoryNameSize: string
     priceSize: string
     itemNameSize: string
@@ -44,7 +45,7 @@ export type MenuThemeSettings = {
     menuSmallSpace: number
     menuSmallestSpace: number
   }
-  colors: {
+  colors?: {
     background: string
     textColor: string
     headingColor: string
@@ -52,23 +53,22 @@ export type MenuThemeSettings = {
     primary: string
     accent: string
   }
-  fonts: {
+  fonts?: {
     family: string // valid font family
     weight: 'light' | 'normal' | 'bold'
     fontScale: 'large' | 'medium' | 'small'
   }
-  layouts: {
+  layouts?: {
     layout: 'normal' | 'compact' | 'spacious'
     alignment: 'left' | 'center' | 'right'
     corners: 'square' | 'slight-round' | 'round'
-    shadows: 'none' | 'shallow' | 'deep'
     category: {
       hasAccordion: boolean // determine if accordion is used or if items always show
     }
   }
 }
 
-// TODO Finish logic for both custom and premade themes below
+// TODO Finish logic for both custom and pre-made themes below
 
 export const menuTheme = ({ theme }) => css`
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap');
@@ -77,25 +77,31 @@ export const menuTheme = ({ theme }) => css`
   --menuBgColor: ${theme?.custom?.menuBgColor || theme?.colors?.background || '#fff'};
   --menuTextColor: ${theme?.custom?.menuTextColor || theme?.colors?.textColor || '#000'};
   --menuHeadingColor: ${theme?.colors?.headingColor || '#000'};
-  --menuLineColor: ${theme?.custom?.menuLineColor || theme?.colors?.lineColor || '#000'};
+  --menuLineColor: ${theme?.custom?.menuLineColor || theme?.colors?.lineColor || '#ccc'};
   --menuLineSize: ${theme?.custom?.menuLineSize || '1px'};
   --menuLineStyle: ${theme?.custom?.menuLineStyle || 'solid'};
 
-  --menuRadius: ${theme?.custom?.menuRadius || '3px'};
+  --menuRadius: ${() => {
+    if (theme?.custom?.menuRadius) return theme?.custom?.menuRadius
+    if (theme?.layouts?.corners === 'slight-round') return '6px'
+    if (theme?.layouts?.corners === 'round') return '30px'
+    return '0'
+  }};
 
-  --menuTitleSize: 2.4rem;
-  --menuDescriptionSize: 1.2rem;
-  --categoryNameSize: 1.7rem;
-  --priceSize: 1.1rem;
-  --itemNameSize: 1.2rem;
-  --itemDescriptionSize: 1rem;
-  --noteSize: 0.8rem;
+  --menuTitleSize: ${theme?.custom?.menuTitleSize || '2.4rem'};
+  --menuDescriptionSize: ${theme?.custom?.menuDescriptionSize || '1.2rem'};
+  --menuDisclaimerSize: ${theme?.custom?.menuDisclaimerSize || '1.2rem'};
+  --categoryNameSize: ${theme?.custom?.categoryNameSize || '1.7rem'};
+  --priceSize: ${theme?.custom?.priceSize || '1.1rem'};
+  --itemNameSize: ${theme?.custom?.itemNameSize || '1.2rem'};
+  --itemDescriptionSize: ${theme?.custom?.itemDescriptionSize || '1rem'};
+  --noteSize: ${theme?.custom?.noteSize || '0.8rem'};
 
-  --menuFontFamily: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  --menuNormalWeight: 300;
-  --menuBoldWeight: 700;
-  --menuBaseSpaceSize: 1em;
-  --menuSpaceScale: 1.5;
+  --menuFontFamily: ${theme?.custom?.menuFontFamily || `'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif`};
+  --menuNormalWeight: ${theme?.custom?.menuNormalWeight || '300'};
+  --menuBoldWeight: ${theme?.custom?.menuBoldWeight || '700'};
+  --menuBaseSpaceSize: ${theme?.custom?.menuBaseSpaceSize || '1em'};
+  --menuSpaceScale: ${theme?.custom?.menuSpaceScale || '1.5'};
   --menuSpace: var(--menuBaseSpaceSize);
   --menuLargeSpace: calc(var(--menuSpace) * var(--menuSpaceScale));
   --menuLargestSpace: calc(var(--menuLargeSpace) * var(--menuSpaceScale));

@@ -52,6 +52,8 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
                 <ErrorMessage name="title" component="div" />
                 <Field isFormik as="textarea" label="Description" name="description" />
                 <ErrorMessage name="description" component="div" />
+                <Field isFormik as="textarea" label="Disclaimer" name="disclaimer" />
+                <ErrorMessage name="disclaimer" component="div" />
                 <Button type="submit" disabled={isSubmitting}>
                   {menu ? 'Update' : 'Create'} Menu
                 </Button>

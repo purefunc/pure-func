@@ -7,6 +7,7 @@ const menuSchema = new Schema({
     required: true,
   },
   description: String,
+  disclaimer: String,
   logo: String,
   bgImage: String,
   categories: [String],

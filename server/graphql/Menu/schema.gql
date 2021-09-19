@@ -3,6 +3,7 @@ module.exports = `
     _id: ID!
     title: String!
     description: String
+    disclaimer: String
     logo: String
     bgImage: String
     categories: [Category]
