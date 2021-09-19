@@ -79,7 +79,9 @@ export function Header() {
                 <Logo isDark={state.isLoggedIn} isShort />
               </NavLink>
             </h1>
-            {state.isLoggedIn && <TeamSelector teams={credsOnServer.me.teams} teamId={teamId} setTeamId={setTeamId} />}
+            {state.isLoggedIn && !location.pathname.includes('/user/') && (
+              <TeamSelector teams={credsOnServer.me.teams} teamId={teamId} setTeamId={setTeamId} />
+            )}
           </div>
 
           <Nav isLoggedIn={state.isLoggedIn} />
