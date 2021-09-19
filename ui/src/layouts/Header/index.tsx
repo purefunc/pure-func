@@ -49,6 +49,9 @@ export function Header() {
   // Processed when creds return
   useEffect(() => {
     if (!isCredsProcessed && credsOnServer && credsOnServer.me && credsOnServer.me.displayName) {
+      if(!teamId && credsOnServer.me.teams.length > 0) {
+        setTeamId(credsOnServer.me.teams[0]._id)
+      }
       dispatch({
         type: Types.Login,
         payload: {
@@ -63,7 +66,7 @@ export function Header() {
         history.push(`/dashboard/teams/${teamId}/menus`)
       }
     }
-  }, [credsOnServer, isCredsProcessed, dispatch])
+  }, [credsOnServer, isCredsProcessed, dispatch, teamId])
 
   return (
     <>
@@ -79,7 +82,7 @@ export function Header() {
                 <Logo isDark={state.isLoggedIn} isShort />
               </NavLink>
             </h1>
-            {state.isLoggedIn && !location.pathname.includes('/user/') && (
+            {state.isLoggedIn && !location.pathname.includes('/user/') && credsOnServer.me && (
               <TeamSelector teams={credsOnServer.me.teams} teamId={teamId} setTeamId={setTeamId} />
             )}
           </div>
