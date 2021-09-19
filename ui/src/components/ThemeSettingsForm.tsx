@@ -72,7 +72,13 @@ export const ThemeSettingsForm = () => {
           <Button
             type="submit"
             disabled={isSubmitting}
-            style={{ position: 'fixed', right: 0, width: '400px', bottom: 0, borderRadius: 0 }}
+            style={{
+              position: 'fixed',
+              right: 0,
+              width: '400px',
+              bottom: 0,
+              borderRadius: 0,
+            }}
           >
             Save
           </Button>
