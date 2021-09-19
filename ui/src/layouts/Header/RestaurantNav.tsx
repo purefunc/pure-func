@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { LanguageSelect } from '../../components/LanguageSelect'
+import { ThemeSettingPanel } from 'components/ThemeSettingPanel'
+import { Button } from 'components'
 
 type Props = {
   name?: string
@@ -8,16 +10,22 @@ type Props = {
 }
 
 export function RestaurantNav({ name = '', logo = '' }: Props) {
+  const [isThemePanelActive, setIsThemePanelActive] = useState(false)
+
   // const languages = [
   //   { value: 'en', name: 'English' },
   //   { value: 'kr', name: 'Korean' },
   // ]
 
   return (
-    <MenuHeader className="menu-header">
-      <h1 className="restaurant-name">{name || logo}</h1>
-      {/* <LanguageSelect languages={languages} /> */}
-    </MenuHeader>
+    <>
+      <ThemeSettingPanel isActive={isThemePanelActive} closeAction={() => setIsThemePanelActive(false)} />
+      <MenuHeader className="menu-header">
+        <h1 className="restaurant-name">{name || logo}</h1>
+        {/* <LanguageSelect languages={languages} /> */}
+        <Button onClick={() => setIsThemePanelActive(true)}>Edit Theme</Button>
+      </MenuHeader>
+    </>
   )
 }
 

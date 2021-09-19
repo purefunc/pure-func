@@ -8,10 +8,9 @@ import { ThemeSettingsForm } from './ThemeSettingsForm'
 const PanelWrapper = styled(motion.div)`
   position: fixed;
   right: 0;
-  top: calc(var(--headerHeight) + 20px);
+  top: 0;
   height: 100vh;
   width: 400px;
-  border-radius: var(--cardRadius) 0 0 0;
   padding: var(--space);
   box-shadow: var(--elevation-3);
   background: var(--backgroundColor);
