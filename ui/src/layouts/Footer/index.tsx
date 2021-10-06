@@ -88,7 +88,16 @@ const FooterWrapper = styled.footer`
   color: var(--footerColor);
   background: var(--purpleGradient);
   .footer__nav {
-    align-items: flex-start !important;
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      .footer-button {
+        margin-top: var(--smallSpace);
+      }
+    }
     a {
       display: block;
       & + a {
@@ -106,6 +115,17 @@ const FooterWrapper = styled.footer`
     }
   }
   .footer__bottom {
+    .flex {
+      @media (max-width: 600px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        span {
+          order: 2;
+        }
+      }
+    }
     ${({ isLoggedIn }: { isLoggedIn: boolean }) =>
       `background: ${isLoggedIn ? 'var(--backgroundColor)' : 'var(--deepPurple)'}`};
     color: var(--gray);
