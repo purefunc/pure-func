@@ -20,7 +20,7 @@ export function TeamSelector({ teams, teamId, setTeamId }: Props) {
     history.push(`/dashboard/teams/${newId}/menus/`)
   }
 
-  const currentTeamName = teams.name || ''
+  const currentTeamName = teams.find(({ _id }) => _id === teamId).name || ''
 
   return (
     <>
