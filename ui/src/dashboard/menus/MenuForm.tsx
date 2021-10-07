@@ -46,15 +46,21 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
       >
         {({ isSubmitting, values }) => (
           <>
-            <div className="card card--full-width card--lightestGray">
-              <Form>
-                <Field isFormik name="title" label="Title" />
-                <Field isFormik as="textarea" label="Description" name="description" />
-                <Field isFormik as="textarea" label="Disclaimer" name="disclaimer" />
-                <Button type="submit" disabled={isSubmitting}>
-                  {menu ? 'Update' : 'Create'} Menu
-                </Button>
-              </Form>
+            <div className="menu-info">avatar img? menu name published? edit, save, preview</div>
+            <div className="card card--full-width card--lightestGray card--update grid">
+              <div className="headerImg-container">
+                <div className="headerImg">header img</div>
+              </div>
+              <div>
+                <Form>
+                  <Field isFormik name="title" label="Title" />
+                  <Field isFormik as="textarea" label="Description" name="description" />
+                  <Field isFormik as="textarea" label="Disclaimer" name="disclaimer" />
+                  <Button type="submit" disabled={isSubmitting}>
+                    {menu ? 'Update' : 'Create'} Menu
+                  </Button>
+                </Form>
+              </div>
             </div>
             <div className="margin-top-small">
               <MenuCategoryForm values={values} initialCategory={initialCategory} initialItem={initialItem} />

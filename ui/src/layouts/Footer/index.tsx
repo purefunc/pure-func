@@ -60,7 +60,7 @@ export function Footer() {
         )}
         <div className="footer__bottom">
           <div className="wrapper">
-            <div className="flex container">
+            <div className="flex container footer-mobile">
               <span>&copy; {new Date().getFullYear()} Pure Func LLC</span>
               {/* <div>
               <NavLink to="/terms" aria-label="Terms & Conditions page">
@@ -115,7 +115,7 @@ const FooterWrapper = styled.footer`
     }
   }
   .footer__bottom {
-    .flex {
+    .footer-mobile {
       @media (max-width: 600px) {
         display: flex;
         flex-direction: column;
