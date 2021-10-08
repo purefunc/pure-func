@@ -66,27 +66,6 @@
     border: var(--line);
   }
 
-  // dashboard edit menu cards and style
-  &--update {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-flow: column;
-    .headerImg-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .headerImg {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: #e5e5e5;
-      border-radius: var(--cardRadius);
-      height: 300px;
-      width: 300px;
-    }
-  }
-
   + .card {
     margin-top: var(--gridGap);
   }
