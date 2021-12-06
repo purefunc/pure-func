@@ -34,6 +34,8 @@ export function CreateMenuWrapper() {
   })
 
   const onSubmit = (data: MenuInput) => {
+    console.log('data', data)
+
     {
       createMenu({
         variables: { menu: data },
