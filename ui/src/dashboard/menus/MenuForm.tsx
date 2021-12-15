@@ -3,6 +3,7 @@ import React from 'react'
 import { Formik, Form } from 'formik'
 import { Field, Button } from 'components'
 import { MenuCategoryForm } from './MenuCategoryForm'
+import { Multi } from 'components/Multi'
 
 export const MenuForm = ({ onSubmit, menu = null }) => {
   const initialItem = {
@@ -51,6 +52,7 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
                 <Field isFormik name="title" label="Title" />
                 <Field isFormik as="textarea" label="Description" name="description" />
                 <Field isFormik as="textarea" label="Disclaimer" name="disclaimer" />
+                <Multi />
                 <Button type="submit" disabled={isSubmitting}>
                   {menu ? 'Update' : 'Create'} Menu
                 </Button>
