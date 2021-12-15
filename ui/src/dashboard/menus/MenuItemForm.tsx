@@ -11,10 +11,10 @@ export function MenuItemForm({ items, categoryIndex, initialItem, setFieldValue 
           {items.length > 0 &&
             items.map((item, index) => (
               <div key={index} className="card card--full-width card--line margins grid grid--split">
-                <div className="left card">
+                <div className="card">
                   <Dropzone name={`categories.${categoryIndex}.items.${index}.bgImage`} setFieldValue={setFieldValue} />
                 </div>
-                <div className="right card card--full-width card--line margins">
+                <div className="card card--full-width card--line margins">
                   <Field
                     isFormik
                     name={`categories.${categoryIndex}.items.${index}.name`}

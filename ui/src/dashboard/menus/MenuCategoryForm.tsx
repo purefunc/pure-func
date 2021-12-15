@@ -13,19 +13,19 @@ export function MenuCategoryForm({ values, initialCategory, initialItem, setFiel
           {values.categories.length > 0 &&
             values.categories.map((category, index) => (
               <div key={index} className="card card--full-width card--line margins">
-                <div className="catergory-container grid">
-                  <div className="left">
+                <div className="grid">
+                  <div>
                     <Field
                       isFormik
                       name={`categories.${index}.name`}
                       placeholder="Appetizers"
                       type="text"
                       label="Category Name"
-                      // TODO Update Formik on change
                     />
                     <MoneyField name={`categories.${index}.price`} placeholder="$2.99" label="Category Price" />
+                    {/* TODO Update Formik on change */}
                   </div>
-                  <div className="right">
+                  <div>
                     <Dropzone name={`categories.${index}.bgImage`} setFieldValue={setFieldValue} />
                   </div>
                 </div>

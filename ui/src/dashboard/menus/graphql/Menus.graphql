@@ -8,12 +8,6 @@ fragment menuFields on Menu {
 
 # Queries
 
-query menu($bgImage: String) {
-  menu(bgImage: $bgImage) {
-    ...menuFields
-  }
-}
-
 query menu($_id: ID!) {
   menu(_id: $_id) {
     ...menuFields
@@ -29,7 +23,7 @@ query menus {
 # Mutations
 
 mutation createMenu($menu: MenuInput!) {
-  createMenu(menu: $menu, bgImage: $bgImage) {
+  createMenu(menu: $menu) {
     ...menuFields
   }
 }

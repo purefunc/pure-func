@@ -11,24 +11,23 @@ const baseStyle = {
   margin: 'auto',
   borderWidth: 2,
   borderRadius: 'var(--cardRadius)',
-  borderColor: '#eeeeee',
-  borderStyle: 'dashed',
-  backgroundColor: 'white',
-  color: '#bdbdbd',
+  borderColor: 'var(--lighterGray)',
+  backgroundColor: 'var(--white)',
+  color: 'var(--textColor)',
   outline: 'none',
   transition: 'border .24s ease-in-out',
 }
 
 const activeStyle = {
-  borderColor: '#2196f3',
+  borderColor: 'var(--gray)',
 }
 
 const acceptStyle = {
-  borderColor: '#00e676',
+  borderColor: 'var(--darkestGray)',
 }
 
 const rejectStyle = {
-  borderColor: '#ff1744',
+  borderColor: 'var(--red)',
 }
 
 const thumbsContainer = {
@@ -44,7 +43,7 @@ const thumb = {
   marginBottom: 8,
   width: 'auto',
   height: 250,
-  padding: 4,
+  padding: 'var(--space)',
   boxSizing: 'border-box',
 }
 
@@ -63,7 +62,6 @@ const img = {
 
 export function Dropzone({ name, setFieldValue }) {
   const [files, setFiles] = useState([])
-  console.log(files, 'files')
 
   const { getRootProps, getInputProps, isDragActive, isDragAccept, isDragReject, acceptedFiles, open } = useDropzone({
     accept: 'image/*',
@@ -93,17 +91,13 @@ export function Dropzone({ name, setFieldValue }) {
   const thumbs = files.map((file) => (
     <div style={thumb} key={file.name}>
       <div style={thumbInner}>
-        <img src={file.preview} style={img} />
+        <img src={file.preview} style={img} alt={file.name} />
       </div>
     </div>
   ))
 
   useEffect(() => {
-    if (files.length > 0) {
-      setFieldValue(name, files[0].preview)
-    } else {
-      setFieldValue(name, '')
-    }
+    setFieldValue(name, files.length > 0 ? files[0].preview : '')
     return () => {
       files.forEach((file) => URL.revokeObjectURL(file.preview))
     }

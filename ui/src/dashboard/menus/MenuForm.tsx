@@ -4,7 +4,6 @@ import { Formik, Form } from 'formik'
 import { Field, Button } from 'components'
 import { MenuCategoryForm } from './MenuCategoryForm'
 import { Dropzone } from 'components/Dropzone'
-import Select from 'components/Select'
 
 export const MenuForm = ({ onSubmit, menu = null }) => {
   const initialItem = {
@@ -29,6 +28,7 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
     bgImage: menu?.bgImage || '',
     logo: menu?.logo || '',
     categories: menu?.categories || [initialCategory],
+    tags: menu?.tags || '',
   }
 
   return (
@@ -52,12 +52,12 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
             <>
               <div className="card card--full-width card--lightestGray">
                 <Form>
-                  <div className="grid-container grid">
-                    <div className="left">
+                  <div className="grid">
+                    <div>
                       <p className="menu-header-text">Header Image</p>
                       <Dropzone name="bgImage" setFieldValue={setFieldValue} />
                     </div>
-                    <div className="right">
+                    <div>
                       <Field isFormik name="title" label="Title" />
                       <Field isFormik as="textarea" label="Description" name="description" />
                       <Field
@@ -71,7 +71,6 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
                   </div>
                   <div>
                     <p>Select Modifiers</p>
-                    <Select />
                   </div>
                   <div className="menu-btn">
                     <Button type="submit" disabled={isSubmitting}>
