@@ -27,9 +27,7 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
     description: menu?.description || '',
     bgImage: menu?.bgImage || '',
     logo: menu?.logo || '',
-    categories: menu?.categories || [initialCategory],
-    tags: menu?.tags || '',
-  }
+    categories: menu?.categories || [initialCategory],  }
 
   return (
     <div>
