@@ -3,6 +3,8 @@ import React from 'react'
 import { Formik, Form } from 'formik'
 import { Field, Button } from 'components'
 import { MenuCategoryForm } from './MenuCategoryForm'
+import { Multi } from 'components/Multi'
+import { MultiSelectWrapper } from 'components/MultiSelectWrapper'
 
 export const MenuForm = ({ onSubmit, menu = null }) => {
   const initialItem = {
@@ -44,13 +46,14 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
         // }}
         onSubmit={onSubmit}
       >
-        {({ isSubmitting, values }) => (
+        {({ isSubmitting, values}) => (
           <>
             <div className="card card--full-width card--lightestGray">
               <Form>
                 <Field isFormik name="title" label="Title" />
                 <Field isFormik as="textarea" label="Description" name="description" />
                 <Field isFormik as="textarea" label="Disclaimer" name="disclaimer" />
+                <MultiSelectWrapper color="tags" />
                 <Button type="submit" disabled={isSubmitting}>
                   {menu ? 'Update' : 'Create'} Menu
                 </Button>
