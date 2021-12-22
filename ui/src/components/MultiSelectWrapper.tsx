@@ -1,5 +1,5 @@
 import React from 'react'
-import { Multi } from './Multi'
+import { MultiSelectField } from './MultiSelectField'
 import styled, { css } from 'styled-components'
 
 const tags = css`
@@ -31,7 +31,7 @@ export function MultiSelectWrapper() {
 
     return (
         <MultiWrapper>
-           <Multi /> 
+           <MultiSelectField /> 
         </MultiWrapper>
     )
 }
