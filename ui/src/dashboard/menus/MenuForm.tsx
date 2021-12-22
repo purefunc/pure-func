@@ -3,6 +3,7 @@ import React from 'react'
 import { Formik, Form } from 'formik'
 import { Field, Button } from 'components'
 import { MenuCategoryForm } from './MenuCategoryForm'
+import { MultiSelectField } from 'components/MultiSelectField'
 import { Dropzone } from 'components/Dropzone'
 
 export const MenuForm = ({ onSubmit, menu = null }) => {
@@ -27,7 +28,9 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
     description: menu?.description || '',
     bgImage: menu?.bgImage || '',
     logo: menu?.logo || '',
-    categories: menu?.categories || [initialCategory],  }
+    categories: menu?.categories || [initialCategory],
+    notes: menu?.notes || [],
+  }
 
   return (
     <div>
@@ -64,6 +67,10 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
                         label="Disclaimer"
                         placeholder="Enter any disclaimer here"
                         name="disclaimer"
+                      />
+                      <MultiSelectField
+                        setOptions={(options) => setFieldValue('notes', options)}
+                        options={values.notes}
                       />
                     </div>
                   </div>

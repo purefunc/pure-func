@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 import styled from 'styled-components'
 import { Dropdown } from 'components'
 
-const Selector = styled.button`
+const Selector = styled.div`
   font-size: var(--h5);
 `
 
@@ -41,7 +41,6 @@ export function TeamSelector({ teams, teamId, setTeamId }: Props) {
                   <button
                     onClick={() => {
                       handleChange(_id)
-                      setIsMenuOpen(false)
                       toggle()
                     }}
                   >
