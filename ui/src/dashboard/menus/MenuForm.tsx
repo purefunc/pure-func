@@ -4,6 +4,7 @@ import { Formik, Form } from 'formik'
 import { Field, Button } from 'components'
 import { MenuCategoryForm } from './MenuCategoryForm'
 import { MultiSelectField } from 'components/MultiSelectField'
+import { Dropzone } from 'components/Dropzone'
 
 export const MenuForm = ({ onSubmit, menu = null }) => {
   const initialItem = {
@@ -46,24 +47,54 @@ export const MenuForm = ({ onSubmit, menu = null }) => {
         // }}
         onSubmit={onSubmit}
       >
-        {({ isSubmitting, values, setFieldValue }) => (
-          <>
-            <div className="card card--full-width card--lightestGray">
-              <Form>
-                <Field isFormik name="title" label="Title" />
-                <Field isFormik as="textarea" label="Description" name="description" />
-                <Field isFormik as="textarea" label="Disclaimer" name="disclaimer" />
-                <MultiSelectField setOptions={(options) => setFieldValue('notes', options)} options={values.notes} />
-                <Button type="submit" disabled={isSubmitting}>
-                  {menu ? 'Update' : 'Create'} Menu
-                </Button>
-              </Form>
-            </div>
-            <div className="margin-top-small">
-              <MenuCategoryForm values={values} initialCategory={initialCategory} initialItem={initialItem} />
-            </div>
-          </>
-        )}
+        {({ isSubmitting, values, setFieldValue }) => {
+          console.log(values, 'values')
+          return (
+            <>
+              <div className="card card--full-width card--lightestGray">
+                <Form>
+                  <div className="grid">
+                    <div>
+                      <p className="menu-header-text">Header Image</p>
+                      <Dropzone name="bgImage" setFieldValue={setFieldValue} />
+                    </div>
+                    <div>
+                      <Field isFormik name="title" label="Title" />
+                      <Field isFormik as="textarea" label="Description" name="description" />
+                      <Field
+                        isFormik
+                        as="textarea"
+                        label="Disclaimer"
+                        placeholder="Enter any disclaimer here"
+                        name="disclaimer"
+                      />
+                      <MultiSelectField
+                        setOptions={(options) => setFieldValue('notes', options)}
+                        options={values.notes}
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <p>Select Modifiers</p>
+                  </div>
+                  <div className="menu-btn">
+                    <Button type="submit" disabled={isSubmitting}>
+                      {menu ? 'Update' : 'Create'} Menu
+                    </Button>
+                  </div>
+                </Form>
+              </div>
+              <div className="margin-top-small">
+                <MenuCategoryForm
+                  setFieldValue={setFieldValue}
+                  values={values}
+                  initialCategory={initialCategory}
+                  initialItem={initialItem}
+                />
+              </div>
+            </>
+          )
+        }}
       </Formik>
     </div>
   )
